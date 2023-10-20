@@ -87,6 +87,7 @@
             // 
             // iconButton2
             // 
+            this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconButton2.FlatAppearance.BorderSize = 0;
             this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -174,6 +175,7 @@
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnHome.TabIndex = 0;
             this.btnHome.TabStop = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnClose
             // 
@@ -280,7 +282,7 @@
             this.btnDestinos.Name = "btnDestinos";
             this.btnDestinos.Size = new System.Drawing.Size(203, 60);
             this.btnDestinos.TabIndex = 9;
-            this.btnDestinos.Text = "Destinos";
+            this.btnDestinos.Text = "Sucursal";
             this.btnDestinos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDestinos.UseVisualStyleBackColor = true;
             this.btnDestinos.Click += new System.EventHandler(this.iconButton5_Click);
@@ -456,8 +458,9 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = global::StellarShip_Express.Properties.Resources.StellarShip_Logo_Tono2;
-            this.pictureBox2.Location = new System.Drawing.Point(234, 158);
+            this.pictureBox2.Location = new System.Drawing.Point(266, 175);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(466, 100);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -470,7 +473,7 @@
             this.lblTitleChildForm.AutoSize = true;
             this.lblTitleChildForm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.lblTitleChildForm.ForeColor = System.Drawing.Color.White;
-            this.lblTitleChildForm.Location = new System.Drawing.Point(655, 32);
+            this.lblTitleChildForm.Location = new System.Drawing.Point(655, 37);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
             this.lblTitleChildForm.Size = new System.Drawing.Size(51, 19);
             this.lblTitleChildForm.TabIndex = 12;
@@ -484,7 +487,7 @@
             this.pcbIconTitle.IconChar = FontAwesome.Sharp.IconChar.House;
             this.pcbIconTitle.IconColor = System.Drawing.Color.WhiteSmoke;
             this.pcbIconTitle.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.pcbIconTitle.Location = new System.Drawing.Point(619, 26);
+            this.pcbIconTitle.Location = new System.Drawing.Point(619, 31);
             this.pcbIconTitle.Name = "pcbIconTitle";
             this.pcbIconTitle.Size = new System.Drawing.Size(32, 32);
             this.pcbIconTitle.TabIndex = 11;

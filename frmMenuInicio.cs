@@ -81,6 +81,7 @@ namespace StellarShip_Express
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
+                pcbIconTitle.IconChar = currentBtn.IconChar;
             }
 
         }
@@ -101,6 +102,15 @@ namespace StellarShip_Express
             panInicio.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+            lblTitleChildForm.Text = childForm.Text;
+        }
+
+        private void Reset()
+        {
+            DisableButton();
+            leftBorderBtn.Visible = false;
+            pcbIconTitle.IconChar = IconChar.Home;
+            lblTitleChildForm.Text = "Inicio";
         }
 
         private void MostrarSubMenu(Panel subMenu)
@@ -185,11 +195,21 @@ namespace StellarShip_Express
         {
             OcultarSubMenu();
             ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new frmSucursal());
         }
 
         private void btnTransportista_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmSucursal());
+            
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            Reset();
         }
     }
 }
