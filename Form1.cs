@@ -185,5 +185,10 @@ namespace StellarShip_Express
             OcultarSubMenu();
             ActivateButton(sender, RGBColors.color1);
         }
+
+        private void btnTransportista_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmPersonal());
+        }
     }
 }

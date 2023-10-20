@@ -190,7 +190,9 @@
   <ItemGroup>
     <None Include="Resources\StellarShip_Express_logo.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\StellarShip_Logo_Tono2.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Null.png" />
   </ItemGroup>
