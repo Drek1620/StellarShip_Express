@@ -1,4 +1,5 @@
 ﻿using FontAwesome.Sharp;
+using StellarShip_Express.Destino;
 using StellarShip_Express.Formularios;
 using System;
 using System.Collections.Generic;
@@ -188,7 +189,7 @@ namespace StellarShip_Express
 
         private void btnTransportista_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmPersonal());
+            OpenChildForm(new frmSucursal());
         }
     }
 }

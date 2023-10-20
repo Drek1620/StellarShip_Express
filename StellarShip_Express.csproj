@@ -118,11 +118,23 @@
       <DependentUpon>CuadroPaquete.cs</DependentUpon>
     </Compile>
     <Compile Include="DatosUsuario.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Sucursal\frmSucursal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Sucursal\frmSucursal.Designer.cs">
+      <DependentUpon>frmSucursal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sucursal\frmRegistrarSucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sucursal\frmRegistrarSucursal.Designer.cs">
+      <DependentUpon>frmRegistrarSucursal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuInicio.Designer.cs">
+      <DependentUpon>frmMenuInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmPersonal.cs">
       <SubType>Form</SubType>
@@ -148,8 +160,14 @@
     <EmbeddedResource Include="CuadroPaquete.resx">
       <DependentUpon>CuadroPaquete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Sucursal\frmSucursal.resx">
+      <DependentUpon>frmSucursal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sucursal\frmRegistrarSucursal.resx">
+      <DependentUpon>frmRegistrarSucursal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuInicio.resx">
+      <DependentUpon>frmMenuInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmPersonal.resx">
       <DependentUpon>frmPersonal.cs</DependentUpon>
@@ -196,5 +214,6 @@
   <ItemGroup>
     <None Include="Resources\Null.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
