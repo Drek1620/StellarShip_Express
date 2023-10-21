@@ -14,11 +14,18 @@ namespace StellarShip_Express.Formularios
     public partial class frmPersonal : Form
     {
         private Form currentChildForm;
+
+        Consultas datos=new Consultas();
         public frmPersonal()
         {
             InitializeComponent();
         }
 
+        public void MostrarUsuarios()
+        {
+            Consultas consultas = new Consultas();
+            dgvDatos.DataSource = consultas.MostrarUsuarios();
+        }
         private void OpenChildForm(Form childForm) //Este es para cerrar la ventana actual y mostrar la que se pase como parametro
         {
             
@@ -41,6 +48,19 @@ namespace StellarShip_Express.Formularios
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmRegistrarUsuario()); //llama al metodo y abre el form que se pase como parametro
+        }
+
+        private void frmPersonal_Load(object sender, EventArgs e)
+        {
+            MostrarUsuarios();
+        }
+
+        private void dgvDatos_Resize(object sender, EventArgs e)
+        {
+            if (dgvDatos.Width > 900)
+            {
+                dgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
         }
     }
 }

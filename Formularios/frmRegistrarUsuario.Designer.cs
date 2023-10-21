@@ -55,6 +55,7 @@
             // 
             // circularPictureBox1
             // 
+            this.circularPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.circularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
             this.circularPictureBox1.BorderColor = System.Drawing.Color.RoyalBlue;
             this.circularPictureBox1.BorderColor2 = System.Drawing.Color.HotPink;
@@ -71,6 +72,8 @@
             // 
             // rjTextBox1
             // 
+            this.rjTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rjTextBox1.AutoSize = true;
             this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
             this.rjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
@@ -79,7 +82,7 @@
             this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.rjTextBox1.Location = new System.Drawing.Point(617, 26);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 100);
             this.rjTextBox1.Multiline = false;
             this.rjTextBox1.Name = "rjTextBox1";
             this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -93,6 +96,8 @@
             // 
             // rjTextBox2
             // 
+            this.rjTextBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rjTextBox2.AutoSize = true;
             this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
             this.rjTextBox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.rjTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
@@ -115,6 +120,8 @@
             // 
             // rjTextBox3
             // 
+            this.rjTextBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rjTextBox3.AutoSize = true;
             this.rjTextBox3.BackColor = System.Drawing.SystemColors.Window;
             this.rjTextBox3.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.rjTextBox3.BorderFocusColor = System.Drawing.Color.HotPink;
@@ -137,6 +144,8 @@
             // 
             // rjTextBox4
             // 
+            this.rjTextBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rjTextBox4.AutoSize = true;
             this.rjTextBox4.BackColor = System.Drawing.SystemColors.Window;
             this.rjTextBox4.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.rjTextBox4.BorderFocusColor = System.Drawing.Color.HotPink;
@@ -159,6 +168,8 @@
             // 
             // rjTextBox5
             // 
+            this.rjTextBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rjTextBox5.AutoSize = true;
             this.rjTextBox5.BackColor = System.Drawing.SystemColors.Window;
             this.rjTextBox5.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.rjTextBox5.BorderFocusColor = System.Drawing.Color.HotPink;
@@ -181,6 +192,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(543, 34);
@@ -191,6 +203,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(375, 93);
@@ -201,6 +214,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(375, 151);
@@ -211,6 +225,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(375, 209);
@@ -221,6 +236,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(375, 264);
@@ -231,6 +247,7 @@
             // 
             // rButton1
             // 
+            this.rButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rButton1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.rButton1.BackgroundColor = System.Drawing.Color.CornflowerBlue;
             this.rButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -249,6 +266,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(375, 324);
@@ -259,6 +277,8 @@
             // 
             // rjTextBox6
             // 
+            this.rjTextBox6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rjTextBox6.AutoSize = true;
             this.rjTextBox6.BackColor = System.Drawing.SystemColors.Window;
             this.rjTextBox6.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.rjTextBox6.BorderFocusColor = System.Drawing.Color.HotPink;
@@ -281,6 +301,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(375, 384);
@@ -291,6 +312,8 @@
             // 
             // rjTextBox7
             // 
+            this.rjTextBox7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rjTextBox7.AutoSize = true;
             this.rjTextBox7.BackColor = System.Drawing.SystemColors.Window;
             this.rjTextBox7.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.rjTextBox7.BorderFocusColor = System.Drawing.Color.HotPink;
@@ -313,6 +336,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.label8.Location = new System.Drawing.Point(375, 445);
@@ -323,6 +347,8 @@
             // 
             // rjTextBox8
             // 
+            this.rjTextBox8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rjTextBox8.AutoSize = true;
             this.rjTextBox8.BackColor = System.Drawing.SystemColors.Window;
             this.rjTextBox8.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.rjTextBox8.BorderFocusColor = System.Drawing.Color.HotPink;
@@ -345,6 +371,7 @@
             // 
             // rButton2
             // 
+            this.rButton2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(139)))), ((int)(((byte)(99)))));
             this.rButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(139)))), ((int)(((byte)(99)))));
             this.rButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -364,6 +391,7 @@
             // 
             // rButton3
             // 
+            this.rButton3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(69)))), ((int)(((byte)(72)))));
             this.rButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(69)))), ((int)(((byte)(72)))));
             this.rButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -383,6 +411,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.Window;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
@@ -394,6 +423,8 @@
             // 
             // rjTextBox9
             // 
+            this.rjTextBox9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rjTextBox9.AutoSize = true;
             this.rjTextBox9.BackColor = System.Drawing.SystemColors.Window;
             this.rjTextBox9.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.rjTextBox9.BorderFocusColor = System.Drawing.Color.HotPink;
