@@ -39,6 +39,8 @@
             this.btnIniciar = new CustomControls.RButton();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblError = new System.Windows.Forms.Label();
+            this.btnConfig = new FontAwesome.Sharp.IconButton();
             this.TitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -104,7 +106,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Silver;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(37, 226);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 21);
@@ -131,7 +133,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Silver;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(37, 307);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 21);
@@ -149,7 +151,7 @@
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciar.ForeColor = System.Drawing.Color.White;
-            this.btnIniciar.Location = new System.Drawing.Point(41, 403);
+            this.btnIniciar.Location = new System.Drawing.Point(41, 430);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(280, 40);
             this.btnIniciar.TabIndex = 6;
@@ -178,12 +180,43 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblError.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblError.Location = new System.Drawing.Point(38, 370);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(101, 19);
+            this.lblError.TabIndex = 9;
+            this.lblError.Text = "Mensaje error";
+            this.lblError.Visible = false;
+            // 
+            // btnConfig
+            // 
+            this.btnConfig.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfig.FlatAppearance.BorderSize = 0;
+            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfig.IconChar = FontAwesome.Sharp.IconChar.Gear;
+            this.btnConfig.IconColor = System.Drawing.Color.White;
+            this.btnConfig.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnConfig.IconSize = 25;
+            this.btnConfig.Location = new System.Drawing.Point(325, 54);
+            this.btnConfig.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.Size = new System.Drawing.Size(36, 25);
+            this.btnConfig.TabIndex = 10;
+            this.btnConfig.UseVisualStyleBackColor = true;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
             this.ClientSize = new System.Drawing.Size(361, 618);
+            this.Controls.Add(this.btnConfig);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnIniciar);
@@ -220,5 +253,7 @@
         private CustomControls.RButton btnIniciar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblError;
+        private FontAwesome.Sharp.IconButton btnConfig;
     }
 }

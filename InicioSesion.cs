@@ -12,11 +12,11 @@ namespace StellarShip_Express
 {
     internal class InicioSesion
     {
-        string tipo = "SQLServer"; //Esta variable solo es para saber a que BD se va a conectar
+        string tipo = TipoConexion.Conexion; //Esta variable solo es para saber a que BD se va a conectar
         public bool Login(string user, string pass)
         {
             
-            if (tipo=="SQLServer") //Para SQLServer
+            if (tipo== "Microsoft SQL Server") //Para SQLServer
             {
                 ConexionSQLServ conexionSQL = new ConexionSQLServ();
                 using (var connection = conexionSQL.GetConnection())

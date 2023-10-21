@@ -41,18 +41,35 @@ namespace StellarShip_Express
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            InicioSesion inicio=new InicioSesion();
-            var validLogin = inicio.Login(txtUser.Text, txtPass.Text);
-            if (validLogin == true)
+            if (txtUser.Text != "")
             {
-                frm_Menu f1 = new frm_Menu();
-                this.Hide();
-                f1.Show();
+                if (txtPass.Text != "")
+                {
+                    InicioSesion inicio = new InicioSesion();
+                    var validLogin = inicio.Login(txtUser.Text, txtPass.Text);
+                    if (validLogin == true)
+                    {
+                        frm_Menu f1 = new frm_Menu();
+                        this.Hide();
+                        f1.Show();
 
+                    }
+                    else
+                    {
+                        lblError.Text = " Contraseña o Usuario Incorrecto. \n   Porfavor intenta otra vez."; lblError.Visible = true;
+                    }
+                }
+                else lblError.Text = " Contraseña Incorrecta"; lblError.Visible = true;
             }
-            else
+            else lblError.Text = " Usuario Incorrecta"; lblError.Visible = true;
+        }
+
+        private void btnConfig_Click(object sender, EventArgs e)
+        {
+            frmConexion frm= new frmConexion();
+            if (frm.ShowDialog()== DialogResult.OK)
             {
-                MessageBox.Show("Credenciales incorrectas");
+                MessageBox.Show("Conexion establecida a: " + TipoConexion.Conexion);
             }
         }
     }
