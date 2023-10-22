@@ -28,174 +28,139 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.circularPictureBox1 = new CustomControls.CircularPictureBox();
-            this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox2 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox3 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox4 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox5 = new CustomControls.RJControls.RJTextBox();
+            this.txtLoginName = new CustomControls.RJControls.RJTextBox();
+            this.txtName = new CustomControls.RJControls.RJTextBox();
+            this.txtSurname = new CustomControls.RJControls.RJTextBox();
+            this.txtSeSurname = new CustomControls.RJControls.RJTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.rButton1 = new CustomControls.RButton();
+            this.btnSelect = new CustomControls.RButton();
             this.label6 = new System.Windows.Forms.Label();
-            this.rjTextBox6 = new CustomControls.RJControls.RJTextBox();
+            this.txtPass = new CustomControls.RJControls.RJTextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.rjTextBox7 = new CustomControls.RJControls.RJTextBox();
+            this.txtCPass = new CustomControls.RJControls.RJTextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.rjTextBox8 = new CustomControls.RJControls.RJTextBox();
-            this.rButton2 = new CustomControls.RButton();
+            this.btnSave = new CustomControls.RButton();
             this.rButton3 = new CustomControls.RButton();
             this.label9 = new System.Windows.Forms.Label();
-            this.rjTextBox9 = new CustomControls.RJControls.RJTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
+            this.txtTel = new CustomControls.RJControls.RJTextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pcbImgUser = new CustomControls.CircularPictureBox();
+            this.cmbAcces = new CustomControls.RJComboBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.TitleBar = new System.Windows.Forms.Panel();
+            this.btnMinum = new FontAwesome.Sharp.IconButton();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImgUser)).BeginInit();
+            this.TitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // circularPictureBox1
+            // txtLoginName
             // 
-            this.circularPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.circularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.circularPictureBox1.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.circularPictureBox1.BorderColor2 = System.Drawing.Color.HotPink;
-            this.circularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.circularPictureBox1.BorderSize = 2;
-            this.circularPictureBox1.GradientAngle = 50F;
-            this.circularPictureBox1.Image = global::StellarShip_Express.Properties.Resources.Null;
-            this.circularPictureBox1.Location = new System.Drawing.Point(73, 58);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(183, 183);
-            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox1.TabIndex = 0;
-            this.circularPictureBox1.TabStop = false;
+            this.txtLoginName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtLoginName.AutoSize = true;
+            this.txtLoginName.BackColor = System.Drawing.SystemColors.Window;
+            this.txtLoginName.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtLoginName.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtLoginName.BorderRadius = 0;
+            this.txtLoginName.BorderSize = 2;
+            this.txtLoginName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLoginName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtLoginName.Location = new System.Drawing.Point(527, 112);
+            this.txtLoginName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLoginName.Multiline = false;
+            this.txtLoginName.Name = "txtLoginName";
+            this.txtLoginName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtLoginName.PasswordChar = false;
+            this.txtLoginName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtLoginName.PlaceholderText = "";
+            this.txtLoginName.Size = new System.Drawing.Size(250, 31);
+            this.txtLoginName.TabIndex = 2;
+            this.txtLoginName.Texts = "";
+            this.txtLoginName.UnderlinedStyle = false;
             // 
-            // rjTextBox1
+            // txtName
             // 
-            this.rjTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rjTextBox1.AutoSize = true;
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(617, 26);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 100);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(250, 31);
-            this.rjTextBox1.TabIndex = 1;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
+            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtName.AutoSize = true;
+            this.txtName.BackColor = System.Drawing.SystemColors.Window;
+            this.txtName.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtName.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtName.BorderRadius = 0;
+            this.txtName.BorderSize = 2;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtName.Location = new System.Drawing.Point(527, 162);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.Multiline = false;
+            this.txtName.Name = "txtName";
+            this.txtName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtName.PasswordChar = false;
+            this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtName.PlaceholderText = "";
+            this.txtName.Size = new System.Drawing.Size(250, 31);
+            this.txtName.TabIndex = 3;
+            this.txtName.Texts = "";
+            this.txtName.UnderlinedStyle = false;
             // 
-            // rjTextBox2
+            // txtSurname
             // 
-            this.rjTextBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rjTextBox2.AutoSize = true;
-            this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox2.BorderRadius = 0;
-            this.rjTextBox2.BorderSize = 2;
-            this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox2.Location = new System.Drawing.Point(617, 85);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox2.PlaceholderText = "";
-            this.rjTextBox2.Size = new System.Drawing.Size(250, 31);
-            this.rjTextBox2.TabIndex = 2;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = false;
+            this.txtSurname.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSurname.AutoSize = true;
+            this.txtSurname.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSurname.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtSurname.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtSurname.BorderRadius = 0;
+            this.txtSurname.BorderSize = 2;
+            this.txtSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSurname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSurname.Location = new System.Drawing.Point(527, 211);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSurname.Multiline = false;
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtSurname.PasswordChar = false;
+            this.txtSurname.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtSurname.PlaceholderText = "";
+            this.txtSurname.Size = new System.Drawing.Size(250, 31);
+            this.txtSurname.TabIndex = 4;
+            this.txtSurname.Texts = "";
+            this.txtSurname.UnderlinedStyle = false;
             // 
-            // rjTextBox3
+            // txtSeSurname
             // 
-            this.rjTextBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rjTextBox3.AutoSize = true;
-            this.rjTextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox3.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox3.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox3.BorderRadius = 0;
-            this.rjTextBox3.BorderSize = 2;
-            this.rjTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox3.Location = new System.Drawing.Point(617, 143);
-            this.rjTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox3.Multiline = false;
-            this.rjTextBox3.Name = "rjTextBox3";
-            this.rjTextBox3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox3.PasswordChar = false;
-            this.rjTextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox3.PlaceholderText = "";
-            this.rjTextBox3.Size = new System.Drawing.Size(250, 31);
-            this.rjTextBox3.TabIndex = 3;
-            this.rjTextBox3.Texts = "";
-            this.rjTextBox3.UnderlinedStyle = false;
-            // 
-            // rjTextBox4
-            // 
-            this.rjTextBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rjTextBox4.AutoSize = true;
-            this.rjTextBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox4.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox4.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox4.BorderRadius = 0;
-            this.rjTextBox4.BorderSize = 2;
-            this.rjTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox4.Location = new System.Drawing.Point(617, 201);
-            this.rjTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox4.Multiline = false;
-            this.rjTextBox4.Name = "rjTextBox4";
-            this.rjTextBox4.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox4.PasswordChar = false;
-            this.rjTextBox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox4.PlaceholderText = "";
-            this.rjTextBox4.Size = new System.Drawing.Size(250, 31);
-            this.rjTextBox4.TabIndex = 4;
-            this.rjTextBox4.Texts = "";
-            this.rjTextBox4.UnderlinedStyle = false;
-            // 
-            // rjTextBox5
-            // 
-            this.rjTextBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rjTextBox5.AutoSize = true;
-            this.rjTextBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox5.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox5.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox5.BorderRadius = 0;
-            this.rjTextBox5.BorderSize = 2;
-            this.rjTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox5.Location = new System.Drawing.Point(617, 256);
-            this.rjTextBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox5.Multiline = false;
-            this.rjTextBox5.Name = "rjTextBox5";
-            this.rjTextBox5.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox5.PasswordChar = false;
-            this.rjTextBox5.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox5.PlaceholderText = "";
-            this.rjTextBox5.Size = new System.Drawing.Size(250, 31);
-            this.rjTextBox5.TabIndex = 5;
-            this.rjTextBox5.Texts = "";
-            this.rjTextBox5.UnderlinedStyle = false;
+            this.txtSeSurname.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSeSurname.AutoSize = true;
+            this.txtSeSurname.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSeSurname.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtSeSurname.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtSeSurname.BorderRadius = 0;
+            this.txtSeSurname.BorderSize = 2;
+            this.txtSeSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSeSurname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSeSurname.Location = new System.Drawing.Point(527, 264);
+            this.txtSeSurname.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSeSurname.Multiline = false;
+            this.txtSeSurname.Name = "txtSeSurname";
+            this.txtSeSurname.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtSeSurname.PasswordChar = false;
+            this.txtSeSurname.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtSeSurname.PlaceholderText = "";
+            this.txtSeSurname.Size = new System.Drawing.Size(250, 31);
+            this.txtSeSurname.TabIndex = 5;
+            this.txtSeSurname.Texts = "";
+            this.txtSeSurname.UnderlinedStyle = false;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(543, 34);
+            this.label1.Location = new System.Drawing.Point(453, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 23);
             this.label1.TabIndex = 6;
@@ -206,7 +171,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(375, 93);
+            this.label2.Location = new System.Drawing.Point(285, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(198, 23);
             this.label2.TabIndex = 7;
@@ -217,7 +182,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(375, 151);
+            this.label3.Location = new System.Drawing.Point(285, 170);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 23);
             this.label3.TabIndex = 8;
@@ -228,7 +193,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(375, 209);
+            this.label4.Location = new System.Drawing.Point(285, 219);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(158, 23);
             this.label4.TabIndex = 9;
@@ -239,155 +204,133 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(375, 264);
+            this.label5.Location = new System.Drawing.Point(285, 272);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(184, 23);
             this.label5.TabIndex = 10;
             this.label5.Text = "Segundo Apellido";
             // 
-            // rButton1
+            // btnSelect
             // 
-            this.rButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rButton1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.rButton1.BackgroundColor = System.Drawing.Color.CornflowerBlue;
-            this.rButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rButton1.BorderRadius = 5;
-            this.rButton1.BorderSize = 0;
-            this.rButton1.FlatAppearance.BorderSize = 0;
-            this.rButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rButton1.ForeColor = System.Drawing.Color.White;
-            this.rButton1.Location = new System.Drawing.Point(73, 256);
-            this.rButton1.Name = "rButton1";
-            this.rButton1.Size = new System.Drawing.Size(183, 40);
-            this.rButton1.TabIndex = 11;
-            this.rButton1.Text = "Elegir/Cambiar Imagen";
-            this.rButton1.TextColor = System.Drawing.Color.White;
-            this.rButton1.UseVisualStyleBackColor = false;
+            this.btnSelect.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSelect.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnSelect.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.btnSelect.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSelect.BorderRadius = 5;
+            this.btnSelect.BorderSize = 0;
+            this.btnSelect.FlatAppearance.BorderSize = 0;
+            this.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelect.ForeColor = System.Drawing.Color.White;
+            this.btnSelect.Location = new System.Drawing.Point(33, 266);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(183, 40);
+            this.btnSelect.TabIndex = 11;
+            this.btnSelect.Text = "Elegir/Cambiar Imagen";
+            this.btnSelect.TextColor = System.Drawing.Color.White;
+            this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(375, 324);
+            this.label6.Location = new System.Drawing.Point(285, 323);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(123, 23);
             this.label6.TabIndex = 13;
             this.label6.Text = "Contraseña";
             // 
-            // rjTextBox6
+            // txtPass
             // 
-            this.rjTextBox6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rjTextBox6.AutoSize = true;
-            this.rjTextBox6.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox6.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox6.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox6.BorderRadius = 0;
-            this.rjTextBox6.BorderSize = 2;
-            this.rjTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox6.Location = new System.Drawing.Point(617, 316);
-            this.rjTextBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox6.Multiline = false;
-            this.rjTextBox6.Name = "rjTextBox6";
-            this.rjTextBox6.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox6.PasswordChar = false;
-            this.rjTextBox6.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox6.PlaceholderText = "";
-            this.rjTextBox6.Size = new System.Drawing.Size(250, 31);
-            this.rjTextBox6.TabIndex = 12;
-            this.rjTextBox6.Texts = "";
-            this.rjTextBox6.UnderlinedStyle = false;
+            this.txtPass.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtPass.AutoSize = true;
+            this.txtPass.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPass.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtPass.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtPass.BorderRadius = 0;
+            this.txtPass.BorderSize = 2;
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPass.Location = new System.Drawing.Point(527, 315);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPass.Multiline = false;
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtPass.PasswordChar = false;
+            this.txtPass.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtPass.PlaceholderText = "";
+            this.txtPass.Size = new System.Drawing.Size(250, 31);
+            this.txtPass.TabIndex = 12;
+            this.txtPass.Texts = "";
+            this.txtPass.UnderlinedStyle = false;
             // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(375, 384);
+            this.label7.Location = new System.Drawing.Point(285, 374);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(225, 23);
             this.label7.TabIndex = 15;
             this.label7.Text = "Confirmar Contraseña";
             // 
-            // rjTextBox7
+            // txtCPass
             // 
-            this.rjTextBox7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rjTextBox7.AutoSize = true;
-            this.rjTextBox7.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox7.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox7.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox7.BorderRadius = 0;
-            this.rjTextBox7.BorderSize = 2;
-            this.rjTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox7.Location = new System.Drawing.Point(617, 376);
-            this.rjTextBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox7.Multiline = false;
-            this.rjTextBox7.Name = "rjTextBox7";
-            this.rjTextBox7.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox7.PasswordChar = false;
-            this.rjTextBox7.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox7.PlaceholderText = "";
-            this.rjTextBox7.Size = new System.Drawing.Size(250, 31);
-            this.rjTextBox7.TabIndex = 14;
-            this.rjTextBox7.Texts = "";
-            this.rjTextBox7.UnderlinedStyle = false;
+            this.txtCPass.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtCPass.AutoSize = true;
+            this.txtCPass.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCPass.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtCPass.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtCPass.BorderRadius = 0;
+            this.txtCPass.BorderSize = 2;
+            this.txtCPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCPass.Location = new System.Drawing.Point(527, 366);
+            this.txtCPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCPass.Multiline = false;
+            this.txtCPass.Name = "txtCPass";
+            this.txtCPass.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtCPass.PasswordChar = false;
+            this.txtCPass.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtCPass.PlaceholderText = "";
+            this.txtCPass.Size = new System.Drawing.Size(250, 31);
+            this.txtCPass.TabIndex = 14;
+            this.txtCPass.Texts = "";
+            this.txtCPass.UnderlinedStyle = false;
             // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(375, 445);
+            this.label8.Location = new System.Drawing.Point(285, 430);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(173, 23);
             this.label8.TabIndex = 17;
             this.label8.Text = "Nivel de Acceso";
             // 
-            // rjTextBox8
+            // btnSave
             // 
-            this.rjTextBox8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rjTextBox8.AutoSize = true;
-            this.rjTextBox8.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox8.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox8.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox8.BorderRadius = 0;
-            this.rjTextBox8.BorderSize = 2;
-            this.rjTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox8.Location = new System.Drawing.Point(617, 437);
-            this.rjTextBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox8.Multiline = false;
-            this.rjTextBox8.Name = "rjTextBox8";
-            this.rjTextBox8.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox8.PasswordChar = false;
-            this.rjTextBox8.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox8.PlaceholderText = "";
-            this.rjTextBox8.Size = new System.Drawing.Size(250, 31);
-            this.rjTextBox8.TabIndex = 16;
-            this.rjTextBox8.Texts = "";
-            this.rjTextBox8.UnderlinedStyle = false;
-            // 
-            // rButton2
-            // 
-            this.rButton2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(139)))), ((int)(((byte)(99)))));
-            this.rButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(139)))), ((int)(((byte)(99)))));
-            this.rButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rButton2.BorderRadius = 5;
-            this.rButton2.BorderSize = 0;
-            this.rButton2.FlatAppearance.BorderSize = 0;
-            this.rButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rButton2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.rButton2.ForeColor = System.Drawing.Color.White;
-            this.rButton2.Location = new System.Drawing.Point(73, 379);
-            this.rButton2.Name = "rButton2";
-            this.rButton2.Size = new System.Drawing.Size(183, 40);
-            this.rButton2.TabIndex = 18;
-            this.rButton2.Text = "Guardar";
-            this.rButton2.TextColor = System.Drawing.Color.White;
-            this.rButton2.UseVisualStyleBackColor = false;
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(139)))), ((int)(((byte)(99)))));
+            this.btnSave.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(139)))), ((int)(((byte)(99)))));
+            this.btnSave.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSave.BorderRadius = 5;
+            this.btnSave.BorderSize = 0;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(33, 403);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(183, 40);
+            this.btnSave.TabIndex = 18;
+            this.btnSave.Text = "Guardar";
+            this.btnSave.TextColor = System.Drawing.Color.White;
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // rButton3
             // 
@@ -401,13 +344,14 @@
             this.rButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rButton3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.rButton3.ForeColor = System.Drawing.Color.White;
-            this.rButton3.Location = new System.Drawing.Point(73, 448);
+            this.rButton3.Location = new System.Drawing.Point(33, 461);
             this.rButton3.Name = "rButton3";
             this.rButton3.Size = new System.Drawing.Size(183, 40);
             this.rButton3.TabIndex = 19;
             this.rButton3.Text = "Cancelar";
             this.rButton3.TextColor = System.Drawing.Color.White;
             this.rButton3.UseVisualStyleBackColor = false;
+            this.rButton3.Click += new System.EventHandler(this.rButton3_Click);
             // 
             // label9
             // 
@@ -415,70 +359,188 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.Window;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(375, 507);
+            this.label9.Location = new System.Drawing.Point(285, 478);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(93, 23);
             this.label9.TabIndex = 21;
             this.label9.Text = "Telefono";
             // 
-            // rjTextBox9
+            // txtTel
             // 
-            this.rjTextBox9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rjTextBox9.AutoSize = true;
-            this.rjTextBox9.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox9.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox9.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox9.BorderRadius = 0;
-            this.rjTextBox9.BorderSize = 2;
-            this.rjTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox9.Location = new System.Drawing.Point(617, 499);
-            this.rjTextBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox9.Multiline = false;
-            this.rjTextBox9.Name = "rjTextBox9";
-            this.rjTextBox9.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox9.PasswordChar = false;
-            this.rjTextBox9.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox9.PlaceholderText = "";
-            this.rjTextBox9.Size = new System.Drawing.Size(250, 31);
-            this.rjTextBox9.TabIndex = 20;
-            this.rjTextBox9.Texts = "";
-            this.rjTextBox9.UnderlinedStyle = false;
+            this.txtTel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTel.AutoSize = true;
+            this.txtTel.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTel.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtTel.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTel.BorderRadius = 0;
+            this.txtTel.BorderSize = 2;
+            this.txtTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTel.Location = new System.Drawing.Point(527, 470);
+            this.txtTel.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTel.Multiline = false;
+            this.txtTel.Name = "txtTel";
+            this.txtTel.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtTel.PasswordChar = false;
+            this.txtTel.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtTel.PlaceholderText = "";
+            this.txtTel.Size = new System.Drawing.Size(250, 31);
+            this.txtTel.TabIndex = 20;
+            this.txtTel.Texts = "";
+            this.txtTel.UnderlinedStyle = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(527, 70);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(250, 24);
+            this.textBox1.TabIndex = 22;
+            // 
+            // pcbImgUser
+            // 
+            this.pcbImgUser.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pcbImgUser.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pcbImgUser.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.pcbImgUser.BorderColor2 = System.Drawing.Color.HotPink;
+            this.pcbImgUser.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.pcbImgUser.BorderSize = 2;
+            this.pcbImgUser.GradientAngle = 50F;
+            this.pcbImgUser.Image = global::StellarShip_Express.Properties.Resources.Null;
+            this.pcbImgUser.Location = new System.Drawing.Point(33, 68);
+            this.pcbImgUser.Name = "pcbImgUser";
+            this.pcbImgUser.Size = new System.Drawing.Size(183, 183);
+            this.pcbImgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbImgUser.TabIndex = 0;
+            this.pcbImgUser.TabStop = false;
+            // 
+            // cmbAcces
+            // 
+            this.cmbAcces.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbAcces.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbAcces.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbAcces.BorderSize = 1;
+            this.cmbAcces.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbAcces.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cmbAcces.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbAcces.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbAcces.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbAcces.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbAcces.Location = new System.Drawing.Point(527, 416);
+            this.cmbAcces.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbAcces.Name = "cmbAcces";
+            this.cmbAcces.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbAcces.SelectedValue = null;
+            this.cmbAcces.Size = new System.Drawing.Size(250, 30);
+            this.cmbAcces.TabIndex = 23;
+            this.cmbAcces.Texts = "";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(251)))));
+            this.iconButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Camera;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 25;
+            this.iconButton1.Location = new System.Drawing.Point(33, 323);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(183, 37);
+            this.iconButton1.TabIndex = 24;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            // 
+            // TitleBar
+            // 
+            this.TitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+            this.TitleBar.Controls.Add(this.btnMinum);
+            this.TitleBar.Controls.Add(this.btnClose);
+            this.TitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TitleBar.Location = new System.Drawing.Point(0, 0);
+            this.TitleBar.Margin = new System.Windows.Forms.Padding(4);
+            this.TitleBar.Name = "TitleBar";
+            this.TitleBar.Size = new System.Drawing.Size(840, 42);
+            this.TitleBar.TabIndex = 25;
+            this.TitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitleBar_MouseDown);
+            // 
+            // btnMinum
+            // 
+            this.btnMinum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinum.FlatAppearance.BorderSize = 0;
+            this.btnMinum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinum.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btnMinum.IconColor = System.Drawing.Color.White;
+            this.btnMinum.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMinum.IconSize = 25;
+            this.btnMinum.Location = new System.Drawing.Point(760, 4);
+            this.btnMinum.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMinum.Name = "btnMinum";
+            this.btnMinum.Size = new System.Drawing.Size(36, 25);
+            this.btnMinum.TabIndex = 4;
+            this.btnMinum.UseVisualStyleBackColor = true;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+            this.btnClose.IconColor = System.Drawing.Color.White;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClose.IconSize = 18;
+            this.btnClose.Location = new System.Drawing.Point(800, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(36, 25);
+            this.btnClose.TabIndex = 3;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmRegistrarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(970, 580);
+            this.ClientSize = new System.Drawing.Size(840, 546);
+            this.Controls.Add(this.TitleBar);
+            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.cmbAcces);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.rjTextBox9);
+            this.Controls.Add(this.txtTel);
             this.Controls.Add(this.rButton3);
-            this.Controls.Add(this.rButton2);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.rjTextBox8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.rjTextBox7);
+            this.Controls.Add(this.txtCPass);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.rjTextBox6);
-            this.Controls.Add(this.rButton1);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.rjTextBox5);
-            this.Controls.Add(this.rjTextBox4);
-            this.Controls.Add(this.rjTextBox3);
-            this.Controls.Add(this.rjTextBox2);
-            this.Controls.Add(this.rjTextBox1);
-            this.Controls.Add(this.circularPictureBox1);
+            this.Controls.Add(this.txtSeSurname);
+            this.Controls.Add(this.txtSurname);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtLoginName);
+            this.Controls.Add(this.pcbImgUser);
             this.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRegistrarUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegistrarUsuario";
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.frmRegistrarUsuario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImgUser)).EndInit();
+            this.TitleBar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -486,27 +548,32 @@
 
         #endregion
 
-        private CustomControls.CircularPictureBox circularPictureBox1;
-        private CustomControls.RJControls.RJTextBox rjTextBox1;
-        private CustomControls.RJControls.RJTextBox rjTextBox2;
-        private CustomControls.RJControls.RJTextBox rjTextBox3;
-        private CustomControls.RJControls.RJTextBox rjTextBox4;
-        private CustomControls.RJControls.RJTextBox rjTextBox5;
+        private CustomControls.CircularPictureBox pcbImgUser;
+        private CustomControls.RJControls.RJTextBox txtLoginName;
+        private CustomControls.RJControls.RJTextBox txtName;
+        private CustomControls.RJControls.RJTextBox txtSurname;
+        private CustomControls.RJControls.RJTextBox txtSeSurname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private CustomControls.RButton rButton1;
+        private CustomControls.RButton btnSelect;
         private System.Windows.Forms.Label label6;
-        private CustomControls.RJControls.RJTextBox rjTextBox6;
+        private CustomControls.RJControls.RJTextBox txtPass;
         private System.Windows.Forms.Label label7;
-        private CustomControls.RJControls.RJTextBox rjTextBox7;
+        private CustomControls.RJControls.RJTextBox txtCPass;
         private System.Windows.Forms.Label label8;
-        private CustomControls.RJControls.RJTextBox rjTextBox8;
-        private CustomControls.RButton rButton2;
+        private CustomControls.RButton btnSave;
         private CustomControls.RButton rButton3;
         private System.Windows.Forms.Label label9;
-        private CustomControls.RJControls.RJTextBox rjTextBox9;
+        private CustomControls.RJControls.RJTextBox txtTel;
+        private System.Windows.Forms.TextBox textBox1;
+        private CustomControls.RJComboBox cmbAcces;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.Panel TitleBar;
+        private FontAwesome.Sharp.IconButton btnMinum;
+        private FontAwesome.Sharp.IconButton btnClose;
     }
 }

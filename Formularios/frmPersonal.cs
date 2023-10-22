@@ -47,7 +47,8 @@ namespace StellarShip_Express.Formularios
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmRegistrarUsuario()); //llama al metodo y abre el form que se pase como parametro
+            frmRegistrarUsuario frm = new frmRegistrarUsuario(); //llama al metodo y abre el form que se pase como parametro
+            frm.ShowDialog();
         }
 
         private void frmPersonal_Load(object sender, EventArgs e)
@@ -61,6 +62,11 @@ namespace StellarShip_Express.Formularios
             {
                 dgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            MostrarUsuarios();
         }
     }
 }
