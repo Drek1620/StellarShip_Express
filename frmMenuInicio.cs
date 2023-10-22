@@ -1,6 +1,7 @@
 ﻿using FontAwesome.Sharp;
 using StellarShip_Express.Destino;
 using StellarShip_Express.Formularios;
+using StellarShip_Express.Vehiculos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,8 +44,6 @@ namespace StellarShip_Express
 
             if (panAlmacen.Visible == true)
                 panAlmacen.Visible = false;
-            if(panPersonal.Visible==true)
-                panPersonal.Visible=false;
         }
 
         private void DisableButton()
@@ -169,14 +168,15 @@ namespace StellarShip_Express
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
-            MostrarSubMenu(panPersonal);
+            OcultarSubMenu();
             ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new frmPersonal());
         }
 
         private void btnTrabajador_Click(object sender, EventArgs e)
         {
 
-            OpenChildForm(new frmPersonal());
+            
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -189,6 +189,7 @@ namespace StellarShip_Express
         {
             OcultarSubMenu();
             ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new frmVehiculos());
         }
 
         private void iconButton5_Click(object sender, EventArgs e)

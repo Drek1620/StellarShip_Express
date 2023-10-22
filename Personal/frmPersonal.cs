@@ -62,6 +62,10 @@ namespace StellarShip_Express.Formularios
             {
                 dgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
+            else
+            {
+                dgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            }
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)

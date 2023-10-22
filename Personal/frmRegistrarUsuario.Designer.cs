@@ -48,15 +48,16 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtTel = new CustomControls.RJControls.RJTextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pcbImgUser = new CustomControls.CircularPictureBox();
             this.cmbAcces = new CustomControls.RJComboBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.TitleBar = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.btnMinum = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbImgUser)).BeginInit();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.pcbImgUser = new CustomControls.CircularPictureBox();
             this.TitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImgUser)).BeginInit();
             this.SuspendLayout();
             // 
             // txtLoginName
@@ -398,30 +399,13 @@
             this.textBox1.Size = new System.Drawing.Size(250, 24);
             this.textBox1.TabIndex = 22;
             // 
-            // pcbImgUser
-            // 
-            this.pcbImgUser.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pcbImgUser.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.pcbImgUser.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.pcbImgUser.BorderColor2 = System.Drawing.Color.HotPink;
-            this.pcbImgUser.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.pcbImgUser.BorderSize = 2;
-            this.pcbImgUser.GradientAngle = 50F;
-            this.pcbImgUser.Image = global::StellarShip_Express.Properties.Resources.Null;
-            this.pcbImgUser.Location = new System.Drawing.Point(33, 68);
-            this.pcbImgUser.Name = "pcbImgUser";
-            this.pcbImgUser.Size = new System.Drawing.Size(183, 183);
-            this.pcbImgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbImgUser.TabIndex = 0;
-            this.pcbImgUser.TabStop = false;
-            // 
             // cmbAcces
             // 
             this.cmbAcces.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmbAcces.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cmbAcces.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.cmbAcces.BorderSize = 1;
-            this.cmbAcces.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbAcces.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAcces.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cmbAcces.ForeColor = System.Drawing.Color.DimGray;
             this.cmbAcces.IconColor = System.Drawing.Color.MediumSlateBlue;
@@ -440,25 +424,10 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(251)))));
-            this.iconButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Camera;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(33, 323);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(183, 37);
-            this.iconButton1.TabIndex = 24;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
             // TitleBar
             // 
-            this.TitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+            this.TitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(48)))), ((int)(((byte)(247)))));
+            this.TitleBar.Controls.Add(this.label10);
             this.TitleBar.Controls.Add(this.btnMinum);
             this.TitleBar.Controls.Add(this.btnClose);
             this.TitleBar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -468,6 +437,18 @@
             this.TitleBar.Size = new System.Drawing.Size(840, 42);
             this.TitleBar.TabIndex = 25;
             this.TitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitleBar_MouseDown);
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(12, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(266, 23);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Registro de Nuevo Usuario";
             // 
             // btnMinum
             // 
@@ -501,6 +482,39 @@
             this.btnClose.TabIndex = 3;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(251)))));
+            this.iconButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Camera;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 25;
+            this.iconButton1.Location = new System.Drawing.Point(33, 323);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(183, 37);
+            this.iconButton1.TabIndex = 24;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            // 
+            // pcbImgUser
+            // 
+            this.pcbImgUser.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pcbImgUser.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pcbImgUser.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.pcbImgUser.BorderColor2 = System.Drawing.Color.HotPink;
+            this.pcbImgUser.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.pcbImgUser.BorderSize = 2;
+            this.pcbImgUser.GradientAngle = 50F;
+            this.pcbImgUser.Image = global::StellarShip_Express.Properties.Resources.Null;
+            this.pcbImgUser.Location = new System.Drawing.Point(33, 68);
+            this.pcbImgUser.Name = "pcbImgUser";
+            this.pcbImgUser.Size = new System.Drawing.Size(183, 183);
+            this.pcbImgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbImgUser.TabIndex = 0;
+            this.pcbImgUser.TabStop = false;
             // 
             // frmRegistrarUsuario
             // 
@@ -539,8 +553,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegistrarUsuario";
             this.Load += new System.EventHandler(this.frmRegistrarUsuario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pcbImgUser)).EndInit();
             this.TitleBar.ResumeLayout(false);
+            this.TitleBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImgUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -575,5 +590,6 @@
         private System.Windows.Forms.Panel TitleBar;
         private FontAwesome.Sharp.IconButton btnMinum;
         private FontAwesome.Sharp.IconButton btnClose;
+        private System.Windows.Forms.Label label10;
     }
 }

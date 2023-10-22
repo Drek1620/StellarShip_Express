@@ -1,6 +1,6 @@
-﻿namespace StellarShip_Express.Formularios
+﻿namespace StellarShip_Express.Vehiculos
 {
-    partial class frmPersonal
+    partial class frmVehiculos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,65 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvDatos = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.btnActualizar = new FontAwesome.Sharp.IconButton();
             this.btnAgregar = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
-            this.btnActualizar = new FontAwesome.Sharp.IconButton();
+            this.dgvDatos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvDatos
+            // btnActualizar
             // 
-            this.dgvDatos.AllowUserToResizeColumns = false;
-            this.dgvDatos.AllowUserToResizeRows = false;
-            this.dgvDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.dgvDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(128)))), ((int)(((byte)(198)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(128)))), ((int)(((byte)(198)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvDatos.ColumnHeadersHeight = 30;
-            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDatos.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvDatos.EnableHeadersVisualStyles = false;
-            this.dgvDatos.Location = new System.Drawing.Point(50, 95);
-            this.dgvDatos.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvDatos.MultiSelect = false;
-            this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.ReadOnly = true;
-            this.dgvDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvDatos.Size = new System.Drawing.Size(866, 445);
-            this.dgvDatos.TabIndex = 2;
-            this.dgvDatos.Resize += new System.EventHandler(this.dgvDatos_Resize);
+            this.btnActualizar.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnActualizar.FlatAppearance.BorderSize = 0;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.IconChar = FontAwesome.Sharp.IconChar.ArrowsRotate;
+            this.btnActualizar.IconColor = System.Drawing.Color.White;
+            this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnActualizar.IconSize = 25;
+            this.btnActualizar.Location = new System.Drawing.Point(392, 50);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(44, 31);
+            this.btnActualizar.TabIndex = 23;
+            this.btnActualizar.UseVisualStyleBackColor = false;
             // 
             // btnAgregar
             // 
@@ -99,12 +68,11 @@
             this.btnAgregar.IconColor = System.Drawing.Color.White;
             this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregar.IconSize = 25;
-            this.btnAgregar.Location = new System.Drawing.Point(772, 50);
+            this.btnAgregar.Location = new System.Drawing.Point(773, 49);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(44, 31);
-            this.btnAgregar.TabIndex = 8;
+            this.btnAgregar.TabIndex = 22;
             this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -117,10 +85,10 @@
             this.btnEliminar.IconColor = System.Drawing.Color.White;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 25;
-            this.btnEliminar.Location = new System.Drawing.Point(872, 50);
+            this.btnEliminar.Location = new System.Drawing.Point(873, 49);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(44, 31);
-            this.btnEliminar.TabIndex = 7;
+            this.btnEliminar.TabIndex = 21;
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
             // btnEditar
@@ -134,10 +102,10 @@
             this.btnEditar.IconColor = System.Drawing.Color.White;
             this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditar.IconSize = 25;
-            this.btnEditar.Location = new System.Drawing.Point(822, 50);
+            this.btnEditar.Location = new System.Drawing.Point(823, 49);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(44, 31);
-            this.btnEditar.TabIndex = 6;
+            this.btnEditar.TabIndex = 20;
             this.btnEditar.UseVisualStyleBackColor = false;
             // 
             // iconButton1
@@ -150,10 +118,10 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(347, 51);
+            this.iconButton1.Location = new System.Drawing.Point(348, 50);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(44, 31);
-            this.iconButton1.TabIndex = 5;
+            this.iconButton1.TabIndex = 19;
             this.iconButton1.UseVisualStyleBackColor = false;
             // 
             // rjTextBox1
@@ -165,7 +133,7 @@
             this.rjTextBox1.BorderSize = 2;
             this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(51, 51);
+            this.rjTextBox1.Location = new System.Drawing.Point(52, 50);
             this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.rjTextBox1.Multiline = false;
             this.rjTextBox1.Name = "rjTextBox1";
@@ -174,28 +142,57 @@
             this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.rjTextBox1.PlaceholderText = "";
             this.rjTextBox1.Size = new System.Drawing.Size(297, 31);
-            this.rjTextBox1.TabIndex = 4;
+            this.rjTextBox1.TabIndex = 18;
             this.rjTextBox1.Texts = "";
             this.rjTextBox1.UnderlinedStyle = false;
             // 
-            // btnActualizar
+            // dgvDatos
             // 
-            this.btnActualizar.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnActualizar.FlatAppearance.BorderSize = 0;
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.IconChar = FontAwesome.Sharp.IconChar.ArrowsRotate;
-            this.btnActualizar.IconColor = System.Drawing.Color.White;
-            this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnActualizar.IconSize = 25;
-            this.btnActualizar.Location = new System.Drawing.Point(391, 51);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(44, 31);
-            this.btnActualizar.TabIndex = 16;
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.dgvDatos.AllowUserToResizeColumns = false;
+            this.dgvDatos.AllowUserToResizeRows = false;
+            this.dgvDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(128)))), ((int)(((byte)(198)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(128)))), ((int)(((byte)(198)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvDatos.ColumnHeadersHeight = 30;
+            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDatos.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvDatos.EnableHeadersVisualStyles = false;
+            this.dgvDatos.Location = new System.Drawing.Point(51, 94);
+            this.dgvDatos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvDatos.MultiSelect = false;
+            this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.ReadOnly = true;
+            this.dgvDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvDatos.Size = new System.Drawing.Size(866, 445);
+            this.dgvDatos.TabIndex = 17;
             // 
-            // frmPersonal
+            // frmVehiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -208,12 +205,11 @@
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.rjTextBox1);
             this.Controls.Add(this.dgvDatos);
-            this.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.Name = "frmPersonal";
-            this.Text = "frmPersonal";
-            this.Load += new System.EventHandler(this.frmPersonal_Load);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "frmVehiculos";
+            this.Text = "Vehiculos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.ResumeLayout(false);
 
@@ -221,12 +217,12 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvDatos;
-        private CustomControls.RJControls.RJTextBox rjTextBox1;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton btnEditar;
-        private FontAwesome.Sharp.IconButton btnEliminar;
-        private FontAwesome.Sharp.IconButton btnAgregar;
         private FontAwesome.Sharp.IconButton btnActualizar;
+        private FontAwesome.Sharp.IconButton btnAgregar;
+        private FontAwesome.Sharp.IconButton btnEliminar;
+        private FontAwesome.Sharp.IconButton btnEditar;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private CustomControls.RJControls.RJTextBox rjTextBox1;
+        private System.Windows.Forms.DataGridView dgvDatos;
     }
 }
