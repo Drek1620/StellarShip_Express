@@ -91,6 +91,7 @@ namespace StellarShip_Express.Formularios
                                     );
                             if (Alta == true)
                             {
+                                pcbImgUser.Image.Save(FilePath, ImageFormat.Jpeg);
                                 MessageBox.Show(this, "Usuario dado de alta exitosamente", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information); Limpiar();
                             }
                             else MessageBox.Show(this, "El Usuario ya existe en la base de datos", "Usuario Existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
