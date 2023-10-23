@@ -431,6 +431,7 @@
             this.TitleBar.Controls.Add(this.btnMinum);
             this.TitleBar.Controls.Add(this.btnClose);
             this.TitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TitleBar.ForeColor = System.Drawing.Color.White;
             this.TitleBar.Location = new System.Drawing.Point(0, 0);
             this.TitleBar.Margin = new System.Windows.Forms.Padding(4);
             this.TitleBar.Name = "TitleBar";
@@ -442,6 +443,7 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
+            this.label10.Enabled = false;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(12, 9);

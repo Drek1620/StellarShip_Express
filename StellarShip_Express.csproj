@@ -125,6 +125,7 @@
     <Compile Include="frmConexion.Designer.cs">
       <DependentUpon>frmConexion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personal\DatosModifPersonal.cs" />
     <Compile Include="Sucursal\frmSucursal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +166,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoConexion.cs" />
+    <Compile Include="Vehiculos\frmRegistrarVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehiculos\frmRegistrarVehiculo.Designer.cs">
+      <DependentUpon>frmRegistrarVehiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vehiculos\frmVehiculos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +212,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vehiculos\frmRegistrarVehiculo.resx">
+      <DependentUpon>frmRegistrarVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vehiculos\frmVehiculos.resx">
       <DependentUpon>frmVehiculos.cs</DependentUpon>
     </EmbeddedResource>

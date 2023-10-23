@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -145,6 +146,17 @@ namespace StellarShip_Express
         private void frm_Menu_Load(object sender, EventArgs e)
         {
             lblNombre.Text = DatosUsuario.Nombre + " " + DatosUsuario.PrimerApellido;
+            string ruta = @"C:\imgUsuarios\" + DatosUsuario.LoginNombre + ".jpg";
+            try
+            {
+                pcbImgUsuario.Image = Image.FromFile(ruta);
+            }
+            catch (Exception)
+            {
+
+                return;
+            }        
+
         }
 
         private void btnMaximizar_Click(object sender, EventArgs e)

@@ -47,7 +47,7 @@ namespace StellarShip_Express
                             DatosUsuario.Nombre = command.Parameters["@nombre"].Value.ToString();
                             DatosUsuario.Acceso = Convert.ToInt32(command.Parameters["@tipo"].Value);
                             DatosUsuario.PrimerApellido = command.Parameters["@PrimerA"].Value.ToString();
-                            DatosUsuario.PrimerApellido = command.Parameters["@SegundoA"].Value.ToString();
+                            DatosUsuario.SegundoApellido = command.Parameters["@SegundoA"].Value.ToString();
                             DatosUsuario.Telefono = Convert.ToInt64(command.Parameters["@Telefono"].Value);
                             return true;
 

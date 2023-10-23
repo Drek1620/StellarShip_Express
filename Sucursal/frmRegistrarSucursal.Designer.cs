@@ -283,7 +283,7 @@
             // 
             // panTitle
             // 
-            this.panTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+            this.panTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(48)))), ((int)(((byte)(247)))));
             this.panTitle.Controls.Add(this.iconButton2);
             this.panTitle.Controls.Add(this.btnMinum);
             this.panTitle.Controls.Add(this.btnClose);
