@@ -8,6 +8,7 @@ namespace StellarShip_Express.Personal
 {
     public static class DatosModifPersonal
     {
+        static string accion; 
         public static int IdUser { get; set; }
         public static string LoginNombre { get; set; }
         public static string Contraseña { get; set; }
@@ -17,5 +18,7 @@ namespace StellarShip_Express.Personal
         public static int Acceso { get; set; }
         public static long Telefono { get; set; }
         public static string Foto { get; set; }
+        public static string Accion { get => accion; set => accion = value; }
+ 
     }
 }

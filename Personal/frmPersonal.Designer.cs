@@ -178,6 +178,7 @@
             this.btnEditar.Size = new System.Drawing.Size(44, 31);
             this.btnEditar.TabIndex = 6;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // iconButton1
             // 

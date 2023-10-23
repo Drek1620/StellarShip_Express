@@ -7,12 +7,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Shapes;
 
 namespace StellarShip_Express
 {
@@ -21,6 +23,7 @@ namespace StellarShip_Express
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+        private string path;
         
         public frm_Menu()
         {
@@ -146,6 +149,10 @@ namespace StellarShip_Express
         private void frm_Menu_Load(object sender, EventArgs e)
         {
             lblNombre.Text = DatosUsuario.Nombre + " " + DatosUsuario.PrimerApellido;
+            path = @"C:\imgUsuarios";
+            if (Directory.Exists(path)) { }
+            else Directory.CreateDirectory(path);
+
             string ruta = @"C:\imgUsuarios\" + DatosUsuario.LoginNombre + ".jpg";
             try
             {

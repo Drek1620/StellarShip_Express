@@ -71,7 +71,41 @@ namespace StellarShip_Express
                     command.Parameters.AddWithValue("@TipoNuevo", acces);
                     command.Parameters.AddWithValue("@ContraUsuarioNuevo", pass);
                     command.Parameters.AddWithValue("@Telefono", tel);
-                    command.Parameters.AddWithValue("@foto", foto);
+                    command.Parameters.AddWithValue("@Foto", foto);
+                    int a = command.ExecuteNonQuery();
+                    if (a > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            }
+        }
+
+        public bool ModificaUsuario(int id, string loginName, string name, string firstName, string secondName, string pass, string acces, long tel, string foto)
+        {
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "spModificarUsuario";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Responsable", DatosUsuario.IdUser);
+                    command.Parameters.AddWithValue("@idModifica", id);
+                    command.Parameters.AddWithValue("@LoginNombreActualizar", loginName);
+                    command.Parameters.AddWithValue("@NombreUsuarioActualizar", name);
+                    command.Parameters.AddWithValue("@PrimerApellido", firstName);
+                    command.Parameters.AddWithValue("@SegundoApellido", secondName);
+                    command.Parameters.AddWithValue("@TipoNuevo", acces);
+                    command.Parameters.AddWithValue("@ContraUsuarioActualizar", pass);
+                    command.Parameters.AddWithValue("@Telefono", tel);
+                    command.Parameters.AddWithValue("@Foto", foto);
                     int a = command.ExecuteNonQuery();
                     if (a > 0)
                     {
