@@ -51,8 +51,13 @@ namespace StellarShip_Express.Formularios
                 txtTel.Texts = DatosModifPersonal.Telefono.ToString(); 
                 cmbAcces.SelectedIndex = Convert.ToInt32(DatosModifPersonal.Acceso) - 1;
                 try
-                {
-                    pcbImgUser.Image = Image.FromFile(@"C:\imgUsuarios\" + txtLoginName.Texts + ".jpg"); //Aqui cargo la imagen al pcb
+                {; //Aqui cargo la imagen al pcb
+                    using (Bitmap bmp = new Bitmap(@""+DatosModifPersonal.Foto))
+                    {
+                        MemoryStream ms = new MemoryStream();
+                        bmp.Save(ms,ImageFormat.Bmp);
+                        pcbImgUser.Image = Image.FromStream(ms);
+                    }
                 }
                 catch (Exception)
                 {
