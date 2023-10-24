@@ -16,5 +16,11 @@ namespace StellarShip_Express.Vehiculos
         {
             InitializeComponent();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmRegistrarVehiculo frm = new frmRegistrarVehiculo();
+            frm.ShowDialog();
+        }
     }
 }

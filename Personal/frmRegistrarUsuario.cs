@@ -109,28 +109,32 @@ namespace StellarShip_Express.Formularios
                 {
                     if (tgbCambiar.Checked==true)
                     {
-                        if (txtPass.Texts == txtCPass.Texts)
+                        if (txtPass.Texts != "")
                         {
-
-                            var Modifica = dato.ModificaUsuario(
-                                    Convert.ToInt32(txtId.Text),
-                                    txtLoginName.Texts,
-                                    txtName.Texts,
-                                    txtPApellido.Texts,
-                                    txtSApellido.Texts,
-                                    txtPass.Texts,
-                                    acces,
-                                    Convert.ToInt64(txtTel.Texts),
-                                    ruta
-                                    );
-                            if (Modifica == true)
+                            if (txtPass.Texts == txtCPass.Texts)
                             {
-                                pcbImgUser.Image.Save(FilePath, ImageFormat.Jpeg); //Aqui guardo la nueva imagen al modificar
-                                MessageBox.Show(this, "Usuario modificado exitosamente", "Modificación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                var Modifica = dato.ModificaUsuario(
+                                        Convert.ToInt32(txtId.Text),
+                                        txtLoginName.Texts,
+                                        txtName.Texts,
+                                        txtPApellido.Texts,
+                                        txtSApellido.Texts,
+                                        txtPass.Texts,
+                                        acces,
+                                        Convert.ToInt64(txtTel.Texts),
+                                        ruta
+                                        );
+                                if (Modifica == true)
+                                {
+                                    pcbImgUser.Image.Save(FilePath, ImageFormat.Jpeg); //Aqui guardo la nueva imagen al modificar
+                                    MessageBox.Show(this, "Usuario modificado exitosamente", "Modificación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                                else MessageBox.Show(this, "El Usuario no se ha podido modificar. Compruebe los datos", "Modificación no Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
-                            else MessageBox.Show(this, "El Usuario no se ha podido modificar. Compruebe los datos", "Modificación no Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            else MessageBox.Show(this, "Este nombre de login, ya esta registrado.\nPorfavor intenta con otro", "Contraseña no identicas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
-                        else MessageBox.Show(this, "Este nombre de login, ya esta registrado.\nPorfavor intenta con otro", "Contraseña no identicas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        
                     }
                     else
                     {
