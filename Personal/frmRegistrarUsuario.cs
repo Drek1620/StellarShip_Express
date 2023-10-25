@@ -147,8 +147,7 @@ namespace StellarShip_Express.Formularios
                                     DatosModifPersonal.Contraseña,
                                     acces,
                                     Convert.ToInt64(txtTel.Texts),
-                                    ruta
-                                    );
+                                    FilePath);
                         if (Modifica == true)
                         {
                             //File.Delete(FilePath);
@@ -217,6 +216,20 @@ namespace StellarShip_Express.Formularios
             if (ofdSeleccionar.ShowDialog()== DialogResult.OK)
             {
                 pcbImgUser.Image = Image.FromFile(ofdSeleccionar.FileName);
+            }
+        }
+
+        private void btnCamara_Click(object sender, EventArgs e)
+        {
+            frmTomarFoto frm = new frmTomarFoto();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                using (Bitmap bmp = new Bitmap(ImagenTomada.Foto))
+                {
+                    MemoryStream ms = new MemoryStream();
+                    bmp.Save(ms, ImageFormat.Bmp);
+                    pcbImgUser.Image = Image.FromStream(ms);
+                }
             }
         }
     }

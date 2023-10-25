@@ -54,7 +54,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btnMinum = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnCamara = new FontAwesome.Sharp.IconButton();
             this.pcbImgUser = new CustomControls.CircularPictureBox();
             this.tgbCambiar = new CustomControls.ToggleButton();
             this.lblCambiar = new System.Windows.Forms.Label();
@@ -491,21 +491,22 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // iconButton1
+            // btnCamara
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(251)))));
-            this.iconButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Camera;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(33, 323);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(183, 37);
-            this.iconButton1.TabIndex = 24;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.btnCamara.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(251)))));
+            this.btnCamara.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCamara.FlatAppearance.BorderSize = 0;
+            this.btnCamara.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCamara.IconChar = FontAwesome.Sharp.IconChar.Camera;
+            this.btnCamara.IconColor = System.Drawing.Color.White;
+            this.btnCamara.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCamara.IconSize = 25;
+            this.btnCamara.Location = new System.Drawing.Point(33, 323);
+            this.btnCamara.Name = "btnCamara";
+            this.btnCamara.Size = new System.Drawing.Size(183, 37);
+            this.btnCamara.TabIndex = 24;
+            this.btnCamara.UseVisualStyleBackColor = false;
+            this.btnCamara.Click += new System.EventHandler(this.btnCamara_Click);
             // 
             // pcbImgUser
             // 
@@ -562,7 +563,7 @@
             this.Controls.Add(this.lblCambiar);
             this.Controls.Add(this.tgbCambiar);
             this.Controls.Add(this.TitleBar);
-            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.btnCamara);
             this.Controls.Add(this.cmbAcces);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label9);
@@ -623,7 +624,7 @@
         private System.Windows.Forms.TextBox txtId;
         private CustomControls.RJComboBox cmbAcces;
         private System.Windows.Forms.OpenFileDialog ofdSeleccionar;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnCamara;
         private System.Windows.Forms.Panel TitleBar;
         private FontAwesome.Sharp.IconButton btnMinum;
         private FontAwesome.Sharp.IconButton btnClose;

@@ -1,6 +1,7 @@
 ﻿using FontAwesome.Sharp;
 using StellarShip_Express.Destino;
 using StellarShip_Express.Formularios;
+using StellarShip_Express.Personal;
 using StellarShip_Express.Vehiculos;
 using System;
 using System.Collections.Generic;
@@ -156,7 +157,12 @@ namespace StellarShip_Express
             string ruta = @"C:\imgUsuarios\" + DatosUsuario.LoginNombre + ".jpg";
             try
             {
-                pcbImgUsuario.Image = Image.FromFile(ruta);
+                using (Bitmap bmp = new Bitmap(ruta))
+                {
+                    MemoryStream ms = new MemoryStream();
+                    bmp.Save(ms, ImageFormat.Bmp);
+                    pcbImgUsuario.Image = Image.FromStream(ms);
+                }
             }
             catch (Exception)
             {
