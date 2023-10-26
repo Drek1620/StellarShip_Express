@@ -2,6 +2,7 @@
 using StellarShip_Express.Destino;
 using StellarShip_Express.Formularios;
 using StellarShip_Express.Personal;
+using StellarShip_Express.RegistrarPaquete;
 using StellarShip_Express.Vehiculos;
 using System;
 using System.Collections.Generic;
@@ -208,6 +209,7 @@ namespace StellarShip_Express
         {
             OcultarSubMenu();
             ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new frmRegistrarPaquete());
         }
 
         private void btnVehicles_Click(object sender, EventArgs e)

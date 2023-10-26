@@ -93,6 +93,7 @@ namespace StellarShip_Express.Personal
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            TerminarFvideo();
             this.Close();
         }
 

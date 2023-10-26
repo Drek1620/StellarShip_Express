@@ -414,6 +414,7 @@
             // 
             // panInicio
             // 
+            this.panInicio.AutoScroll = true;
             this.panInicio.Controls.Add(this.pictureBox2);
             this.panInicio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panInicio.Location = new System.Drawing.Point(220, 73);

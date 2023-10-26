@@ -148,6 +148,12 @@
       <DependentUpon>frmTomarFoto.cs</DependentUpon>
     </Compile>
     <Compile Include="Personal\ImagenTomada.cs" />
+    <Compile Include="RegistrarPaquete\frmRegistrarPaquete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarPaquete\frmRegistrarPaquete.Designer.cs">
+      <DependentUpon>frmRegistrarPaquete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sucursal\frmSucursal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Personal\frmTomarFoto.resx">
       <DependentUpon>frmTomarFoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarPaquete\frmRegistrarPaquete.resx">
+      <DependentUpon>frmRegistrarPaquete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sucursal\frmSucursal.resx">
       <DependentUpon>frmSucursal.cs</DependentUpon>

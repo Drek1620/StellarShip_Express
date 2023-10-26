@@ -30,7 +30,6 @@
         {
             this.panTitle = new System.Windows.Forms.Panel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.btnMinum = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.pcbCamara = new System.Windows.Forms.PictureBox();
             this.cboDispocitivos = new System.Windows.Forms.ComboBox();
@@ -44,7 +43,6 @@
             // 
             this.panTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(48)))), ((int)(((byte)(247)))));
             this.panTitle.Controls.Add(this.iconButton2);
-            this.panTitle.Controls.Add(this.btnMinum);
             this.panTitle.Controls.Add(this.btnClose);
             this.panTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panTitle.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -70,22 +68,6 @@
             this.iconButton2.Size = new System.Drawing.Size(33, 42);
             this.iconButton2.TabIndex = 10;
             this.iconButton2.UseVisualStyleBackColor = true;
-            // 
-            // btnMinum
-            // 
-            this.btnMinum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinum.FlatAppearance.BorderSize = 0;
-            this.btnMinum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinum.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.btnMinum.IconColor = System.Drawing.Color.White;
-            this.btnMinum.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMinum.IconSize = 25;
-            this.btnMinum.Location = new System.Drawing.Point(315, 1);
-            this.btnMinum.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMinum.Name = "btnMinum";
-            this.btnMinum.Size = new System.Drawing.Size(36, 25);
-            this.btnMinum.TabIndex = 6;
-            this.btnMinum.UseVisualStyleBackColor = true;
             // 
             // btnClose
             // 
@@ -163,6 +145,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTomarFoto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTomarFoto";
             this.Load += new System.EventHandler(this.frmTomarFoto_Load);
             this.panTitle.ResumeLayout(false);
@@ -176,7 +159,6 @@
 
         private System.Windows.Forms.Panel panTitle;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton btnMinum;
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.PictureBox pcbCamara;
         private System.Windows.Forms.ComboBox cboDispocitivos;
