@@ -278,8 +278,6 @@
   <ItemGroup>
     <None Include="Resources\Null.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ImgUsuarios\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

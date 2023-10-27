@@ -31,17 +31,17 @@
             this.panTitulo = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.tlpRemitente = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtNoInterior = new CustomControls.RJControls.RJTextBox();
             this.txtNombre = new CustomControls.RJControls.RJTextBox();
             this.txtEmpresa = new CustomControls.RJControls.RJTextBox();
             this.txtDireccion = new CustomControls.RJControls.RJTextBox();
-            this.txtNoInterior = new CustomControls.RJControls.RJTextBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.rjComboBox1 = new CustomControls.RJComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.rjComboBox1 = new CustomControls.RJComboBox();
             this.panTitulo.SuspendLayout();
             this.tlpRemitente.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -94,16 +94,52 @@
             this.tlpRemitente.Size = new System.Drawing.Size(816, 180);
             this.tlpRemitente.TabIndex = 1;
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(17, 75);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 22);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Enviar desde";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(421, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(144, 17);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Empresa (Opcional)";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(273, 17);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Nombre completo (nombre y apellido)";
+            // 
+            // txtNoInterior
+            // 
+            this.txtNoInterior.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNoInterior.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.txtNoInterior.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNoInterior.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtNoInterior.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
+            this.txtNoInterior.BorderRadius = 5;
+            this.txtNoInterior.BorderSize = 2;
+            this.txtNoInterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtNoInterior.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNoInterior.Location = new System.Drawing.Point(422, 114);
+            this.txtNoInterior.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNoInterior.Multiline = false;
+            this.txtNoInterior.Name = "txtNoInterior";
+            this.txtNoInterior.Padding = new System.Windows.Forms.Padding(20, 15, 15, 15);
+            this.txtNoInterior.PasswordChar = false;
+            this.txtNoInterior.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtNoInterior.PlaceholderText = "Nº interior/Depto (opcional)";
+            this.txtNoInterior.Size = new System.Drawing.Size(390, 51);
+            this.txtNoInterior.TabIndex = 12;
+            this.txtNoInterior.Texts = "";
+            this.txtNoInterior.UnderlinedStyle = false;
             // 
             // txtNombre
             // 
@@ -178,30 +214,38 @@
             this.txtDireccion.Texts = "";
             this.txtDireccion.UnderlinedStyle = false;
             // 
-            // txtNoInterior
+            // label4
             // 
-            this.txtNoInterior.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNoInterior.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.txtNoInterior.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNoInterior.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtNoInterior.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
-            this.txtNoInterior.BorderRadius = 5;
-            this.txtNoInterior.BorderSize = 2;
-            this.txtNoInterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtNoInterior.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNoInterior.Location = new System.Drawing.Point(422, 114);
-            this.txtNoInterior.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNoInterior.Multiline = false;
-            this.txtNoInterior.Name = "txtNoInterior";
-            this.txtNoInterior.Padding = new System.Windows.Forms.Padding(20, 15, 15, 15);
-            this.txtNoInterior.PasswordChar = false;
-            this.txtNoInterior.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtNoInterior.PlaceholderText = "Nº interior/Depto (opcional)";
-            this.txtNoInterior.Size = new System.Drawing.Size(390, 51);
-            this.txtNoInterior.TabIndex = 12;
-            this.txtNoInterior.Texts = "";
-            this.txtNoInterior.UnderlinedStyle = false;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(3, 90);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 17);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Calle y número";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(421, 90);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(195, 17);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Nº interior/Depto (opcional)";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(17, 75);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 22);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Enviar desde";
             // 
             // tableLayoutPanel1
             // 
@@ -231,7 +275,7 @@
             this.rjComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.rjComboBox1.BorderSize = 1;
             this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.rjComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rjComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.rjComboBox1.ForeColor = System.Drawing.Color.DimGray;
             this.rjComboBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.rjComboBox1.Items.AddRange(new object[] {
@@ -274,53 +318,9 @@
             this.rjComboBox1.Name = "rjComboBox1";
             this.rjComboBox1.Padding = new System.Windows.Forms.Padding(1);
             this.rjComboBox1.SelectedValue = null;
-            this.rjComboBox1.Size = new System.Drawing.Size(193, 30);
+            this.rjComboBox1.Size = new System.Drawing.Size(193, 37);
             this.rjComboBox1.TabIndex = 14;
             this.rjComboBox1.Texts = "";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(273, 17);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Nombre completo (nombre y apellido)";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(421, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(144, 17);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Empresa (Opcional)";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(3, 90);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 17);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Calle y número";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(421, 90);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(195, 17);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Nº interior/Depto (opcional)";
             // 
             // frmRegistrarPaquete
             // 
@@ -335,7 +335,7 @@
             this.Controls.Add(this.panTitulo);
             this.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRegistrarPaquete";
             this.Text = "frmRegistrarPaquete";
             this.Resize += new System.EventHandler(this.frmRegistrarPaquete_Resize);

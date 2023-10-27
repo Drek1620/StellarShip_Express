@@ -12,7 +12,8 @@ namespace StellarShip_Express
         private readonly string connectionString;
         public ConexionSQLServ()
         {
-            connectionString = "Server=.\\SQLEXPRESS;DataBase=STELLARSHIP; integrated security= true";
+            //connectionString = "Server=.\\SQLEXPRESS;DataBase=STELLARSHIP; integrated security= true";
+            connectionString = @"Server=STELLARSHIP.mssql.somee.com;DataBase=STELLARSHIP; User Id=Drek1620_SQLLogin_1; Password=y8clqb461k";
         }
 
 

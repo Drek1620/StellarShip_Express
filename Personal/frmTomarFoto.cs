@@ -101,7 +101,7 @@ namespace StellarShip_Express.Personal
         {
 
             if (!(FuenteVideo == null))
-            {
+            { 
                 if (FuenteVideo.IsRunning)
                 {
                     ImagenTomada.Foto = (Bitmap)pcbCamara.Image.Clone();
