@@ -13,7 +13,7 @@ namespace StellarShip_Express
     {
         private SqlDataReader LeerFilas;
         //Esta es la forma base para conectarse a la clase conexion
-        public DataTable MostrarUsuarios() 
+        public DataTable MostrarUsuarios()
         {
             DataTable Tabla = new DataTable();
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
@@ -27,6 +27,47 @@ namespace StellarShip_Express
                     command.CommandType = CommandType.Text;
                     LeerFilas = command.ExecuteReader();
                     Tabla.Load(LeerFilas);
+                    return Tabla;
+                }
+            }
+
+        }
+
+        public DataTable MostrarVehiculos()
+        {
+            DataTable Tabla = new DataTable();
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT * FROM Vehiculo";
+                    command.CommandType = CommandType.Text;
+                    LeerFilas = command.ExecuteReader();
+                    Tabla.Load(LeerFilas);
+                    return Tabla;
+                }
+            }
+
+        }
+
+        public DataTable Conductores()
+        {
+            DataTable Tabla = new DataTable();
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT Idusuario FROM Usuario where NivelAcceso = 3";
+                    command.CommandType = CommandType.Text;
+
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                    dataAdapter.Fill(Tabla);
                     return Tabla;
                 }
             }
@@ -53,7 +94,7 @@ namespace StellarShip_Express
 
         }
 
-        public bool AltaUsuario(string loginName, string name,string firstName, string secondName, string pass, string acces, long tel, string foto)
+        public bool AltaUsuario(string loginName, string name, string firstName, string secondName, string pass, string acces, long tel, string foto)
         {
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
             using (var connection = conexionSQL.GetConnection())
@@ -117,6 +158,40 @@ namespace StellarShip_Express
                         return false;
                     }
                 }
+            }
+        }
+
+        public bool AltaVehiculos(string Marca,string Modelo, string NoPlacas,string TipoVehiculo,string Año,int IdTransportista)
+        {
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection()) 
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "spAltaVehiculos";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Responsable",DatosUsuario.IdUser);
+                    command.Parameters.AddWithValue("@Marca", Marca);
+                    command.Parameters.AddWithValue("@Modelo",Modelo);
+                    command.Parameters.AddWithValue("@Noplacas", NoPlacas);
+                    command.Parameters.AddWithValue("@TipoVehiculo", TipoVehiculo);
+                    command.Parameters.AddWithValue("@Año", Año);
+                    command.Parameters.AddWithValue("@IdTransportista", IdTransportista);
+                    int a = command.ExecuteNonQuery();
+                    if (a > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+
+
+
             }
         }
 

@@ -194,6 +194,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoConexion.cs" />
+    <Compile Include="Vehiculos\DatosVehiculo.cs" />
     <Compile Include="Vehiculos\frmRegistrarVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -16,11 +16,49 @@ namespace StellarShip_Express.Vehiculos
         {
             InitializeComponent();
         }
+        public void MostrarVehiculos()
+        {
+            Consultas consultas = new Consultas();
+            dgvDatos.DataSource = consultas.MostrarVehiculos();
+        }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            DatosVehiculo.AccionV = "Alta";
             frmRegistrarVehiculo frm = new frmRegistrarVehiculo();
             frm.ShowDialog();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            MostrarVehiculos();
+        }
+
+        private void frmVehiculos_Load(object sender, EventArgs e)
+        {
+            MostrarVehiculos();
+        }
+
+        private void dgvDatos_Resize(object sender, EventArgs e)
+        {
+            if (dgvDatos.Width > 900)
+            {
+                dgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            else
+            {
+                dgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            }
         }
     }
 }

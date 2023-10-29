@@ -56,6 +56,7 @@
             this.btnActualizar.Size = new System.Drawing.Size(44, 31);
             this.btnActualizar.TabIndex = 23;
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnAgregar
             // 
@@ -91,6 +92,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(44, 31);
             this.btnEliminar.TabIndex = 21;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -108,6 +110,7 @@
             this.btnEditar.Size = new System.Drawing.Size(44, 31);
             this.btnEditar.TabIndex = 20;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // iconButton1
             // 
@@ -192,6 +195,7 @@
             this.dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDatos.Size = new System.Drawing.Size(866, 445);
             this.dgvDatos.TabIndex = 17;
+            this.dgvDatos.Resize += new System.EventHandler(this.dgvDatos_Resize);
             // 
             // frmVehiculos
             // 
@@ -211,6 +215,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmVehiculos";
             this.Text = "Vehiculos";
+            this.Load += new System.EventHandler(this.frmVehiculos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.ResumeLayout(false);
 

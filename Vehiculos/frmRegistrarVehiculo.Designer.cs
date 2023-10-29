@@ -45,7 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtTipoV = new System.Windows.Forms.Label();
             this.cmbConductor = new CustomControls.RJComboBox();
-            this.cmbTipo = new CustomControls.RJComboBox();
+            this.txtTipo = new CustomControls.RJControls.RJTextBox();
             this.TitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -147,6 +147,7 @@
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextColor = System.Drawing.Color.White;
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // txtModelo
             // 
@@ -315,26 +316,29 @@
             this.cmbConductor.Size = new System.Drawing.Size(250, 30);
             this.cmbConductor.TabIndex = 41;
             this.cmbConductor.Texts = "";
+            this.cmbConductor.OnSelectedIndexChanged += new System.EventHandler(this.cmbConductor_OnSelectedIndexChanged);
             // 
-            // cmbTipo
+            // txtTipo
             // 
-            this.cmbTipo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbTipo.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbTipo.BorderSize = 1;
-            this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cmbTipo.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbTipo.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbTipo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmbTipo.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbTipo.Location = new System.Drawing.Point(134, 224);
-            this.cmbTipo.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbTipo.SelectedValue = null;
-            this.cmbTipo.Size = new System.Drawing.Size(250, 30);
-            this.cmbTipo.TabIndex = 42;
-            this.cmbTipo.Texts = "";
+            this.txtTipo.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTipo.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtTipo.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTipo.BorderRadius = 0;
+            this.txtTipo.BorderSize = 2;
+            this.txtTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTipo.Location = new System.Drawing.Point(134, 223);
+            this.txtTipo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTipo.Multiline = false;
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtTipo.PasswordChar = false;
+            this.txtTipo.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtTipo.PlaceholderText = "";
+            this.txtTipo.Size = new System.Drawing.Size(250, 31);
+            this.txtTipo.TabIndex = 42;
+            this.txtTipo.Texts = "";
+            this.txtTipo.UnderlinedStyle = false;
             // 
             // frmRegistrarVehiculo
             // 
@@ -342,7 +346,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(414, 464);
-            this.Controls.Add(this.cmbTipo);
+            this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.cmbConductor);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
@@ -363,6 +367,7 @@
             this.Name = "frmRegistrarVehiculo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegistrarVehiculo";
+            this.Load += new System.EventHandler(this.frmRegistrarVehiculo_Load);
             this.TitleBar.ResumeLayout(false);
             this.TitleBar.PerformLayout();
             this.ResumeLayout(false);
@@ -389,6 +394,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label txtTipoV;
         private CustomControls.RJComboBox cmbConductor;
-        private CustomControls.RJComboBox cmbTipo;
+        private CustomControls.RJControls.RJTextBox txtTipo;
     }
 }
