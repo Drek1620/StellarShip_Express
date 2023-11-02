@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -193,6 +194,75 @@ namespace StellarShip_Express
 
 
             }
+        }
+
+        public bool ModificaVehiculos(int IdModifica, string Marca,string Modelo,string NoPlaca,string TipoVeh,string Año, int IdTransportista) 
+        {
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection()) 
+            { 
+                connection.Open();
+                using (var command = new SqlCommand()) 
+                { 
+                    command.Connection=connection;
+                    command.CommandText = "spModificaVehiculo";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Responsable",DatosUsuario.IdUser);
+                    command.Parameters.AddWithValue("@IdModifica",IdModifica);
+                    command.Parameters.AddWithValue("@MarcaAct",Marca);
+                    command.Parameters.AddWithValue("@ModeloAct", Modelo);
+                    command.Parameters.AddWithValue("@NoPlacaAct", NoPlaca);
+                    command.Parameters.AddWithValue("@TipoVehiculoAct", TipoVeh);
+                    command.Parameters.AddWithValue("@AñoAct", Año);
+                    command.Parameters.AddWithValue("@IdTransportistaAct", IdTransportista);
+                    int a = command.ExecuteNonQuery();
+                    if (a > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                }
+            
+            
+            
+            }
+               
+        
+        }
+        public bool EliminaVehiculos(int IdVehiculoBaja) 
+        {
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "spBajaVehiculo";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Responsable", DatosUsuario.IdUser);
+                    command.Parameters.AddWithValue("@IdVehiculoBaja",IdVehiculoBaja);              
+                    int a = command.ExecuteNonQuery();
+                    if (a > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                }
+
+
+
+            }
+
+                       
         }
 
     }

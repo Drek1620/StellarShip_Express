@@ -9,6 +9,7 @@ using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -65,21 +66,50 @@ namespace StellarShip_Express.Vehiculos
                     MessageBox.Show(this, "El Vehiculo ya existe en la base de datos", "Vehiculo Existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
+            if (DatosVehiculo.AccionV=="Modifica")
+            {
+                var Modifica = dato.ModificaVehiculos(Convert.ToInt32(txtIDMod.Text),txtMarca.Texts,txtModelo.Texts,txtNoPlaca.Texts,txtTipo.Texts,txtYear.Texts, Convert.ToInt32(conductor));
+                if (Modifica == true)
+                {
+                    MessageBox.Show(this, "Vehiculo Modificado exitosamente", "Modificacion Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                    MessageBox.Show(this, "El Vehiculo No existe en la base de datos", "Vehiculo Inexistente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
         }
 
        
 
         private void frmRegistrarVehiculo_Load(object sender, EventArgs e)
         {
-            
+            txtIDMod.ReadOnly = true;
             cmbConductor.DisplayMember = "Idusuario";
             cmbConductor.ValueMember = "Idusuario";
             cmbConductor.DataSource = IDcon.Conductores();
+
+            if (DatosVehiculo.AccionV=="Modifica")
+            {
+                txtIDMod.ReadOnly = false;
+                txtIDMod.Text = DatosVehiculo.IdVehiculo.ToString();
+                txtMarca.Texts = DatosVehiculo.Marca;
+                txtModelo.Texts=DatosVehiculo.Modelo;
+                txtNoPlaca.Texts = DatosVehiculo.NoPlaca;
+                txtTipo.Texts = DatosVehiculo.TipoVehiculo;
+                txtYear.Texts = DatosVehiculo.Año;
+                lblTitulo.Text = "Modificar Vehiculo";
+               
+            }
 
 
         }
 
         private void cmbConductor_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNoPlaca__TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.TitleBar = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.btnMinum = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.btnCancelar = new CustomControls.RButton();
@@ -46,35 +46,37 @@
             this.txtTipoV = new System.Windows.Forms.Label();
             this.cmbConductor = new CustomControls.RJComboBox();
             this.txtTipo = new CustomControls.RJControls.RJTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtIDMod = new System.Windows.Forms.TextBox();
             this.TitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // TitleBar
             // 
             this.TitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(48)))), ((int)(((byte)(247)))));
-            this.TitleBar.Controls.Add(this.label10);
+            this.TitleBar.Controls.Add(this.lblTitulo);
             this.TitleBar.Controls.Add(this.btnMinum);
             this.TitleBar.Controls.Add(this.btnClose);
             this.TitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.TitleBar.Location = new System.Drawing.Point(0, 0);
             this.TitleBar.Margin = new System.Windows.Forms.Padding(4);
             this.TitleBar.Name = "TitleBar";
-            this.TitleBar.Size = new System.Drawing.Size(414, 42);
+            this.TitleBar.Size = new System.Drawing.Size(412, 42);
             this.TitleBar.TabIndex = 26;
             this.TitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitleBar_MouseDown);
             // 
-            // label10
+            // lblTitulo
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label10.AutoSize = true;
-            this.label10.Enabled = false;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(4, 12);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(166, 19);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Registro de Vehiculo";
+            this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Enabled = false;
+            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(3, 12);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(166, 19);
+            this.lblTitulo.TabIndex = 8;
+            this.lblTitulo.Text = "Registro de Vehiculo";
             // 
             // btnMinum
             // 
@@ -85,7 +87,7 @@
             this.btnMinum.IconColor = System.Drawing.Color.White;
             this.btnMinum.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinum.IconSize = 25;
-            this.btnMinum.Location = new System.Drawing.Point(334, 4);
+            this.btnMinum.Location = new System.Drawing.Point(332, 4);
             this.btnMinum.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinum.Name = "btnMinum";
             this.btnMinum.Size = new System.Drawing.Size(36, 25);
@@ -101,7 +103,7 @@
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 18;
-            this.btnClose.Location = new System.Drawing.Point(374, 4);
+            this.btnClose.Location = new System.Drawing.Point(372, 4);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(36, 25);
@@ -120,7 +122,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(36, 397);
+            this.btnCancelar.Location = new System.Drawing.Point(36, 447);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(150, 40);
             this.btnCancelar.TabIndex = 40;
@@ -140,7 +142,7 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(234, 397);
+            this.btnAceptar.Location = new System.Drawing.Point(234, 447);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(150, 40);
             this.btnAceptar.TabIndex = 39;
@@ -158,7 +160,7 @@
             this.txtModelo.BorderSize = 2;
             this.txtModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtModelo.Location = new System.Drawing.Point(134, 113);
+            this.txtModelo.Location = new System.Drawing.Point(118, 175);
             this.txtModelo.Margin = new System.Windows.Forms.Padding(4);
             this.txtModelo.Multiline = false;
             this.txtModelo.Name = "txtModelo";
@@ -175,7 +177,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(33, 126);
+            this.label5.Location = new System.Drawing.Point(17, 188);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 18);
             this.label5.TabIndex = 35;
@@ -185,7 +187,7 @@
             // 
             this.lblConductor.AutoSize = true;
             this.lblConductor.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
-            this.lblConductor.Location = new System.Drawing.Point(33, 341);
+            this.lblConductor.Location = new System.Drawing.Point(17, 403);
             this.lblConductor.Name = "lblConductor";
             this.lblConductor.Size = new System.Drawing.Size(87, 18);
             this.lblConductor.TabIndex = 33;
@@ -200,7 +202,7 @@
             this.txtYear.BorderSize = 2;
             this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtYear.Location = new System.Drawing.Point(134, 273);
+            this.txtYear.Location = new System.Drawing.Point(118, 335);
             this.txtYear.Margin = new System.Windows.Forms.Padding(4);
             this.txtYear.Multiline = false;
             this.txtYear.Name = "txtYear";
@@ -217,7 +219,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(33, 286);
+            this.label7.Location = new System.Drawing.Point(17, 348);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 18);
             this.label7.TabIndex = 31;
@@ -232,7 +234,7 @@
             this.txtNoPlaca.BorderSize = 2;
             this.txtNoPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNoPlaca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNoPlaca.Location = new System.Drawing.Point(134, 165);
+            this.txtNoPlaca.Location = new System.Drawing.Point(118, 227);
             this.txtNoPlaca.Margin = new System.Windows.Forms.Padding(4);
             this.txtNoPlaca.Multiline = false;
             this.txtNoPlaca.Name = "txtNoPlaca";
@@ -244,12 +246,13 @@
             this.txtNoPlaca.TabIndex = 30;
             this.txtNoPlaca.Texts = "";
             this.txtNoPlaca.UnderlinedStyle = false;
+            this.txtNoPlaca._TextChanged += new System.EventHandler(this.txtNoPlaca__TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(33, 178);
+            this.label2.Location = new System.Drawing.Point(17, 240);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 18);
             this.label2.TabIndex = 29;
@@ -264,7 +267,7 @@
             this.txtMarca.BorderSize = 2;
             this.txtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMarca.Location = new System.Drawing.Point(134, 61);
+            this.txtMarca.Location = new System.Drawing.Point(118, 123);
             this.txtMarca.Margin = new System.Windows.Forms.Padding(4);
             this.txtMarca.Multiline = false;
             this.txtMarca.Name = "txtMarca";
@@ -281,7 +284,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(33, 74);
+            this.label1.Location = new System.Drawing.Point(17, 136);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 18);
             this.label1.TabIndex = 27;
@@ -291,7 +294,7 @@
             // 
             this.txtTipoV.AutoSize = true;
             this.txtTipoV.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
-            this.txtTipoV.Location = new System.Drawing.Point(33, 218);
+            this.txtTipoV.Location = new System.Drawing.Point(17, 280);
             this.txtTipoV.Name = "txtTipoV";
             this.txtTipoV.Size = new System.Drawing.Size(72, 36);
             this.txtTipoV.TabIndex = 37;
@@ -308,7 +311,7 @@
             this.cmbConductor.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.cmbConductor.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbConductor.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbConductor.Location = new System.Drawing.Point(134, 329);
+            this.cmbConductor.Location = new System.Drawing.Point(118, 391);
             this.cmbConductor.MinimumSize = new System.Drawing.Size(200, 30);
             this.cmbConductor.Name = "cmbConductor";
             this.cmbConductor.Padding = new System.Windows.Forms.Padding(1);
@@ -327,7 +330,7 @@
             this.txtTipo.BorderSize = 2;
             this.txtTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTipo.Location = new System.Drawing.Point(134, 223);
+            this.txtTipo.Location = new System.Drawing.Point(118, 285);
             this.txtTipo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTipo.Multiline = false;
             this.txtTipo.Name = "txtTipo";
@@ -340,12 +343,32 @@
             this.txtTipo.Texts = "";
             this.txtTipo.UnderlinedStyle = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(17, 84);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 18);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "ID";
+            // 
+            // txtIDMod
+            // 
+            this.txtIDMod.Location = new System.Drawing.Point(118, 70);
+            this.txtIDMod.Multiline = true;
+            this.txtIDMod.Name = "txtIDMod";
+            this.txtIDMod.Size = new System.Drawing.Size(250, 32);
+            this.txtIDMod.TabIndex = 44;
+            // 
             // frmRegistrarVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(414, 464);
+            this.ClientSize = new System.Drawing.Size(412, 499);
+            this.Controls.Add(this.txtIDMod);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.cmbConductor);
             this.Controls.Add(this.btnCancelar);
@@ -378,7 +401,7 @@
         #endregion
 
         private System.Windows.Forms.Panel TitleBar;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblTitulo;
         private FontAwesome.Sharp.IconButton btnMinum;
         private FontAwesome.Sharp.IconButton btnClose;
         private CustomControls.RButton btnCancelar;
@@ -395,5 +418,7 @@
         private System.Windows.Forms.Label txtTipoV;
         private CustomControls.RJComboBox cmbConductor;
         private CustomControls.RJControls.RJTextBox txtTipo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtIDMod;
     }
 }
