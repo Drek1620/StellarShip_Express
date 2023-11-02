@@ -209,7 +209,7 @@ namespace StellarShip_Express
         {
             OcultarSubMenu();
             ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new frmRegistrarPaquete());
+            OpenChildForm(new frmRegistrarDatos());
         }
 
         private void btnVehicles_Click(object sender, EventArgs e)
@@ -238,6 +238,13 @@ namespace StellarShip_Express
                 currentChildForm.Close();
             }
             Reset();
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Quieres cerrar la sesión?", "Advertencia",
+           MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                this.Close();
         }
     }
 }

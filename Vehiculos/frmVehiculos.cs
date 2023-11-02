@@ -90,20 +90,6 @@ namespace StellarShip_Express.Vehiculos
         private void frmVehiculos_Load(object sender, EventArgs e)
         {
             MostrarVehiculos();
-
-
-        }
-
-        private void dgvDatos_Resize(object sender, EventArgs e)
-        {
-            if (dgvDatos.Width > 900)
-            {
-                dgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            }
-            else
-            {
-                dgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            }
         }
     }
 }

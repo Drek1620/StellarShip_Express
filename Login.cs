@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AForge.Imaging.Filters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -50,8 +51,10 @@ namespace StellarShip_Express
                     if (validLogin == true)
                     {
                         frm_Menu f1 = new frm_Menu();
-                        this.Hide();
                         f1.Show();
+                        f1.FormClosed += Logout;
+                        this.Hide();
+                        
 
                     }
                     else
@@ -71,6 +74,15 @@ namespace StellarShip_Express
             {
                 MessageBox.Show("Conexion establecida a: " + TipoConexion.Conexion);
             }
+        }
+
+        private void Logout(object sender, FormClosedEventArgs e)
+        {
+            txtPass.Clear();
+            txtUser.Clear();
+            txtUser.Focus();
+            lblError.Visible=false;
+            this.Show();
         }
     }
 }

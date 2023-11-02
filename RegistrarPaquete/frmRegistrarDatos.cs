@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StellarShip_Express.RegistrarPaquete
 {
-    public partial class frmRegistrarPaquete : Form
+    public partial class frmRegistrarDatos : Form
     {
-        public frmRegistrarPaquete()
+        public frmRegistrarDatos()
         {
             InitializeComponent();
         }
@@ -23,6 +23,9 @@ namespace StellarShip_Express.RegistrarPaquete
             txtDireccion.Refresh();
             txtEmpresa.Refresh();
             txtNoInterior.Refresh();
+            txtCorreo.Refresh();
+            txtTelefono.Refresh();
+            txtCP.Refresh();
         }
     }
 }

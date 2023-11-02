@@ -44,7 +44,7 @@
             this.panMenu = new System.Windows.Forms.Panel();
             this.btnDestinos = new FontAwesome.Sharp.IconButton();
             this.btnVehicles = new FontAwesome.Sharp.IconButton();
-            this.iconButton8 = new FontAwesome.Sharp.IconButton();
+            this.btnCerrarSesion = new FontAwesome.Sharp.IconButton();
             this.btnStaff = new FontAwesome.Sharp.IconButton();
             this.btnParcel = new FontAwesome.Sharp.IconButton();
             this.btnRegister = new FontAwesome.Sharp.IconButton();
@@ -276,7 +276,7 @@
             this.panMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(52)))), ((int)(((byte)(72)))));
             this.panMenu.Controls.Add(this.btnDestinos);
             this.panMenu.Controls.Add(this.btnVehicles);
-            this.panMenu.Controls.Add(this.iconButton8);
+            this.panMenu.Controls.Add(this.btnCerrarSesion);
             this.panMenu.Controls.Add(this.btnStaff);
             this.panMenu.Controls.Add(this.panAlmacen);
             this.panMenu.Controls.Add(this.btnParcel);
@@ -329,25 +329,26 @@
             this.btnVehicles.UseVisualStyleBackColor = true;
             this.btnVehicles.Click += new System.EventHandler(this.btnVehicles_Click);
             // 
-            // iconButton8
+            // btnCerrarSesion
             // 
-            this.iconButton8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.iconButton8.FlatAppearance.BorderSize = 0;
-            this.iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton8.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton8.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.RightToBracket;
-            this.iconButton8.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton8.IconSize = 35;
-            this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton8.Location = new System.Drawing.Point(0, 520);
-            this.iconButton8.Name = "iconButton8";
-            this.iconButton8.Size = new System.Drawing.Size(220, 60);
-            this.iconButton8.TabIndex = 8;
-            this.iconButton8.Text = "Cerrar Sesion";
-            this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton8.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnCerrarSesion.IconChar = FontAwesome.Sharp.IconChar.RightToBracket;
+            this.btnCerrarSesion.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrarSesion.IconSize = 35;
+            this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 520);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(220, 60);
+            this.btnCerrarSesion.TabIndex = 8;
+            this.btnCerrarSesion.Text = "Cerrar Sesion";
+            this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // btnStaff
             // 
@@ -470,7 +471,7 @@
         private FontAwesome.Sharp.IconButton btnMinum;
         private FontAwesome.Sharp.IconButton btnClose;
         private FontAwesome.Sharp.IconButton btnRegister;
-        private FontAwesome.Sharp.IconButton iconButton8;
+        private FontAwesome.Sharp.IconButton btnCerrarSesion;
         private FontAwesome.Sharp.IconButton btnStaff;
         private System.Windows.Forms.Panel panAlmacen;
         private FontAwesome.Sharp.IconButton btnDelivered;
