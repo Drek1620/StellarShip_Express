@@ -148,12 +148,20 @@
       <DependentUpon>frmTomarFoto.cs</DependentUpon>
     </Compile>
     <Compile Include="Personal\ImagenTomada.cs" />
+    <Compile Include="RegistrarPaquete\ComboBoxTools.cs" />
     <Compile Include="RegistrarPaquete\frmRegistrarDatos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RegistrarPaquete\frmRegistrarDatos.Designer.cs">
       <DependentUpon>frmRegistrarDatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistrarPaquete\frmRegistrarEmpaque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarPaquete\frmRegistrarEmpaque.Designer.cs">
+      <DependentUpon>frmRegistrarEmpaque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarPaquete\ImageAndText.cs" />
     <Compile Include="Sucursal\frmSucursal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +228,9 @@
     <EmbeddedResource Include="RegistrarPaquete\frmRegistrarDatos.resx">
       <DependentUpon>frmRegistrarDatos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarPaquete\frmRegistrarEmpaque.resx">
+      <DependentUpon>frmRegistrarEmpaque.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sucursal\frmSucursal.resx">
       <DependentUpon>frmSucursal.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,6 +291,11 @@
   <ItemGroup>
     <None Include="Resources\Null.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Parcel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SoftEnvelope.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

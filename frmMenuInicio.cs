@@ -24,7 +24,7 @@ namespace StellarShip_Express
     {
         private IconButton currentBtn;
         private Panel leftBorderBtn;
-        private Form currentChildForm;
+        public static Form currentChildForm;
         private string path;
         
         public frm_Menu()

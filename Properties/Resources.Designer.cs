@@ -73,9 +73,29 @@ namespace StellarShip_Express.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Parcel {
+            get {
+                object obj = ResourceManager.GetObject("Parcel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Parcel_box {
             get {
                 object obj = ResourceManager.GetObject("Parcel_box", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SoftEnvelope {
+            get {
+                object obj = ResourceManager.GetObject("SoftEnvelope", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

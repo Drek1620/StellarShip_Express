@@ -77,7 +77,7 @@
             this.panTitle.ForeColor = System.Drawing.Color.White;
             this.panTitle.Location = new System.Drawing.Point(0, 0);
             this.panTitle.Name = "panTitle";
-            this.panTitle.Size = new System.Drawing.Size(1183, 73);
+            this.panTitle.Size = new System.Drawing.Size(1197, 73);
             this.panTitle.TabIndex = 0;
             this.panTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panTitle_MouseDown);
             // 
@@ -87,7 +87,7 @@
             this.lblTitleChildForm.AutoSize = true;
             this.lblTitleChildForm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.lblTitleChildForm.ForeColor = System.Drawing.Color.White;
-            this.lblTitleChildForm.Location = new System.Drawing.Point(655, 37);
+            this.lblTitleChildForm.Location = new System.Drawing.Point(662, 37);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
             this.lblTitleChildForm.Size = new System.Drawing.Size(51, 19);
             this.lblTitleChildForm.TabIndex = 12;
@@ -101,7 +101,7 @@
             this.pcbIconTitle.IconChar = FontAwesome.Sharp.IconChar.House;
             this.pcbIconTitle.IconColor = System.Drawing.Color.WhiteSmoke;
             this.pcbIconTitle.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.pcbIconTitle.Location = new System.Drawing.Point(619, 31);
+            this.pcbIconTitle.Location = new System.Drawing.Point(626, 31);
             this.pcbIconTitle.Name = "pcbIconTitle";
             this.pcbIconTitle.Size = new System.Drawing.Size(32, 32);
             this.pcbIconTitle.TabIndex = 11;
@@ -117,7 +117,7 @@
             this.iconButton2.IconColor = System.Drawing.Color.White;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 25;
-            this.iconButton2.Location = new System.Drawing.Point(1150, 32);
+            this.iconButton2.Location = new System.Drawing.Point(1164, 32);
             this.iconButton2.Margin = new System.Windows.Forms.Padding(10, 3, 20, 3);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(33, 42);
@@ -129,7 +129,7 @@
             this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(990, 41);
+            this.lblNombre.Location = new System.Drawing.Point(1004, 41);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(56, 17);
@@ -146,7 +146,7 @@
             this.pcbImgUsuario.BorderSize = 2;
             this.pcbImgUsuario.GradientAngle = 50F;
             this.pcbImgUsuario.Image = global::StellarShip_Express.Properties.Resources.Null;
-            this.pcbImgUsuario.Location = new System.Drawing.Point(944, 27);
+            this.pcbImgUsuario.Location = new System.Drawing.Point(958, 27);
             this.pcbImgUsuario.Name = "pcbImgUsuario";
             this.pcbImgUsuario.Size = new System.Drawing.Size(43, 43);
             this.pcbImgUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -162,7 +162,7 @@
             this.btnMaximizar.IconColor = System.Drawing.Color.White;
             this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximizar.IconSize = 20;
-            this.btnMaximizar.Location = new System.Drawing.Point(1105, 1);
+            this.btnMaximizar.Location = new System.Drawing.Point(1119, 1);
             this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(36, 25);
@@ -179,7 +179,7 @@
             this.btnMinum.IconColor = System.Drawing.Color.White;
             this.btnMinum.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinum.IconSize = 25;
-            this.btnMinum.Location = new System.Drawing.Point(1071, 1);
+            this.btnMinum.Location = new System.Drawing.Point(1085, 1);
             this.btnMinum.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinum.Name = "btnMinum";
             this.btnMinum.Size = new System.Drawing.Size(36, 25);
@@ -208,7 +208,7 @@
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 18;
-            this.btnClose.Location = new System.Drawing.Point(1143, 1);
+            this.btnClose.Location = new System.Drawing.Point(1157, 1);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(36, 25);
@@ -420,14 +420,14 @@
             this.panInicio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panInicio.Location = new System.Drawing.Point(220, 73);
             this.panInicio.Name = "panInicio";
-            this.panInicio.Size = new System.Drawing.Size(963, 580);
+            this.panInicio.Size = new System.Drawing.Size(977, 580);
             this.panInicio.TabIndex = 2;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = global::StellarShip_Express.Properties.Resources.StellarShip_Logo_Tono2;
-            this.pictureBox2.Location = new System.Drawing.Point(266, 175);
+            this.pictureBox2.Location = new System.Drawing.Point(271, 175);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(466, 100);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -439,7 +439,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1183, 653);
+            this.ClientSize = new System.Drawing.Size(1197, 653);
             this.Controls.Add(this.panInicio);
             this.Controls.Add(this.panMenu);
             this.Controls.Add(this.panTitle);
