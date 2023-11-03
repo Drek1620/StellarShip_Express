@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StellarShip_Express.Vehiculos;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -32,6 +33,24 @@ namespace StellarShip_Express
                 }
             }
 
+        }
+        public DataTable MostrarSuc() 
+        {
+            DataTable Tabla = new DataTable();
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT * FROM Sucursal";
+                    command.CommandType = CommandType.Text;
+                    LeerFilas = command.ExecuteReader();
+                    Tabla.Load(LeerFilas);
+                    return Tabla;
+                }
+            }
         }
 
         public DataTable MostrarVehiculos()
@@ -162,6 +181,70 @@ namespace StellarShip_Express
             }
         }
 
+        public bool AgregarSucursal(string NombreSuc, string PaisS, string EstadoS, string MunicipioS, string CPS, string TelefS)
+        {
+            ConexionSQLServ conexionSQL=new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "spAgregarSucursal";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Responsable", DatosUsuario.IdUser);
+                    command.Parameters.AddWithValue("Nombre", NombreSuc);
+                    command.Parameters.AddWithValue("Pais",PaisS);
+                    command.Parameters.AddWithValue("Estado",EstadoS);
+                    command.Parameters.AddWithValue("Municipio",MunicipioS);
+                    command.Parameters.AddWithValue("CP",CPS);
+                    command.Parameters.AddWithValue("Telefono",TelefS);
+                    int a = command.ExecuteNonQuery();
+                    if (a > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            }
+
+        }
+        public bool ModificarSucursal(int IDModi, string NombreSuc, string PaisS, string EstadoS, string MunicipioS, string CPS, string TelefS)
+        {
+            
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    
+                    command.Connection = connection;
+                    command.CommandText = "spEditarSucursal";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Responsable", DatosUsuario.IdUser);
+                    command.Parameters.AddWithValue("@idAtua", IDModi);
+                    command.Parameters.AddWithValue("NombreActua", NombreSuc);
+                    command.Parameters.AddWithValue("PaisActua", PaisS);
+                    command.Parameters.AddWithValue("EstadoActua", EstadoS);
+                    command.Parameters.AddWithValue("MunicipioActua", MunicipioS);
+                    command.Parameters.AddWithValue("CPActua", CPS);
+                    command.Parameters.AddWithValue("TelefonoActua", TelefS);
+                    int a = command.ExecuteNonQuery();
+                    if (a > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            }
+        }
         public bool AltaVehiculos(string Marca,string Modelo, string NoPlacas,string TipoVehiculo,string Año,int IdTransportista)
         {
             ConexionSQLServ conexionSQL = new ConexionSQLServ();

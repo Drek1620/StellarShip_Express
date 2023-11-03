@@ -43,9 +43,12 @@
             this.btnAceptar = new CustomControls.RButton();
             this.btnCancelar = new CustomControls.RButton();
             this.panTitle = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.btnMinum = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtIdSuc = new System.Windows.Forms.TextBox();
             this.panTitle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,9 +56,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(34, 74);
+            this.label1.Location = new System.Drawing.Point(35, 124);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 18);
+            this.label1.Size = new System.Drawing.Size(99, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
@@ -68,7 +71,7 @@
             this.txtNombreSuc.BorderSize = 2;
             this.txtNombreSuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreSuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNombreSuc.Location = new System.Drawing.Point(131, 61);
+            this.txtNombreSuc.Location = new System.Drawing.Point(153, 111);
             this.txtNombreSuc.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreSuc.Multiline = false;
             this.txtNombreSuc.Name = "txtNombreSuc";
@@ -76,7 +79,7 @@
             this.txtNombreSuc.PasswordChar = false;
             this.txtNombreSuc.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtNombreSuc.PlaceholderText = "";
-            this.txtNombreSuc.Size = new System.Drawing.Size(250, 31);
+            this.txtNombreSuc.Size = new System.Drawing.Size(250, 39);
             this.txtNombreSuc.TabIndex = 1;
             this.txtNombreSuc.Texts = "";
             this.txtNombreSuc.UnderlinedStyle = false;
@@ -90,7 +93,7 @@
             this.txtEstado.BorderSize = 2;
             this.txtEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEstado.Location = new System.Drawing.Point(131, 165);
+            this.txtEstado.Location = new System.Drawing.Point(153, 215);
             this.txtEstado.Margin = new System.Windows.Forms.Padding(4);
             this.txtEstado.Multiline = false;
             this.txtEstado.Name = "txtEstado";
@@ -98,7 +101,7 @@
             this.txtEstado.PasswordChar = false;
             this.txtEstado.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtEstado.PlaceholderText = "";
-            this.txtEstado.Size = new System.Drawing.Size(250, 31);
+            this.txtEstado.Size = new System.Drawing.Size(250, 39);
             this.txtEstado.TabIndex = 3;
             this.txtEstado.Texts = "";
             this.txtEstado.UnderlinedStyle = false;
@@ -107,9 +110,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(34, 178);
+            this.label2.Location = new System.Drawing.Point(35, 228);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 18);
+            this.label2.Size = new System.Drawing.Size(84, 26);
             this.label2.TabIndex = 2;
             this.label2.Text = "Estado";
             // 
@@ -122,7 +125,7 @@
             this.txtMunicipio.BorderSize = 2;
             this.txtMunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMunicipio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMunicipio.Location = new System.Drawing.Point(131, 226);
+            this.txtMunicipio.Location = new System.Drawing.Point(153, 276);
             this.txtMunicipio.Margin = new System.Windows.Forms.Padding(4);
             this.txtMunicipio.Multiline = false;
             this.txtMunicipio.Name = "txtMunicipio";
@@ -130,7 +133,7 @@
             this.txtMunicipio.PasswordChar = false;
             this.txtMunicipio.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtMunicipio.PlaceholderText = "";
-            this.txtMunicipio.Size = new System.Drawing.Size(250, 31);
+            this.txtMunicipio.Size = new System.Drawing.Size(250, 39);
             this.txtMunicipio.TabIndex = 5;
             this.txtMunicipio.Texts = "";
             this.txtMunicipio.UnderlinedStyle = false;
@@ -139,9 +142,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(34, 239);
+            this.label3.Location = new System.Drawing.Point(35, 289);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 18);
+            this.label3.Size = new System.Drawing.Size(116, 26);
             this.label3.TabIndex = 4;
             this.label3.Text = "Municipio";
             // 
@@ -154,7 +157,7 @@
             this.txtCP.BorderSize = 2;
             this.txtCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCP.Location = new System.Drawing.Point(131, 285);
+            this.txtCP.Location = new System.Drawing.Point(153, 335);
             this.txtCP.Margin = new System.Windows.Forms.Padding(4);
             this.txtCP.Multiline = false;
             this.txtCP.Name = "txtCP";
@@ -162,7 +165,7 @@
             this.txtCP.PasswordChar = false;
             this.txtCP.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtCP.PlaceholderText = "";
-            this.txtCP.Size = new System.Drawing.Size(250, 31);
+            this.txtCP.Size = new System.Drawing.Size(250, 39);
             this.txtCP.TabIndex = 7;
             this.txtCP.Texts = "";
             this.txtCP.UnderlinedStyle = false;
@@ -171,9 +174,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(34, 298);
+            this.label4.Location = new System.Drawing.Point(35, 348);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 18);
+            this.label4.Size = new System.Drawing.Size(51, 26);
             this.label4.TabIndex = 6;
             this.label4.Text = "C/P";
             // 
@@ -187,7 +190,7 @@
             this.txtPais.Enabled = false;
             this.txtPais.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPais.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPais.Location = new System.Drawing.Point(131, 113);
+            this.txtPais.Location = new System.Drawing.Point(153, 163);
             this.txtPais.Margin = new System.Windows.Forms.Padding(4);
             this.txtPais.Multiline = false;
             this.txtPais.Name = "txtPais";
@@ -195,7 +198,7 @@
             this.txtPais.PasswordChar = false;
             this.txtPais.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPais.PlaceholderText = "";
-            this.txtPais.Size = new System.Drawing.Size(250, 31);
+            this.txtPais.Size = new System.Drawing.Size(250, 39);
             this.txtPais.TabIndex = 9;
             this.txtPais.Texts = "México";
             this.txtPais.UnderlinedStyle = false;
@@ -204,9 +207,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(34, 126);
+            this.label5.Location = new System.Drawing.Point(35, 176);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 18);
+            this.label5.Size = new System.Drawing.Size(54, 26);
             this.label5.TabIndex = 8;
             this.label5.Text = "País";
             // 
@@ -219,7 +222,7 @@
             this.txtTel.BorderSize = 2;
             this.txtTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTel.Location = new System.Drawing.Point(131, 347);
+            this.txtTel.Location = new System.Drawing.Point(153, 397);
             this.txtTel.Margin = new System.Windows.Forms.Padding(4);
             this.txtTel.Multiline = false;
             this.txtTel.Name = "txtTel";
@@ -227,7 +230,7 @@
             this.txtTel.PasswordChar = false;
             this.txtTel.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtTel.PlaceholderText = "";
-            this.txtTel.Size = new System.Drawing.Size(250, 31);
+            this.txtTel.Size = new System.Drawing.Size(250, 39);
             this.txtTel.TabIndex = 11;
             this.txtTel.Texts = "";
             this.txtTel.UnderlinedStyle = false;
@@ -236,9 +239,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(34, 360);
+            this.label6.Location = new System.Drawing.Point(35, 410);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 18);
+            this.label6.Size = new System.Drawing.Size(101, 26);
             this.label6.TabIndex = 10;
             this.label6.Text = "Telefono";
             // 
@@ -253,13 +256,14 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(231, 416);
+            this.btnAceptar.Location = new System.Drawing.Point(232, 466);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(150, 40);
             this.btnAceptar.TabIndex = 12;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextColor = System.Drawing.Color.White;
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -272,7 +276,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(37, 416);
+            this.btnCancelar.Location = new System.Drawing.Point(38, 466);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(150, 40);
             this.btnCancelar.TabIndex = 13;
@@ -284,6 +288,7 @@
             // panTitle
             // 
             this.panTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(48)))), ((int)(((byte)(247)))));
+            this.panTitle.Controls.Add(this.lblTitulo);
             this.panTitle.Controls.Add(this.iconButton2);
             this.panTitle.Controls.Add(this.btnMinum);
             this.panTitle.Controls.Add(this.btnClose);
@@ -295,6 +300,15 @@
             this.panTitle.Size = new System.Drawing.Size(416, 39);
             this.panTitle.TabIndex = 14;
             this.panTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panTitle_MouseDown);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.Location = new System.Drawing.Point(84, 7);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(0, 26);
+            this.lblTitulo.TabIndex = 15;
             // 
             // iconButton2
             // 
@@ -343,14 +357,34 @@
             this.btnClose.Size = new System.Drawing.Size(36, 25);
             this.btnClose.TabIndex = 5;
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(37, 59);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(33, 26);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Id";
+            // 
+            // txtIdSuc
+            // 
+            this.txtIdSuc.Location = new System.Drawing.Point(216, 58);
+            this.txtIdSuc.Name = "txtIdSuc";
+            this.txtIdSuc.Size = new System.Drawing.Size(100, 32);
+            this.txtIdSuc.TabIndex = 16;
             // 
             // frmRegistrarSucursal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(416, 478);
+            this.ClientSize = new System.Drawing.Size(416, 525);
+            this.Controls.Add(this.txtIdSuc);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.panTitle);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
@@ -372,7 +406,9 @@
             this.Name = "frmRegistrarSucursal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegistrarDestino";
+            this.Load += new System.EventHandler(this.frmRegistrarSucursal_Load);
             this.panTitle.ResumeLayout(false);
+            this.panTitle.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,5 +434,8 @@
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton btnMinum;
         private FontAwesome.Sharp.IconButton btnClose;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtIdSuc;
     }
 }

@@ -106,10 +106,15 @@ namespace StellarShip_Express.Vehiculos
 
         private void cmbConductor_OnSelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void txtNoPlaca__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TitleBar_Paint(object sender, PaintEventArgs e)
         {
 
         }

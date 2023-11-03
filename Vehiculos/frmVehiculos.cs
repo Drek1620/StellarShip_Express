@@ -91,5 +91,10 @@ namespace StellarShip_Express.Vehiculos
         {
             MostrarVehiculos();
         }
+
+        private void dgvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

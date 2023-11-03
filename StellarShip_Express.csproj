@@ -53,7 +53,7 @@
     </Reference>
     <Reference Include="CustomControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\OneDrive\Escritorio\CustomControls.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\CustomControls.dll</HintPath>
     </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.6.3.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
@@ -194,6 +194,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoConexion.cs" />
+    <Compile Include="Sucursal\DatosSucursal.cs" />
     <Compile Include="Vehiculos\DatosVehiculo.cs" />
     <Compile Include="Vehiculos\frmRegistrarVehiculo.cs">
       <SubType>Form</SubType>
