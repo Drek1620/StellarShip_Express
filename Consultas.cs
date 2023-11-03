@@ -226,7 +226,7 @@ namespace StellarShip_Express
                     command.CommandText = "spEditarSucursal";
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@Responsable", DatosUsuario.IdUser);
-                    command.Parameters.AddWithValue("@idAtua", IDModi);
+                    command.Parameters.AddWithValue("@idActua", IDModi);
                     command.Parameters.AddWithValue("NombreActua", NombreSuc);
                     command.Parameters.AddWithValue("PaisActua", PaisS);
                     command.Parameters.AddWithValue("EstadoActua", EstadoS);

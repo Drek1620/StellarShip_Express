@@ -72,7 +72,9 @@ namespace StellarShip_Express.Destino
             if (DatosSucursal.AccionS == "Modifica")
             {
 
-                var Modifica = dato.ModificarSucursal(Convert.ToInt32(txtIdSuc.Text),txtNombreSuc.Texts, txtPais.Texts, txtEstado.Texts, txtMunicipio.Texts, txtCP.Texts, txtTel.Texts);
+                var Modifica = dato.ModificarSucursal(
+                    Convert.ToInt32(txtIdSuc.Text),
+                    txtNombreSuc.Texts, txtPais.Texts, txtEstado.Texts, txtMunicipio.Texts, txtCP.Texts, txtTel.Texts);
                 if (Modifica == true)
                 {
                     MessageBox.Show(this, "Sucursal Modificada exitosamente", "Modificacion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
