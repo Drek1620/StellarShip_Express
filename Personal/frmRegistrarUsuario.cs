@@ -26,10 +26,13 @@ namespace StellarShip_Express.Formularios
 
         public void ListarPuestos()
         {
-            Consultas objPuesto= new Consultas();
-            cmbAcces.DataSource = objPuesto.MostrarPuestos();
+            Consultas objConsulta= new Consultas();
+            cmbAcces.DataSource = objConsulta.MostrarPuestos();
             cmbAcces.DisplayMember = "Puesto";
             cmbAcces.ValueMember = "IdPuesto";
+            cmbSucursal.DataSource = objConsulta.MostrarSuc();
+            cmbSucursal.DisplayMember = "Nombre";
+            cmbSucursal.ValueMember = "IdDestino";
         }
         private void frmRegistrarUsuario_Load(object sender, EventArgs e)
         {
@@ -92,6 +95,7 @@ namespace StellarShip_Express.Formularios
                                     txtPass.Texts,
                                     acces,
                                     Convert.ToInt64(txtTel.Texts),
+                                    Convert.ToInt32(cmbSucursal.SelectedValue),
                                     ruta
                                     );
                             if (Alta == true)
@@ -123,6 +127,7 @@ namespace StellarShip_Express.Formularios
                                         txtPass.Texts,
                                         acces,
                                         Convert.ToInt64(txtTel.Texts),
+                                        Convert.ToInt32(cmbSucursal.SelectedValue),
                                         ruta
                                         );
                                 if (Modifica == true)
@@ -147,6 +152,7 @@ namespace StellarShip_Express.Formularios
                                     DatosModifPersonal.Contraseña,
                                     acces,
                                     Convert.ToInt64(txtTel.Texts),
+                                    Convert.ToInt32(cmbSucursal.SelectedValue),
                                     FilePath);
                         if (Modifica == true)
                         {

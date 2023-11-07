@@ -38,5 +38,15 @@ namespace StellarShip_Express.RegistrarPaquete
             cboPlanets.DisplayImagesAndText(planets);
             cboPlanets.SelectedIndex = 0;
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

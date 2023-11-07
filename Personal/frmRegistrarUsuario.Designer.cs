@@ -58,6 +58,8 @@
             this.pcbImgUser = new CustomControls.CircularPictureBox();
             this.tgbCambiar = new CustomControls.ToggleButton();
             this.lblCambiar = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cmbSucursal = new CustomControls.RJComboBox();
             this.TitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImgUser)).BeginInit();
             this.SuspendLayout();
@@ -238,7 +240,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(285, 434);
+            this.label6.Location = new System.Drawing.Point(285, 482);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(123, 23);
             this.label6.TabIndex = 13;
@@ -256,7 +258,7 @@
             this.txtPass.BorderSize = 2;
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPass.Location = new System.Drawing.Point(527, 426);
+            this.txtPass.Location = new System.Drawing.Point(527, 474);
             this.txtPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtPass.Multiline = false;
             this.txtPass.Name = "txtPass";
@@ -275,7 +277,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(285, 485);
+            this.label7.Location = new System.Drawing.Point(285, 533);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(225, 23);
             this.label7.TabIndex = 15;
@@ -293,7 +295,7 @@
             this.txtCPass.BorderSize = 2;
             this.txtCPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCPass.Location = new System.Drawing.Point(527, 477);
+            this.txtCPass.Location = new System.Drawing.Point(527, 525);
             this.txtCPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtCPass.Multiline = false;
             this.txtCPass.Name = "txtCPass";
@@ -330,7 +332,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(33, 403);
+            this.btnSave.Location = new System.Drawing.Point(33, 414);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(183, 40);
             this.btnSave.TabIndex = 18;
@@ -351,7 +353,7 @@
             this.rButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rButton3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.rButton3.ForeColor = System.Drawing.Color.White;
-            this.rButton3.Location = new System.Drawing.Point(33, 461);
+            this.rButton3.Location = new System.Drawing.Point(33, 472);
             this.rButton3.Name = "rButton3";
             this.rButton3.Size = new System.Drawing.Size(183, 40);
             this.rButton3.TabIndex = 19;
@@ -400,7 +402,7 @@
             // 
             this.txtId.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(527, 65);
+            this.txtId.Location = new System.Drawing.Point(527, 70);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(250, 24);
             this.txtId.TabIndex = 22;
@@ -528,7 +530,7 @@
             // tgbCambiar
             // 
             this.tgbCambiar.AutoSize = true;
-            this.tgbCambiar.Location = new System.Drawing.Point(527, 400);
+            this.tgbCambiar.Location = new System.Drawing.Point(527, 448);
             this.tgbCambiar.MinimumSize = new System.Drawing.Size(45, 22);
             this.tgbCambiar.Name = "tgbCambiar";
             this.tgbCambiar.OffBackColor = System.Drawing.Color.Gray;
@@ -547,19 +549,54 @@
             this.lblCambiar.AutoSize = true;
             this.lblCambiar.BackColor = System.Drawing.SystemColors.Window;
             this.lblCambiar.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.lblCambiar.Location = new System.Drawing.Point(578, 402);
+            this.lblCambiar.Location = new System.Drawing.Point(578, 450);
             this.lblCambiar.Name = "lblCambiar";
             this.lblCambiar.Size = new System.Drawing.Size(153, 17);
             this.lblCambiar.TabIndex = 27;
             this.lblCambiar.Text = "Cambiar  Contraseña";
             this.lblCambiar.Visible = false;
             // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.Window;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
+            this.label11.Location = new System.Drawing.Point(285, 418);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(90, 23);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "Sucursal";
+            // 
+            // cmbSucursal
+            // 
+            this.cmbSucursal.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbSucursal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbSucursal.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbSucursal.BorderSize = 1;
+            this.cmbSucursal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cmbSucursal.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbSucursal.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbSucursal.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbSucursal.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbSucursal.Location = new System.Drawing.Point(527, 411);
+            this.cmbSucursal.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbSucursal.Name = "cmbSucursal";
+            this.cmbSucursal.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbSucursal.SelectedValue = null;
+            this.cmbSucursal.Size = new System.Drawing.Size(250, 30);
+            this.cmbSucursal.TabIndex = 30;
+            this.cmbSucursal.Texts = "";
+            // 
             // frmRegistrarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(840, 536);
+            this.ClientSize = new System.Drawing.Size(840, 574);
+            this.Controls.Add(this.cmbSucursal);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.lblCambiar);
             this.Controls.Add(this.tgbCambiar);
             this.Controls.Add(this.TitleBar);
@@ -632,5 +669,7 @@
         private CustomControls.ToggleButton tgbCambiar;
         private System.Windows.Forms.Label lblCambiar;
         public CustomControls.CircularPictureBox pcbImgUser;
+        private System.Windows.Forms.Label label11;
+        private CustomControls.RJComboBox cmbSucursal;
     }
 }

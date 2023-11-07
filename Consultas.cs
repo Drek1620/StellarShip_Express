@@ -114,7 +114,7 @@ namespace StellarShip_Express
 
         }
 
-        public bool AltaUsuario(string loginName, string name, string firstName, string secondName, string pass, string acces, long tel, string foto)
+        public bool AltaUsuario(string loginName, string name, string firstName, string secondName, string pass, string acces, long tel, int sucursal, string foto)
         {
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
             using (var connection = conexionSQL.GetConnection())
@@ -133,6 +133,7 @@ namespace StellarShip_Express
                     command.Parameters.AddWithValue("@TipoNuevo", acces);
                     command.Parameters.AddWithValue("@ContraUsuarioNuevo", pass);
                     command.Parameters.AddWithValue("@Telefono", tel);
+                    command.Parameters.AddWithValue("@Sucursal", sucursal);
                     command.Parameters.AddWithValue("@Foto", foto);
                     int a = command.ExecuteNonQuery();
                     if (a > 0)
@@ -147,7 +148,7 @@ namespace StellarShip_Express
             }
         }
 
-        public bool ModificaUsuario(int id, string loginName, string name, string firstName, string secondName, string pass, string acces, long tel, string foto)
+        public bool ModificaUsuario(int id, string loginName, string name, string firstName, string secondName, string pass, string acces, long tel,int sucursal, string foto)
         {
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
             using (var connection = conexionSQL.GetConnection())
@@ -167,6 +168,7 @@ namespace StellarShip_Express
                     command.Parameters.AddWithValue("@TipoNuevo", acces);
                     command.Parameters.AddWithValue("@ContraUsuarioActualizar", pass);
                     command.Parameters.AddWithValue("@Telefono", tel);
+                    command.Parameters.AddWithValue("@Sucursal", sucursal);
                     command.Parameters.AddWithValue("@Foto", foto);
                     int a = command.ExecuteNonQuery();
                     if (a > 0)

@@ -42,7 +42,8 @@ namespace StellarShip_Express.RegistrarPaquete
         {
         }
 
-        private void btnSelect_Click(object sender, EventArgs e)
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmRegistrarEmpaque());
         }

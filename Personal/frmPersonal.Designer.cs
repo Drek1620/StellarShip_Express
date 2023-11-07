@@ -70,7 +70,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDatos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDatos.EnableHeadersVisualStyles = false;
-            this.dgvDatos.Location = new System.Drawing.Point(50, 95);
+            this.dgvDatos.Location = new System.Drawing.Point(41, 90);
             this.dgvDatos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDatos.MultiSelect = false;
             this.dgvDatos.Name = "dgvDatos";
