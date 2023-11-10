@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.cboPlanets = new System.Windows.Forms.ComboBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.cmbEmbalaje = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tlpRemitente = new System.Windows.Forms.TableLayoutPanel();
@@ -65,22 +65,22 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // cboPlanets
+            // cmbEmbalaje
             // 
-            this.cboPlanets.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmbEmbalaje.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboPlanets.BackColor = System.Drawing.Color.Gainsboro;
-            this.cboPlanets.DropDownHeight = 400;
-            this.cboPlanets.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPlanets.DropDownWidth = 50;
-            this.cboPlanets.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F);
-            this.cboPlanets.FormattingEnabled = true;
-            this.cboPlanets.IntegralHeight = false;
-            this.cboPlanets.Location = new System.Drawing.Point(41, 105);
-            this.cboPlanets.Margin = new System.Windows.Forms.Padding(4);
-            this.cboPlanets.Name = "cboPlanets";
-            this.cboPlanets.Size = new System.Drawing.Size(909, 99);
-            this.cboPlanets.TabIndex = 0;
+            this.cmbEmbalaje.BackColor = System.Drawing.Color.Gainsboro;
+            this.cmbEmbalaje.DropDownHeight = 400;
+            this.cmbEmbalaje.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEmbalaje.DropDownWidth = 50;
+            this.cmbEmbalaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F);
+            this.cmbEmbalaje.FormattingEnabled = true;
+            this.cmbEmbalaje.IntegralHeight = false;
+            this.cmbEmbalaje.Location = new System.Drawing.Point(41, 105);
+            this.cmbEmbalaje.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbEmbalaje.Name = "cmbEmbalaje";
+            this.cmbEmbalaje.Size = new System.Drawing.Size(909, 99);
+            this.cmbEmbalaje.TabIndex = 0;
             // 
             // label10
             // 
@@ -276,6 +276,7 @@
             this.chkSeguro.TabIndex = 19;
             this.chkSeguro.Text = "Seguro";
             this.chkSeguro.UseVisualStyleBackColor = true;
+            this.chkSeguro.CheckedChanged += new System.EventHandler(this.chkSeguro_CheckedChanged);
             // 
             // chkPeligroso
             // 
@@ -288,6 +289,7 @@
             this.chkPeligroso.TabIndex = 20;
             this.chkPeligroso.Text = "Materiales peligrosos";
             this.chkPeligroso.UseVisualStyleBackColor = true;
+            this.chkPeligroso.CheckedChanged += new System.EventHandler(this.chkPeligroso_CheckedChanged);
             // 
             // chkIrregular
             // 
@@ -300,6 +302,7 @@
             this.chkIrregular.TabIndex = 21;
             this.chkIrregular.Text = "Paquete irregular";
             this.chkIrregular.UseVisualStyleBackColor = true;
+            this.chkIrregular.CheckedChanged += new System.EventHandler(this.chkIrregular_CheckedChanged);
             // 
             // label4
             // 
@@ -315,7 +318,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(225, 545);
+            this.label6.Location = new System.Drawing.Point(227, 545);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(620, 19);
             this.label6.TabIndex = 23;
@@ -325,7 +328,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(225, 570);
+            this.label9.Location = new System.Drawing.Point(204, 570);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(598, 19);
             this.label9.TabIndex = 24;
@@ -337,27 +340,27 @@
             this.dgvPaquetes.AllowUserToResizeRows = false;
             this.dgvPaquetes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvPaquetes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvPaquetes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPaquetes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPaquetes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(128)))), ((int)(((byte)(198)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(128)))), ((int)(((byte)(198)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPaquetes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(128)))), ((int)(((byte)(198)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(128)))), ((int)(((byte)(198)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPaquetes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvPaquetes.ColumnHeadersHeight = 30;
             this.dgvPaquetes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPaquetes.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPaquetes.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvPaquetes.EnableHeadersVisualStyles = false;
             this.dgvPaquetes.Location = new System.Drawing.Point(41, 719);
             this.dgvPaquetes.Margin = new System.Windows.Forms.Padding(4);
@@ -365,14 +368,14 @@
             this.dgvPaquetes.Name = "dgvPaquetes";
             this.dgvPaquetes.ReadOnly = true;
             this.dgvPaquetes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPaquetes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPaquetes.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvPaquetes.Size = new System.Drawing.Size(909, 135);
             this.dgvPaquetes.TabIndex = 25;
             // 
@@ -505,7 +508,7 @@
             this.Controls.Add(this.tlpRemitente);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cboPlanets);
+            this.Controls.Add(this.cmbEmbalaje);
             this.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -526,7 +529,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cboPlanets;
+        private System.Windows.Forms.ComboBox cmbEmbalaje;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tlpRemitente;

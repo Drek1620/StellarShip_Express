@@ -52,6 +52,24 @@ namespace StellarShip_Express
                 }
             }
         }
+        public DataTable MostrarEstado()
+        {
+            DataTable Tabla = new DataTable();
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT DISTINCT Estado FROM Sucursal";
+                    command.CommandType = CommandType.Text;
+                    LeerFilas = command.ExecuteReader();
+                    Tabla.Load(LeerFilas);
+                    return Tabla;
+                }
+            }
+        }
 
         public DataTable MostrarVehiculos()
         {

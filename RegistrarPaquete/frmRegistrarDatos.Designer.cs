@@ -32,34 +32,34 @@
             this.btnSiguiente = new CustomControls.RButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label14 = new System.Windows.Forms.Label();
-            this.rjComboBox4 = new CustomControls.RJComboBox();
+            this.cmbEstadoD = new CustomControls.RJComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.rjComboBox5 = new CustomControls.RJComboBox();
+            this.cmbPaisD = new CustomControls.RJComboBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.rjComboBox6 = new CustomControls.RJComboBox();
+            this.cmbCiudadD = new CustomControls.RJComboBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
+            this.txtCpD = new CustomControls.RJControls.RJTextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.rjTextBox2 = new CustomControls.RJControls.RJTextBox();
+            this.txtCorreoD = new CustomControls.RJControls.RJTextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.rjTextBox3 = new CustomControls.RJControls.RJTextBox();
+            this.txtNombreD = new CustomControls.RJControls.RJTextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.rjTextBox4 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox5 = new CustomControls.RJControls.RJTextBox();
+            this.txtTelD = new CustomControls.RJControls.RJTextBox();
+            this.txtDireccionD = new CustomControls.RJControls.RJTextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.rjTextBox6 = new CustomControls.RJControls.RJTextBox();
+            this.txtNointernoD = new CustomControls.RJControls.RJTextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.rjTextBox7 = new CustomControls.RJControls.RJTextBox();
+            this.txtEmpresaD = new CustomControls.RJControls.RJTextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label12 = new System.Windows.Forms.Label();
-            this.rjComboBox2 = new CustomControls.RJComboBox();
+            this.cmbEstado = new CustomControls.RJComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.rjComboBox1 = new CustomControls.RJComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.rjComboBox3 = new CustomControls.RJComboBox();
+            this.cmbCiudad = new CustomControls.RJComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCP = new CustomControls.RJControls.RJTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -90,7 +90,7 @@
             this.panel1.Controls.Add(this.btnSiguiente);
             this.panel1.Location = new System.Drawing.Point(48, 774);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(831, 186);
+            this.panel1.Size = new System.Drawing.Size(854, 186);
             this.panel1.TabIndex = 32;
             // 
             // btnSiguiente
@@ -105,7 +105,7 @@
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSiguiente.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.btnSiguiente.ForeColor = System.Drawing.Color.White;
-            this.btnSiguiente.Location = new System.Drawing.Point(247, 20);
+            this.btnSiguiente.Location = new System.Drawing.Point(259, 20);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(324, 57);
             this.btnSiguiente.TabIndex = 16;
@@ -125,19 +125,19 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.Controls.Add(this.label14, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.rjComboBox4, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.cmbEstadoD, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.label15, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.rjComboBox5, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.cmbPaisD, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label16, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.rjComboBox6, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.cmbCiudadD, 3, 1);
             this.tableLayoutPanel2.Controls.Add(this.label17, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.rjTextBox1, 4, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtCpD, 4, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(48, 680);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(848, 88);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(854, 88);
             this.tableLayoutPanel2.TabIndex = 31;
             // 
             // label14
@@ -145,34 +145,34 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(644, 0);
+            this.label14.Location = new System.Drawing.Point(647, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(103, 17);
             this.label14.TabIndex = 16;
             this.label14.Text = "Codigo Postal";
             // 
-            // rjComboBox4
+            // cmbEstadoD
             // 
-            this.rjComboBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmbEstadoD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjComboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.rjComboBox4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.rjComboBox4.BorderSize = 2;
-            this.rjComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.rjComboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.rjComboBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.rjComboBox4.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox4.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox4.Location = new System.Drawing.Point(210, 23);
-            this.rjComboBox4.MinimumSize = new System.Drawing.Size(150, 30);
-            this.rjComboBox4.Name = "rjComboBox4";
-            this.rjComboBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.rjComboBox4.SelectedValue = null;
-            this.rjComboBox4.Size = new System.Drawing.Size(201, 52);
-            this.rjComboBox4.TabIndex = 15;
-            this.rjComboBox4.Texts = "";
+            this.cmbEstadoD.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbEstadoD.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbEstadoD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.cmbEstadoD.BorderSize = 2;
+            this.cmbEstadoD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstadoD.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.cmbEstadoD.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbEstadoD.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.cmbEstadoD.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbEstadoD.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbEstadoD.Location = new System.Drawing.Point(211, 23);
+            this.cmbEstadoD.MinimumSize = new System.Drawing.Size(150, 30);
+            this.cmbEstadoD.Name = "cmbEstadoD";
+            this.cmbEstadoD.Padding = new System.Windows.Forms.Padding(2);
+            this.cmbEstadoD.SelectedValue = null;
+            this.cmbEstadoD.Size = new System.Drawing.Size(202, 52);
+            this.cmbEstadoD.TabIndex = 15;
+            this.cmbEstadoD.Texts = "";
             // 
             // label15
             // 
@@ -185,19 +185,19 @@
             this.label15.TabIndex = 16;
             this.label15.Text = "País";
             // 
-            // rjComboBox5
+            // cmbPaisD
             // 
-            this.rjComboBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmbPaisD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjComboBox5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.rjComboBox5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.rjComboBox5.BorderSize = 2;
-            this.rjComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.rjComboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.rjComboBox5.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.rjComboBox5.Items.AddRange(new object[] {
+            this.cmbPaisD.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbPaisD.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbPaisD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.cmbPaisD.BorderSize = 2;
+            this.cmbPaisD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPaisD.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.cmbPaisD.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbPaisD.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.cmbPaisD.Items.AddRange(new object[] {
             "Afganistán",
             "Albania",
             "Alemania",
@@ -230,85 +230,85 @@
             "Suecia",
             "",
             ""});
-            this.rjComboBox5.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox5.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox5.Location = new System.Drawing.Point(3, 23);
-            this.rjComboBox5.MinimumSize = new System.Drawing.Size(150, 30);
-            this.rjComboBox5.Name = "rjComboBox5";
-            this.rjComboBox5.Padding = new System.Windows.Forms.Padding(2);
-            this.rjComboBox5.SelectedValue = null;
-            this.rjComboBox5.Size = new System.Drawing.Size(201, 52);
-            this.rjComboBox5.TabIndex = 14;
-            this.rjComboBox5.Texts = "";
+            this.cmbPaisD.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbPaisD.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbPaisD.Location = new System.Drawing.Point(3, 23);
+            this.cmbPaisD.MinimumSize = new System.Drawing.Size(150, 30);
+            this.cmbPaisD.Name = "cmbPaisD";
+            this.cmbPaisD.Padding = new System.Windows.Forms.Padding(2);
+            this.cmbPaisD.SelectedValue = null;
+            this.cmbPaisD.Size = new System.Drawing.Size(202, 52);
+            this.cmbPaisD.TabIndex = 14;
+            this.cmbPaisD.Texts = "";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(210, 0);
+            this.label16.Location = new System.Drawing.Point(211, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(52, 17);
             this.label16.TabIndex = 17;
             this.label16.Text = "Estado";
             // 
-            // rjComboBox6
+            // cmbCiudadD
             // 
-            this.rjComboBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmbCiudadD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjComboBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.rjComboBox6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.rjComboBox6.BorderSize = 2;
-            this.rjComboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.rjComboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.rjComboBox6.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox6.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.rjComboBox6.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox6.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox6.Location = new System.Drawing.Point(437, 23);
-            this.rjComboBox6.MinimumSize = new System.Drawing.Size(150, 30);
-            this.rjComboBox6.Name = "rjComboBox6";
-            this.rjComboBox6.Padding = new System.Windows.Forms.Padding(2);
-            this.rjComboBox6.SelectedValue = null;
-            this.rjComboBox6.Size = new System.Drawing.Size(201, 52);
-            this.rjComboBox6.TabIndex = 18;
-            this.rjComboBox6.Texts = "";
+            this.cmbCiudadD.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbCiudadD.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbCiudadD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.cmbCiudadD.BorderSize = 2;
+            this.cmbCiudadD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCiudadD.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.cmbCiudadD.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbCiudadD.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.cmbCiudadD.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbCiudadD.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbCiudadD.Location = new System.Drawing.Point(439, 23);
+            this.cmbCiudadD.MinimumSize = new System.Drawing.Size(150, 30);
+            this.cmbCiudadD.Name = "cmbCiudadD";
+            this.cmbCiudadD.Padding = new System.Windows.Forms.Padding(2);
+            this.cmbCiudadD.SelectedValue = null;
+            this.cmbCiudadD.Size = new System.Drawing.Size(202, 52);
+            this.cmbCiudadD.TabIndex = 18;
+            this.cmbCiudadD.Texts = "";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(437, 0);
+            this.label17.Location = new System.Drawing.Point(439, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(143, 17);
             this.label17.TabIndex = 19;
             this.label17.Text = "Ciudad o Municipio";
             // 
-            // rjTextBox1
+            // txtCpD
             // 
-            this.rjTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtCpD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.rjTextBox1.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
-            this.rjTextBox1.BorderRadius = 5;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(645, 24);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(20, 15, 15, 15);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "Codigo Postal";
-            this.rjTextBox1.Size = new System.Drawing.Size(199, 51);
-            this.rjTextBox1.TabIndex = 20;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
+            this.txtCpD.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCpD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtCpD.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
+            this.txtCpD.BorderRadius = 5;
+            this.txtCpD.BorderSize = 2;
+            this.txtCpD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCpD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCpD.Location = new System.Drawing.Point(648, 24);
+            this.txtCpD.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCpD.Multiline = false;
+            this.txtCpD.Name = "txtCpD";
+            this.txtCpD.Padding = new System.Windows.Forms.Padding(20, 15, 15, 15);
+            this.txtCpD.PasswordChar = false;
+            this.txtCpD.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtCpD.PlaceholderText = "Codigo Postal";
+            this.txtCpD.Size = new System.Drawing.Size(202, 51);
+            this.txtCpD.TabIndex = 20;
+            this.txtCpD.Texts = "";
+            this.txtCpD.UnderlinedStyle = false;
             // 
             // tableLayoutPanel3
             // 
@@ -318,17 +318,17 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.rjTextBox2, 2, 1);
+            this.tableLayoutPanel3.Controls.Add(this.txtCorreoD, 2, 1);
             this.tableLayoutPanel3.Controls.Add(this.label18, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.label19, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.rjTextBox3, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.txtNombreD, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.label20, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.rjTextBox4, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.rjTextBox5, 0, 5);
+            this.tableLayoutPanel3.Controls.Add(this.txtTelD, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.txtDireccionD, 0, 5);
             this.tableLayoutPanel3.Controls.Add(this.label21, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.rjTextBox6, 2, 5);
+            this.tableLayoutPanel3.Controls.Add(this.txtNointernoD, 2, 5);
             this.tableLayoutPanel3.Controls.Add(this.label22, 2, 4);
-            this.tableLayoutPanel3.Controls.Add(this.rjTextBox7, 2, 3);
+            this.tableLayoutPanel3.Controls.Add(this.txtEmpresaD, 2, 3);
             this.tableLayoutPanel3.Controls.Add(this.label23, 2, 2);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(48, 429);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -339,39 +339,39 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(848, 248);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(854, 248);
             this.tableLayoutPanel3.TabIndex = 30;
             // 
-            // rjTextBox2
+            // txtCorreoD
             // 
-            this.rjTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtCorreoD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.rjTextBox2.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
-            this.rjTextBox2.BorderRadius = 5;
-            this.rjTextBox2.BorderSize = 2;
-            this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.rjTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox2.Location = new System.Drawing.Point(438, 24);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(20, 15, 15, 15);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox2.PlaceholderText = "Correo Electronico";
-            this.rjTextBox2.Size = new System.Drawing.Size(406, 51);
-            this.rjTextBox2.TabIndex = 13;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = false;
+            this.txtCorreoD.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCorreoD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtCorreoD.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
+            this.txtCorreoD.BorderRadius = 5;
+            this.txtCorreoD.BorderSize = 2;
+            this.txtCorreoD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCorreoD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCorreoD.Location = new System.Drawing.Point(441, 24);
+            this.txtCorreoD.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCorreoD.Multiline = false;
+            this.txtCorreoD.Name = "txtCorreoD";
+            this.txtCorreoD.Padding = new System.Windows.Forms.Padding(20, 15, 15, 15);
+            this.txtCorreoD.PasswordChar = false;
+            this.txtCorreoD.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtCorreoD.PlaceholderText = "Correo Electronico";
+            this.txtCorreoD.Size = new System.Drawing.Size(409, 51);
+            this.txtCorreoD.TabIndex = 13;
+            this.txtCorreoD.Texts = "";
+            this.txtCorreoD.UnderlinedStyle = false;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(437, 0);
+            this.label18.Location = new System.Drawing.Point(440, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(134, 17);
             this.label18.TabIndex = 15;
@@ -388,30 +388,30 @@
             this.label19.TabIndex = 13;
             this.label19.Text = "Nombre completo (nombre y apellido)";
             // 
-            // rjTextBox3
+            // txtNombreD
             // 
-            this.rjTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtNombreD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjTextBox3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.rjTextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.rjTextBox3.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
-            this.rjTextBox3.BorderRadius = 5;
-            this.rjTextBox3.BorderSize = 2;
-            this.rjTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.rjTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox3.Location = new System.Drawing.Point(4, 24);
-            this.rjTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox3.Multiline = false;
-            this.rjTextBox3.Name = "rjTextBox3";
-            this.rjTextBox3.Padding = new System.Windows.Forms.Padding(20, 15, 15, 15);
-            this.rjTextBox3.PasswordChar = false;
-            this.rjTextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox3.PlaceholderText = "Nombre completo (nombre y apellido)";
-            this.rjTextBox3.Size = new System.Drawing.Size(406, 51);
-            this.rjTextBox3.TabIndex = 0;
-            this.rjTextBox3.Texts = "";
-            this.rjTextBox3.UnderlinedStyle = false;
+            this.txtNombreD.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.txtNombreD.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNombreD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtNombreD.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
+            this.txtNombreD.BorderRadius = 5;
+            this.txtNombreD.BorderSize = 2;
+            this.txtNombreD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtNombreD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNombreD.Location = new System.Drawing.Point(4, 24);
+            this.txtNombreD.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombreD.Multiline = false;
+            this.txtNombreD.Name = "txtNombreD";
+            this.txtNombreD.Padding = new System.Windows.Forms.Padding(20, 15, 15, 15);
+            this.txtNombreD.PasswordChar = false;
+            this.txtNombreD.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtNombreD.PlaceholderText = "Nombre completo (nombre y apellido)";
+            this.txtNombreD.Size = new System.Drawing.Size(409, 51);
+            this.txtNombreD.TabIndex = 0;
+            this.txtNombreD.Texts = "";
+            this.txtNombreD.UnderlinedStyle = false;
             // 
             // label20
             // 
@@ -424,53 +424,53 @@
             this.label20.TabIndex = 16;
             this.label20.Text = "Telefono";
             // 
-            // rjTextBox4
+            // txtTelD
             // 
-            this.rjTextBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtTelD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjTextBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.rjTextBox4.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
-            this.rjTextBox4.BorderRadius = 5;
-            this.rjTextBox4.BorderSize = 2;
-            this.rjTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.rjTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox4.Location = new System.Drawing.Point(4, 106);
-            this.rjTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox4.Multiline = false;
-            this.rjTextBox4.Name = "rjTextBox4";
-            this.rjTextBox4.Padding = new System.Windows.Forms.Padding(20, 15, 15, 15);
-            this.rjTextBox4.PasswordChar = false;
-            this.rjTextBox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox4.PlaceholderText = "Telefono";
-            this.rjTextBox4.Size = new System.Drawing.Size(406, 51);
-            this.rjTextBox4.TabIndex = 17;
-            this.rjTextBox4.Texts = "";
-            this.rjTextBox4.UnderlinedStyle = false;
+            this.txtTelD.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTelD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtTelD.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
+            this.txtTelD.BorderRadius = 5;
+            this.txtTelD.BorderSize = 2;
+            this.txtTelD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtTelD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTelD.Location = new System.Drawing.Point(4, 106);
+            this.txtTelD.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTelD.Multiline = false;
+            this.txtTelD.Name = "txtTelD";
+            this.txtTelD.Padding = new System.Windows.Forms.Padding(20, 15, 15, 15);
+            this.txtTelD.PasswordChar = false;
+            this.txtTelD.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtTelD.PlaceholderText = "Telefono";
+            this.txtTelD.Size = new System.Drawing.Size(409, 51);
+            this.txtTelD.TabIndex = 17;
+            this.txtTelD.Texts = "";
+            this.txtTelD.UnderlinedStyle = false;
             // 
-            // rjTextBox5
+            // txtDireccionD
             // 
-            this.rjTextBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtDireccionD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjTextBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.rjTextBox5.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
-            this.rjTextBox5.BorderRadius = 5;
-            this.rjTextBox5.BorderSize = 2;
-            this.rjTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.rjTextBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox5.Location = new System.Drawing.Point(4, 188);
-            this.rjTextBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox5.Multiline = false;
-            this.rjTextBox5.Name = "rjTextBox5";
-            this.rjTextBox5.Padding = new System.Windows.Forms.Padding(20, 15, 15, 15);
-            this.rjTextBox5.PasswordChar = false;
-            this.rjTextBox5.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox5.PlaceholderText = "Calle y número";
-            this.rjTextBox5.Size = new System.Drawing.Size(406, 51);
-            this.rjTextBox5.TabIndex = 2;
-            this.rjTextBox5.Texts = "";
-            this.rjTextBox5.UnderlinedStyle = false;
+            this.txtDireccionD.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDireccionD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtDireccionD.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
+            this.txtDireccionD.BorderRadius = 5;
+            this.txtDireccionD.BorderSize = 2;
+            this.txtDireccionD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtDireccionD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDireccionD.Location = new System.Drawing.Point(4, 188);
+            this.txtDireccionD.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDireccionD.Multiline = false;
+            this.txtDireccionD.Name = "txtDireccionD";
+            this.txtDireccionD.Padding = new System.Windows.Forms.Padding(20, 15, 15, 15);
+            this.txtDireccionD.PasswordChar = false;
+            this.txtDireccionD.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtDireccionD.PlaceholderText = "Calle y número";
+            this.txtDireccionD.Size = new System.Drawing.Size(409, 51);
+            this.txtDireccionD.TabIndex = 2;
+            this.txtDireccionD.Texts = "";
+            this.txtDireccionD.UnderlinedStyle = false;
             // 
             // label21
             // 
@@ -483,72 +483,72 @@
             this.label21.TabIndex = 15;
             this.label21.Text = "Calle y número";
             // 
-            // rjTextBox6
+            // txtNointernoD
             // 
-            this.rjTextBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtNointernoD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjTextBox6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.rjTextBox6.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.rjTextBox6.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
-            this.rjTextBox6.BorderRadius = 5;
-            this.rjTextBox6.BorderSize = 2;
-            this.rjTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.rjTextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox6.Location = new System.Drawing.Point(438, 188);
-            this.rjTextBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox6.Multiline = false;
-            this.rjTextBox6.Name = "rjTextBox6";
-            this.rjTextBox6.Padding = new System.Windows.Forms.Padding(20, 15, 15, 15);
-            this.rjTextBox6.PasswordChar = false;
-            this.rjTextBox6.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox6.PlaceholderText = "Nº interior/Depto (opcional)";
-            this.rjTextBox6.Size = new System.Drawing.Size(406, 51);
-            this.rjTextBox6.TabIndex = 12;
-            this.rjTextBox6.Texts = "";
-            this.rjTextBox6.UnderlinedStyle = false;
+            this.txtNointernoD.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.txtNointernoD.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNointernoD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtNointernoD.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
+            this.txtNointernoD.BorderRadius = 5;
+            this.txtNointernoD.BorderSize = 2;
+            this.txtNointernoD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtNointernoD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNointernoD.Location = new System.Drawing.Point(441, 188);
+            this.txtNointernoD.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNointernoD.Multiline = false;
+            this.txtNointernoD.Name = "txtNointernoD";
+            this.txtNointernoD.Padding = new System.Windows.Forms.Padding(20, 15, 15, 15);
+            this.txtNointernoD.PasswordChar = false;
+            this.txtNointernoD.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtNointernoD.PlaceholderText = "Nº interior/Depto (opcional)";
+            this.txtNointernoD.Size = new System.Drawing.Size(409, 51);
+            this.txtNointernoD.TabIndex = 12;
+            this.txtNointernoD.Texts = "";
+            this.txtNointernoD.UnderlinedStyle = false;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(437, 164);
+            this.label22.Location = new System.Drawing.Point(440, 164);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(195, 17);
             this.label22.TabIndex = 16;
             this.label22.Text = "Nº interior/Depto (opcional)";
             // 
-            // rjTextBox7
+            // txtEmpresaD
             // 
-            this.rjTextBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtEmpresaD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjTextBox7.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.rjTextBox7.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
-            this.rjTextBox7.BorderRadius = 5;
-            this.rjTextBox7.BorderSize = 2;
-            this.rjTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.rjTextBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox7.Location = new System.Drawing.Point(438, 106);
-            this.rjTextBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox7.Multiline = false;
-            this.rjTextBox7.Name = "rjTextBox7";
-            this.rjTextBox7.Padding = new System.Windows.Forms.Padding(20, 15, 15, 15);
-            this.rjTextBox7.PasswordChar = false;
-            this.rjTextBox7.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox7.PlaceholderText = "Empresa (Opcional)";
-            this.rjTextBox7.Size = new System.Drawing.Size(406, 51);
-            this.rjTextBox7.TabIndex = 1;
-            this.rjTextBox7.Texts = "";
-            this.rjTextBox7.UnderlinedStyle = false;
+            this.txtEmpresaD.BackColor = System.Drawing.SystemColors.Window;
+            this.txtEmpresaD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtEmpresaD.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
+            this.txtEmpresaD.BorderRadius = 5;
+            this.txtEmpresaD.BorderSize = 2;
+            this.txtEmpresaD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtEmpresaD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEmpresaD.Location = new System.Drawing.Point(441, 106);
+            this.txtEmpresaD.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmpresaD.Multiline = false;
+            this.txtEmpresaD.Name = "txtEmpresaD";
+            this.txtEmpresaD.Padding = new System.Windows.Forms.Padding(20, 15, 15, 15);
+            this.txtEmpresaD.PasswordChar = false;
+            this.txtEmpresaD.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtEmpresaD.PlaceholderText = "Empresa (Opcional)";
+            this.txtEmpresaD.Size = new System.Drawing.Size(409, 51);
+            this.txtEmpresaD.TabIndex = 1;
+            this.txtEmpresaD.Texts = "";
+            this.txtEmpresaD.UnderlinedStyle = false;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(437, 82);
+            this.label23.Location = new System.Drawing.Point(440, 82);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(144, 17);
             this.label23.TabIndex = 14;
@@ -576,11 +576,11 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.Controls.Add(this.label12, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.rjComboBox2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cmbEstado, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.rjComboBox1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label9, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.rjComboBox3, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cmbCiudad, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.label11, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtCP, 4, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(48, 301);
@@ -588,7 +588,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(848, 88);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(854, 88);
             this.tableLayoutPanel1.TabIndex = 28;
             // 
             // label12
@@ -596,34 +596,34 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(644, 0);
+            this.label12.Location = new System.Drawing.Point(647, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(103, 17);
             this.label12.TabIndex = 16;
             this.label12.Text = "Codigo Postal";
             // 
-            // rjComboBox2
+            // cmbEstado
             // 
-            this.rjComboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmbEstado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.rjComboBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.rjComboBox2.BorderSize = 2;
-            this.rjComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.rjComboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.rjComboBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.rjComboBox2.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox2.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox2.Location = new System.Drawing.Point(210, 23);
-            this.rjComboBox2.MinimumSize = new System.Drawing.Size(150, 30);
-            this.rjComboBox2.Name = "rjComboBox2";
-            this.rjComboBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.rjComboBox2.SelectedValue = null;
-            this.rjComboBox2.Size = new System.Drawing.Size(201, 52);
-            this.rjComboBox2.TabIndex = 15;
-            this.rjComboBox2.Texts = "";
+            this.cmbEstado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbEstado.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbEstado.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.cmbEstado.BorderSize = 2;
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.cmbEstado.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbEstado.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.cmbEstado.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbEstado.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbEstado.Location = new System.Drawing.Point(211, 23);
+            this.cmbEstado.MinimumSize = new System.Drawing.Size(150, 30);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Padding = new System.Windows.Forms.Padding(2);
+            this.cmbEstado.SelectedValue = null;
+            this.cmbEstado.Size = new System.Drawing.Size(202, 52);
+            this.cmbEstado.TabIndex = 15;
+            this.cmbEstado.Texts = "";
             // 
             // label8
             // 
@@ -688,7 +688,7 @@
             this.rjComboBox1.Name = "rjComboBox1";
             this.rjComboBox1.Padding = new System.Windows.Forms.Padding(2);
             this.rjComboBox1.SelectedValue = null;
-            this.rjComboBox1.Size = new System.Drawing.Size(201, 52);
+            this.rjComboBox1.Size = new System.Drawing.Size(202, 52);
             this.rjComboBox1.TabIndex = 14;
             this.rjComboBox1.Texts = "";
             // 
@@ -697,41 +697,41 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(210, 0);
+            this.label9.Location = new System.Drawing.Point(211, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(52, 17);
             this.label9.TabIndex = 17;
             this.label9.Text = "Estado";
             // 
-            // rjComboBox3
+            // cmbCiudad
             // 
-            this.rjComboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmbCiudad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjComboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.rjComboBox3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.rjComboBox3.BorderSize = 2;
-            this.rjComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.rjComboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.rjComboBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.rjComboBox3.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox3.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox3.Location = new System.Drawing.Point(437, 23);
-            this.rjComboBox3.MinimumSize = new System.Drawing.Size(150, 30);
-            this.rjComboBox3.Name = "rjComboBox3";
-            this.rjComboBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.rjComboBox3.SelectedValue = null;
-            this.rjComboBox3.Size = new System.Drawing.Size(201, 52);
-            this.rjComboBox3.TabIndex = 18;
-            this.rjComboBox3.Texts = "";
+            this.cmbCiudad.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbCiudad.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbCiudad.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.cmbCiudad.BorderSize = 2;
+            this.cmbCiudad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.cmbCiudad.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbCiudad.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.cmbCiudad.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbCiudad.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbCiudad.Location = new System.Drawing.Point(439, 23);
+            this.cmbCiudad.MinimumSize = new System.Drawing.Size(150, 30);
+            this.cmbCiudad.Name = "cmbCiudad";
+            this.cmbCiudad.Padding = new System.Windows.Forms.Padding(2);
+            this.cmbCiudad.SelectedValue = null;
+            this.cmbCiudad.Size = new System.Drawing.Size(202, 52);
+            this.cmbCiudad.TabIndex = 18;
+            this.cmbCiudad.Texts = "";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(437, 0);
+            this.label11.Location = new System.Drawing.Point(439, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(143, 17);
             this.label11.TabIndex = 19;
@@ -748,7 +748,7 @@
             this.txtCP.BorderSize = 2;
             this.txtCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCP.Location = new System.Drawing.Point(645, 24);
+            this.txtCP.Location = new System.Drawing.Point(648, 24);
             this.txtCP.Margin = new System.Windows.Forms.Padding(4);
             this.txtCP.Multiline = false;
             this.txtCP.Name = "txtCP";
@@ -756,7 +756,7 @@
             this.txtCP.PasswordChar = false;
             this.txtCP.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtCP.PlaceholderText = "Codigo Postal";
-            this.txtCP.Size = new System.Drawing.Size(199, 51);
+            this.txtCP.Size = new System.Drawing.Size(202, 51);
             this.txtCP.TabIndex = 20;
             this.txtCP.Texts = "";
             this.txtCP.UnderlinedStyle = false;
@@ -801,7 +801,7 @@
             this.tlpRemitente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tlpRemitente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpRemitente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpRemitente.Size = new System.Drawing.Size(848, 248);
+            this.tlpRemitente.Size = new System.Drawing.Size(854, 248);
             this.tlpRemitente.TabIndex = 26;
             // 
             // txtCorreo
@@ -815,7 +815,7 @@
             this.txtCorreo.BorderSize = 2;
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCorreo.Location = new System.Drawing.Point(438, 24);
+            this.txtCorreo.Location = new System.Drawing.Point(441, 24);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.Multiline = false;
             this.txtCorreo.Name = "txtCorreo";
@@ -823,7 +823,7 @@
             this.txtCorreo.PasswordChar = false;
             this.txtCorreo.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtCorreo.PlaceholderText = "Correo Electronico";
-            this.txtCorreo.Size = new System.Drawing.Size(406, 51);
+            this.txtCorreo.Size = new System.Drawing.Size(409, 51);
             this.txtCorreo.TabIndex = 13;
             this.txtCorreo.Texts = "";
             this.txtCorreo.UnderlinedStyle = false;
@@ -833,7 +833,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(437, 0);
+            this.label7.Location = new System.Drawing.Point(440, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(134, 17);
             this.label7.TabIndex = 15;
@@ -870,7 +870,7 @@
             this.txtNombre.PasswordChar = false;
             this.txtNombre.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtNombre.PlaceholderText = "Nombre completo (nombre y apellido)";
-            this.txtNombre.Size = new System.Drawing.Size(406, 51);
+            this.txtNombre.Size = new System.Drawing.Size(409, 51);
             this.txtNombre.TabIndex = 0;
             this.txtNombre.Texts = "";
             this.txtNombre.UnderlinedStyle = false;
@@ -905,7 +905,7 @@
             this.txtTelefono.PasswordChar = false;
             this.txtTelefono.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtTelefono.PlaceholderText = "Telefono";
-            this.txtTelefono.Size = new System.Drawing.Size(406, 51);
+            this.txtTelefono.Size = new System.Drawing.Size(409, 51);
             this.txtTelefono.TabIndex = 17;
             this.txtTelefono.Texts = "";
             this.txtTelefono.UnderlinedStyle = false;
@@ -929,7 +929,7 @@
             this.txtDireccion.PasswordChar = false;
             this.txtDireccion.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtDireccion.PlaceholderText = "Calle y número";
-            this.txtDireccion.Size = new System.Drawing.Size(406, 51);
+            this.txtDireccion.Size = new System.Drawing.Size(409, 51);
             this.txtDireccion.TabIndex = 2;
             this.txtDireccion.Texts = "";
             this.txtDireccion.UnderlinedStyle = false;
@@ -957,7 +957,7 @@
             this.txtNoInterior.BorderSize = 2;
             this.txtNoInterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtNoInterior.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNoInterior.Location = new System.Drawing.Point(438, 188);
+            this.txtNoInterior.Location = new System.Drawing.Point(441, 188);
             this.txtNoInterior.Margin = new System.Windows.Forms.Padding(4);
             this.txtNoInterior.Multiline = false;
             this.txtNoInterior.Name = "txtNoInterior";
@@ -965,7 +965,7 @@
             this.txtNoInterior.PasswordChar = false;
             this.txtNoInterior.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtNoInterior.PlaceholderText = "Nº interior/Depto (opcional)";
-            this.txtNoInterior.Size = new System.Drawing.Size(406, 51);
+            this.txtNoInterior.Size = new System.Drawing.Size(409, 51);
             this.txtNoInterior.TabIndex = 12;
             this.txtNoInterior.Texts = "";
             this.txtNoInterior.UnderlinedStyle = false;
@@ -975,7 +975,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(437, 164);
+            this.label5.Location = new System.Drawing.Point(440, 164);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(195, 17);
             this.label5.TabIndex = 16;
@@ -992,7 +992,7 @@
             this.txtEmpresa.BorderSize = 2;
             this.txtEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEmpresa.Location = new System.Drawing.Point(438, 106);
+            this.txtEmpresa.Location = new System.Drawing.Point(441, 106);
             this.txtEmpresa.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmpresa.Multiline = false;
             this.txtEmpresa.Name = "txtEmpresa";
@@ -1000,7 +1000,7 @@
             this.txtEmpresa.PasswordChar = false;
             this.txtEmpresa.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtEmpresa.PlaceholderText = "Empresa (Opcional)";
-            this.txtEmpresa.Size = new System.Drawing.Size(406, 51);
+            this.txtEmpresa.Size = new System.Drawing.Size(409, 51);
             this.txtEmpresa.TabIndex = 1;
             this.txtEmpresa.Texts = "";
             this.txtEmpresa.UnderlinedStyle = false;
@@ -1010,7 +1010,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(437, 82);
+            this.label3.Location = new System.Drawing.Point(440, 82);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 17);
             this.label3.TabIndex = 14;
@@ -1035,6 +1035,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRegistrarDatos";
             this.Text = "frmRegistrarDatos";
+            this.Load += new System.EventHandler(this.frmRegistrarDatos_Load);
             this.Resize += new System.EventHandler(this.frmRegistrarPaquete_Resize);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -1056,34 +1057,34 @@
         private CustomControls.RButton btnSiguiente;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label14;
-        private CustomControls.RJComboBox rjComboBox4;
+        private CustomControls.RJComboBox cmbEstadoD;
         private System.Windows.Forms.Label label15;
-        private CustomControls.RJComboBox rjComboBox5;
+        private CustomControls.RJComboBox cmbPaisD;
         private System.Windows.Forms.Label label16;
-        private CustomControls.RJComboBox rjComboBox6;
+        private CustomControls.RJComboBox cmbCiudadD;
         private System.Windows.Forms.Label label17;
-        private CustomControls.RJControls.RJTextBox rjTextBox1;
+        private CustomControls.RJControls.RJTextBox txtCpD;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private CustomControls.RJControls.RJTextBox rjTextBox2;
+        private CustomControls.RJControls.RJTextBox txtCorreoD;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private CustomControls.RJControls.RJTextBox rjTextBox3;
+        private CustomControls.RJControls.RJTextBox txtNombreD;
         private System.Windows.Forms.Label label20;
-        private CustomControls.RJControls.RJTextBox rjTextBox4;
-        private CustomControls.RJControls.RJTextBox rjTextBox5;
+        private CustomControls.RJControls.RJTextBox txtTelD;
+        private CustomControls.RJControls.RJTextBox txtDireccionD;
         private System.Windows.Forms.Label label21;
-        private CustomControls.RJControls.RJTextBox rjTextBox6;
+        private CustomControls.RJControls.RJTextBox txtNointernoD;
         private System.Windows.Forms.Label label22;
-        private CustomControls.RJControls.RJTextBox rjTextBox7;
+        private CustomControls.RJControls.RJTextBox txtEmpresaD;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label12;
-        private CustomControls.RJComboBox rjComboBox2;
+        private CustomControls.RJComboBox cmbEstado;
         private System.Windows.Forms.Label label8;
         private CustomControls.RJComboBox rjComboBox1;
         private System.Windows.Forms.Label label9;
-        private CustomControls.RJComboBox rjComboBox3;
+        private CustomControls.RJComboBox cmbCiudad;
         private System.Windows.Forms.Label label11;
         private CustomControls.RJControls.RJTextBox txtCP;
         private System.Windows.Forms.Label label1;

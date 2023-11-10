@@ -46,6 +46,27 @@ namespace StellarShip_Express.RegistrarPaquete
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmRegistrarEmpaque());
+
+        }
+
+        private void frmRegistrarDatos_Load(object sender, EventArgs e)
+        {
+            Ubicaciones();
+        }
+
+        public void Ubicaciones()
+        {
+            Consultas consultas = new Consultas();
+
+            cmbEstadoD.DataSource = consultas.MostrarEstado();
+            cmbEstado.DataSource = consultas.MostrarEstado();
+            cmbEstadoD.DisplayMember = "Estado";
+            cmbEstado.DisplayMember = "Estado";
+
+            cmbCiudad.DataSource = consultas.MostrarSuc();
+            cmbCiudadD.DataSource = consultas.MostrarSuc();
+            cmbCiudad.DisplayMember = "Municipio";
+            cmbCiudadD.DisplayMember = "Municipio";
         }
     }
 }

@@ -149,6 +149,12 @@
     </Compile>
     <Compile Include="Personal\ImagenTomada.cs" />
     <Compile Include="RegistrarPaquete\ComboBoxTools.cs" />
+    <Compile Include="RegistrarPaquete\frmConfirmarCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarPaquete\frmConfirmarCompra.Designer.cs">
+      <DependentUpon>frmConfirmarCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistrarPaquete\frmRegistrarDatos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Personal\frmTomarFoto.resx">
       <DependentUpon>frmTomarFoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarPaquete\frmConfirmarCompra.resx">
+      <DependentUpon>frmConfirmarCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrarPaquete\frmRegistrarDatos.resx">
       <DependentUpon>frmRegistrarDatos.cs</DependentUpon>
