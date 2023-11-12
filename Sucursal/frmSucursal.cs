@@ -62,5 +62,33 @@ namespace StellarShip_Express.Destino
                 , MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+        Consultas dato = new Consultas();
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DatosSucursal.AccionS = "Baja";
+            if (dgvDatos.SelectedRows.Count > 0)
+            {
+                DatosSucursal.IdDestino = Convert.ToInt32(dgvDatos.CurrentRow.Cells["IdDestino"].Value);
+                DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas eliminar esta sucursal",
+                "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+                    var Elimina = dato.EliminaSucursal(DatosSucursal.IdDestino);
+                    if (Elimina == true)
+                    {
+                        MessageBox.Show(this, "Sucursal Eliminada exitosamente", "Eliminacion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MostrarSuc();
+                    }
+                    else
+                        MessageBox.Show(this, "La Sucursal no existe en la base de datos", "Sucursal Inexistente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show(this, "Seleccione la fila de los datos que desea modificar.\nPor favor", "Seleccione los datos"
+                , MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
     }
 }

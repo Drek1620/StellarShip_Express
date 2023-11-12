@@ -64,6 +64,7 @@ namespace StellarShip_Express.Destino
                 if (Alta == true)
                 {
                     MessageBox.Show(this, "Sucursal agregada exitosamente", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
                 else
                     MessageBox.Show(this, "La sucursal ya existe en la base de datos", "Sucursal Existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -78,6 +79,7 @@ namespace StellarShip_Express.Destino
                 if (Modifica == true)
                 {
                     MessageBox.Show(this, "Sucursal Modificada exitosamente", "Modificacion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
                 else
                     MessageBox.Show(this, "La sucursal no existe en la base de datos", "Sucursal Inexistente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
