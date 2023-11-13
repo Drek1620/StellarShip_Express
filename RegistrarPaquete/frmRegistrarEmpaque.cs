@@ -60,6 +60,35 @@ namespace StellarShip_Express.RegistrarPaquete
                 PaqIrreg = "No";
         }
 
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            frmConfirmarCompra frmConfirm= new frmConfirmarCompra();
+            DatosPaquete paq= new DatosPaquete();
+            int contpaq = 0;
+            int contbolsa = 0;
+
+            for (int i = 0; i <= indice_fila; i++)
+            {
+                DatosPaquete.Paquete[i] = new Paquete(
+                    dgvPaquetes.Rows[i].Cells[0].Value.ToString(),
+                    dgvPaquetes.Rows[i].Cells[1].Value.ToString(),
+                    dgvPaquetes.Rows[i].Cells[2].Value.ToString(),
+                    dgvPaquetes.Rows[i].Cells[3].Value.ToString(),
+                    dgvPaquetes.Rows[i].Cells[4].Value.ToString(),
+                    dgvPaquetes.Rows[i].Cells[5].Value.ToString(),
+                    dgvPaquetes.Rows[i].Cells[6].Value.ToString()
+                    );
+                if (dgvPaquetes.Rows[i].Cells[0].Value.ToString() == "Caja")
+                    contpaq++;
+                else if (dgvPaquetes.Rows[i].Cells[0].Value.ToString() == "Bolsa")
+                    contbolsa++;
+            }
+            DatosPaquete.Caja = contpaq + " x Caja rijida";
+            DatosPaquete.Bolsa = contbolsa + " x Sobre acolchado";
+            DatosPaquete.Cantidad = indice_fila + 1;
+            frmConfirm.ShowDialog();
+        }
+
         private void chkPeligroso_CheckedChanged(object sender, EventArgs e)
         {
             if (chkPeligroso.Checked == true)
@@ -67,12 +96,12 @@ namespace StellarShip_Express.RegistrarPaquete
             else
                 Mpeligroso = "No";
         }
-
+        int indice_fila;
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             
 
-            int indice_fila= dgvPaquetes.Rows.Add();
+            indice_fila= dgvPaquetes.Rows.Add();
             DataGridViewRow fila= dgvPaquetes.Rows[indice_fila];
             
             if (cmbEmbalaje.SelectedIndex == 0)

@@ -1,4 +1,5 @@
-﻿using StellarShip_Express.Formularios;
+﻿using CustomControls.RJControls;
+using StellarShip_Express.Formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,12 +41,69 @@ namespace StellarShip_Express.RegistrarPaquete
 
         private void frmRegistrarPaquete_Resize(object sender, EventArgs e)
         {
+            txtNombre.Refresh();
+            txtCorreo.Refresh();
+            txtTelefono.Refresh();
+            txtDireccion.Refresh();
+            txtEmpresa.Refresh();
+            txtNoInterior.Refresh();
+            txtCP.Refresh();
+
+            txtNombreD.Refresh();
+            txtCorreoD.Refresh();
+            txtTelD.Refresh();
+            txtDireccionD.Refresh();
+            txtEmpresaD.Refresh();
+            txtNointernoD.Refresh();
+            txtCpD.Refresh(); 
         }
 
+        private bool ValidarCampo()
+        {
+            bool vr = !string.IsNullOrEmpty(txtNombre.Texts) &&
+                !string.IsNullOrEmpty(txtCorreo.Texts) &&
+                !string.IsNullOrEmpty(txtTelefono.Texts) &&
+                !string.IsNullOrEmpty(txtDireccion.Texts) &&
+                !string.IsNullOrEmpty(txtCP.Texts) &&
+                !string.IsNullOrEmpty(txtNombreD.Texts) &&
+                !string.IsNullOrEmpty(txtDireccionD.Texts) &&
+                !string.IsNullOrEmpty(txtTelD.Texts) &&
+                !string.IsNullOrEmpty(txtCpD.Texts);
+            return vr;
+        }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmRegistrarEmpaque());
+            if (ValidarCampo()==true)
+            {
+                DatosCliente.Cliente[0] = new ArregloCliente(
+                    txtNombre.Texts,
+                    txtCorreo.Texts,
+                    txtTelefono.Texts,
+                    txtEmpresa.Texts,
+                    txtDireccion.Texts,
+                    txtNoInterior.Texts,
+                    txtCP.Texts,
+                    cmbCiudad.Texts,
+                    cmbEstado.Texts,
+                    cmbPais.Texts);
+                DatosCliente.Cliente[1] = new ArregloCliente(
+                    txtNombreD.Texts,
+                    txtCorreoD.Texts,
+                    txtTelD.Texts,
+                    txtEmpresaD.Texts,
+                    txtDireccionD.Texts,
+                    txtNointernoD.Texts,
+                    txtCpD.Texts,
+                    cmbCiudadD.Texts,
+                    cmbEstadoD.Texts,
+                    cmbPaisD.Texts);
+                OpenChildForm(new frmRegistrarEmpaque());
+                Limpiar();
+            }
+            else
+                MessageBox.Show(this, "Ingrese todos los campos obligatorios.\nPor favor", "Ingrese todos los datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
 
         }
 
@@ -68,5 +126,29 @@ namespace StellarShip_Express.RegistrarPaquete
             cmbCiudad.DisplayMember = "Municipio";
             cmbCiudadD.DisplayMember = "Municipio";
         }
+        public void Limpiar()
+        {
+            txtNombre.Texts="";
+            txtCorreo.Texts="";
+            txtTelefono.Texts="";
+            txtDireccion.Texts="";
+            txtEmpresa.Texts="";
+            txtNoInterior.Texts="";
+            txtCP.Texts="";
+
+            txtNombreD.Texts="";
+            txtCorreoD.Texts="";
+            txtTelD.Texts="";
+            txtDireccionD.Texts="";
+            txtEmpresaD.Texts="";
+            txtNointernoD.Texts="";
+            txtCpD.Texts=""; 
+        }
+
+        private void txtNombre__TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
     }
 }
