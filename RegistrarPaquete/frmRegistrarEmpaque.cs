@@ -113,7 +113,7 @@ namespace StellarShip_Express.RegistrarPaquete
             fila.Cells["Embalaje"].Value = embalaje;
             fila.Cells["Largo"].Value = txtLargo.Texts;
             fila.Cells["Ancho"].Value = txtAncho.Texts;
-            fila.Cells["Peso"].Value = txtAncho.Texts;
+            fila.Cells["Peso"].Value = txtKg.Texts;
             fila.Cells["Seguro"].Value = seguro;
             fila.Cells["MPeligroso"].Value = Mpeligroso;
             fila.Cells["PaqIrregular"].Value = PaqIrreg;
