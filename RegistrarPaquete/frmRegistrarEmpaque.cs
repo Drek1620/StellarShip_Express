@@ -80,7 +80,7 @@ namespace StellarShip_Express.RegistrarPaquete
                     );
                 if (dgvPaquetes.Rows[i].Cells[0].Value.ToString() == "Caja")
                     contpaq++;
-                else if (dgvPaquetes.Rows[i].Cells[0].Value.ToString() == "Bolsa")
+                else if (dgvPaquetes.Rows[i].Cells[0].Value.ToString() == "Sobre alcolchado")
                     contbolsa++;
             }
             DatosPaquete.Caja = contpaq + " x Caja rijida";
