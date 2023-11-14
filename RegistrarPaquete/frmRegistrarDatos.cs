@@ -37,6 +37,7 @@ namespace StellarShip_Express.RegistrarPaquete
             this.Controls.Add(childForm);
             this.Tag = childForm;
             childForm.BringToFront();
+            childForm.FormClosed += AgregarControles;
             childForm.Show();
         }
 
@@ -106,6 +107,11 @@ namespace StellarShip_Express.RegistrarPaquete
                 MessageBox.Show(this, "Ingrese todos los campos obligatorios.\nPor favor", "Ingrese todos los datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
 
+        }
+
+        public void AgregarControles(object sender, FormClosedEventArgs e)
+        {
+            InitializeComponent();
         }
 
         private void frmRegistrarDatos_Load(object sender, EventArgs e)

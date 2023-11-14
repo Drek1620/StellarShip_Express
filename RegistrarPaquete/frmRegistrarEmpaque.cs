@@ -83,8 +83,8 @@ namespace StellarShip_Express.RegistrarPaquete
                 else if (dgvPaquetes.Rows[i].Cells[0].Value.ToString() == "Sobre alcolchado")
                     contbolsa++;
             }
-            DatosPaquete.Caja = contpaq + " x Caja rijida";
-            DatosPaquete.Bolsa = contbolsa + " x Sobre acolchado";
+            DatosPaquete.Caja = contpaq.ToString();
+            DatosPaquete.Bolsa = contbolsa.ToString();
             DatosPaquete.Cantidad = indice_fila + 1;
             frmConfirm.ShowDialog();
         }

@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TitleBar = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.btnMinum = new FontAwesome.Sharp.IconButton();
@@ -62,6 +63,9 @@
             this.label24 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblEmpresaD = new System.Windows.Forms.Label();
+            this.lblSubtotal = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.TitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaquetes)).BeginInit();
             this.SuspendLayout();
@@ -152,14 +156,15 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvPaquetes.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvPaquetes.Enabled = false;
             this.dgvPaquetes.EnableHeadersVisualStyles = false;
             this.dgvPaquetes.Location = new System.Drawing.Point(26, 234);
             this.dgvPaquetes.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPaquetes.MultiSelect = false;
             this.dgvPaquetes.Name = "dgvPaquetes";
             this.dgvPaquetes.ReadOnly = true;
-            this.dgvPaquetes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dgvPaquetes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -167,6 +172,12 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvPaquetes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvPaquetes.RowHeadersVisible = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.dgvPaquetes.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvPaquetes.RowTemplate.Height = 105;
+            this.dgvPaquetes.RowTemplate.ReadOnly = true;
             this.dgvPaquetes.Size = new System.Drawing.Size(780, 135);
             this.dgvPaquetes.TabIndex = 27;
             // 
@@ -422,12 +433,45 @@
             this.lblEmpresaD.TabIndex = 53;
             this.lblEmpresaD.Text = "Empresa";
             // 
+            // lblSubtotal
+            // 
+            this.lblSubtotal.AutoSize = true;
+            this.lblSubtotal.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.lblSubtotal.Location = new System.Drawing.Point(665, 385);
+            this.lblSubtotal.Name = "lblSubtotal";
+            this.lblSubtotal.Size = new System.Drawing.Size(78, 21);
+            this.lblSubtotal.TabIndex = 54;
+            this.lblSubtotal.Text = "SubTotal";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label9.Location = new System.Drawing.Point(612, 413);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 21);
+            this.label9.TabIndex = 55;
+            this.label9.Text = "16%";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.lblTotal.Location = new System.Drawing.Point(627, 452);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(49, 21);
+            this.lblTotal.TabIndex = 56;
+            this.lblTotal.Text = "Total";
+            // 
             // frmConfirmarCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(840, 574);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblSubtotal);
             this.Controls.Add(this.lblEmpresaD);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.label24);
@@ -504,5 +548,8 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblEmpresaD;
+        private System.Windows.Forms.Label lblSubtotal;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblTotal;
     }
 }

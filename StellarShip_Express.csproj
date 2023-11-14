@@ -148,6 +148,7 @@
       <DependentUpon>frmTomarFoto.cs</DependentUpon>
     </Compile>
     <Compile Include="Personal\ImagenTomada.cs" />
+    <Compile Include="RegistrarPaquete\CalcularPrecios.cs" />
     <Compile Include="RegistrarPaquete\ComboBoxTools.cs" />
     <Compile Include="RegistrarPaquete\DatosCliente.cs" />
     <Compile Include="RegistrarPaquete\DatosPaquete.cs" />

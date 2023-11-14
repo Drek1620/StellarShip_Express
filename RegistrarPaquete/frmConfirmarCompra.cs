@@ -25,8 +25,14 @@ namespace StellarShip_Express.RegistrarPaquete
             dgvPaquetes.Columns.Add("Paquetes", "Paquetes");
             dgvPaquetes.Columns.Add("Servicios extras", "Servicios extras");
 
+            CalcularPrecios precios = new CalcularPrecios();
+            precios.Calcular();
+            lblSubtotal.Text = CalcularPrecios.Subtotal.ToString();
+            lblTotal.Text = CalcularPrecios.Total.ToString();
+
             dgvPaquetes.Rows[0].Cells["Cantidad"].Value = DatosPaquete.Cantidad;
-            dgvPaquetes.Rows[0].Cells["Paquetes"].Value = DatosPaquete.Caja + "\n" + DatosPaquete.Bolsa;
+            dgvPaquetes.Rows[0].Cells["Paquetes"].Value = DatosPaquete.Caja+ " x Caja rijida\n" + DatosPaquete.Bolsa+ " x Sobre acolchado";
+            dgvPaquetes.Rows[0].Cells["Servicios extras"].Value = CalcularPrecios.Servicios.ToString();
 
 
             string datos= DatosPaquete.Paquete[0].Embalaje;
@@ -45,6 +51,7 @@ namespace StellarShip_Express.RegistrarPaquete
             lblDireccionD.Text = DatosCliente.Cliente[1].Direccion + ", " + DatosCliente.Cliente[0].Nointerior;
             lblCpD.Text = DatosCliente.Cliente[1].Cp + ", " + DatosCliente.Cliente[0].Ciudad + ", " + DatosCliente.Cliente[0].Estado;
             lblPaisD.Text = DatosCliente.Cliente[1].Pais;
+
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
