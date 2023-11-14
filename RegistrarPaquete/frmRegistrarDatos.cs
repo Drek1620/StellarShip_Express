@@ -32,7 +32,8 @@ namespace StellarShip_Express.RegistrarPaquete
             //End
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill; 
+            childForm.Dock = DockStyle.Fill;
+            this.Controls.Clear();
             this.Controls.Add(childForm);
             this.Tag = childForm;
             childForm.BringToFront();
