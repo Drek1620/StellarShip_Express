@@ -37,7 +37,7 @@
             this.btnMinum = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.dgvPaquetes = new System.Windows.Forms.DataGridView();
-            this.btnSiguiente = new CustomControls.RButton();
+            this.btnConfirmar = new CustomControls.RButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -181,25 +181,26 @@
             this.dgvPaquetes.Size = new System.Drawing.Size(780, 135);
             this.dgvPaquetes.TabIndex = 27;
             // 
-            // btnSiguiente
+            // btnConfirmar
             // 
-            this.btnSiguiente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSiguiente.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSiguiente.BackgroundColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSiguiente.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSiguiente.BorderRadius = 5;
-            this.btnSiguiente.BorderSize = 0;
-            this.btnSiguiente.FlatAppearance.BorderSize = 0;
-            this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSiguiente.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
-            this.btnSiguiente.ForeColor = System.Drawing.Color.White;
-            this.btnSiguiente.Location = new System.Drawing.Point(573, 501);
-            this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(233, 50);
-            this.btnSiguiente.TabIndex = 28;
-            this.btnSiguiente.Text = "Confirmar";
-            this.btnSiguiente.TextColor = System.Drawing.Color.White;
-            this.btnSiguiente.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfirmar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnConfirmar.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.btnConfirmar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnConfirmar.BorderRadius = 5;
+            this.btnConfirmar.BorderSize = 0;
+            this.btnConfirmar.FlatAppearance.BorderSize = 0;
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
+            this.btnConfirmar.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmar.Location = new System.Drawing.Point(573, 501);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(233, 50);
+            this.btnConfirmar.TabIndex = 28;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.TextColor = System.Drawing.Color.White;
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // label1
             // 
@@ -497,7 +498,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnSiguiente);
+            this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.dgvPaquetes);
             this.Controls.Add(this.TitleBar);
             this.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -522,7 +523,7 @@
         private FontAwesome.Sharp.IconButton btnMinum;
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.DataGridView dgvPaquetes;
-        private CustomControls.RButton btnSiguiente;
+        private CustomControls.RButton btnConfirmar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

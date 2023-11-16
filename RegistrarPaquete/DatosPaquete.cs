@@ -9,14 +9,14 @@ namespace StellarShip_Express.RegistrarPaquete
     internal class Paquete
     {
         private string embalaje;
-        private string largo;
-        private string ancho;
-        private string peso;
+        private double largo;
+        private double ancho;
+        private double peso;
         private string seguro;
         private string mpeligroso;
         private string pirregular;
 
-        public Paquete(string embalaje, string largo, string ancho, string peso, string seguro, string mpeligroso, string pirregular)
+        public Paquete(string embalaje, double largo, double ancho, double peso, string seguro, string mpeligroso, string pirregular)
         {
             this.Embalaje = embalaje;
             this.Largo = largo;
@@ -29,9 +29,9 @@ namespace StellarShip_Express.RegistrarPaquete
 
         public string Embalaje { get => Embalaje1; set => Embalaje1 = value; }
         public string Embalaje1 { get => embalaje; set => embalaje = value; }
-        public string Largo { get => largo; set => largo = value; }
-        public string Ancho { get => ancho; set => ancho = value; }
-        public string Peso { get => peso; set => peso = value; }
+        public double Largo { get => largo; set => largo = value; }
+        public double Ancho { get => ancho; set => ancho = value; }
+        public double Peso { get => peso; set => peso = value; }
         public string Seguro { get => seguro; set => seguro = value; }
         public string Mpeligroso { get => mpeligroso; set => mpeligroso = value; }
         public string Pirregular { get => pirregular; set => pirregular = value; }

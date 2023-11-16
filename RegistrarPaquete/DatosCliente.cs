@@ -48,7 +48,9 @@ namespace StellarShip_Express.RegistrarPaquete
     class DatosCliente
     {
         static ArregloCliente[] cliente = new ArregloCliente[2];
+        public static int IdCliente { get;set; }
+		public static long NoFactura { get; set; }
 
-        public static ArregloCliente[] Cliente { get => cliente; set => cliente = value; }
+		public static ArregloCliente[] Cliente { get => cliente; set => cliente = value; }
     }
 }

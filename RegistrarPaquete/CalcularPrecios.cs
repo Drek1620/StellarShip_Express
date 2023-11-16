@@ -29,7 +29,7 @@ namespace StellarShip_Express.RegistrarPaquete
             double pesot=0;
             for (int i = 0; i < DatosPaquete.Cantidad; i++)
             {
-                pesot =pesot+ double.Parse(DatosPaquete.Paquete[i].Peso);
+                pesot =pesot+ DatosPaquete.Paquete[i].Peso;
                 if (DatosPaquete.Paquete[i].Seguro == "Si")
                     Servicios = Servicios + seguro;
                 if (DatosPaquete.Paquete[i].Mpeligroso == "Si")

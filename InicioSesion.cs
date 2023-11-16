@@ -36,9 +36,10 @@ namespace StellarShip_Express
                         command.Parameters.Add("@PrimerA", SqlDbType.VarChar, 50).Direction = ParameterDirection.Output;
                         command.Parameters.Add("@SegundoA", SqlDbType.VarChar, 50).Direction = ParameterDirection.Output;
                         command.Parameters.Add("@Telefono", SqlDbType.BigInt).Direction = ParameterDirection.Output;
-                        //command.Parameters.Add("@nombre", SqlDbType.VarChar, 50);
-                        //command.Parameters["@ClientName"].Dirección = ParameterDirection.Output;
-                        command.ExecuteNonQuery();
+						command.Parameters.Add("@Sucursal", SqlDbType.Int).Direction = ParameterDirection.Output;
+						//command.Parameters.Add("@nombre", SqlDbType.VarChar, 50);
+						//command.Parameters["@ClientName"].Dirección = ParameterDirection.Output;
+						command.ExecuteNonQuery();
                         if (command.Parameters["@idusuariologueo"].Value.ToString() != "")
                         {
                             DatosUsuario.IdUser = Convert.ToInt32(command.Parameters["@idusuariologueo"].Value);
@@ -49,6 +50,7 @@ namespace StellarShip_Express
                             DatosUsuario.PrimerApellido = command.Parameters["@PrimerA"].Value.ToString();
                             DatosUsuario.SegundoApellido = command.Parameters["@SegundoA"].Value.ToString();
                             DatosUsuario.Telefono = Convert.ToInt64(command.Parameters["@Telefono"].Value);
+                            DatosUsuario.Sucursal = Convert.ToInt32(command.Parameters["@Sucursal"].Value);
                             return true;
 
                         }

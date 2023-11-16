@@ -13,6 +13,7 @@ namespace StellarShip_Express.RegistrarPaquete
 {
     public partial class frmConfirmarCompra : Form
     {
+        Consultas consultas = new Consultas();
         public frmConfirmarCompra()
         {
             InitializeComponent();
@@ -35,7 +36,7 @@ namespace StellarShip_Express.RegistrarPaquete
             dgvPaquetes.Rows[0].Cells["Servicios extras"].Value = CalcularPrecios.Servicios.ToString();
 
 
-            string datos= DatosPaquete.Paquete[0].Embalaje;
+
             lblCliente.Text = DatosCliente.Cliente[0].Nombre;
             lblCorreo.Text = DatosCliente.Cliente[0].Correo;
             lblTel.Text = DatosCliente.Cliente[0].Telefono;
@@ -69,5 +70,65 @@ namespace StellarShip_Express.RegistrarPaquete
         {
             this.Close();
         }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            string NoEnvio = DateTime.Now.ToString("ddMMyyyyHHmmss") + random.Next(1000, 9999);
+			DateTime Fecha = DateTime.Today;
+			long IdEnvio = Convert.ToInt64(NoEnvio);
+
+            var Remitente = consultas.AgregarRemitente(
+				DatosCliente.Cliente[0].Nombre,
+				DatosCliente.Cliente[0].Telefono,
+				DatosCliente.Cliente[0].Correo,
+				DatosCliente.Cliente[0].Direccion,
+				DatosCliente.Cliente[0].Nointerior,
+				DatosCliente.Cliente[0].Cp,
+				DatosCliente.Cliente[0].Ciudad,
+				DatosCliente.Cliente[0].Estado,
+				DatosCliente.Cliente[0].Pais
+				);
+            MessageBox.Show(DatosCliente.IdCliente.ToString());
+            var DetalleEnvio = consultas.AgregarDetalleEnvio(
+                IdEnvio,
+				DatosCliente.Cliente[1].Nombre,
+				DatosCliente.Cliente[1].Telefono,
+				DatosCliente.Cliente[1].Direccion+","+ DatosCliente.Cliente[1].Nointerior,
+				DatosCliente.Cliente[1].Cp,
+				DatosCliente.Cliente[1].Ciudad,
+				DatosCliente.Cliente[1].Estado,
+				DatosCliente.Cliente[1].Pais,
+                "Ingreso a la sucursal de origen"
+				);
+            var Factura = consultas.AgregarFactura(
+                DatosUsuario.Sucursal,
+                IdEnvio
+                );
+     //       for (int i = 0; i < DatosPaquete.Cantidad; i++)
+     //       {
+     //           consultas.AgregarPaquete(
+     //               IdEnvio,
+     //               DatosPaquete.Paquete[i].Embalaje,
+     //               DatosPaquete.Paquete[i].Largo,
+     //               DatosPaquete.Paquete[i].Ancho,
+     //               DatosPaquete.Paquete[i].Peso,
+					//DatosPaquete.Paquete[i].Seguro,
+					//DatosPaquete.Paquete[i].Mpeligroso,
+					//DatosPaquete.Paquete[i].Pirregular
+					//);
+     //           MessageBox.Show("Se Agrego");
+     //       }
+
+            if (Remitente ==true)
+            {
+                MessageBox.Show("Remitente ingresado exitosamente");
+            }
+            if (DetalleEnvio==true)
+				MessageBox.Show("Envio ingresado exitosamente");
+            if(Factura==true)
+				MessageBox.Show("Factura ingresado exitosamente");
+
+		}
     }
 }

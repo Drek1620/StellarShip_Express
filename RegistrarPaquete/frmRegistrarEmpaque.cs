@@ -71,9 +71,9 @@ namespace StellarShip_Express.RegistrarPaquete
             {
                 DatosPaquete.Paquete[i] = new Paquete(
                     dgvPaquetes.Rows[i].Cells[0].Value.ToString(),
-                    dgvPaquetes.Rows[i].Cells[1].Value.ToString(),
-                    dgvPaquetes.Rows[i].Cells[2].Value.ToString(),
-                    dgvPaquetes.Rows[i].Cells[3].Value.ToString(),
+                    double.Parse(dgvPaquetes.Rows[i].Cells[1].Value.ToString()),
+                    double.Parse(dgvPaquetes.Rows[i].Cells[2].Value.ToString()),
+					double.Parse(dgvPaquetes.Rows[i].Cells[3].Value.ToString()),
                     dgvPaquetes.Rows[i].Cells[4].Value.ToString(),
                     dgvPaquetes.Rows[i].Cells[5].Value.ToString(),
                     dgvPaquetes.Rows[i].Cells[6].Value.ToString()
