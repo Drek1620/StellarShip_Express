@@ -105,20 +105,20 @@ namespace StellarShip_Express.RegistrarPaquete
                 DatosUsuario.Sucursal,
                 IdEnvio
                 );
-     //       for (int i = 0; i < DatosPaquete.Cantidad; i++)
-     //       {
-     //           consultas.AgregarPaquete(
-     //               IdEnvio,
-     //               DatosPaquete.Paquete[i].Embalaje,
-     //               DatosPaquete.Paquete[i].Largo,
-     //               DatosPaquete.Paquete[i].Ancho,
-     //               DatosPaquete.Paquete[i].Peso,
-					//DatosPaquete.Paquete[i].Seguro,
-					//DatosPaquete.Paquete[i].Mpeligroso,
-					//DatosPaquete.Paquete[i].Pirregular
-					//);
-     //           MessageBox.Show("Se Agrego");
-     //       }
+            for (int i = 0; i < DatosPaquete.Cantidad; i++)
+            {
+                consultas.AgregarPaquete(
+                    IdEnvio,
+                    DatosPaquete.Paquete[i].Embalaje,
+                    DatosPaquete.Paquete[i].Largo,
+                    DatosPaquete.Paquete[i].Ancho,
+                    DatosPaquete.Paquete[i].Peso,
+                    DatosPaquete.Paquete[i].Seguro,
+                    DatosPaquete.Paquete[i].Mpeligroso,
+                    DatosPaquete.Paquete[i].Pirregular
+                    );
+                MessageBox.Show("Se Agrego");
+            }
 
             if (Remitente ==true)
             {
