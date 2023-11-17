@@ -28,9 +28,9 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
 			this.dgvDatos = new System.Windows.Forms.DataGridView();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -38,7 +38,7 @@
 			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
 			this.btnActualizar = new FontAwesome.Sharp.IconButton();
 			this.iconButton1 = new FontAwesome.Sharp.IconButton();
-			this.rjComboBox1 = new CustomControls.RJComboBox();
+			this.cmbFiltros = new CustomControls.RJComboBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.SuspendLayout();
@@ -75,24 +75,24 @@
 			this.dgvDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
 			this.dgvDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(128)))), ((int)(((byte)(198)))));
-			dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10F);
-			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(128)))), ((int)(((byte)(198)))));
-			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(128)))), ((int)(((byte)(198)))));
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F);
+			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(128)))), ((int)(((byte)(198)))));
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvDatos.ColumnHeadersHeight = 30;
 			this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 10F);
-			dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
-			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dgvDatos.DefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10F);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dgvDatos.DefaultCellStyle = dataGridViewCellStyle2;
 			this.dgvDatos.EnableHeadersVisualStyles = false;
 			this.dgvDatos.Location = new System.Drawing.Point(41, 89);
 			this.dgvDatos.Margin = new System.Windows.Forms.Padding(4);
@@ -100,14 +100,14 @@
 			this.dgvDatos.Name = "dgvDatos";
 			this.dgvDatos.ReadOnly = true;
 			this.dgvDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 10F);
-			dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10F);
+			dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
 			this.dgvDatos.Size = new System.Drawing.Size(889, 445);
 			this.dgvDatos.TabIndex = 32;
 			// 
@@ -119,7 +119,7 @@
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-			this.tableLayoutPanel1.Controls.Add(this.rjComboBox1, 0, 0);
+			this.tableLayoutPanel1.Controls.Add(this.cmbFiltros, 0, 0);
 			this.tableLayoutPanel1.Controls.Add(this.dateTimePicker2, 2, 0);
 			this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 1, 0);
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(381, 47);
@@ -179,31 +179,31 @@
 			this.iconButton1.TabIndex = 34;
 			this.iconButton1.UseVisualStyleBackColor = false;
 			// 
-			// rjComboBox1
+			// cmbFiltros
 			// 
-			this.rjComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-			this.rjComboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-			this.rjComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-			this.rjComboBox1.BorderSize = 2;
-			this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.rjComboBox1.Font = new System.Drawing.Font("Century Gothic", 10F);
-			this.rjComboBox1.ForeColor = System.Drawing.Color.DimGray;
-			this.rjComboBox1.IconColor = System.Drawing.Color.DimGray;
-			this.rjComboBox1.Items.AddRange(new object[] {
+			this.cmbFiltros.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+			this.cmbFiltros.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.cmbFiltros.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.cmbFiltros.BorderSize = 2;
+			this.cmbFiltros.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cmbFiltros.Font = new System.Drawing.Font("Century Gothic", 10F);
+			this.cmbFiltros.ForeColor = System.Drawing.Color.DimGray;
+			this.cmbFiltros.IconColor = System.Drawing.Color.DimGray;
+			this.cmbFiltros.Items.AddRange(new object[] {
             "NoFactura",
             "ID Cliente",
             "Sucursal",
             "Fecha"});
-			this.rjComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.rjComboBox1.ListTextColor = System.Drawing.Color.DimGray;
-			this.rjComboBox1.Location = new System.Drawing.Point(3, 3);
-			this.rjComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
-			this.rjComboBox1.Name = "rjComboBox1";
-			this.rjComboBox1.Padding = new System.Windows.Forms.Padding(2);
-			this.rjComboBox1.SelectedValue = null;
-			this.rjComboBox1.Size = new System.Drawing.Size(200, 30);
-			this.rjComboBox1.TabIndex = 37;
-			this.rjComboBox1.Texts = "";
+			this.cmbFiltros.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.cmbFiltros.ListTextColor = System.Drawing.Color.DimGray;
+			this.cmbFiltros.Location = new System.Drawing.Point(3, 3);
+			this.cmbFiltros.MinimumSize = new System.Drawing.Size(200, 30);
+			this.cmbFiltros.Name = "cmbFiltros";
+			this.cmbFiltros.Padding = new System.Windows.Forms.Padding(2);
+			this.cmbFiltros.SelectedValue = null;
+			this.cmbFiltros.Size = new System.Drawing.Size(200, 30);
+			this.cmbFiltros.TabIndex = 37;
+			this.cmbFiltros.Texts = "";
 			// 
 			// frmFactura
 			// 
@@ -236,6 +236,6 @@
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.DateTimePicker dateTimePicker2;
 		private System.Windows.Forms.DateTimePicker dateTimePicker1;
-		private CustomControls.RJComboBox rjComboBox1;
+		private CustomControls.RJComboBox cmbFiltros;
 	}
 }
