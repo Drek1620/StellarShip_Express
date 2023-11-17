@@ -1,6 +1,7 @@
 ﻿using FontAwesome.Sharp;
 using StellarShip_Express.Destino;
 using StellarShip_Express.Formularios;
+using StellarShip_Express.Otros;
 using StellarShip_Express.Personal;
 using StellarShip_Express.RegistrarPaquete;
 using StellarShip_Express.Vehiculos;
@@ -50,6 +51,8 @@ namespace StellarShip_Express
 
             if (panAlmacen.Visible == true)
                 panAlmacen.Visible = false;
+            if (panRegis.Visible == true)
+                panRegis.Visible = false;
         }
 
         private void DisableButton()
@@ -246,5 +249,26 @@ namespace StellarShip_Express
            MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 this.Close();
         }
-    }
+
+		private void btnRegistros_Click(object sender, EventArgs e)
+		{
+            MostrarSubMenu(panRegis);
+			ActivateButton(sender, RGBColors.color1);
+		}
+
+		private void btnClientes_Click(object sender, EventArgs e)
+		{
+            OpenChildForm(new frmClientes());
+		}
+
+		private void btnFactura_Click(object sender, EventArgs e)
+		{
+            OpenChildForm(new frmFactura());
+		}
+
+		private void btnBitacora_Click(object sender, EventArgs e)
+		{
+            OpenChildForm(new frmBitacora());
+		}
+	}
 }
