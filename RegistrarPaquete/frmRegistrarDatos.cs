@@ -57,7 +57,7 @@ namespace StellarShip_Express.RegistrarPaquete
             txtDireccionD.Refresh();
             txtEmpresaD.Refresh();
             txtNointernoD.Refresh();
-            txtCpD.Refresh(); 
+            txtCpD.Refresh();
         }
 
         private bool ValidarCampo()

@@ -91,6 +91,37 @@ namespace StellarShip_Express.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html&gt;
+        ///&lt;title&gt;Online HTML Editor&lt;/title&gt;
+        ///&lt;head&gt;
+        ///    &lt;style&gt;
+        ///            .border{
+        ///                border: 0;
+        ///            }
+        ///            h4{
+        ///                margin:0;
+        ///                font-family:sans-serif;
+        ///                font-size:20px;
+        ///            }
+        ///
+        ///                
+        ///            table,td {
+        ///                padding: 5px;
+        ///               border: 2px solid black;
+        ///               
+        ///               border-collapse: collapse;
+        ///            }
+        ///            img{
+        ///                height:  [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string Plantilla_Guia {
+            get {
+                return ResourceManager.GetString("Plantilla_Guia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap SoftEnvelope {

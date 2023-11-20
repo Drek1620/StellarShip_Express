@@ -3,17 +3,27 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Shapes;
+
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.tool.xml;
 
 namespace StellarShip_Express.RegistrarPaquete
 {
     public partial class frmConfirmarCompra : Form
     {
         Consultas consultas = new Consultas();
+        private string NoEnvio;
+        private string path;
+        private string ruta;
+        private DateTime Fecha;
         public frmConfirmarCompra()
         {
             InitializeComponent();
@@ -74,8 +84,8 @@ namespace StellarShip_Express.RegistrarPaquete
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             Random random = new Random();
-            string NoEnvio = DateTime.Now.ToString("ddMMyyyyHHmmss") + random.Next(1000, 9999);
-			DateTime Fecha = DateTime.Today;
+            NoEnvio = DateTime.Now.ToString("ddMMyyyyHHmmss") + random.Next(1000, 9999);
+			Fecha = DateTime.Today;
 			long IdEnvio = Convert.ToInt64(NoEnvio);
 
             var Remitente = consultas.AgregarRemitente(
@@ -129,6 +139,87 @@ namespace StellarShip_Express.RegistrarPaquete
             if(Factura==true)
 				MessageBox.Show("Factura ingresado exitosamente");
 
+            btnConfirmar.Visible = false;
+            btnGuia.Visible = true;
 		}
-    }
+
+		private void btnGuia_Click(object sender, EventArgs e)
+		{
+            ruta = @"C:\GuiasEnvio\Temporal";
+            string size;
+
+			if (Directory.Exists(ruta)) { }
+			else Directory.CreateDirectory(ruta);
+
+            for (int i = 0; i < DatosPaquete.Cantidad; i++)
+            {
+				path = @"C:\GuiasEnvio\Temporal\" + NoEnvio + $"_{i}.pdf";
+
+				string paginahtml_texto = Properties.Resources.Plantilla_Guia.ToString();
+                paginahtml_texto = paginahtml_texto.Replace("@REMITENTE", DatosCliente.Cliente[0].Nombre);
+                paginahtml_texto = paginahtml_texto.Replace("@TELEFONO", DatosCliente.Cliente[0].Telefono);
+                paginahtml_texto = paginahtml_texto.Replace("@CALLE", DatosCliente.Cliente[0].Direccion);
+                paginahtml_texto = paginahtml_texto.Replace("@DEP", DatosCliente.Cliente[0].Nointerior);
+                paginahtml_texto = paginahtml_texto.Replace("@CP", DatosCliente.Cliente[0].Cp);
+                paginahtml_texto = paginahtml_texto.Replace("@ESTADO", DatosCliente.Cliente[0].Estado);
+                paginahtml_texto = paginahtml_texto.Replace("@PAIS", DatosCliente.Cliente[0].Pais);
+
+                paginahtml_texto = paginahtml_texto.Replace("@DESTINATARIO", DatosCliente.Cliente[1].Nombre);
+                paginahtml_texto = paginahtml_texto.Replace("@Telefono", DatosCliente.Cliente[1].Telefono);
+                paginahtml_texto = paginahtml_texto.Replace("@Calle", DatosCliente.Cliente[1].Direccion);
+                paginahtml_texto = paginahtml_texto.Replace("@Dep", DatosCliente.Cliente[1].Nointerior);
+                paginahtml_texto = paginahtml_texto.Replace("@Cp", DatosCliente.Cliente[1].Cp);
+                paginahtml_texto = paginahtml_texto.Replace("@Estado", DatosCliente.Cliente[1].Estado);
+                paginahtml_texto = paginahtml_texto.Replace("@Pais", DatosCliente.Cliente[1].Pais);
+
+                size = DatosPaquete.Paquete[i].Largo + " x " + DatosPaquete.Paquete[i].Ancho;
+
+				paginahtml_texto = paginahtml_texto.Replace("@PESO", DatosPaquete.Paquete[i].Peso.ToString());
+                paginahtml_texto = paginahtml_texto.Replace("@FECHA", Fecha.ToString("d"));
+                paginahtml_texto = paginahtml_texto.Replace("@Size",size);
+
+                using (FileStream stream = new FileStream(path, FileMode.Create))
+				{
+					Document Pdfdoc = new Document(PageSize.A4, 25, 25, 25, 25);
+
+
+					PdfWriter writer = PdfWriter.GetInstance(Pdfdoc, stream);
+
+					Pdfdoc.Open();
+
+					using (StringReader sr = new StringReader(paginahtml_texto))
+					{
+						XMLWorkerHelper.GetInstance().ParseXHtml(writer, Pdfdoc, sr);
+					}
+					Pdfdoc.Close();
+					stream.Close();
+
+				}
+			}
+
+			path = @"C:\GuiasEnvio\" + NoEnvio + ".pdf";
+			CreateMergedPDF(path,ruta);
+		}
+
+		public void CreateMergedPDF(string targetPDF, string sourceDir)
+		{
+			using (FileStream stream = new FileStream(targetPDF, FileMode.Create))
+			{
+				Document pdfDoc = new Document(PageSize.A4);
+				PdfCopy pdf = new PdfCopy(pdfDoc, stream);
+				pdfDoc.Open();
+
+				var files = Directory.GetFiles(sourceDir);
+				foreach (string file in files)
+				{
+					if (file.Split('.').Last().ToUpper() == "PDF")
+					{
+						pdf.AddDocument(new PdfReader(file));
+					}
+				}
+				if (pdfDoc != null)
+					pdfDoc.Close();
+			}
+		}
+	}
 }

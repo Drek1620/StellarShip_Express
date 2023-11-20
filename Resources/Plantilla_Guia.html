@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title of the document</title>
+    <style>
+        tr.border {
+            border: 0;
+        }
+
+        td.border {
+            border: 0;
+        }
+
+        table.border {
+            border: 0;
+        }
+
+        h4 {
+            margin: 0;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+
+        table {
+            padding: 5px;
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 5px;
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        img {
+            height: 50px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <table style="width:75%">
+        <tr height="50">
+            <td style="width:20%"></td>
+            <td style="width:60%" align="center" valign="top">
+                <table class="border">
+                    <tr>
+                        <td class="border" align="center">
+                            <img src="img/StellarShip_Logo.png" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width:20%"> </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="border" style="width:70%">
+                    <tr class="border">
+                        <td style="width:10%; font-weight: bold;" class="border">From: </td>
+                        <td class="border">@REMITENTE</td>
+                    </tr>
+
+                    <tr class="border">
+                        <td class="border" style="width:10%"> </td>
+                        <td class="border">@TELEFONO</td>
+                    </tr>
+
+                    <tr class="border">
+                        <td style="width:10%" class="border"> </td>
+                        <td class="border">@CALLE @DEP</td>
+                    </tr>
+
+                    <tr class="border">
+                        <td style="width:10%" class="border"> </td>
+                        <td class="border">@CP , @ESTADO, @PAIS</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="border" style="width:70%">
+                    <tr class="border">
+                        <td style="width:10%; font-weight: bold;" class="border">To:    </td>
+                        <td class="border">@DESTINATARIO</td>
+                    </tr>
+
+                    <tr class="border">
+                        <td class="border" style="width:10%"> </td>
+                        <td class="border">@Telefono</td>
+                    </tr>
+
+                    <tr class="border">
+                        <td style="width:10%" class="border"> </td>
+                        <td class="border">@Calle @Dep</td>
+                    </tr>
+
+                    <tr class="border">
+                        <td style="width:10%" class="border"> </td>
+                        <td class="border">@Cp , @Estado, @Pais</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="border">
+                <table class="border" style="width:70%">
+                    <tr class="border">
+                        <td style="width:10%; font-weight: bold;" class="border">Ref: </td>
+
+                    </tr>
+                </table>
+            </td>
+            <td align="center" colspan="2" class="border">
+                <table class="border" style="width:70%">
+                    <tr class="border">
+                        <td style="width:10%" class="border">Weight: </td>
+                        <td class="border">@PESO</td>
+                        <td style="width:10%" class="border">Date: </td>
+                        <td class="border">@FECHA</td>
+                    </tr>
+
+                    <tr class="border">
+                        <td class="border" style="width:20%">Size:</td>
+                        <td class="border">@Size</td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td height=200px colspan="3">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
