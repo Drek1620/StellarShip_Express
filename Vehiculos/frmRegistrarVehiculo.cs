@@ -50,31 +50,40 @@ namespace StellarShip_Express.Vehiculos
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            
-            string conductor;
 
-            conductor = cmbConductor.SelectedValue.ToString();
-
-            if (DatosVehiculo.AccionV == "Alta") {
-
-                var Alta = dato.AltaVehiculos(txtMarca.Texts, txtModelo.Texts, txtNoPlaca.Texts, txtTipo.Texts, txtYear.Texts, Convert.ToInt32(conductor));
-                if (Alta == true)
-                {
-                    MessageBox.Show(this, "Vehiculo dado de alta exitosamente", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                    MessageBox.Show(this, "El Vehiculo ya existe en la base de datos", "Vehiculo Existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-            }
-            if (DatosVehiculo.AccionV=="Modifica")
+            try
             {
-                var Modifica = dato.ModificaVehiculos(Convert.ToInt32(txtIDMod.Text),txtMarca.Texts,txtModelo.Texts,txtNoPlaca.Texts,txtTipo.Texts,txtYear.Texts, Convert.ToInt32(conductor));
-                if (Modifica == true)
+                string conductor;
+
+                conductor = cmbConductor.SelectedValue.ToString();
+
+                if (DatosVehiculo.AccionV == "Alta")
                 {
-                    MessageBox.Show(this, "Vehiculo Modificado exitosamente", "Modificacion Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    var Alta = dato.AltaVehiculos(txtMarca.Texts, txtModelo.Texts, txtNoPlaca.Texts, txtTipo.Texts, txtYear.Texts, Convert.ToInt32(conductor));
+                    if (Alta == true)
+                    {
+                        MessageBox.Show(this, "Vehiculo dado de alta exitosamente", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information); limpiar();
+                    }
+                    else
+                        MessageBox.Show(this, "El Vehiculo ya existe en la base de datos", "Vehiculo Existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 }
-                else
-                    MessageBox.Show(this, "El Vehiculo No existe en la base de datos", "Vehiculo Inexistente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (DatosVehiculo.AccionV == "Modifica")
+                {
+                    var Modifica = dato.ModificaVehiculos(Convert.ToInt32(txtIDMod.Text), txtMarca.Texts, txtModelo.Texts, txtNoPlaca.Texts, txtTipo.Texts, txtYear.Texts, Convert.ToInt32(conductor));
+                    if (Modifica == true)
+                    {
+                        MessageBox.Show(this, "Vehiculo Modificado exitosamente", "Modificacion Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                        MessageBox.Show(this, "El Vehiculo No existe en la base de datos", "Vehiculo Inexistente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception EX)
+            {
+
+                MessageBox.Show("Ha ocurrido un error: " + EX.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
@@ -100,8 +109,18 @@ namespace StellarShip_Express.Vehiculos
                 lblTitulo.Text = "Modificar Vehiculo";
                
             }
+        
 
+        }
 
+        public void limpiar() 
+        {
+            txtMarca.Texts = "";
+            txtModelo.Texts = "";
+            txtNoPlaca.Texts="";
+            txtTipo.Texts = "";
+            txtTipoV.Text = "";
+            txtYear.Texts = "";       
         }
 
         private void cmbConductor_OnSelectedIndexChanged(object sender, EventArgs e)

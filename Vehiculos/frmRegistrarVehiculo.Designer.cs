@@ -75,7 +75,7 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(3, 12);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(251, 28);
+            this.lblTitulo.Size = new System.Drawing.Size(166, 19);
             this.lblTitulo.TabIndex = 8;
             this.lblTitulo.Text = "Registro de Vehiculo";
             // 
@@ -163,13 +163,14 @@
             this.txtModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtModelo.Location = new System.Drawing.Point(118, 175);
             this.txtModelo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtModelo.MaxLength = 100;
             this.txtModelo.Multiline = false;
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtModelo.PasswordChar = false;
             this.txtModelo.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtModelo.PlaceholderText = "";
-            this.txtModelo.Size = new System.Drawing.Size(250, 39);
+            this.txtModelo.Size = new System.Drawing.Size(250, 31);
             this.txtModelo.TabIndex = 36;
             this.txtModelo.Texts = "";
             this.txtModelo.UnderlinedStyle = false;
@@ -180,7 +181,7 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(17, 188);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 26);
+            this.label5.Size = new System.Drawing.Size(66, 18);
             this.label5.TabIndex = 35;
             this.label5.Text = "Modelo";
             // 
@@ -190,7 +191,7 @@
             this.lblConductor.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.lblConductor.Location = new System.Drawing.Point(17, 403);
             this.lblConductor.Name = "lblConductor";
-            this.lblConductor.Size = new System.Drawing.Size(126, 26);
+            this.lblConductor.Size = new System.Drawing.Size(87, 18);
             this.lblConductor.TabIndex = 33;
             this.lblConductor.Text = "Conductor";
             // 
@@ -205,13 +206,14 @@
             this.txtYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtYear.Location = new System.Drawing.Point(118, 335);
             this.txtYear.Margin = new System.Windows.Forms.Padding(4);
+            this.txtYear.MaxLength = 4;
             this.txtYear.Multiline = false;
             this.txtYear.Name = "txtYear";
             this.txtYear.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtYear.PasswordChar = false;
             this.txtYear.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtYear.PlaceholderText = "";
-            this.txtYear.Size = new System.Drawing.Size(250, 39);
+            this.txtYear.Size = new System.Drawing.Size(250, 31);
             this.txtYear.TabIndex = 32;
             this.txtYear.Texts = "";
             this.txtYear.UnderlinedStyle = false;
@@ -222,7 +224,7 @@
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(17, 348);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 26);
+            this.label7.Size = new System.Drawing.Size(38, 18);
             this.label7.TabIndex = 31;
             this.label7.Text = "Año";
             // 
@@ -237,13 +239,14 @@
             this.txtNoPlaca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtNoPlaca.Location = new System.Drawing.Point(118, 227);
             this.txtNoPlaca.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNoPlaca.MaxLength = 9;
             this.txtNoPlaca.Multiline = false;
             this.txtNoPlaca.Name = "txtNoPlaca";
             this.txtNoPlaca.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtNoPlaca.PasswordChar = false;
             this.txtNoPlaca.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtNoPlaca.PlaceholderText = "";
-            this.txtNoPlaca.Size = new System.Drawing.Size(250, 39);
+            this.txtNoPlaca.Size = new System.Drawing.Size(250, 31);
             this.txtNoPlaca.TabIndex = 30;
             this.txtNoPlaca.Texts = "";
             this.txtNoPlaca.UnderlinedStyle = false;
@@ -255,7 +258,7 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(17, 240);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 26);
+            this.label2.Size = new System.Drawing.Size(79, 18);
             this.label2.TabIndex = 29;
             this.label2.Text = "No. Placa";
             // 
@@ -270,13 +273,14 @@
             this.txtMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMarca.Location = new System.Drawing.Point(118, 123);
             this.txtMarca.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMarca.MaxLength = 100;
             this.txtMarca.Multiline = false;
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtMarca.PasswordChar = false;
             this.txtMarca.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtMarca.PlaceholderText = "";
-            this.txtMarca.Size = new System.Drawing.Size(250, 39);
+            this.txtMarca.Size = new System.Drawing.Size(250, 31);
             this.txtMarca.TabIndex = 28;
             this.txtMarca.Texts = "";
             this.txtMarca.UnderlinedStyle = false;
@@ -287,7 +291,7 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(17, 136);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 26);
+            this.label1.Size = new System.Drawing.Size(57, 18);
             this.label1.TabIndex = 27;
             this.label1.Text = "Marca";
             // 
@@ -297,7 +301,7 @@
             this.txtTipoV.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.txtTipoV.Location = new System.Drawing.Point(17, 280);
             this.txtTipoV.Name = "txtTipoV";
-            this.txtTipoV.Size = new System.Drawing.Size(102, 52);
+            this.txtTipoV.Size = new System.Drawing.Size(72, 36);
             this.txtTipoV.TabIndex = 37;
             this.txtTipoV.Text = "Tipo de \r\nvehículo";
             // 
@@ -333,13 +337,14 @@
             this.txtTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTipo.Location = new System.Drawing.Point(118, 285);
             this.txtTipo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTipo.MaxLength = 9;
             this.txtTipo.Multiline = false;
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtTipo.PasswordChar = false;
             this.txtTipo.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtTipo.PlaceholderText = "";
-            this.txtTipo.Size = new System.Drawing.Size(250, 39);
+            this.txtTipo.Size = new System.Drawing.Size(250, 31);
             this.txtTipo.TabIndex = 42;
             this.txtTipo.Texts = "";
             this.txtTipo.UnderlinedStyle = false;
@@ -350,13 +355,15 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(17, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 26);
+            this.label3.Size = new System.Drawing.Size(23, 18);
             this.label3.TabIndex = 43;
             this.label3.Text = "ID";
             // 
             // txtIDMod
             // 
+            this.txtIDMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.txtIDMod.Location = new System.Drawing.Point(118, 70);
+            this.txtIDMod.MaxLength = 1000;
             this.txtIDMod.Multiline = true;
             this.txtIDMod.Name = "txtIDMod";
             this.txtIDMod.Size = new System.Drawing.Size(250, 32);
@@ -364,7 +371,7 @@
             // 
             // frmRegistrarVehiculo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(412, 499);
