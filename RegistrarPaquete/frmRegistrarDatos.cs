@@ -50,7 +50,6 @@ namespace StellarShip_Express.RegistrarPaquete
             txtEmpresa.Refresh();
             txtNoInterior.Refresh();
             txtCP.Refresh();
-
             txtNombreD.Refresh();
             txtCorreoD.Refresh();
             txtTelD.Refresh();

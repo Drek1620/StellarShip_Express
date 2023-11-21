@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Shapes;
@@ -145,7 +147,7 @@ namespace StellarShip_Express.RegistrarPaquete
 
 		private void btnGuia_Click(object sender, EventArgs e)
 		{
-            ruta = @"C:\GuiasEnvio\Temporal";
+            ruta = @"C:\GuiasEnvio\Temporal\";
             string size;
 
 			if (Directory.Exists(ruta)) { }
@@ -187,6 +189,12 @@ namespace StellarShip_Express.RegistrarPaquete
 
 					Pdfdoc.Open();
 
+					iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.StellarShip_Logo_Guia, ImageFormat.Png);
+					img.ScaleToFit(250, 40);
+					img.Alignment = iTextSharp.text.Image.UNDERLYING;
+					img.SetAbsolutePosition(125, Pdfdoc.Top - 40);
+					Pdfdoc.Add(img);
+
 					using (StringReader sr = new StringReader(paginahtml_texto))
 					{
 						XMLWorkerHelper.GetInstance().ParseXHtml(writer, Pdfdoc, sr);
@@ -196,30 +204,45 @@ namespace StellarShip_Express.RegistrarPaquete
 
 				}
 			}
-
 			path = @"C:\GuiasEnvio\" + NoEnvio + ".pdf";
 			CreateMergedPDF(path,ruta);
+			Thread.Sleep(1000);
+			foreach (var item in Directory.GetFiles(ruta, "*.pdf"))
+			{
+				File.Delete(item);
+			}
 		}
 
 		public void CreateMergedPDF(string targetPDF, string sourceDir)
 		{
 			using (FileStream stream = new FileStream(targetPDF, FileMode.Create))
 			{
-				Document pdfDoc = new Document(PageSize.A4);
-				PdfCopy pdf = new PdfCopy(pdfDoc, stream);
-				pdfDoc.Open();
 
-				var files = Directory.GetFiles(sourceDir);
-				foreach (string file in files)
+				using (Document pdfDoc = new Document(PageSize.A4))
 				{
-					if (file.Split('.').Last().ToUpper() == "PDF")
+					using (PdfCopy pdf = new PdfCopy(pdfDoc, stream))
 					{
-						pdf.AddDocument(new PdfReader(file));
+
+						pdfDoc.Open();
+						PdfReader r;
+						foreach (var file in Directory.GetFiles(sourceDir, "*.pdf"))
+						{
+							r = new PdfReader(file);
+							pdf.AddDocument(r);
+							r.Close();
+						}
+
+
+						if (pdfDoc != null)
+							pdfDoc.Close();
 					}
 				}
-				if (pdfDoc != null)
-					pdfDoc.Close();
+
+
+
 			}
+
 		}
 	}
+	
 }

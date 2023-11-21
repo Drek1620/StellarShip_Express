@@ -93,27 +93,32 @@ namespace StellarShip_Express.Properties {
         /// <summary>
         ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
         ///&lt;html&gt;
-        ///&lt;title&gt;Online HTML Editor&lt;/title&gt;
         ///&lt;head&gt;
+        ///    &lt;title&gt;Title of the document&lt;/title&gt;
         ///    &lt;style&gt;
-        ///            .border{
-        ///                border: 0;
-        ///            }
-        ///            h4{
-        ///                margin:0;
-        ///                font-family:sans-serif;
-        ///                font-size:20px;
-        ///            }
+        ///        tr.border {
+        ///            border: 0;
+        ///        }
         ///
-        ///                
-        ///            table,td {
-        ///                padding: 5px;
-        ///               border: 2px solid black;
-        ///               
-        ///               border-collapse: collapse;
-        ///            }
-        ///            img{
-        ///                height:  [resto de la cadena truncado]&quot;;.
+        ///        td.border {
+        ///            border: 0;
+        ///        }
+        ///
+        ///        table.border {
+        ///            border: 0;
+        ///        }
+        ///
+        ///        h4 {
+        ///            margin: 0;
+        ///            font-family: sans-serif;
+        ///            font-size: 20px;
+        ///        }
+        ///
+        ///        table {
+        ///            padding: 5px;
+        ///            border: 2px solid black;
+        ///            border-collapse: collapse;
+        ///       [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string Plantilla_Guia {
             get {
@@ -137,6 +142,16 @@ namespace StellarShip_Express.Properties {
         internal static System.Drawing.Bitmap StellarShip_Express_logo {
             get {
                 object obj = ResourceManager.GetObject("StellarShip_Express_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StellarShip_Logo_Guia {
+            get {
+                object obj = ResourceManager.GetObject("StellarShip_Logo_Guia", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
