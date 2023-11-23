@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace StellarShip_Express
 {
-    public partial class CuadroPaquete : Form
+    public partial class CuadroPaquete : UserControl
     {
         public CuadroPaquete()
         {

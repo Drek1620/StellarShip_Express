@@ -17,6 +17,8 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using iTextSharp.tool.xml;
 
+using BarcodeLib;
+
 namespace StellarShip_Express.RegistrarPaquete
 {
     public partial class frmConfirmarCompra : Form
@@ -153,7 +155,35 @@ namespace StellarShip_Express.RegistrarPaquete
 			if (Directory.Exists(ruta)) { }
 			else Directory.CreateDirectory(ruta);
 
-            for (int i = 0; i < DatosPaquete.Cantidad; i++)
+			System.Drawing.Image imagenCodigo;
+
+
+			BarcodeLib.Barcode codigo = new BarcodeLib.Barcode();
+			codigo.IncludeLabel = true;
+			codigo.LabelPosition = LabelPositions.BOTTOMCENTER;
+
+			//AQUI PASALE EL TEXTO DEL TXT  "CODIGO"
+			imagenCodigo = codigo.Encode(BarcodeLib.TYPE.CODE128, NoEnvio.ToString(), Color.Black, Color.White, 500, 100);
+
+
+
+
+			//EXTRA Y AL ULTIMO
+			Bitmap imagenTitulo = convertirTextoImagen("Guia de Envio", 500, Color.White);
+
+			int alto_imagen_nuevo = imagenCodigo.Height + imagenTitulo.Height;
+
+			Bitmap imagenNueva = new Bitmap(500, alto_imagen_nuevo);
+			Graphics dibujar = Graphics.FromImage(imagenNueva);
+
+			dibujar.DrawImage(imagenTitulo, new Point(0, 0));
+			dibujar.DrawImage(imagenCodigo, new Point(0, imagenTitulo.Height));
+
+			System.Drawing.Image imagenCodigoNuevo = imagenNueva;
+
+
+
+			for (int i = 0; i < DatosPaquete.Cantidad; i++)
             {
 				path = @"C:\GuiasEnvio\Temporal\" + NoEnvio + $"_{i}.pdf";
 
@@ -194,6 +224,12 @@ namespace StellarShip_Express.RegistrarPaquete
 					img.Alignment = iTextSharp.text.Image.UNDERLYING;
 					img.SetAbsolutePosition(125, Pdfdoc.Top - 40);
 					Pdfdoc.Add(img);
+
+					iTextSharp.text.Image img2 = iTextSharp.text.Image.GetInstance(imagenCodigoNuevo, ImageFormat.Png);
+					img2.ScaleToFit(1500, 100);
+					img2.Alignment = iTextSharp.text.Image.UNDERLYING;
+					img2.SetAbsolutePosition(25, Pdfdoc.Top - 370);
+					Pdfdoc.Add(img2);
 
 					using (StringReader sr = new StringReader(paginahtml_texto))
 					{
@@ -242,6 +278,41 @@ namespace StellarShip_Express.RegistrarPaquete
 
 			}
 
+		}
+
+		public static Bitmap convertirTextoImagen(string texto, int ancho, Color color)
+		{
+			//creamos el objeto imagen Bitmap
+			Bitmap objBitmap = new Bitmap(1, 1);
+			int Width = 0;
+			int Height = 0;
+			//formateamos la fuente (tipo de letra, tamaño)
+			System.Drawing.Font objFont = new System.Drawing.Font("Arial", 16, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+
+			//creamos un objeto Graphics a partir del Bitmap
+			Graphics objGraphics = Graphics.FromImage(objBitmap);
+
+			//establecemos el tamaño según la longitud del texto
+			Width = ancho;
+			Height = (int)objGraphics.MeasureString(texto, objFont).Height + 5;
+			objBitmap = new Bitmap(objBitmap, new Size(Width, Height));
+
+			objGraphics = Graphics.FromImage(objBitmap);
+
+			objGraphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+			objGraphics.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+			objGraphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.High;
+			objGraphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+
+			StringFormat drawFormat = new StringFormat();
+			objGraphics.Clear(color);
+
+			drawFormat.Alignment = StringAlignment.Center;
+			objGraphics.DrawString(texto, objFont, new SolidBrush(Color.Black), new RectangleF(0, (objBitmap.Height / 2) - (objBitmap.Height - 10), objBitmap.Width, objBitmap.Height), drawFormat);
+			objGraphics.Flush();
+
+
+			return objBitmap;
 		}
 	}
 	
