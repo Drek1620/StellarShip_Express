@@ -16,5 +16,16 @@ namespace StellarShip_Express.Otros
 		{
 			InitializeComponent();
 		}
-	}
+
+		public void mostrarbitacora()
+        {
+			Consultas consultas = new Consultas();
+			dgvDatos.DataSource = consultas.Bitacora();
+        }
+
+        private void frmBitacora_Load(object sender, EventArgs e)
+        {
+			mostrarbitacora();
+        }
+    }
 }
