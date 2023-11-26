@@ -27,5 +27,10 @@ namespace StellarShip_Express.Otros
         {
 			mostrarbitacora();
         }
-    }
+
+		private void dgvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+
+		}
+	}
 }

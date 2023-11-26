@@ -92,6 +92,30 @@ namespace StellarShip_Express
 
         }
 
+        public DataTable Factura(string hoka)
+		{
+            DataTable Tabla = new DataTable();
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT * from Factura" ;
+
+                    command.CommandType = CommandType.Text;
+
+                    LeerFilas = command.ExecuteReader();
+                    Tabla.Load(LeerFilas);
+                    return Tabla;
+                }
+            }
+        }
+
+        
+        
+
         public DataTable Bitacora()
         {
             DataTable Tabla = new DataTable();

@@ -34,11 +34,11 @@
 			this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
 			this.dgvDatos = new System.Windows.Forms.DataGridView();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.cmbFiltros = new CustomControls.RJComboBox();
 			this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
 			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
 			this.btnActualizar = new FontAwesome.Sharp.IconButton();
 			this.iconButton1 = new FontAwesome.Sharp.IconButton();
-			this.cmbFiltros = new CustomControls.RJComboBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.SuspendLayout();
@@ -54,6 +54,7 @@
 			this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.rjTextBox1.Location = new System.Drawing.Point(41, 50);
 			this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
+			this.rjTextBox1.MaxLength = 32767;
 			this.rjTextBox1.Multiline = false;
 			this.rjTextBox1.Name = "rjTextBox1";
 			this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -110,6 +111,7 @@
 			this.dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
 			this.dgvDatos.Size = new System.Drawing.Size(889, 445);
 			this.dgvDatos.TabIndex = 32;
+			this.dgvDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellContentClick);
 			// 
 			// tableLayoutPanel1
 			// 
@@ -128,6 +130,32 @@
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
 			this.tableLayoutPanel1.Size = new System.Drawing.Size(549, 37);
 			this.tableLayoutPanel1.TabIndex = 36;
+			// 
+			// cmbFiltros
+			// 
+			this.cmbFiltros.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+			this.cmbFiltros.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.cmbFiltros.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.cmbFiltros.BorderSize = 2;
+			this.cmbFiltros.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cmbFiltros.Font = new System.Drawing.Font("Century Gothic", 10F);
+			this.cmbFiltros.ForeColor = System.Drawing.Color.DimGray;
+			this.cmbFiltros.IconColor = System.Drawing.Color.DimGray;
+			this.cmbFiltros.Items.AddRange(new object[] {
+            "NoFactura",
+            "ID Cliente",
+            "Sucursal",
+            "Fecha"});
+			this.cmbFiltros.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.cmbFiltros.ListTextColor = System.Drawing.Color.DimGray;
+			this.cmbFiltros.Location = new System.Drawing.Point(3, 3);
+			this.cmbFiltros.MinimumSize = new System.Drawing.Size(200, 30);
+			this.cmbFiltros.Name = "cmbFiltros";
+			this.cmbFiltros.Padding = new System.Windows.Forms.Padding(2);
+			this.cmbFiltros.SelectedValue = null;
+			this.cmbFiltros.Size = new System.Drawing.Size(200, 30);
+			this.cmbFiltros.TabIndex = 37;
+			this.cmbFiltros.Texts = "";
 			// 
 			// dateTimePicker2
 			// 
@@ -162,6 +190,7 @@
 			this.btnActualizar.Size = new System.Drawing.Size(44, 31);
 			this.btnActualizar.TabIndex = 35;
 			this.btnActualizar.UseVisualStyleBackColor = false;
+			this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
 			// 
 			// iconButton1
 			// 
@@ -178,32 +207,7 @@
 			this.iconButton1.Size = new System.Drawing.Size(44, 31);
 			this.iconButton1.TabIndex = 34;
 			this.iconButton1.UseVisualStyleBackColor = false;
-			// 
-			// cmbFiltros
-			// 
-			this.cmbFiltros.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-			this.cmbFiltros.BackColor = System.Drawing.Color.WhiteSmoke;
-			this.cmbFiltros.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-			this.cmbFiltros.BorderSize = 2;
-			this.cmbFiltros.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.cmbFiltros.Font = new System.Drawing.Font("Century Gothic", 10F);
-			this.cmbFiltros.ForeColor = System.Drawing.Color.DimGray;
-			this.cmbFiltros.IconColor = System.Drawing.Color.DimGray;
-			this.cmbFiltros.Items.AddRange(new object[] {
-            "NoFactura",
-            "ID Cliente",
-            "Sucursal",
-            "Fecha"});
-			this.cmbFiltros.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.cmbFiltros.ListTextColor = System.Drawing.Color.DimGray;
-			this.cmbFiltros.Location = new System.Drawing.Point(3, 3);
-			this.cmbFiltros.MinimumSize = new System.Drawing.Size(200, 30);
-			this.cmbFiltros.Name = "cmbFiltros";
-			this.cmbFiltros.Padding = new System.Windows.Forms.Padding(2);
-			this.cmbFiltros.SelectedValue = null;
-			this.cmbFiltros.Size = new System.Drawing.Size(200, 30);
-			this.cmbFiltros.TabIndex = 37;
-			this.cmbFiltros.Texts = "";
+			this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
 			// 
 			// frmFactura
 			// 
@@ -218,9 +222,10 @@
 			this.Controls.Add(this.dgvDatos);
 			this.Font = new System.Drawing.Font("Century Gothic", 10F);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "frmFactura";
 			this.Text = "Factura";
+			this.Load += new System.EventHandler(this.frmFactura_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.ResumeLayout(false);
