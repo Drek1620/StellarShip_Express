@@ -178,6 +178,26 @@ namespace StellarShip_Express
 
         }
 
+        public DataTable MostrarClientes()
+        {
+            DataTable Tabla = new DataTable();
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT * FROM Remitente";
+                    command.CommandType = CommandType.Text;
+                    LeerFilas = command.ExecuteReader();
+                    Tabla.Load(LeerFilas);
+                    return Tabla;
+                }
+            }
+
+        }
+
         public bool AltaUsuario(string loginName, string name, string firstName, string secondName, string pass, string acces, long tel, int sucursal, string foto)
         {
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
