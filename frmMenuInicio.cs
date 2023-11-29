@@ -1,5 +1,6 @@
 ﻿using FontAwesome.Sharp;
 using StellarShip_Express.Destino;
+using StellarShip_Express.Envios;
 using StellarShip_Express.Formularios;
 using StellarShip_Express.Otros;
 using StellarShip_Express.Personal;
@@ -275,6 +276,11 @@ namespace StellarShip_Express
 		private void btnBitacora_Click(object sender, EventArgs e)
 		{
             OpenChildForm(new frmBitacora());
+		}
+
+		private void btnSent_Click(object sender, EventArgs e)
+		{
+			OpenChildForm(new frmEnviosEnCurso());
 		}
 	}
 }

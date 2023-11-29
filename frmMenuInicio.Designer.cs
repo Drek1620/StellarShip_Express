@@ -30,40 +30,40 @@
         {
 			this.panTitle = new System.Windows.Forms.Panel();
 			this.lblTitleChildForm = new System.Windows.Forms.Label();
-			this.lblNombre = new System.Windows.Forms.Label();
-			this.panAlmacen = new System.Windows.Forms.Panel();
-			this.panMenu = new System.Windows.Forms.Panel();
-			this.panInicio = new System.Windows.Forms.Panel();
-			this.pictureBox2 = new System.Windows.Forms.PictureBox();
-			this.btnRegistros = new FontAwesome.Sharp.IconButton();
-			this.btnDestinos = new FontAwesome.Sharp.IconButton();
-			this.btnVehicles = new FontAwesome.Sharp.IconButton();
-			this.btnCerrarSesion = new FontAwesome.Sharp.IconButton();
-			this.btnStaff = new FontAwesome.Sharp.IconButton();
-			this.btnDelivered = new FontAwesome.Sharp.IconButton();
-			this.btnSent = new FontAwesome.Sharp.IconButton();
-			this.btnParcel = new FontAwesome.Sharp.IconButton();
-			this.btnRegister = new FontAwesome.Sharp.IconButton();
 			this.pcbIconTitle = new FontAwesome.Sharp.IconPictureBox();
 			this.iconButton2 = new FontAwesome.Sharp.IconButton();
+			this.lblNombre = new System.Windows.Forms.Label();
 			this.pcbImgUsuario = new CustomControls.CircularPictureBox();
 			this.btnMaximizar = new FontAwesome.Sharp.IconButton();
 			this.btnMinum = new FontAwesome.Sharp.IconButton();
 			this.btnHome = new System.Windows.Forms.PictureBox();
 			this.btnClose = new FontAwesome.Sharp.IconButton();
+			this.panAlmacen = new System.Windows.Forms.Panel();
+			this.btnDelivered = new FontAwesome.Sharp.IconButton();
+			this.btnSent = new FontAwesome.Sharp.IconButton();
+			this.panMenu = new System.Windows.Forms.Panel();
 			this.panRegis = new System.Windows.Forms.Panel();
+			this.btnBitacora = new FontAwesome.Sharp.IconButton();
 			this.btnFactura = new FontAwesome.Sharp.IconButton();
 			this.btnClientes = new FontAwesome.Sharp.IconButton();
-			this.btnBitacora = new FontAwesome.Sharp.IconButton();
+			this.btnRegistros = new FontAwesome.Sharp.IconButton();
+			this.btnDestinos = new FontAwesome.Sharp.IconButton();
+			this.btnVehicles = new FontAwesome.Sharp.IconButton();
+			this.btnCerrarSesion = new FontAwesome.Sharp.IconButton();
+			this.btnStaff = new FontAwesome.Sharp.IconButton();
+			this.btnParcel = new FontAwesome.Sharp.IconButton();
+			this.btnRegister = new FontAwesome.Sharp.IconButton();
+			this.panInicio = new System.Windows.Forms.Panel();
+			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.panTitle.SuspendLayout();
-			this.panAlmacen.SuspendLayout();
-			this.panMenu.SuspendLayout();
-			this.panInicio.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pcbIconTitle)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pcbImgUsuario)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
+			this.panAlmacen.SuspendLayout();
+			this.panMenu.SuspendLayout();
 			this.panRegis.SuspendLayout();
+			this.panInicio.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panTitle
@@ -99,6 +99,37 @@
 			this.lblTitleChildForm.TabIndex = 12;
 			this.lblTitleChildForm.Text = "Inicio";
 			// 
+			// pcbIconTitle
+			// 
+			this.pcbIconTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+			this.pcbIconTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+			this.pcbIconTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.pcbIconTitle.IconChar = FontAwesome.Sharp.IconChar.House;
+			this.pcbIconTitle.IconColor = System.Drawing.Color.WhiteSmoke;
+			this.pcbIconTitle.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.pcbIconTitle.Location = new System.Drawing.Point(626, 31);
+			this.pcbIconTitle.Name = "pcbIconTitle";
+			this.pcbIconTitle.Size = new System.Drawing.Size(32, 32);
+			this.pcbIconTitle.TabIndex = 11;
+			this.pcbIconTitle.TabStop = false;
+			// 
+			// iconButton2
+			// 
+			this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.iconButton2.FlatAppearance.BorderSize = 0;
+			this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.iconButton2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.EllipsisVertical;
+			this.iconButton2.IconColor = System.Drawing.Color.White;
+			this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.iconButton2.IconSize = 25;
+			this.iconButton2.Location = new System.Drawing.Point(1164, 32);
+			this.iconButton2.Margin = new System.Windows.Forms.Padding(10, 3, 20, 3);
+			this.iconButton2.Name = "iconButton2";
+			this.iconButton2.Size = new System.Drawing.Size(33, 42);
+			this.iconButton2.TabIndex = 10;
+			this.iconButton2.UseVisualStyleBackColor = true;
+			// 
 			// lblNombre
 			// 
 			this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -111,6 +142,86 @@
 			this.lblNombre.TabIndex = 9;
 			this.lblNombre.Text = "Default";
 			// 
+			// pcbImgUsuario
+			// 
+			this.pcbImgUsuario.Anchor = System.Windows.Forms.AnchorStyles.Right;
+			this.pcbImgUsuario.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+			this.pcbImgUsuario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+			this.pcbImgUsuario.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+			this.pcbImgUsuario.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+			this.pcbImgUsuario.BorderSize = 2;
+			this.pcbImgUsuario.GradientAngle = 50F;
+			this.pcbImgUsuario.Image = global::StellarShip_Express.Properties.Resources.Null;
+			this.pcbImgUsuario.Location = new System.Drawing.Point(958, 27);
+			this.pcbImgUsuario.Name = "pcbImgUsuario";
+			this.pcbImgUsuario.Size = new System.Drawing.Size(43, 43);
+			this.pcbImgUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pcbImgUsuario.TabIndex = 8;
+			this.pcbImgUsuario.TabStop = false;
+			// 
+			// btnMaximizar
+			// 
+			this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnMaximizar.FlatAppearance.BorderSize = 0;
+			this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnMaximizar.IconChar = FontAwesome.Sharp.IconChar.WindowRestore;
+			this.btnMaximizar.IconColor = System.Drawing.Color.White;
+			this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btnMaximizar.IconSize = 20;
+			this.btnMaximizar.Location = new System.Drawing.Point(1119, 1);
+			this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4);
+			this.btnMaximizar.Name = "btnMaximizar";
+			this.btnMaximizar.Size = new System.Drawing.Size(36, 25);
+			this.btnMaximizar.TabIndex = 7;
+			this.btnMaximizar.UseVisualStyleBackColor = true;
+			this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
+			// 
+			// btnMinum
+			// 
+			this.btnMinum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnMinum.FlatAppearance.BorderSize = 0;
+			this.btnMinum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnMinum.IconChar = FontAwesome.Sharp.IconChar.Minus;
+			this.btnMinum.IconColor = System.Drawing.Color.White;
+			this.btnMinum.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btnMinum.IconSize = 25;
+			this.btnMinum.Location = new System.Drawing.Point(1085, 1);
+			this.btnMinum.Margin = new System.Windows.Forms.Padding(4);
+			this.btnMinum.Name = "btnMinum";
+			this.btnMinum.Size = new System.Drawing.Size(36, 25);
+			this.btnMinum.TabIndex = 6;
+			this.btnMinum.UseVisualStyleBackColor = true;
+			this.btnMinum.Click += new System.EventHandler(this.btnMinum_Click);
+			// 
+			// btnHome
+			// 
+			this.btnHome.Dock = System.Windows.Forms.DockStyle.Left;
+			this.btnHome.Image = global::StellarShip_Express.Properties.Resources.StellarShip_Express_logo;
+			this.btnHome.Location = new System.Drawing.Point(0, 0);
+			this.btnHome.Name = "btnHome";
+			this.btnHome.Size = new System.Drawing.Size(220, 73);
+			this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.btnHome.TabIndex = 0;
+			this.btnHome.TabStop = false;
+			this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+			// 
+			// btnClose
+			// 
+			this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnClose.FlatAppearance.BorderSize = 0;
+			this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+			this.btnClose.IconColor = System.Drawing.Color.White;
+			this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btnClose.IconSize = 18;
+			this.btnClose.Location = new System.Drawing.Point(1157, 1);
+			this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+			this.btnClose.Name = "btnClose";
+			this.btnClose.Size = new System.Drawing.Size(36, 25);
+			this.btnClose.TabIndex = 5;
+			this.btnClose.UseVisualStyleBackColor = true;
+			this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+			// 
 			// panAlmacen
 			// 
 			this.panAlmacen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(82)))), ((int)(((byte)(92)))));
@@ -122,6 +233,49 @@
 			this.panAlmacen.Size = new System.Drawing.Size(203, 120);
 			this.panAlmacen.TabIndex = 4;
 			this.panAlmacen.Visible = false;
+			// 
+			// btnDelivered
+			// 
+			this.btnDelivered.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnDelivered.FlatAppearance.BorderSize = 0;
+			this.btnDelivered.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnDelivered.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnDelivered.ForeColor = System.Drawing.Color.Gainsboro;
+			this.btnDelivered.IconChar = FontAwesome.Sharp.IconChar.Box;
+			this.btnDelivered.IconColor = System.Drawing.Color.Gainsboro;
+			this.btnDelivered.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btnDelivered.IconSize = 30;
+			this.btnDelivered.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnDelivered.Location = new System.Drawing.Point(0, 55);
+			this.btnDelivered.Name = "btnDelivered";
+			this.btnDelivered.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+			this.btnDelivered.Size = new System.Drawing.Size(203, 55);
+			this.btnDelivered.TabIndex = 3;
+			this.btnDelivered.Text = "Entregados";
+			this.btnDelivered.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnDelivered.UseVisualStyleBackColor = true;
+			// 
+			// btnSent
+			// 
+			this.btnSent.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnSent.FlatAppearance.BorderSize = 0;
+			this.btnSent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSent.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSent.ForeColor = System.Drawing.Color.Gainsboro;
+			this.btnSent.IconChar = FontAwesome.Sharp.IconChar.TruckFast;
+			this.btnSent.IconColor = System.Drawing.Color.Gainsboro;
+			this.btnSent.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btnSent.IconSize = 30;
+			this.btnSent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnSent.Location = new System.Drawing.Point(0, 0);
+			this.btnSent.Name = "btnSent";
+			this.btnSent.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+			this.btnSent.Size = new System.Drawing.Size(203, 55);
+			this.btnSent.TabIndex = 2;
+			this.btnSent.Text = "En Envio";
+			this.btnSent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnSent.UseVisualStyleBackColor = true;
+			this.btnSent.Click += new System.EventHandler(this.btnSent_Click);
 			// 
 			// panMenu
 			// 
@@ -142,26 +296,84 @@
 			this.panMenu.Size = new System.Drawing.Size(220, 580);
 			this.panMenu.TabIndex = 1;
 			// 
-			// panInicio
+			// panRegis
 			// 
-			this.panInicio.AutoScroll = true;
-			this.panInicio.Controls.Add(this.pictureBox2);
-			this.panInicio.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panInicio.Location = new System.Drawing.Point(220, 73);
-			this.panInicio.Name = "panInicio";
-			this.panInicio.Size = new System.Drawing.Size(977, 580);
-			this.panInicio.TabIndex = 2;
+			this.panRegis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(82)))), ((int)(((byte)(92)))));
+			this.panRegis.Controls.Add(this.btnBitacora);
+			this.panRegis.Controls.Add(this.btnFactura);
+			this.panRegis.Controls.Add(this.btnClientes);
+			this.panRegis.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panRegis.Location = new System.Drawing.Point(0, 480);
+			this.panRegis.Name = "panRegis";
+			this.panRegis.Size = new System.Drawing.Size(203, 177);
+			this.panRegis.TabIndex = 11;
+			this.panRegis.Visible = false;
 			// 
-			// pictureBox2
+			// btnBitacora
 			// 
-			this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.pictureBox2.Image = global::StellarShip_Express.Properties.Resources.StellarShip_Logo_Tono2;
-			this.pictureBox2.Location = new System.Drawing.Point(271, 175);
-			this.pictureBox2.Name = "pictureBox2";
-			this.pictureBox2.Size = new System.Drawing.Size(466, 100);
-			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-			this.pictureBox2.TabIndex = 0;
-			this.pictureBox2.TabStop = false;
+			this.btnBitacora.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnBitacora.FlatAppearance.BorderSize = 0;
+			this.btnBitacora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnBitacora.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnBitacora.ForeColor = System.Drawing.Color.Gainsboro;
+			this.btnBitacora.IconChar = FontAwesome.Sharp.IconChar.None;
+			this.btnBitacora.IconColor = System.Drawing.Color.Gainsboro;
+			this.btnBitacora.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btnBitacora.IconSize = 30;
+			this.btnBitacora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnBitacora.Location = new System.Drawing.Point(0, 110);
+			this.btnBitacora.Name = "btnBitacora";
+			this.btnBitacora.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+			this.btnBitacora.Size = new System.Drawing.Size(203, 55);
+			this.btnBitacora.TabIndex = 4;
+			this.btnBitacora.Text = "Bitacora";
+			this.btnBitacora.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnBitacora.UseVisualStyleBackColor = true;
+			this.btnBitacora.Click += new System.EventHandler(this.btnBitacora_Click);
+			// 
+			// btnFactura
+			// 
+			this.btnFactura.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnFactura.FlatAppearance.BorderSize = 0;
+			this.btnFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnFactura.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnFactura.ForeColor = System.Drawing.Color.Gainsboro;
+			this.btnFactura.IconChar = FontAwesome.Sharp.IconChar.None;
+			this.btnFactura.IconColor = System.Drawing.Color.Gainsboro;
+			this.btnFactura.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btnFactura.IconSize = 30;
+			this.btnFactura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnFactura.Location = new System.Drawing.Point(0, 55);
+			this.btnFactura.Name = "btnFactura";
+			this.btnFactura.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+			this.btnFactura.Size = new System.Drawing.Size(203, 55);
+			this.btnFactura.TabIndex = 3;
+			this.btnFactura.Text = "Facturas";
+			this.btnFactura.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnFactura.UseVisualStyleBackColor = true;
+			this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
+			// 
+			// btnClientes
+			// 
+			this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnClientes.FlatAppearance.BorderSize = 0;
+			this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnClientes.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnClientes.ForeColor = System.Drawing.Color.Gainsboro;
+			this.btnClientes.IconChar = FontAwesome.Sharp.IconChar.None;
+			this.btnClientes.IconColor = System.Drawing.Color.Gainsboro;
+			this.btnClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btnClientes.IconSize = 30;
+			this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnClientes.Location = new System.Drawing.Point(0, 0);
+			this.btnClientes.Name = "btnClientes";
+			this.btnClientes.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+			this.btnClientes.Size = new System.Drawing.Size(203, 55);
+			this.btnClientes.TabIndex = 2;
+			this.btnClientes.Text = "Clientes";
+			this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnClientes.UseVisualStyleBackColor = true;
+			this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
 			// 
 			// btnRegistros
 			// 
@@ -268,48 +480,6 @@
 			this.btnStaff.UseVisualStyleBackColor = true;
 			this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
 			// 
-			// btnDelivered
-			// 
-			this.btnDelivered.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnDelivered.FlatAppearance.BorderSize = 0;
-			this.btnDelivered.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnDelivered.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnDelivered.ForeColor = System.Drawing.Color.Gainsboro;
-			this.btnDelivered.IconChar = FontAwesome.Sharp.IconChar.Box;
-			this.btnDelivered.IconColor = System.Drawing.Color.Gainsboro;
-			this.btnDelivered.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.btnDelivered.IconSize = 30;
-			this.btnDelivered.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnDelivered.Location = new System.Drawing.Point(0, 55);
-			this.btnDelivered.Name = "btnDelivered";
-			this.btnDelivered.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-			this.btnDelivered.Size = new System.Drawing.Size(203, 55);
-			this.btnDelivered.TabIndex = 3;
-			this.btnDelivered.Text = "Entregados";
-			this.btnDelivered.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.btnDelivered.UseVisualStyleBackColor = true;
-			// 
-			// btnSent
-			// 
-			this.btnSent.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnSent.FlatAppearance.BorderSize = 0;
-			this.btnSent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnSent.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnSent.ForeColor = System.Drawing.Color.Gainsboro;
-			this.btnSent.IconChar = FontAwesome.Sharp.IconChar.TruckFast;
-			this.btnSent.IconColor = System.Drawing.Color.Gainsboro;
-			this.btnSent.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.btnSent.IconSize = 30;
-			this.btnSent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnSent.Location = new System.Drawing.Point(0, 0);
-			this.btnSent.Name = "btnSent";
-			this.btnSent.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-			this.btnSent.Size = new System.Drawing.Size(203, 55);
-			this.btnSent.TabIndex = 2;
-			this.btnSent.Text = "En Envio";
-			this.btnSent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.btnSent.UseVisualStyleBackColor = true;
-			// 
 			// btnParcel
 			// 
 			this.btnParcel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -352,195 +522,26 @@
 			this.btnRegister.UseVisualStyleBackColor = true;
 			this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
 			// 
-			// pcbIconTitle
+			// panInicio
 			// 
-			this.pcbIconTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-			this.pcbIconTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
-			this.pcbIconTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
-			this.pcbIconTitle.IconChar = FontAwesome.Sharp.IconChar.House;
-			this.pcbIconTitle.IconColor = System.Drawing.Color.WhiteSmoke;
-			this.pcbIconTitle.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.pcbIconTitle.Location = new System.Drawing.Point(626, 31);
-			this.pcbIconTitle.Name = "pcbIconTitle";
-			this.pcbIconTitle.Size = new System.Drawing.Size(32, 32);
-			this.pcbIconTitle.TabIndex = 11;
-			this.pcbIconTitle.TabStop = false;
+			this.panInicio.AutoScroll = true;
+			this.panInicio.Controls.Add(this.pictureBox2);
+			this.panInicio.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panInicio.Location = new System.Drawing.Point(220, 73);
+			this.panInicio.Name = "panInicio";
+			this.panInicio.Size = new System.Drawing.Size(977, 580);
+			this.panInicio.TabIndex = 2;
 			// 
-			// iconButton2
+			// pictureBox2
 			// 
-			this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.iconButton2.FlatAppearance.BorderSize = 0;
-			this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.iconButton2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.EllipsisVertical;
-			this.iconButton2.IconColor = System.Drawing.Color.White;
-			this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.iconButton2.IconSize = 25;
-			this.iconButton2.Location = new System.Drawing.Point(1164, 32);
-			this.iconButton2.Margin = new System.Windows.Forms.Padding(10, 3, 20, 3);
-			this.iconButton2.Name = "iconButton2";
-			this.iconButton2.Size = new System.Drawing.Size(33, 42);
-			this.iconButton2.TabIndex = 10;
-			this.iconButton2.UseVisualStyleBackColor = true;
-			// 
-			// pcbImgUsuario
-			// 
-			this.pcbImgUsuario.Anchor = System.Windows.Forms.AnchorStyles.Right;
-			this.pcbImgUsuario.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-			this.pcbImgUsuario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
-			this.pcbImgUsuario.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
-			this.pcbImgUsuario.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-			this.pcbImgUsuario.BorderSize = 2;
-			this.pcbImgUsuario.GradientAngle = 50F;
-			this.pcbImgUsuario.Image = global::StellarShip_Express.Properties.Resources.Null;
-			this.pcbImgUsuario.Location = new System.Drawing.Point(958, 27);
-			this.pcbImgUsuario.Name = "pcbImgUsuario";
-			this.pcbImgUsuario.Size = new System.Drawing.Size(43, 43);
-			this.pcbImgUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.pcbImgUsuario.TabIndex = 8;
-			this.pcbImgUsuario.TabStop = false;
-			// 
-			// btnMaximizar
-			// 
-			this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnMaximizar.FlatAppearance.BorderSize = 0;
-			this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnMaximizar.IconChar = FontAwesome.Sharp.IconChar.WindowRestore;
-			this.btnMaximizar.IconColor = System.Drawing.Color.White;
-			this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.btnMaximizar.IconSize = 20;
-			this.btnMaximizar.Location = new System.Drawing.Point(1119, 1);
-			this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4);
-			this.btnMaximizar.Name = "btnMaximizar";
-			this.btnMaximizar.Size = new System.Drawing.Size(36, 25);
-			this.btnMaximizar.TabIndex = 7;
-			this.btnMaximizar.UseVisualStyleBackColor = true;
-			this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
-			// 
-			// btnMinum
-			// 
-			this.btnMinum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnMinum.FlatAppearance.BorderSize = 0;
-			this.btnMinum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnMinum.IconChar = FontAwesome.Sharp.IconChar.Minus;
-			this.btnMinum.IconColor = System.Drawing.Color.White;
-			this.btnMinum.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.btnMinum.IconSize = 25;
-			this.btnMinum.Location = new System.Drawing.Point(1085, 1);
-			this.btnMinum.Margin = new System.Windows.Forms.Padding(4);
-			this.btnMinum.Name = "btnMinum";
-			this.btnMinum.Size = new System.Drawing.Size(36, 25);
-			this.btnMinum.TabIndex = 6;
-			this.btnMinum.UseVisualStyleBackColor = true;
-			this.btnMinum.Click += new System.EventHandler(this.btnMinum_Click);
-			// 
-			// btnHome
-			// 
-			this.btnHome.Dock = System.Windows.Forms.DockStyle.Left;
-			this.btnHome.Image = global::StellarShip_Express.Properties.Resources.StellarShip_Express_logo;
-			this.btnHome.Location = new System.Drawing.Point(0, 0);
-			this.btnHome.Name = "btnHome";
-			this.btnHome.Size = new System.Drawing.Size(220, 73);
-			this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.btnHome.TabIndex = 0;
-			this.btnHome.TabStop = false;
-			this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-			// 
-			// btnClose
-			// 
-			this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnClose.FlatAppearance.BorderSize = 0;
-			this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Xmark;
-			this.btnClose.IconColor = System.Drawing.Color.White;
-			this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.btnClose.IconSize = 18;
-			this.btnClose.Location = new System.Drawing.Point(1157, 1);
-			this.btnClose.Margin = new System.Windows.Forms.Padding(4);
-			this.btnClose.Name = "btnClose";
-			this.btnClose.Size = new System.Drawing.Size(36, 25);
-			this.btnClose.TabIndex = 5;
-			this.btnClose.UseVisualStyleBackColor = true;
-			this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-			// 
-			// panRegis
-			// 
-			this.panRegis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(82)))), ((int)(((byte)(92)))));
-			this.panRegis.Controls.Add(this.btnBitacora);
-			this.panRegis.Controls.Add(this.btnFactura);
-			this.panRegis.Controls.Add(this.btnClientes);
-			this.panRegis.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panRegis.Location = new System.Drawing.Point(0, 480);
-			this.panRegis.Name = "panRegis";
-			this.panRegis.Size = new System.Drawing.Size(203, 177);
-			this.panRegis.TabIndex = 11;
-			this.panRegis.Visible = false;
-			// 
-			// btnFactura
-			// 
-			this.btnFactura.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnFactura.FlatAppearance.BorderSize = 0;
-			this.btnFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnFactura.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnFactura.ForeColor = System.Drawing.Color.Gainsboro;
-			this.btnFactura.IconChar = FontAwesome.Sharp.IconChar.None;
-			this.btnFactura.IconColor = System.Drawing.Color.Gainsboro;
-			this.btnFactura.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.btnFactura.IconSize = 30;
-			this.btnFactura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnFactura.Location = new System.Drawing.Point(0, 55);
-			this.btnFactura.Name = "btnFactura";
-			this.btnFactura.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-			this.btnFactura.Size = new System.Drawing.Size(203, 55);
-			this.btnFactura.TabIndex = 3;
-			this.btnFactura.Text = "Facturas";
-			this.btnFactura.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.btnFactura.UseVisualStyleBackColor = true;
-			this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
-			// 
-			// btnClientes
-			// 
-			this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnClientes.FlatAppearance.BorderSize = 0;
-			this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnClientes.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnClientes.ForeColor = System.Drawing.Color.Gainsboro;
-			this.btnClientes.IconChar = FontAwesome.Sharp.IconChar.None;
-			this.btnClientes.IconColor = System.Drawing.Color.Gainsboro;
-			this.btnClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.btnClientes.IconSize = 30;
-			this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnClientes.Location = new System.Drawing.Point(0, 0);
-			this.btnClientes.Name = "btnClientes";
-			this.btnClientes.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-			this.btnClientes.Size = new System.Drawing.Size(203, 55);
-			this.btnClientes.TabIndex = 2;
-			this.btnClientes.Text = "Clientes";
-			this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.btnClientes.UseVisualStyleBackColor = true;
-			this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
-			// 
-			// btnBitacora
-			// 
-			this.btnBitacora.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnBitacora.FlatAppearance.BorderSize = 0;
-			this.btnBitacora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnBitacora.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnBitacora.ForeColor = System.Drawing.Color.Gainsboro;
-			this.btnBitacora.IconChar = FontAwesome.Sharp.IconChar.None;
-			this.btnBitacora.IconColor = System.Drawing.Color.Gainsboro;
-			this.btnBitacora.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.btnBitacora.IconSize = 30;
-			this.btnBitacora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnBitacora.Location = new System.Drawing.Point(0, 110);
-			this.btnBitacora.Name = "btnBitacora";
-			this.btnBitacora.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-			this.btnBitacora.Size = new System.Drawing.Size(203, 55);
-			this.btnBitacora.TabIndex = 4;
-			this.btnBitacora.Text = "Bitacora";
-			this.btnBitacora.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.btnBitacora.UseVisualStyleBackColor = true;
-			this.btnBitacora.Click += new System.EventHandler(this.btnBitacora_Click);
+			this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.pictureBox2.Image = global::StellarShip_Express.Properties.Resources.StellarShip_Logo_Tono2;
+			this.pictureBox2.Location = new System.Drawing.Point(271, 175);
+			this.pictureBox2.Name = "pictureBox2";
+			this.pictureBox2.Size = new System.Drawing.Size(466, 100);
+			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+			this.pictureBox2.TabIndex = 0;
+			this.pictureBox2.TabStop = false;
 			// 
 			// frm_Menu
 			// 
@@ -559,15 +560,15 @@
 			this.Load += new System.EventHandler(this.frm_Menu_Load);
 			this.panTitle.ResumeLayout(false);
 			this.panTitle.PerformLayout();
-			this.panAlmacen.ResumeLayout(false);
-			this.panMenu.ResumeLayout(false);
-			this.panInicio.ResumeLayout(false);
-			this.panInicio.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pcbIconTitle)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pcbImgUsuario)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
+			this.panAlmacen.ResumeLayout(false);
+			this.panMenu.ResumeLayout(false);
 			this.panRegis.ResumeLayout(false);
+			this.panInicio.ResumeLayout(false);
+			this.panInicio.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			this.ResumeLayout(false);
 
         }

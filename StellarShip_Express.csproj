@@ -162,6 +162,13 @@
       <DependentUpon>CuadroPaquete.cs</DependentUpon>
     </Compile>
     <Compile Include="DatosUsuario.cs" />
+    <Compile Include="Envios\ConsultaPaquetes.cs" />
+    <Compile Include="Envios\frmEnviosEnCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Envios\frmEnviosEnCurso.Designer.cs">
+      <DependentUpon>frmEnviosEnCurso.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmConexion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,6 +280,9 @@
     </Compile>
     <EmbeddedResource Include="CuadroPaquete.resx">
       <DependentUpon>CuadroPaquete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Envios\frmEnviosEnCurso.resx">
+      <DependentUpon>frmEnviosEnCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConexion.resx">
       <DependentUpon>frmConexion.cs</DependentUpon>

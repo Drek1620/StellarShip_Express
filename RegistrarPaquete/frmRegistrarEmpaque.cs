@@ -87,6 +87,10 @@ namespace StellarShip_Express.RegistrarPaquete
             DatosPaquete.Bolsa = contbolsa.ToString();
             DatosPaquete.Cantidad = indice_fila + 1;
             frmConfirm.ShowDialog();
+            if (frmConfirm.ShowDialog() == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
 
         private void chkPeligroso_CheckedChanged(object sender, EventArgs e)

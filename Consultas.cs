@@ -15,6 +15,8 @@ namespace StellarShip_Express
     internal class Consultas
     {
         private SqlDataReader LeerFilas;
+        
+
         //Esta es la forma base para conectarse a la clase conexion
         public DataTable MostrarUsuarios()
         {
@@ -138,7 +140,7 @@ namespace StellarShip_Express
 
 
             public DataTable Conductores()
-        {
+            {
             DataTable Tabla = new DataTable();
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
             using (var connection = conexionSQL.GetConnection())
@@ -156,7 +158,7 @@ namespace StellarShip_Express
                 }
             }
 
-        }
+            }
 
         public DataTable MostrarPuestos()
         {
@@ -608,6 +610,8 @@ namespace StellarShip_Express
 
 			}
 		}
+
+
 
 	}
 }

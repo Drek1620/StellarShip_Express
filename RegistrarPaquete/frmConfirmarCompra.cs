@@ -82,7 +82,10 @@ namespace StellarShip_Express.RegistrarPaquete
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+			if (MessageBox.Show("¿Quieres cerrar la ventana de compra?", "Advertencia",
+		   MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+				DialogResult = DialogResult.OK;
+
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)

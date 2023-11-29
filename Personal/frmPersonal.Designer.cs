@@ -32,12 +32,12 @@
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.dgvDatos = new System.Windows.Forms.DataGridView();
-			this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
+			this.txtBuscar = new CustomControls.RJControls.RJTextBox();
 			this.btnActualizar = new FontAwesome.Sharp.IconButton();
 			this.btnAgregar = new FontAwesome.Sharp.IconButton();
 			this.btnEliminar = new FontAwesome.Sharp.IconButton();
 			this.btnEditar = new FontAwesome.Sharp.IconButton();
-			this.iconButton1 = new FontAwesome.Sharp.IconButton();
+			this.btnBuscar = new FontAwesome.Sharp.IconButton();
 			((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -88,27 +88,28 @@
 			this.dgvDatos.TabIndex = 2;
 			this.dgvDatos.Resize += new System.EventHandler(this.dgvDatos_Resize);
 			// 
-			// rjTextBox1
+			// txtBuscar
 			// 
-			this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-			this.rjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-			this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-			this.rjTextBox1.BorderRadius = 0;
-			this.rjTextBox1.BorderSize = 2;
-			this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.rjTextBox1.Location = new System.Drawing.Point(41, 51);
-			this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-			this.rjTextBox1.Multiline = false;
-			this.rjTextBox1.Name = "rjTextBox1";
-			this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-			this.rjTextBox1.PasswordChar = false;
-			this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-			this.rjTextBox1.PlaceholderText = "";
-			this.rjTextBox1.Size = new System.Drawing.Size(297, 31);
-			this.rjTextBox1.TabIndex = 4;
-			this.rjTextBox1.Texts = "";
-			this.rjTextBox1.UnderlinedStyle = false;
+			this.txtBuscar.BackColor = System.Drawing.SystemColors.Window;
+			this.txtBuscar.BorderColor = System.Drawing.Color.MediumSlateBlue;
+			this.txtBuscar.BorderFocusColor = System.Drawing.Color.HotPink;
+			this.txtBuscar.BorderRadius = 0;
+			this.txtBuscar.BorderSize = 2;
+			this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.txtBuscar.Location = new System.Drawing.Point(41, 51);
+			this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
+			this.txtBuscar.MaxLength = 32767;
+			this.txtBuscar.Multiline = false;
+			this.txtBuscar.Name = "txtBuscar";
+			this.txtBuscar.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+			this.txtBuscar.PasswordChar = false;
+			this.txtBuscar.PlaceholderColor = System.Drawing.Color.DarkGray;
+			this.txtBuscar.PlaceholderText = "";
+			this.txtBuscar.Size = new System.Drawing.Size(297, 31);
+			this.txtBuscar.TabIndex = 4;
+			this.txtBuscar.Texts = "";
+			this.txtBuscar.UnderlinedStyle = false;
 			// 
 			// btnActualizar
 			// 
@@ -161,6 +162,7 @@
 			this.btnEliminar.Size = new System.Drawing.Size(44, 31);
 			this.btnEliminar.TabIndex = 7;
 			this.btnEliminar.UseVisualStyleBackColor = false;
+			this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
 			// 
 			// btnEditar
 			// 
@@ -180,21 +182,22 @@
 			this.btnEditar.UseVisualStyleBackColor = false;
 			this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
 			// 
-			// iconButton1
+			// btnBuscar
 			// 
-			this.iconButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-			this.iconButton1.Cursor = System.Windows.Forms.Cursors.Default;
-			this.iconButton1.FlatAppearance.BorderSize = 0;
-			this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-			this.iconButton1.IconColor = System.Drawing.Color.White;
-			this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.iconButton1.IconSize = 25;
-			this.iconButton1.Location = new System.Drawing.Point(338, 51);
-			this.iconButton1.Name = "iconButton1";
-			this.iconButton1.Size = new System.Drawing.Size(44, 31);
-			this.iconButton1.TabIndex = 5;
-			this.iconButton1.UseVisualStyleBackColor = false;
+			this.btnBuscar.BackColor = System.Drawing.Color.MediumSlateBlue;
+			this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Default;
+			this.btnBuscar.FlatAppearance.BorderSize = 0;
+			this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+			this.btnBuscar.IconColor = System.Drawing.Color.White;
+			this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btnBuscar.IconSize = 25;
+			this.btnBuscar.Location = new System.Drawing.Point(338, 51);
+			this.btnBuscar.Name = "btnBuscar";
+			this.btnBuscar.Size = new System.Drawing.Size(44, 31);
+			this.btnBuscar.TabIndex = 5;
+			this.btnBuscar.UseVisualStyleBackColor = false;
+			this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
 			// 
 			// frmPersonal
 			// 
@@ -206,8 +209,8 @@
 			this.Controls.Add(this.btnAgregar);
 			this.Controls.Add(this.btnEliminar);
 			this.Controls.Add(this.btnEditar);
-			this.Controls.Add(this.iconButton1);
-			this.Controls.Add(this.rjTextBox1);
+			this.Controls.Add(this.btnBuscar);
+			this.Controls.Add(this.txtBuscar);
 			this.Controls.Add(this.dgvDatos);
 			this.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -223,8 +226,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvDatos;
-        private CustomControls.RJControls.RJTextBox rjTextBox1;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private CustomControls.RJControls.RJTextBox txtBuscar;
+        private FontAwesome.Sharp.IconButton btnBuscar;
         private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private FontAwesome.Sharp.IconButton btnAgregar;

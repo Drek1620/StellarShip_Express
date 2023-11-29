@@ -98,5 +98,18 @@ namespace StellarShip_Express.Formularios
             }
             
         }
-    }
+
+		private void btnEliminar_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnBuscar_Click(object sender, EventArgs e)
+		{
+            if (txtBuscar.Texts != "")
+            {
+
+            }
+		}
+	}
 }

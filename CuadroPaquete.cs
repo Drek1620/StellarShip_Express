@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StellarShip_Express.Envios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,60 @@ namespace StellarShip_Express
 {
     public partial class CuadroPaquete : UserControl
     {
-        public CuadroPaquete()
+		private long id = 0;
+		private string status = "";
+		public CuadroPaquete()
         {
             InitializeComponent();
+			pictureBox1.Image = StellarShip_Express.Properties.Resources.Parcel_box;
         }
-    }
+
+        public long Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
+        public string Guia
+        {
+            get { return label2.Text; }
+            set { label2.Text = value; }
+        }
+
+		public string Recibe
+		{
+			get { return label3.Text; }
+			set { label3.Text = value; }
+		}
+
+		public string Destino
+		{
+			get { return label5.Text; }
+			set { label5.Text = value; }
+		}
+
+		public string Estatus
+		{
+			get { return label7.Text; }
+			set { label7.Text = value; }
+		}
+
+		public string Detalles
+		{
+			get { return label9.Text; }
+			set { label9.Text = value; }
+		}
+
+		private void btnCambiar_Click(object sender, EventArgs e)
+		{
+			ConsultaPaquetes obj = new ConsultaPaquetes();
+
+			var editar = obj.CambiarEstatus(this.Id,
+				cmbEstatus.Text);
+			if (editar==true)
+			{
+				MessageBox.Show("Modificado");
+			}
+		}
+	}
 }

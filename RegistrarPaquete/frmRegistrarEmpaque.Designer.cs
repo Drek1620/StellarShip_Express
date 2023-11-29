@@ -79,7 +79,7 @@
 			this.cmbEmbalaje.Location = new System.Drawing.Point(41, 105);
 			this.cmbEmbalaje.Margin = new System.Windows.Forms.Padding(4);
 			this.cmbEmbalaje.Name = "cmbEmbalaje";
-			this.cmbEmbalaje.Size = new System.Drawing.Size(816, 99);
+			this.cmbEmbalaje.Size = new System.Drawing.Size(799, 99);
 			this.cmbEmbalaje.TabIndex = 0;
 			// 
 			// label10
@@ -135,6 +135,7 @@
 			this.txtAncho.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.txtAncho.Location = new System.Drawing.Point(328, 24);
 			this.txtAncho.Margin = new System.Windows.Forms.Padding(4);
+			this.txtAncho.MaxLength = 32767;
 			this.txtAncho.Multiline = false;
 			this.txtAncho.Name = "txtAncho";
 			this.txtAncho.Padding = new System.Windows.Forms.Padding(20, 15, 15, 15);
@@ -182,6 +183,7 @@
 			this.txtLargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.txtLargo.Location = new System.Drawing.Point(4, 24);
 			this.txtLargo.Margin = new System.Windows.Forms.Padding(4);
+			this.txtLargo.MaxLength = 32767;
 			this.txtLargo.Multiline = false;
 			this.txtLargo.Name = "txtLargo";
 			this.txtLargo.Padding = new System.Windows.Forms.Padding(20, 15, 15, 15);
@@ -227,6 +229,7 @@
 			this.txtKg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.txtKg.Location = new System.Drawing.Point(4, 24);
 			this.txtKg.Margin = new System.Windows.Forms.Padding(4);
+			this.txtKg.MaxLength = 32767;
 			this.txtKg.Multiline = false;
 			this.txtKg.Name = "txtKg";
 			this.txtKg.Padding = new System.Windows.Forms.Padding(20, 15, 15, 15);
@@ -376,7 +379,7 @@
 			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
 			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
 			this.dgvPaquetes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-			this.dgvPaquetes.Size = new System.Drawing.Size(816, 135);
+			this.dgvPaquetes.Size = new System.Drawing.Size(799, 135);
 			this.dgvPaquetes.TabIndex = 25;
 			// 
 			// label11
@@ -430,7 +433,7 @@
 			this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
 			this.btnAgregar.ForeColor = System.Drawing.Color.White;
-			this.btnAgregar.Location = new System.Drawing.Point(360, 607);
+			this.btnAgregar.Location = new System.Drawing.Point(351, 607);
 			this.btnAgregar.Name = "btnAgregar";
 			this.btnAgregar.Size = new System.Drawing.Size(183, 40);
 			this.btnAgregar.TabIndex = 30;
@@ -443,7 +446,7 @@
 			// 
 			this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.panel2.Controls.Add(this.btnConfirmar);
-			this.panel2.Location = new System.Drawing.Point(526, 856);
+			this.panel2.Location = new System.Drawing.Point(509, 856);
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(344, 87);
 			this.panel2.TabIndex = 31;
@@ -479,7 +482,7 @@
 			this.btnEliminar.IconColor = System.Drawing.Color.White;
 			this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnEliminar.IconSize = 25;
-			this.btnEliminar.Location = new System.Drawing.Point(813, 681);
+			this.btnEliminar.Location = new System.Drawing.Point(796, 681);
 			this.btnEliminar.Name = "btnEliminar";
 			this.btnEliminar.Size = new System.Drawing.Size(44, 31);
 			this.btnEliminar.TabIndex = 27;
