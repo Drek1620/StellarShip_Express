@@ -169,6 +169,12 @@
     <Compile Include="Envios\frmEnviosEnCurso.Designer.cs">
       <DependentUpon>frmEnviosEnCurso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Envios\frmEnviosEntregados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Envios\frmEnviosEntregados.Designer.cs">
+      <DependentUpon>frmEnviosEntregados.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmConexion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -283,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Envios\frmEnviosEnCurso.resx">
       <DependentUpon>frmEnviosEnCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Envios\frmEnviosEntregados.resx">
+      <DependentUpon>frmEnviosEntregados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConexion.resx">
       <DependentUpon>frmConexion.cs</DependentUpon>

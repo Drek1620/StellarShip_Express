@@ -34,7 +34,7 @@
 			this.label9 = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
 			this.cmbEstatus = new System.Windows.Forms.ComboBox();
-			this.rButton1 = new CustomControls.RButton();
+			this.btnEntregado = new CustomControls.RButton();
 			this.label7 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
 			this.panel1.Controls.Add(this.label9);
 			this.panel1.Controls.Add(this.label10);
 			this.panel1.Controls.Add(this.cmbEstatus);
-			this.panel1.Controls.Add(this.rButton1);
+			this.panel1.Controls.Add(this.btnEntregado);
 			this.panel1.Controls.Add(this.label7);
 			this.panel1.Controls.Add(this.label8);
 			this.panel1.Controls.Add(this.label5);
@@ -68,7 +68,7 @@
 			this.panel1.Controls.Add(this.pictureBox1);
 			this.panel1.Location = new System.Drawing.Point(5, 7);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(310, 344);
+			this.panel1.Size = new System.Drawing.Size(310, 358);
 			this.panel1.TabIndex = 15;
 			// 
 			// btnCambiar
@@ -83,7 +83,7 @@
 			this.btnCambiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnCambiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnCambiar.ForeColor = System.Drawing.Color.White;
-			this.btnCambiar.Location = new System.Drawing.Point(16, 305);
+			this.btnCambiar.Location = new System.Drawing.Point(16, 319);
 			this.btnCambiar.Name = "btnCambiar";
 			this.btnCambiar.Size = new System.Drawing.Size(81, 28);
 			this.btnCambiar.TabIndex = 29;
@@ -104,11 +104,11 @@
 			// 
 			// label9
 			// 
-			this.label9.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label9.Location = new System.Drawing.Point(136, 255);
+			this.label9.Font = new System.Drawing.Font("Century Gothic", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label9.Location = new System.Drawing.Point(131, 266);
 			this.label9.Name = "label9";
 			this.label9.Padding = new System.Windows.Forms.Padding(0, 0, 0, 4);
-			this.label9.Size = new System.Drawing.Size(160, 47);
+			this.label9.Size = new System.Drawing.Size(172, 47);
 			this.label9.TabIndex = 27;
 			this.label9.Text = "El paquete ha llegado a un centro de clasificación";
 			// 
@@ -116,7 +116,7 @@
 			// 
 			this.label10.AutoSize = true;
 			this.label10.Font = new System.Drawing.Font("Lohit Telugu", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label10.Location = new System.Drawing.Point(136, 233);
+			this.label10.Location = new System.Drawing.Point(131, 244);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(61, 22);
 			this.label10.TabIndex = 26;
@@ -139,42 +139,42 @@
 			this.cmbEstatus.Size = new System.Drawing.Size(101, 21);
 			this.cmbEstatus.TabIndex = 25;
 			// 
-			// rButton1
+			// btnEntregado
 			// 
-			this.rButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.rButton1.BackColor = System.Drawing.Color.YellowGreen;
-			this.rButton1.BackgroundColor = System.Drawing.Color.YellowGreen;
-			this.rButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-			this.rButton1.BorderRadius = 5;
-			this.rButton1.BorderSize = 0;
-			this.rButton1.FlatAppearance.BorderSize = 0;
-			this.rButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.rButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.rButton1.ForeColor = System.Drawing.Color.White;
-			this.rButton1.Location = new System.Drawing.Point(215, 305);
-			this.rButton1.Name = "rButton1";
-			this.rButton1.Size = new System.Drawing.Size(81, 28);
-			this.rButton1.TabIndex = 24;
-			this.rButton1.Text = "Entregado";
-			this.rButton1.TextColor = System.Drawing.Color.White;
-			this.rButton1.UseVisualStyleBackColor = false;
+			this.btnEntregado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnEntregado.BackColor = System.Drawing.Color.YellowGreen;
+			this.btnEntregado.BackgroundColor = System.Drawing.Color.YellowGreen;
+			this.btnEntregado.BorderColor = System.Drawing.Color.PaleVioletRed;
+			this.btnEntregado.BorderRadius = 5;
+			this.btnEntregado.BorderSize = 0;
+			this.btnEntregado.FlatAppearance.BorderSize = 0;
+			this.btnEntregado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnEntregado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnEntregado.ForeColor = System.Drawing.Color.White;
+			this.btnEntregado.Location = new System.Drawing.Point(215, 319);
+			this.btnEntregado.Name = "btnEntregado";
+			this.btnEntregado.Size = new System.Drawing.Size(81, 28);
+			this.btnEntregado.TabIndex = 24;
+			this.btnEntregado.Text = "Entregado";
+			this.btnEntregado.TextColor = System.Drawing.Color.White;
+			this.btnEntregado.UseVisualStyleBackColor = false;
+			this.btnEntregado.Click += new System.EventHandler(this.btnEntregado_Click);
 			// 
 			// label7
 			// 
-			this.label7.AutoSize = true;
-			this.label7.Font = new System.Drawing.Font("Lohit Telugu", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label7.Location = new System.Drawing.Point(136, 207);
+			this.label7.Font = new System.Drawing.Font("Lohit Telugu", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label7.Location = new System.Drawing.Point(131, 205);
 			this.label7.Name = "label7";
 			this.label7.Padding = new System.Windows.Forms.Padding(0, 0, 0, 4);
-			this.label7.Size = new System.Drawing.Size(99, 26);
+			this.label7.Size = new System.Drawing.Size(172, 52);
 			this.label7.TabIndex = 23;
-			this.label7.Text = "En Transito.";
+			this.label7.Text = "Intento de Entrega Fallido.";
 			// 
 			// label8
 			// 
 			this.label8.AutoSize = true;
 			this.label8.Font = new System.Drawing.Font("Lohit Telugu", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label8.Location = new System.Drawing.Point(136, 185);
+			this.label8.Location = new System.Drawing.Point(131, 185);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(57, 22);
 			this.label8.TabIndex = 22;
@@ -182,11 +182,11 @@
 			// 
 			// label5
 			// 
-			this.label5.Font = new System.Drawing.Font("Lohit Telugu", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(136, 137);
+			this.label5.Font = new System.Drawing.Font("Lohit Telugu", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label5.Location = new System.Drawing.Point(131, 137);
 			this.label5.Name = "label5";
 			this.label5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 4);
-			this.label5.Size = new System.Drawing.Size(160, 48);
+			this.label5.Size = new System.Drawing.Size(172, 48);
 			this.label5.TabIndex = 21;
 			this.label5.Text = "Gomez Palacio\r\nDurango, Mexico.";
 			// 
@@ -194,7 +194,7 @@
 			// 
 			this.label6.AutoSize = true;
 			this.label6.Font = new System.Drawing.Font("Lohit Telugu", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label6.Location = new System.Drawing.Point(136, 115);
+			this.label6.Location = new System.Drawing.Point(131, 115);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(58, 22);
 			this.label6.TabIndex = 20;
@@ -203,10 +203,10 @@
 			// label3
 			// 
 			this.label3.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(136, 82);
+			this.label3.Location = new System.Drawing.Point(131, 82);
 			this.label3.Name = "label3";
 			this.label3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 4);
-			this.label3.Size = new System.Drawing.Size(160, 48);
+			this.label3.Size = new System.Drawing.Size(172, 48);
 			this.label3.TabIndex = 19;
 			this.label3.Text = "Alan Garcia";
 			// 
@@ -214,7 +214,7 @@
 			// 
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Lohit Telugu", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(136, 60);
+			this.label4.Location = new System.Drawing.Point(131, 60);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(54, 22);
 			this.label4.TabIndex = 18;
@@ -224,7 +224,7 @@
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Lohit Telugu", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(136, 34);
+			this.label2.Location = new System.Drawing.Point(131, 34);
 			this.label2.Name = "label2";
 			this.label2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 4);
 			this.label2.Size = new System.Drawing.Size(172, 26);
@@ -235,7 +235,7 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Lohit Telugu", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(136, 12);
+			this.label1.Location = new System.Drawing.Point(131, 12);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(160, 22);
 			this.label1.TabIndex = 16;
@@ -243,7 +243,7 @@
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(3, 12);
+			this.pictureBox1.Location = new System.Drawing.Point(2, 12);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(127, 118);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -258,7 +258,7 @@
 			this.Controls.Add(this.panel1);
 			this.Margin = new System.Windows.Forms.Padding(0);
 			this.Name = "CuadroPaquete";
-			this.Size = new System.Drawing.Size(320, 357);
+			this.Size = new System.Drawing.Size(320, 371);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -273,7 +273,7 @@
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.ComboBox cmbEstatus;
-		private CustomControls.RButton rButton1;
+		private CustomControls.RButton btnEntregado;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label5;

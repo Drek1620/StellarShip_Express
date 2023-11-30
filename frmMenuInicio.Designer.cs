@@ -254,6 +254,7 @@
 			this.btnDelivered.Text = "Entregados";
 			this.btnDelivered.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.btnDelivered.UseVisualStyleBackColor = true;
+			this.btnDelivered.Click += new System.EventHandler(this.btnDelivered_Click);
 			// 
 			// btnSent
 			// 

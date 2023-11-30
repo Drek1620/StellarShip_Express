@@ -282,5 +282,10 @@ namespace StellarShip_Express
 		{
 			OpenChildForm(new frmEnviosEnCurso());
 		}
+
+		private void btnDelivered_Click(object sender, EventArgs e)
+		{
+			OpenChildForm(new frmEnviosEntregados());
+		}
 	}
 }
