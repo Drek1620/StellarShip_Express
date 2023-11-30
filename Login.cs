@@ -1,4 +1,5 @@
 ﻿using AForge.Imaging.Filters;
+using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -84,5 +85,25 @@ namespace StellarShip_Express
             lblError.Visible=false;
             this.Show();
         }
-    }
+
+		private void btnMostrar_Click(object sender, EventArgs e)
+		{
+            if (txtPass.UseSystemPasswordChar == false)
+            {
+				txtPass.UseSystemPasswordChar = true;
+				btnMostrar.IconChar = IconChar.Eye;
+				
+			}
+            else
+            {
+				if (txtPass.UseSystemPasswordChar == true)
+				{
+					txtPass.UseSystemPasswordChar = false;
+					btnMostrar.IconChar = IconChar.EyeSlash;
+				}
+			}
+            
+            
+		}
+	}
 }
