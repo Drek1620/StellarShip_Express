@@ -45,7 +45,7 @@ namespace StellarShip_Express.Otros
 		{
 			
 
-			object opcionSeleccionada = cmbFiltros.SelectedItem;
+			string opcionSeleccionada = cmbFiltros.Texts;
 
 			DataTable Tabla = new DataTable();
 			ConexionSQLServ conexionSQL = new ConexionSQLServ();
@@ -120,14 +120,14 @@ namespace StellarShip_Express.Otros
 					using (var command = new SqlCommand())
 					{
 						connection.Open();
-						string consutaNoFac = "Select * from Factura where Fecha BETWEEN " + dateTimePicker1.CustomFormat + " AND " + dateTimePicker2.CustomFormat+"";
+						string consutaNoFac = $"Select * from Factura where Fecha BETWEEN '{dateTimePicker1.Value.Date.ToString("yyyy-MM-dd HH:mm:ss")}' AND '{dateTimePicker2.Value.Date.ToString("yyyy-MM-dd HH:mm:ss")}'";
 						SqlDataAdapter adap = new SqlDataAdapter(consutaNoFac, connection);
 						adap.Fill(Tabla);
 						dgvDatos.DataSource = Tabla;
 						SqlCommand comando = new SqlCommand(consutaNoFac, connection);
 						SqlDataReader leer;
 						leer = comando.ExecuteReader();
-						connection.Close();
+						connection.Close(); 
 					}
 					
 				}
