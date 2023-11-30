@@ -113,5 +113,37 @@ namespace StellarShip_Express.Vehiculos
         {
 
         }
+
+        //boton busqueda 
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            Consultas consultas = new Consultas();
+           
+
+            try
+            {
+                             
+                if (cmbFiltros.Texts == "ID")
+                {
+                    dgvDatos.DataSource = consultas.BuscarID(txtBusqueda.Texts);
+                }
+                if (cmbFiltros.Texts == "Marca")                       
+                {
+                    dgvDatos.DataSource = consultas.BuscarMarca(txtBusqueda.Texts);
+                }
+                if (cmbFiltros.Texts == "Tipo Vehiculo")
+                {
+                    dgvDatos.DataSource = consultas.BuscarTipoV(txtBusqueda.Texts);
+                }
+                
+
+            }
+            catch (Exception EX)
+            {
+
+                MessageBox.Show("Ha ocurrido un error: " + EX.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
     }
 }

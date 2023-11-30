@@ -430,6 +430,75 @@ namespace StellarShip_Express
                
         
         }
+
+        //metodos para busqueda de vehiculos
+        public DataTable BuscarMarca(string marca)
+        {
+          
+            DataTable Tabla = new DataTable();
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT * FROM Vehiculo WHERE Marca LIKE '" + marca + "%'";
+                    command.CommandType = CommandType.Text;
+                    LeerFilas = command.ExecuteReader();                
+                    Tabla.Load(LeerFilas);
+                    return Tabla;
+                }
+            }
+
+        }
+
+        public DataTable BuscarID(string id)
+        {
+
+            DataTable Tabla = new DataTable();
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT * FROM Vehiculo WHERE IdVehiculo LIKE '" + id + "%'";
+                    command.CommandType = CommandType.Text;
+                    LeerFilas = command.ExecuteReader();
+                    Tabla.Load(LeerFilas);
+                    return Tabla;
+                }
+            }
+
+        }
+
+        public DataTable BuscarTipoV(string tipo)
+        {
+
+            DataTable Tabla = new DataTable();
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT * FROM Vehiculo WHERE TipoVehiculo LIKE '" + tipo + "%'";
+                    command.CommandType = CommandType.Text;
+                    LeerFilas = command.ExecuteReader();
+                    Tabla.Load(LeerFilas);
+                    return Tabla;
+                }
+            }
+
+        }
+
+
+        //---------------------------------------------------------------------------------
+
+
         public bool EliminaVehiculos(int IdVehiculoBaja) 
         {
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
