@@ -18,7 +18,16 @@ namespace StellarShip_Express
 		public CuadroPaquete()
         {
             InitializeComponent();
-			pictureBox1.Image = StellarShip_Express.Properties.Resources.Parcel_box;
+			try
+			{
+				pictureBox1.Image = StellarShip_Express.Properties.Resources.Parcel_box;
+			}
+			catch (Exception)
+			{
+
+				return;
+			}
+			
         }
 
         public long Id
@@ -56,17 +65,19 @@ namespace StellarShip_Express
 			get { return label9.Text; }
 			set { label9.Text = value; }
 		}
-
+		ConsultaPaquetes obj = new ConsultaPaquetes();
 		private void btnCambiar_Click(object sender, EventArgs e)
 		{
-			ConsultaPaquetes obj = new ConsultaPaquetes();
+			
 
 			var editar = obj.CambiarEstatus(this.Id,
 				cmbEstatus.Text);
-			if (editar==true)
-			{
-				MessageBox.Show("Modificado");
-			}
+		}
+
+		private void btnEntregado_Click(object sender, EventArgs e)
+		{
+			var editar = obj.CambiarEstatus(this.Id,
+				"Entregado");
 		}
 	}
 }
