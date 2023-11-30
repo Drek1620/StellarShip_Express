@@ -40,9 +40,16 @@ namespace StellarShip_Express.Otros
 
 			DataTable Tabla = new DataTable();
 			ConexionSQLServ conexionSQL = new ConexionSQLServ();
+
+			
+
 			if (opcionSeleccionada == "ID")
 			{
-		
+				if (rjTextBox1.Texts == "")
+				{
+					mostrarbitacora();
+					return;
+				}
 				using (var connection = conexionSQL.GetConnection())
 				{
 					
@@ -65,6 +72,11 @@ namespace StellarShip_Express.Otros
 			}
 			else if (opcionSeleccionada == "ID Usuario")
 			{
+				if (rjTextBox1.Texts == "")
+				{
+					mostrarbitacora();
+					return;
+				}
 				using (var connection = conexionSQL.GetConnection())
 				{
 					

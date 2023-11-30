@@ -51,7 +51,11 @@ namespace StellarShip_Express.Otros
 			ConexionSQLServ conexionSQL = new ConexionSQLServ();
 			if (opcionSeleccionada == "NoFactura")
 			{
-		
+				if (rjTextBox1.Texts == "")
+				{
+					MostrarFactura();
+					return;
+				}
 				using (var connection = conexionSQL.GetConnection())
 				{
 					
@@ -74,6 +78,11 @@ namespace StellarShip_Express.Otros
 			}
 			else if (opcionSeleccionada == "ID Cliente")
 			{
+				if (rjTextBox1.Texts == "")
+				{
+					MostrarFactura();
+					return;
+				}
 				using (var connection = conexionSQL.GetConnection())
 				{
 					
@@ -94,6 +103,11 @@ namespace StellarShip_Express.Otros
 			}
 			else if (opcionSeleccionada == "Sucursal")
 			{
+				if (rjTextBox1.Texts == "")
+				{
+					MostrarFactura();
+					return;
+				}
 				using (var connection = conexionSQL.GetConnection())
 				{
 					
