@@ -190,6 +190,7 @@
 			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "frmClientes";
 			this.Text = "Clientes";
+			this.Load += new System.EventHandler(this.frmClientes_Load_1);
 			this.tableLayoutPanel1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
 			this.ResumeLayout(false);

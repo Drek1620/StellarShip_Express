@@ -25,10 +25,6 @@ namespace StellarShip_Express.Otros
 			InitializeComponent();
 		}
 
-        private void frmClientes_Load(object sender, EventArgs e)
-        {
-            MostrarClientes();
-        }
 
         public void MostrarClientes()
         {
@@ -197,5 +193,10 @@ namespace StellarShip_Express.Otros
         {
             MostrarClientes();
         }
-    }
+
+		private void frmClientes_Load_1(object sender, EventArgs e)
+		{
+			MostrarClientes();
+		}
+	}
 }
