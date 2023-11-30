@@ -90,5 +90,38 @@ namespace StellarShip_Express.Destino
                 , MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            Consultas consultas = new Consultas();
+            try
+            {
+
+                if (cmbFiltros.Texts == "IdDestino")
+                {
+                    dgvDatos.DataSource = consultas.BuscarIdSuc(txtBusqueda.Texts);
+                }
+                if (cmbFiltros.Texts == "Nombre")
+                {
+                    dgvDatos.DataSource = consultas.BuscarNombreSuc(txtBusqueda.Texts);
+                }
+                if (cmbFiltros.Texts == "Municipio")
+                {
+                    dgvDatos.DataSource = consultas.BuscarMunic(txtBusqueda.Texts);
+                }
+
+
+            }
+            catch (Exception EX)
+            {
+
+                MessageBox.Show("Ha ocurrido un error: " + EX.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void cmbFiltro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
