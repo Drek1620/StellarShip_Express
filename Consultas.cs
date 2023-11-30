@@ -9,6 +9,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Forms;
 
 namespace StellarShip_Express
 {
@@ -55,7 +56,18 @@ namespace StellarShip_Express
                 }
             }
         }
-        public DataTable MostrarEstado()
+
+		internal object BuscarFechas(string v1, string v2)
+		{
+			throw new NotImplementedException();
+		}
+
+		internal object BuscarFechas(string v, DateTimePicker dateTimePicker2)
+		{
+			throw new NotImplementedException();
+		}
+
+		public DataTable MostrarEstado()
         {
             DataTable Tabla = new DataTable();
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
@@ -115,10 +127,12 @@ namespace StellarShip_Express
             }
         }
 
-        
-        
+		internal object BuscarFecha(DateTimePicker dateTimePicker1, DateTimePicker dateTimePicker2)
+		{
+			throw new NotImplementedException();
+		}
 
-        public DataTable Bitacora()
+		public DataTable Bitacora()
         {
             DataTable Tabla = new DataTable();
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
@@ -452,6 +466,86 @@ namespace StellarShip_Express
             }
 
         }
+
+        // Busquedas factura ----------------------------------------------
+        public DataTable BuscarNoFac(string NoFac)
+		{
+            DataTable Tabla = new DataTable();
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "Select * from Factura where NoFactura LIKE " + NoFac + "";
+                    command.CommandType = CommandType.Text;
+                    LeerFilas = command.ExecuteReader();
+                    Tabla.Load(LeerFilas);
+                    return Tabla;
+                }
+            }
+        }
+
+        public DataTable BuscarIdcliente(string idClientec)
+        {
+            DataTable Tabla = new DataTable();
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "Select * from Factura where Cliente LIKE " + idClientec + "";
+                    command.CommandType = CommandType.Text;
+                    LeerFilas = command.ExecuteReader();
+                    Tabla.Load(LeerFilas);
+                    return Tabla;
+                }
+            }
+        }
+
+        public DataTable BuscarSuc(string suc)
+        {
+            DataTable Tabla = new DataTable();
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "Select * from Factura where Sucursal LIKE " + suc + "";
+                    command.CommandType = CommandType.Text;
+                    LeerFilas = command.ExecuteReader();
+                    Tabla.Load(LeerFilas);
+                    return Tabla;
+                }
+            }
+        }
+
+        // Este no muestra alan
+        public DataTable BuscarFechas(DateTimePicker fecha1, DateTimePicker fecha2)
+        {
+            DataTable Tabla = new DataTable();
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = $"Select * from Factura where Fecha BETWEEN '{fecha1.Value.Date.ToString("yyyy-MM-dd HH:mm:ss")}' AND '{fecha2.Value.Date.ToString("yyyy-MM-dd HH:mm:ss")}'";
+                    command.CommandType = CommandType.Text;
+                    LeerFilas = command.ExecuteReader();
+                    Tabla.Load(LeerFilas);
+                    return Tabla;
+                }
+            }
+        }
+
+       // ---------------------------------------------------------------------
 
         public DataTable BuscarIdSuc(string idDesti) 
         {

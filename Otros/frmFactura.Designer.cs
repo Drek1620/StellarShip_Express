@@ -111,7 +111,7 @@
 			this.dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
 			this.dgvDatos.Size = new System.Drawing.Size(889, 445);
 			this.dgvDatos.TabIndex = 32;
-			this.dgvDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellContentClick);
+//			this.dgvDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellContentClick);
 			// 
 			// tableLayoutPanel1
 			// 
