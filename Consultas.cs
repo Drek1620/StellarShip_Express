@@ -525,26 +525,6 @@ namespace StellarShip_Express
             }
         }
 
-        // Este no muestra alan
-        public DataTable BuscarFechas(DateTimePicker fecha1, DateTimePicker fecha2)
-        {
-            DataTable Tabla = new DataTable();
-            ConexionSQLServ conexionSQL = new ConexionSQLServ();
-            using (var connection = conexionSQL.GetConnection())
-            {
-                connection.Open();
-                using (var command = new SqlCommand())
-                {
-                    command.Connection = connection;
-                    command.CommandText = $"Select * from Factura where Fecha BETWEEN '{fecha1.Value.Date.ToString("yyyy-MM-dd HH:mm:ss")}' AND '{fecha2.Value.Date.ToString("yyyy-MM-dd HH:mm:ss")}'";
-                    command.CommandType = CommandType.Text;
-                    LeerFilas = command.ExecuteReader();
-                    Tabla.Load(LeerFilas);
-                    return Tabla;
-                }
-            }
-        }
-
        // ---------------------------------------------------------------------
 
         public DataTable BuscarIdSuc(string idDesti) 
