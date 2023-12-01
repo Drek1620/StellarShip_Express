@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Menu));
 			this.panTitle = new System.Windows.Forms.Panel();
 			this.lblTitleChildForm = new System.Windows.Forms.Label();
 			this.pcbIconTitle = new FontAwesome.Sharp.IconPictureBox();
@@ -555,6 +556,7 @@
 			this.Controls.Add(this.panMenu);
 			this.Controls.Add(this.panTitle);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MinimumSize = new System.Drawing.Size(950, 600);
 			this.Name = "frm_Menu";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
