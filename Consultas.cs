@@ -347,7 +347,35 @@ namespace StellarShip_Express
                 }
             }
         }
-        public bool EliminaSucursal(int IdEliminaSuc)
+
+		public bool EliminaUsuario(int IdEliminaUsu)
+		{
+			ConexionSQLServ conexionSQL = new ConexionSQLServ();
+			using (var connection = conexionSQL.GetConnection())
+			{
+				connection.Open();
+				using (var command = new SqlCommand())
+				{
+					command.Connection = connection;
+					command.CommandText = "spBajaUsuario";
+					command.CommandType = CommandType.StoredProcedure;
+					command.Parameters.AddWithValue("@Responsable", DatosUsuario.IdUser);
+					command.Parameters.AddWithValue("@idBajaUsuario", IdEliminaUsu);
+					int a = command.ExecuteNonQuery();
+					if (a > 0)
+					{
+						return true;
+					}
+					else
+					{
+						return false;
+					}
+
+				}
+			}
+		}
+
+		public bool EliminaSucursal(int IdEliminaSuc)
         {
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
             using (var connection = conexionSQL.GetConnection())
@@ -373,6 +401,8 @@ namespace StellarShip_Express
                 }
             }
         }
+
+
         public bool AltaVehiculos(string Marca,string Modelo, string NoPlacas,string TipoVehiculo,string Año,int IdTransportista)
         {
             ConexionSQLServ conexionSQL = new ConexionSQLServ();

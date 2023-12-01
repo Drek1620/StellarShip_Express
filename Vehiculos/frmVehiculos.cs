@@ -72,7 +72,7 @@ namespace StellarShip_Express.Vehiculos
                 if (dgvDatos.SelectedRows.Count > 0)
                 {
                     DatosVehiculo.IdVehiculo = Convert.ToInt32(dgvDatos.CurrentRow.Cells["IdVehiculo"].Value);
-                    DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas eliminar este vehiculo",
+                    DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas eliminar este vehiculo?",
                     "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (resultado == DialogResult.Yes)
                     {

@@ -14,12 +14,12 @@ namespace StellarShip_Express.Envios
 	{
 		ConsultaPaquetes obj = new ConsultaPaquetes();
 		DataSet dsTabla = new DataSet();
-		int PagInicio = 1, Indice = 0, NumFilas = 12, PagFinal;
+		int PagInicio = 1, Indice = 0, NumFilas = 6, PagFinal;
 		public frmEnviosEnCurso()
 		{
 			InitializeComponent();
 			PagFinal = NumFilas;
-			LlenarPaquetes();
+			
 		}
 
 		private void LlenarPaquetes()
@@ -55,7 +55,7 @@ namespace StellarShip_Express.Envios
 
 		private void frmEnviosEnCurso_Load(object sender, EventArgs e)
 		{
-			
+			LlenarPaquetes();
 		}
 
 		private void BtnCambiar_Click(object sender, EventArgs e)

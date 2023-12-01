@@ -101,7 +101,29 @@ namespace StellarShip_Express.Formularios
 
 		private void btnEliminar_Click(object sender, EventArgs e)
 		{
+			Consultas dato = new Consultas();
+			if (dgvDatos.SelectedRows.Count > 0)
+			{
+				int id = Convert.ToInt32(dgvDatos.CurrentRow.Cells["IdUsuario"].Value);
+				DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas eliminar este Usuario?",
+				"Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+				if (resultado == DialogResult.Yes)
+				{
+					var Elimina = dato.EliminaUsuario(id);
+					if (Elimina == true)
+					{
+						MessageBox.Show(this, "Usuario Eliminado exitosamente", "Eliminacion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+					}
+					else
+						MessageBox.Show(this, "El Usuario No se pudo eliminar", "Usuario Inexistente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				}
 
+			}
+			else
+			{
+				MessageBox.Show(this, "Seleccione la fila de los datos que desea Eliminar.\nPor favor", "Seleccione los datos"
+				, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+			}
 		}
 
 		private void btnBuscar_Click(object sender, EventArgs e)
