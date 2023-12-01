@@ -129,6 +129,7 @@
 			this.iconButton2.Size = new System.Drawing.Size(33, 42);
 			this.iconButton2.TabIndex = 10;
 			this.iconButton2.UseVisualStyleBackColor = true;
+			this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
 			// 
 			// lblNombre
 			// 

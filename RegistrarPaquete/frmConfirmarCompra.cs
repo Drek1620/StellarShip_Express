@@ -134,17 +134,8 @@ namespace StellarShip_Express.RegistrarPaquete
                     DatosPaquete.Paquete[i].Mpeligroso,
                     DatosPaquete.Paquete[i].Pirregular
                     );
-                MessageBox.Show("Se Agrego");
             }
 
-            if (Remitente ==true)
-            {
-                MessageBox.Show("Remitente ingresado exitosamente");
-            }
-            if (DetalleEnvio==true)
-				MessageBox.Show("Envio ingresado exitosamente");
-            if(Factura==true)
-				MessageBox.Show("Factura ingresado exitosamente");
 
             btnConfirmar.Visible = false;
             btnGuia.Visible = true;
@@ -250,6 +241,8 @@ namespace StellarShip_Express.RegistrarPaquete
 			{
 				File.Delete(item);
 			}
+
+			MessageBox.Show("Guia de envio generada en:" + path);
 		}
 
 		public void CreateMergedPDF(string targetPDF, string sourceDir)

@@ -1,4 +1,5 @@
 ﻿using FontAwesome.Sharp;
+using StellarShip_Express.Acerca;
 using StellarShip_Express.Destino;
 using StellarShip_Express.Envios;
 using StellarShip_Express.Formularios;
@@ -286,6 +287,12 @@ namespace StellarShip_Express
 		private void btnDelivered_Click(object sender, EventArgs e)
 		{
 			OpenChildForm(new frmEnviosEntregados());
+		}
+
+		private void iconButton2_Click(object sender, EventArgs e)
+		{
+            frmAcerca frmAcerca = new frmAcerca();
+            frmAcerca.ShowDialog();
 		}
 	}
 }

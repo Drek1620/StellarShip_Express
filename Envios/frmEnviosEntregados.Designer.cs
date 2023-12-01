@@ -153,7 +153,7 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "frmEnviosEntregados";
-			this.Text = "frmEnviosEntregados";
+			this.Text = "Envios Entregados";
 			this.Load += new System.EventHandler(this.frmEnviosEntregados_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
 			this.ResumeLayout(false);
