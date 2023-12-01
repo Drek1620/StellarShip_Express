@@ -156,7 +156,36 @@ namespace StellarShip_Express
 
         private void frm_Menu_Load(object sender, EventArgs e)
         {
-            lblNombre.Text = DatosUsuario.Nombre + " " + DatosUsuario.PrimerApellido;
+			
+			if (DatosUsuario.Acceso == 2)
+			{
+				btnStaff.Visible = false;
+				btnVehicles.Visible = false;
+				btnDestinos.Visible = false;
+			}
+			else
+			{
+				if (DatosUsuario.Acceso == 3)
+				{
+					btnStaff.Visible = false;
+					btnVehicles.Visible = false;
+					btnDestinos.Visible = false;
+					btnRegister.Visible = false;
+					btnRegistros.Visible = false;
+				}
+				else
+				{
+					if (DatosUsuario.Acceso == 4)
+					{
+						btnStaff.Visible = false;
+						btnVehicles.Visible = false;
+						btnDestinos.Visible = false;
+						btnRegister.Visible = false;
+						btnRegistros.Visible = false;
+					}
+				}
+			}
+			lblNombre.Text = DatosUsuario.Nombre + " " + DatosUsuario.PrimerApellido;
             path = @"C:\imgUsuarios";
             guias = @"C:\GuiasEnvio";
 
@@ -180,8 +209,8 @@ namespace StellarShip_Express
             {
 
                 return;
-            }        
-
+            }
+            
         }
 
         private void btnMaximizar_Click(object sender, EventArgs e)
