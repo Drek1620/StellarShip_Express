@@ -63,8 +63,8 @@ namespace StellarShip_Express.RegistrarPaquete
             lblEmpresaD.Text =DatosCliente.Cliente[1].Empresa;
             lblCorreoD.Text = DatosCliente.Cliente[1].Correo;
             lblTelD.Text = DatosCliente.Cliente[1].Telefono;
-            lblDireccionD.Text = DatosCliente.Cliente[1].Direccion + ", " + DatosCliente.Cliente[0].Nointerior;
-            lblCpD.Text = DatosCliente.Cliente[1].Cp + ", " + DatosCliente.Cliente[0].Ciudad + ", " + DatosCliente.Cliente[0].Estado;
+            lblDireccionD.Text = DatosCliente.Cliente[1].Direccion + ", " + DatosCliente.Cliente[1].Nointerior;
+            lblCpD.Text = DatosCliente.Cliente[1].Cp + ", " + DatosCliente.Cliente[1].Ciudad + ", " + DatosCliente.Cliente[1].Estado;
             lblPaisD.Text = DatosCliente.Cliente[1].Pais;
 
         }
@@ -106,7 +106,6 @@ namespace StellarShip_Express.RegistrarPaquete
 				DatosCliente.Cliente[0].Estado,
 				DatosCliente.Cliente[0].Pais
 				);
-            MessageBox.Show(DatosCliente.IdCliente.ToString());
             var DetalleEnvio = consultas.AgregarDetalleEnvio(
                 IdEnvio,
 				DatosCliente.Cliente[1].Nombre,
