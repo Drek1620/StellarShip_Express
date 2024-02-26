@@ -67,10 +67,7 @@ namespace StellarShip_Express
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.IconColor = Color.Gainsboro;
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
-                if (panMenu.Width == 220)
-                    currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
-                else
-                    currentBtn.ImageAlign = ContentAlignment.MiddleCenter;
+                currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
 

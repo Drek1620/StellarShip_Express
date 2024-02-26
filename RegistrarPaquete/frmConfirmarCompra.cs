@@ -234,7 +234,7 @@ namespace StellarShip_Express.RegistrarPaquete
 				}
 			}
 			path = @"C:\GuiasEnvio\" + NoEnvio + ".pdf";
-			CreateMergedPDF(path,ruta);
+			CreacionPDF(path,ruta);
 			Thread.Sleep(1000);
 			foreach (var item in Directory.GetFiles(ruta, "*.pdf"))
 			{
@@ -244,7 +244,7 @@ namespace StellarShip_Express.RegistrarPaquete
 			MessageBox.Show("Guia de envio generada en:" + path);
 		}
 
-		public void CreateMergedPDF(string targetPDF, string sourceDir)
+		public void CreacionPDF(string targetPDF, string sourceDir)
 		{
 			using (FileStream stream = new FileStream(targetPDF, FileMode.Create))
 			{
@@ -260,7 +260,7 @@ namespace StellarShip_Express.RegistrarPaquete
 						{
 							r = new PdfReader(file);
 							pdf.AddDocument(r);
-							r.Close();
+							r.Close(); //Este cierra el proceso
 						}
 
 
