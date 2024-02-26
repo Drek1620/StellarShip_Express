@@ -215,7 +215,7 @@ namespace StellarShip_Express.RegistrarPaquete
 					iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.StellarShip_Logo_Guia, ImageFormat.Png);
 					img.ScaleToFit(250, 40);
 					img.Alignment = iTextSharp.text.Image.UNDERLYING;
-					img.SetAbsolutePosition(125, Pdfdoc.Top - 40);
+					img.SetAbsolutePosition(135, Pdfdoc.Top - 40);
 					Pdfdoc.Add(img);
 
 					iTextSharp.text.Image img2 = iTextSharp.text.Image.GetInstance(imagenCodigoNuevo, ImageFormat.Png);
