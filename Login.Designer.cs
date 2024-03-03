@@ -111,7 +111,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(37, 226);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 21);
+            this.label1.Size = new System.Drawing.Size(79, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Usuario";
             // 
@@ -119,16 +119,18 @@
             // 
             this.txtUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.Location = new System.Drawing.Point(41, 250);
+            this.txtUser.MinimumSize = new System.Drawing.Size(0, 32);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(280, 27);
+            this.txtUser.Size = new System.Drawing.Size(280, 32);
             this.txtUser.TabIndex = 3;
             // 
             // txtPass
             // 
             this.txtPass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(41, 331);
+            this.txtPass.MinimumSize = new System.Drawing.Size(0, 32);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(246, 27);
+            this.txtPass.Size = new System.Drawing.Size(246, 32);
             this.txtPass.TabIndex = 5;
             this.txtPass.UseSystemPasswordChar = true;
             // 
@@ -139,7 +141,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(37, 307);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 21);
+            this.label2.Size = new System.Drawing.Size(125, 23);
             this.label2.TabIndex = 4;
             this.label2.Text = "Contraseña";
             // 
@@ -154,7 +156,7 @@
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciar.ForeColor = System.Drawing.Color.White;
-            this.btnIniciar.Location = new System.Drawing.Point(41, 430);
+            this.btnIniciar.Location = new System.Drawing.Point(41, 434);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(280, 40);
             this.btnIniciar.TabIndex = 6;
@@ -167,9 +169,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(38, 530);
+            this.label3.Location = new System.Drawing.Point(14, 529);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(283, 16);
+            this.label3.Size = new System.Drawing.Size(331, 19);
             this.label3.TabIndex = 7;
             this.label3.Text = "______________________________________________";
             // 
@@ -190,7 +192,7 @@
             this.lblError.ForeColor = System.Drawing.Color.Gainsboro;
             this.lblError.Location = new System.Drawing.Point(38, 370);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(101, 19);
+            this.lblError.Size = new System.Drawing.Size(123, 21);
             this.lblError.TabIndex = 9;
             this.lblError.Text = "Mensaje error";
             this.lblError.Visible = false;
@@ -223,8 +225,9 @@
             this.btnMostrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMostrar.IconSize = 30;
             this.btnMostrar.Location = new System.Drawing.Point(287, 331);
+            this.btnMostrar.MaximumSize = new System.Drawing.Size(36, 32);
             this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(34, 27);
+            this.btnMostrar.Size = new System.Drawing.Size(36, 32);
             this.btnMostrar.TabIndex = 30;
             this.btnMostrar.UseVisualStyleBackColor = false;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);

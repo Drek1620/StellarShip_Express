@@ -45,7 +45,7 @@ namespace StellarShip_Express.Otros
 
 			if (opcionSeleccionada == "ID")
 			{
-				if (rjTextBox1.Texts == "")
+				if (txtBusqueda.Texts == "")
 				{
 					mostrarbitacora();
 					return;
@@ -56,7 +56,7 @@ namespace StellarShip_Express.Otros
 					using (var command = new SqlCommand())
 					{
 						connection.Open();
-						string consutaid = "Select * from  bitacora where idbitacora = " + rjTextBox1.Texts + "";
+						string consutaid = "Select * from  bitacora where idbitacora = " + txtBusqueda.Texts + "";
 						SqlDataAdapter adap = new SqlDataAdapter(consutaid, connection);
 						adap.Fill(Tabla);
 						dgvDatos.DataSource = Tabla;
@@ -72,7 +72,7 @@ namespace StellarShip_Express.Otros
 			}
 			else if (opcionSeleccionada == "ID Usuario")
 			{
-				if (rjTextBox1.Texts == "")
+				if (txtBusqueda.Texts == "")
 				{
 					mostrarbitacora();
 					return;
@@ -83,7 +83,7 @@ namespace StellarShip_Express.Otros
 					using (var command = new SqlCommand())
 					{
 						connection.Open();
-						string consutaidusuario = "select * from Bitacora where idusuario = " + rjTextBox1.Texts + "";
+						string consutaidusuario = "select * from Bitacora where idusuario = " + txtBusqueda.Texts + "";
 						SqlDataAdapter adap = new SqlDataAdapter(consutaidusuario, connection);
 						adap.Fill(Tabla);
 						dgvDatos.DataSource = Tabla;

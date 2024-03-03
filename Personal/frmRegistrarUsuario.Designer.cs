@@ -77,6 +77,7 @@
             this.txtLoginName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtLoginName.Location = new System.Drawing.Point(527, 112);
             this.txtLoginName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLoginName.MaxLength = 32767;
             this.txtLoginName.Multiline = false;
             this.txtLoginName.Name = "txtLoginName";
             this.txtLoginName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -101,6 +102,7 @@
             this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtName.Location = new System.Drawing.Point(527, 162);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.MaxLength = 32767;
             this.txtName.Multiline = false;
             this.txtName.Name = "txtName";
             this.txtName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -125,6 +127,7 @@
             this.txtPApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPApellido.Location = new System.Drawing.Point(527, 211);
             this.txtPApellido.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPApellido.MaxLength = 32767;
             this.txtPApellido.Multiline = false;
             this.txtPApellido.Name = "txtPApellido";
             this.txtPApellido.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -149,6 +152,7 @@
             this.txtSApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSApellido.Location = new System.Drawing.Point(527, 264);
             this.txtSApellido.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSApellido.MaxLength = 32767;
             this.txtSApellido.Multiline = false;
             this.txtSApellido.Name = "txtSApellido";
             this.txtSApellido.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -260,6 +264,7 @@
             this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPass.Location = new System.Drawing.Point(527, 474);
             this.txtPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPass.MaxLength = 32767;
             this.txtPass.Multiline = false;
             this.txtPass.Name = "txtPass";
             this.txtPass.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -297,6 +302,7 @@
             this.txtCPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtCPass.Location = new System.Drawing.Point(527, 525);
             this.txtCPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCPass.MaxLength = 32767;
             this.txtCPass.Multiline = false;
             this.txtCPass.Name = "txtCPass";
             this.txtCPass.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -387,6 +393,7 @@
             this.txtTel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTel.Location = new System.Drawing.Point(527, 365);
             this.txtTel.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTel.MaxLength = 32767;
             this.txtTel.Multiline = false;
             this.txtTel.Name = "txtTel";
             this.txtTel.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -589,8 +596,8 @@
             // 
             // frmRegistrarUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(840, 574);
             this.Controls.Add(this.cmbSucursal);
@@ -624,6 +631,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(0, 574);
             this.Name = "frmRegistrarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegistrarUsuario";

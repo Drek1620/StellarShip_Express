@@ -35,7 +35,7 @@ namespace StellarShip_Express.Otros
 
         public void MostrarBusquedaClienteN()
         {
-            string terminoBusqueda = txt1.Text;
+            string terminoBusqueda = txtBusqueda.Text;
             DataTable Tabla = new DataTable();
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
             using (var connection = conexionSQL.GetConnection())
@@ -44,7 +44,7 @@ namespace StellarShip_Express.Otros
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT * FROM Remitente WHERE Nombre LIKE '" + txt1.Text + "%'";
+                    command.CommandText = "SELECT * FROM Remitente WHERE Nombre LIKE '" + txtBusqueda.Text + "%'";
                     command.CommandType = CommandType.Text;
                     command.Parameters.AddWithValue("@terminoBusqueda", terminoBusqueda);
 
@@ -59,7 +59,7 @@ namespace StellarShip_Express.Otros
 
         public void MostrarBusquedaClienteI()
         {
-            string terminoBusqueda = txt1.Text;
+            string terminoBusqueda = txtBusqueda.Text;
             DataTable Tabla = new DataTable();
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
             using (var connection = conexionSQL.GetConnection())
@@ -68,7 +68,7 @@ namespace StellarShip_Express.Otros
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT * FROM Remitente WHERE IdRemitente LIKE '" + txt1.Text + "%'";
+                    command.CommandText = "SELECT * FROM Remitente WHERE IdRemitente LIKE '" + txtBusqueda.Text + "%'";
                     command.CommandType = CommandType.Text;
                     command.Parameters.AddWithValue("@terminoBusqueda", terminoBusqueda);
 
@@ -83,7 +83,7 @@ namespace StellarShip_Express.Otros
 
         public void MostrarBusquedaClienteC()
         {
-            string terminoBusqueda = txt1.Text;
+            string terminoBusqueda = txtBusqueda.Text;
             DataTable Tabla = new DataTable();
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
             using (var connection = conexionSQL.GetConnection())
@@ -92,7 +92,7 @@ namespace StellarShip_Express.Otros
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT * FROM Remitente WHERE Ciudad LIKE '" + txt1.Text + "%'";
+                    command.CommandText = "SELECT * FROM Remitente WHERE Ciudad LIKE '" + txtBusqueda.Text + "%'";
                     command.CommandType = CommandType.Text;
                     command.Parameters.AddWithValue("@terminoBusqueda", terminoBusqueda);
 
@@ -107,7 +107,7 @@ namespace StellarShip_Express.Otros
 
         public void MostrarBusquedaClienteE()
         {
-            string terminoBusqueda = txt1.Text;
+            string terminoBusqueda = txtBusqueda.Text;
             DataTable Tabla = new DataTable();
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
             using (var connection = conexionSQL.GetConnection())
@@ -116,7 +116,7 @@ namespace StellarShip_Express.Otros
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT * FROM Remitente WHERE Estado LIKE '" + txt1.Text + "%'";
+                    command.CommandText = "SELECT * FROM Remitente WHERE Estado LIKE '" + txtBusqueda.Text + "%'";
                     command.CommandType = CommandType.Text;
                     command.Parameters.AddWithValue("@terminoBusqueda", terminoBusqueda);
 
@@ -131,7 +131,7 @@ namespace StellarShip_Express.Otros
 
         public void MostrarBusquedaClienteP()
         {
-            string terminoBusqueda = txt1.Text;
+            string terminoBusqueda = txtBusqueda.Text;
             DataTable Tabla = new DataTable();
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
             using (var connection = conexionSQL.GetConnection())
@@ -140,7 +140,7 @@ namespace StellarShip_Express.Otros
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT * FROM Remitente WHERE Pais LIKE '" + txt1.Text + "%'";
+                    command.CommandText = "SELECT * FROM Remitente WHERE Pais LIKE '" + txtBusqueda.Text + "%'";
                     command.CommandType = CommandType.Text;
                     command.Parameters.AddWithValue("@terminoBusqueda", terminoBusqueda);
 

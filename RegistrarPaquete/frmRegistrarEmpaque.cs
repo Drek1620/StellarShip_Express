@@ -100,6 +100,7 @@ namespace StellarShip_Express.RegistrarPaquete
             else
                 Mpeligroso = "No";
         }
+
         int indice_fila;
         private void btnAgregar_Click(object sender, EventArgs e)
         {

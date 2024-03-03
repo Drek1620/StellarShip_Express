@@ -30,12 +30,15 @@ namespace StellarShip_Express
         public static Form currentChildForm;
         private string path;
         private string guias;
+        private int height;
         
         public frm_Menu()
         {
+            
             InitializeComponent();
+            height = btnRegister.Height;
             leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 60);
+            leftBorderBtn.Size = new Size(7, height);
             panMenu.Controls.Add(leftBorderBtn);
             //Form
             this.Text = string.Empty;
@@ -270,6 +273,7 @@ namespace StellarShip_Express
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            OcultarSubMenu();
             if (currentChildForm != null)
             {
                 currentChildForm.Close();
