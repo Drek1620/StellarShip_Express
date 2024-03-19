@@ -33,7 +33,6 @@
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.pcbIconTitle = new FontAwesome.Sharp.IconPictureBox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.lblNombre = new System.Windows.Forms.Label();
             this.pcbImgUsuario = new CustomControls.CircularPictureBox();
             this.btnMaximizar = new FontAwesome.Sharp.IconButton();
             this.btnMinum = new FontAwesome.Sharp.IconButton();
@@ -56,6 +55,8 @@
             this.btnRegister = new FontAwesome.Sharp.IconButton();
             this.panInicio = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.panTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIconTitle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImgUsuario)).BeginInit();
@@ -65,16 +66,16 @@
             this.panRegis.SuspendLayout();
             this.panInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panTitle
             // 
             this.panTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+            this.panTitle.Controls.Add(this.tableLayoutPanel1);
             this.panTitle.Controls.Add(this.lblTitleChildForm);
             this.panTitle.Controls.Add(this.pcbIconTitle);
             this.panTitle.Controls.Add(this.iconButton2);
-            this.panTitle.Controls.Add(this.lblNombre);
-            this.panTitle.Controls.Add(this.pcbImgUsuario);
             this.panTitle.Controls.Add(this.btnMaximizar);
             this.panTitle.Controls.Add(this.btnMinum);
             this.panTitle.Controls.Add(this.btnHome);
@@ -84,7 +85,7 @@
             this.panTitle.ForeColor = System.Drawing.Color.White;
             this.panTitle.Location = new System.Drawing.Point(0, 0);
             this.panTitle.Name = "panTitle";
-            this.panTitle.Size = new System.Drawing.Size(1245, 72);
+            this.panTitle.Size = new System.Drawing.Size(1245, 76);
             this.panTitle.TabIndex = 0;
             this.panTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panTitle_MouseDown);
             // 
@@ -108,10 +109,10 @@
             this.pcbIconTitle.IconChar = FontAwesome.Sharp.IconChar.House;
             this.pcbIconTitle.IconColor = System.Drawing.Color.WhiteSmoke;
             this.pcbIconTitle.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.pcbIconTitle.IconSize = 31;
+            this.pcbIconTitle.IconSize = 34;
             this.pcbIconTitle.Location = new System.Drawing.Point(652, 30);
             this.pcbIconTitle.Name = "pcbIconTitle";
-            this.pcbIconTitle.Size = new System.Drawing.Size(34, 31);
+            this.pcbIconTitle.Size = new System.Drawing.Size(34, 35);
             this.pcbIconTitle.TabIndex = 11;
             this.pcbIconTitle.TabStop = false;
             // 
@@ -133,21 +134,9 @@
             this.iconButton2.UseVisualStyleBackColor = true;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
-            // lblNombre
-            // 
-            this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(1039, 40);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(0);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(56, 17);
-            this.lblNombre.TabIndex = 9;
-            this.lblNombre.Text = "Default";
-            // 
             // pcbImgUsuario
             // 
-            this.pcbImgUsuario.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pcbImgUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pcbImgUsuario.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
             this.pcbImgUsuario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
             this.pcbImgUsuario.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
@@ -155,7 +144,8 @@
             this.pcbImgUsuario.BorderSize = 2;
             this.pcbImgUsuario.GradientAngle = 50F;
             this.pcbImgUsuario.Image = global::StellarShip_Express.Properties.Resources.Null;
-            this.pcbImgUsuario.Location = new System.Drawing.Point(990, 26);
+            this.pcbImgUsuario.Location = new System.Drawing.Point(3, 3);
+            this.pcbImgUsuario.MinimumSize = new System.Drawing.Size(46, 46);
             this.pcbImgUsuario.Name = "pcbImgUsuario";
             this.pcbImgUsuario.Size = new System.Drawing.Size(46, 46);
             this.pcbImgUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -171,8 +161,8 @@
             this.btnMaximizar.IconColor = System.Drawing.Color.White;
             this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximizar.IconSize = 20;
-            this.btnMaximizar.Location = new System.Drawing.Point(1162, 1);
-            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMaximizar.Location = new System.Drawing.Point(1162, 2);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(38, 25);
             this.btnMaximizar.TabIndex = 7;
@@ -188,8 +178,8 @@
             this.btnMinum.IconColor = System.Drawing.Color.White;
             this.btnMinum.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinum.IconSize = 25;
-            this.btnMinum.Location = new System.Drawing.Point(1126, 1);
-            this.btnMinum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMinum.Location = new System.Drawing.Point(1126, 2);
+            this.btnMinum.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinum.Name = "btnMinum";
             this.btnMinum.Size = new System.Drawing.Size(38, 25);
             this.btnMinum.TabIndex = 6;
@@ -202,7 +192,7 @@
             this.btnHome.Image = global::StellarShip_Express.Properties.Resources.StellarShip_Express_logo;
             this.btnHome.Location = new System.Drawing.Point(0, 0);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(234, 72);
+            this.btnHome.Size = new System.Drawing.Size(234, 76);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnHome.TabIndex = 0;
             this.btnHome.TabStop = false;
@@ -217,8 +207,8 @@
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 18;
-            this.btnClose.Location = new System.Drawing.Point(1202, 1);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Location = new System.Drawing.Point(1202, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(38, 25);
             this.btnClose.TabIndex = 5;
@@ -295,9 +285,9 @@
             this.panMenu.Controls.Add(this.btnParcel);
             this.panMenu.Controls.Add(this.btnRegister);
             this.panMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panMenu.Location = new System.Drawing.Point(0, 72);
+            this.panMenu.Location = new System.Drawing.Point(0, 76);
             this.panMenu.Name = "panMenu";
-            this.panMenu.Size = new System.Drawing.Size(234, 571);
+            this.panMenu.Size = new System.Drawing.Size(234, 567);
             this.panMenu.TabIndex = 1;
             // 
             // panRegis
@@ -531,21 +521,51 @@
             this.panInicio.AutoScroll = true;
             this.panInicio.Controls.Add(this.pictureBox2);
             this.panInicio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panInicio.Location = new System.Drawing.Point(234, 72);
+            this.panInicio.Location = new System.Drawing.Point(234, 76);
             this.panInicio.Name = "panInicio";
-            this.panInicio.Size = new System.Drawing.Size(1011, 571);
+            this.panInicio.Size = new System.Drawing.Size(1011, 567);
             this.panInicio.TabIndex = 2;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = global::StellarShip_Express.Properties.Resources.StellarShip_Logo_Tono2;
-            this.pictureBox2.Location = new System.Drawing.Point(273, 172);
+            this.pictureBox2.Location = new System.Drawing.Point(273, 170);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(466, 100);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.Controls.Add(this.lblNombre, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pcbImgUsuario, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1094, 26);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(110, 52);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(52, 0);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblNombre.Size = new System.Drawing.Size(58, 52);
+            this.lblNombre.TabIndex = 9;
+            this.lblNombre.Text = "Default";
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frm_Menu
             // 
@@ -572,8 +592,9 @@
             this.panMenu.ResumeLayout(false);
             this.panRegis.ResumeLayout(false);
             this.panInicio.ResumeLayout(false);
-            this.panInicio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -595,7 +616,6 @@
         private CustomControls.CircularPictureBox pcbImgUsuario;
         private System.Windows.Forms.Panel panMenu;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private System.Windows.Forms.Label lblNombre;
         private FontAwesome.Sharp.IconButton btnDestinos;
         private FontAwesome.Sharp.IconButton btnVehicles;
         public System.Windows.Forms.Panel panInicio;
@@ -607,6 +627,8 @@
 		private FontAwesome.Sharp.IconButton btnBitacora;
 		private FontAwesome.Sharp.IconButton btnFactura;
 		private FontAwesome.Sharp.IconButton btnClientes;
-	}
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label lblNombre;
+    }
 }
 

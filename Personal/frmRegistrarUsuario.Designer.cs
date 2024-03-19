@@ -576,6 +576,7 @@
             // cmbSucursal
             // 
             this.cmbSucursal.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbSucursal.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbSucursal.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cmbSucursal.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.cmbSucursal.BorderSize = 1;
@@ -592,7 +593,7 @@
             this.cmbSucursal.SelectedValue = null;
             this.cmbSucursal.Size = new System.Drawing.Size(250, 30);
             this.cmbSucursal.TabIndex = 30;
-            this.cmbSucursal.Texts = "";
+            this.cmbSucursal.Texts = "---Sucursal---";
             // 
             // frmRegistrarUsuario
             // 

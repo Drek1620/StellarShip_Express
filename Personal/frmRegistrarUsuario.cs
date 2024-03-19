@@ -33,6 +33,7 @@ namespace StellarShip_Express.Formularios
             cmbSucursal.DataSource = objConsulta.MostrarSuc();
             cmbSucursal.DisplayMember = "Nombre";
             cmbSucursal.ValueMember = "IdDestino";
+            cmbSucursal.Texts = "---Sucursal---";
         }
         private void frmRegistrarUsuario_Load(object sender, EventArgs e)
         {
@@ -78,7 +79,7 @@ namespace StellarShip_Express.Formularios
             string FilePath = @"C:\imgUsuarios\" + txtLoginName.Texts + ".jpg";
             string ruta = FilePath;
 
-            if (txtLoginName.Texts != "" && txtName.Texts != "" && txtPApellido.Texts != "" && txtSApellido.Texts != "" && txtTel.Texts != "")
+            if (txtLoginName.Texts != "" && txtName.Texts != "" && txtPApellido.Texts != "" && txtSApellido.Texts != "" && txtTel.Texts != "" && cmbSucursal.Texts != "---Sucursal---")
             {
                 if (DatosModifPersonal.Accion== "Alta")
                 {
