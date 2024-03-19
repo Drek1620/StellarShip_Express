@@ -18,7 +18,7 @@ namespace StellarShip_Express.Vehiculos
         }
         public void MostrarVehiculos()
         {
-            Consultas consultas = new Consultas();
+            ConsultasVehiculo consultas = new ConsultasVehiculo();
             dgvDatos.DataSource = consultas.MostrarVehiculos();
         }
 
@@ -62,7 +62,7 @@ namespace StellarShip_Express.Vehiculos
 
         }
 
-        Consultas dato = new Consultas();    
+        ConsultasVehiculo dato = new ConsultasVehiculo();    
       
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -117,7 +117,7 @@ namespace StellarShip_Express.Vehiculos
         //boton busqueda 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            Consultas consultas = new Consultas();
+            ConsultasVehiculo consultas = new ConsultasVehiculo();
            
 
             try

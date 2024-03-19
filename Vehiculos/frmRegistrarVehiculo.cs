@@ -18,8 +18,8 @@ namespace StellarShip_Express.Vehiculos
 {
     public partial class frmRegistrarVehiculo : Form
     {
-        Consultas dato = new Consultas();
-        Consultas IDcon = new Consultas();
+        ConsultasVehiculo dato = new ConsultasVehiculo();
+        ConsultasVehiculo IDcon = new ConsultasVehiculo();
        
         public frmRegistrarVehiculo()
         {
@@ -50,6 +50,7 @@ namespace StellarShip_Express.Vehiculos
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+
 
             try
             {
