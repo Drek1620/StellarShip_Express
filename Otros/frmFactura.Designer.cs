@@ -178,6 +178,7 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(158, 32);
             this.dateTimePicker1.TabIndex = 24;
             this.dateTimePicker1.Value = new System.DateTime(2023, 11, 24, 0, 0, 0, 0);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // btnActualizar
             // 

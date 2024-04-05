@@ -102,5 +102,10 @@ namespace StellarShip_Express.Otros
 		{
 			MostrarFactura();
 		}
-	}
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

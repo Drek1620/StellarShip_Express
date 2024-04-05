@@ -101,7 +101,7 @@
       <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="CustomControls">
-      <HintPath>..\..\..\..\OneDrive\Escritorio\CustomControls.dll</HintPath>
+      <HintPath>..\..\..\Downloads\CustomControls.dll</HintPath>
     </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.6.3.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
@@ -135,7 +135,9 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
@@ -231,6 +233,7 @@
     <Compile Include="frmConexion.Designer.cs">
       <DependentUpon>frmConexion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Otros\consultasbitacora.cs" />
     <Compile Include="Otros\frmBitacora.cs">
       <SubType>Form</SubType>
     </Compile>

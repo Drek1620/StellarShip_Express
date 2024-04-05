@@ -19,7 +19,7 @@ namespace StellarShip_Express.Otros
 		}
 
 		public void mostrarbitacora()
-        {
+        {	
 			Consultas consultas = new Consultas();
 			dgvDatos.DataSource = consultas.Bitacora();
         }
@@ -36,86 +36,31 @@ namespace StellarShip_Express.Otros
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
+
+			consultasbitacora consultas = new consultasbitacora();
 			string opcionSeleccionada = cmbFiltros.Texts;
 
-			DataTable Tabla = new DataTable();
-			ConexionSQLServ conexionSQL = new ConexionSQLServ();
 
 			
 
 			if (opcionSeleccionada == "ID")
 			{
-				if (txtBusqueda.Texts == "")
-				{
-					mostrarbitacora();
-					return;
-				}
-				using (var connection = conexionSQL.GetConnection())
-				{
-					
-					using (var command = new SqlCommand())
-					{
-						connection.Open();
-						string consutaid = "Select * from  bitacora where idbitacora = " + txtBusqueda.Texts + "";
-						SqlDataAdapter adap = new SqlDataAdapter(consutaid, connection);
-						adap.Fill(Tabla);
-						dgvDatos.DataSource = Tabla;
-						SqlCommand comando = new SqlCommand(consutaid, connection);
-						SqlDataReader leer;
-						leer = comando.ExecuteReader();
-						connection.Close();
-					}
-					
-				}
-				
+				dgvDatos.DataSource = consultas.buscarid(txtBusqueda.Texts);
 				
 			}
 			else if (opcionSeleccionada == "ID Usuario")
 			{
-				if (txtBusqueda.Texts == "")
-				{
-					mostrarbitacora();
-					return;
-				}
-				using (var connection = conexionSQL.GetConnection())
-				{
-					
-					using (var command = new SqlCommand())
-					{
-						connection.Open();
-						string consutaidusuario = "select * from Bitacora where idusuario = " + txtBusqueda.Texts + "";
-						SqlDataAdapter adap = new SqlDataAdapter(consutaidusuario, connection);
-						adap.Fill(Tabla);
-						dgvDatos.DataSource = Tabla;
-						SqlCommand comando = new SqlCommand(consutaidusuario, connection);
-						SqlDataReader leer;
-						leer = comando.ExecuteReader();
-						connection.Close();
-					}
-					
-				}
-			}
+
+                dgvDatos.DataSource = consultas.buscarusuario(txtBusqueda.Texts);
+            }
 			
 			else if (opcionSeleccionada == "Fecha")
 			{
-				using (var connection = conexionSQL.GetConnection())
-				{
-					
-					using (var command = new SqlCommand())
-					{
-						connection.Open();
-						string consutafecha = $"Select * from bitacora where Fecha BETWEEN '{dateTimePicker1.Value.Date.ToString("yyyy-MM-dd HH:mm:ss")}' AND '{dateTimePicker2.Value.Date.ToString("yyyy-MM-dd HH:mm:ss")}'";
-						SqlDataAdapter adap = new SqlDataAdapter(consutafecha, connection);
-						adap.Fill(Tabla);
-						dgvDatos.DataSource = Tabla;
-						SqlCommand comando = new SqlCommand(consutafecha, connection);
-						SqlDataReader leer;
-						leer = comando.ExecuteReader();
-						connection.Close(); 
-					}
-					
-				}
-			}
+                dgvDatos.DataSource = consultas.buscarfecha(dateTimePicker1.Text,dateTimePicker2.Text);
+
+            }
+
+
         }
     }
 }
