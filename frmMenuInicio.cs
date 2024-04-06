@@ -30,6 +30,7 @@ namespace StellarShip_Express
         public static Form currentChildForm;
         private string path;
         private string guias;
+        private string facturas;
         private int height;
         
         public frm_Menu()
@@ -188,14 +189,19 @@ namespace StellarShip_Express
 			lblNombre.Text = DatosUsuario.Nombre + " " + DatosUsuario.PrimerApellido;
             path = @"C:\imgUsuarios";
             guias = @"C:\GuiasEnvio";
+            facturas = @"C:\Facturas";
 
-			if (Directory.Exists(path)) { }
+
+            if (Directory.Exists(path)) { }
             else Directory.CreateDirectory(path);
 
 			if (Directory.Exists(guias)) { }
 			else Directory.CreateDirectory(guias);
 
-			string ruta = @"C:\imgUsuarios\" + DatosUsuario.LoginNombre + ".jpg";
+            if (Directory.Exists(facturas)) { }
+            else Directory.CreateDirectory(facturas);
+
+            string ruta = @"C:\imgUsuarios\" + DatosUsuario.LoginNombre + ".jpg";
             try
             {
                 using (Bitmap bmp = new Bitmap(ruta))

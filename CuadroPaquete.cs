@@ -79,5 +79,12 @@ namespace StellarShip_Express
 			var editar = obj.CambiarEstatus(this.Id,
 				"Entregado");
 		}
-	}
+
+        private void btnGuia_Click(object sender, EventArgs e)
+        {
+			GuiaEnvio guiaEnvio = new GuiaEnvio();
+			GuiaEnvio.NoEnvio = this.id;
+			guiaEnvio.ConsultaGuia();
+        }
+    }
 }

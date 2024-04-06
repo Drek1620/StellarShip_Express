@@ -52,6 +52,7 @@ namespace StellarShip_Express.Destino
                 DatosSucursal.EstadoS = dgvDatos.CurrentRow.Cells["Estado"].Value.ToString();
                 DatosSucursal.MunicipioS = dgvDatos.CurrentRow.Cells["Municipio"].Value.ToString();
                 DatosSucursal.CPS= dgvDatos.CurrentRow.Cells["CP"].Value.ToString();
+                DatosSucursal.Calle = dgvDatos.CurrentRow.Cells["Calle"].Value.ToString();
                 DatosSucursal.TelefS = dgvDatos.CurrentRow.Cells["Telefono"].Value.ToString();
                 frmRegistrarSucursal frm = new frmRegistrarSucursal();
                 frm.ShowDialog();

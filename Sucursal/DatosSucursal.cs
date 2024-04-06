@@ -15,6 +15,7 @@ namespace StellarShip_Express.Vehiculos
         public static string EstadoS { get; set; }
         public static string MunicipioS { get; set; }
         public static string CPS { get; set; }
+        public static string Calle { get; set; }
         public static string TelefS { get; set; }
         public static string AccionS { get => accionS; set => accionS = value; }
 

@@ -246,7 +246,7 @@ namespace StellarShip_Express
             }
         }
 
-        public bool AgregarSucursal(string NombreSuc, string PaisS, string EstadoS, string MunicipioS, string CPS, string TelefS)
+        public bool AgregarSucursal(string NombreSuc, string PaisS, string EstadoS, string MunicipioS, string CPS,string Calle, string TelefS)
         {
             ConexionSQLServ conexionSQL=new ConexionSQLServ();
             using (var connection = conexionSQL.GetConnection())
@@ -263,6 +263,7 @@ namespace StellarShip_Express
                     command.Parameters.AddWithValue("Estado",EstadoS);
                     command.Parameters.AddWithValue("Municipio",MunicipioS);
                     command.Parameters.AddWithValue("CP",CPS);
+                    command.Parameters.AddWithValue("Calle", Calle);
                     command.Parameters.AddWithValue("Telefono",TelefS);
                     int a = command.ExecuteNonQuery();
                     if (a > 0)
@@ -277,7 +278,7 @@ namespace StellarShip_Express
             }
 
         }
-        public bool ModificarSucursal(int IDModi, string NombreSuc, string PaisS, string EstadoS, string MunicipioS, string CPS, string TelefS)
+        public bool ModificarSucursal(int IDModi, string NombreSuc, string PaisS, string EstadoS, string MunicipioS, string CPS, string Calle, string TelefS)
         {
             
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
@@ -297,6 +298,7 @@ namespace StellarShip_Express
                     command.Parameters.AddWithValue("EstadoActua", EstadoS);
                     command.Parameters.AddWithValue("MunicipioActua", MunicipioS);
                     command.Parameters.AddWithValue("CPActua", CPS);
+                    command.Parameters.AddWithValue("CalleActua", Calle);
                     command.Parameters.AddWithValue("TelefonoActua", TelefS);
                     int a = command.ExecuteNonQuery();
                     if (a > 0)
@@ -524,7 +526,7 @@ namespace StellarShip_Express
 			}
 		}
 
-		public bool AgregarDetalleEnvio(long IdEnvio, string Destinatario,string Telefono, string DirecDest, string CpDest, string CiudadDest, string EstadoDest, string PaisDest, string Detalles)
+		public bool AgregarDetalleEnvio(long IdEnvio, string Destinatario,string Telefono,string Correo, string DirecDest,string DepDest, string CpDest, string CiudadDest, string EstadoDest, string PaisDest, string Detalles)
 		{
 			ConexionSQLServ conexionSQL = new ConexionSQLServ();
 			using (var connection = conexionSQL.GetConnection())
@@ -540,13 +542,15 @@ namespace StellarShip_Express
 					command.Parameters.AddWithValue("@Remitente", DatosCliente.IdCliente);
 					command.Parameters.AddWithValue("@Destinatario", Destinatario);
 					command.Parameters.AddWithValue("@DireccionDestino", DirecDest);
-					command.Parameters.AddWithValue("@CpDestino", CpDest);
+                    command.Parameters.AddWithValue("@DepDestino", DepDest);
+                    command.Parameters.AddWithValue("@CpDestino", CpDest);
 					command.Parameters.AddWithValue("@CiudadDestino", CiudadDest);
 					command.Parameters.AddWithValue("@EstadoDestino", EstadoDest);
 					command.Parameters.AddWithValue("@PaisDestino", PaisDest);
 					command.Parameters.AddWithValue("@DetallesEstado", Detalles);
                     command.Parameters.AddWithValue("@Telefono", Telefono);
-					int a = command.ExecuteNonQuery();
+                    command.Parameters.AddWithValue("@Correo", Correo);
+                    int a = command.ExecuteNonQuery();
 					if (a > 0)
 					{
 						return true;
@@ -583,7 +587,9 @@ namespace StellarShip_Express
 					int a = command.ExecuteNonQuery();
 					if (a > 0)
 					{
-						DatosCliente.NoFactura= Convert.ToInt64(command.Parameters["@NoFactura"].Value);
+                        
+						GenerarFactura.NoFactura= Convert.ToInt64(command.Parameters["@NoFactura"].Value);
+                        
 						return true;
 					}
 					else

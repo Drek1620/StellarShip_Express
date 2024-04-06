@@ -44,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnGuia = new CustomControls.RButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +53,7 @@
             // 
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.btnGuia);
             this.panel1.Controls.Add(this.btnCambiar);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label9);
@@ -86,9 +88,9 @@
             this.btnCambiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCambiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCambiar.ForeColor = System.Drawing.Color.White;
-            this.btnCambiar.Location = new System.Drawing.Point(804, 18);
+            this.btnCambiar.Location = new System.Drawing.Point(785, 35);
             this.btnCambiar.Name = "btnCambiar";
-            this.btnCambiar.Size = new System.Drawing.Size(81, 28);
+            this.btnCambiar.Size = new System.Drawing.Size(106, 34);
             this.btnCambiar.TabIndex = 29;
             this.btnCambiar.Text = "Cambiar";
             this.btnCambiar.TextColor = System.Drawing.Color.White;
@@ -155,9 +157,9 @@
             this.btnEntregado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntregado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntregado.ForeColor = System.Drawing.Color.White;
-            this.btnEntregado.Location = new System.Drawing.Point(804, 65);
+            this.btnEntregado.Location = new System.Drawing.Point(785, 78);
             this.btnEntregado.Name = "btnEntregado";
-            this.btnEntregado.Size = new System.Drawing.Size(81, 28);
+            this.btnEntregado.Size = new System.Drawing.Size(106, 34);
             this.btnEntregado.TabIndex = 24;
             this.btnEntregado.Text = "Entregado";
             this.btnEntregado.TextColor = System.Drawing.Color.White;
@@ -254,6 +256,27 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
+            // btnGuia
+            // 
+            this.btnGuia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuia.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnGuia.BackgroundColor = System.Drawing.Color.YellowGreen;
+            this.btnGuia.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnGuia.BorderRadius = 5;
+            this.btnGuia.BorderSize = 0;
+            this.btnGuia.FlatAppearance.BorderSize = 0;
+            this.btnGuia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuia.ForeColor = System.Drawing.Color.White;
+            this.btnGuia.Location = new System.Drawing.Point(785, 122);
+            this.btnGuia.Name = "btnGuia";
+            this.btnGuia.Size = new System.Drawing.Size(106, 34);
+            this.btnGuia.TabIndex = 30;
+            this.btnGuia.Text = "Guia Envio";
+            this.btnGuia.TextColor = System.Drawing.Color.White;
+            this.btnGuia.UseVisualStyleBackColor = false;
+            this.btnGuia.Click += new System.EventHandler(this.btnGuia_Click);
+            // 
             // CuadroPaquete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,5 +312,6 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		public CustomControls.RButton btnCambiar;
-	}
+        private CustomControls.RButton btnGuia;
+    }
 }

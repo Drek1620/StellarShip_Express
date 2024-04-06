@@ -18,12 +18,15 @@ using iTextSharp.text.pdf;
 using iTextSharp.tool.xml;
 
 using BarcodeLib;
+using StellarShip_Express.Envios;
 
 namespace StellarShip_Express.RegistrarPaquete
 {
     public partial class frmConfirmarCompra : Form
     {
         Consultas consultas = new Consultas();
+        GuiaEnvio guiaEnvio = new GuiaEnvio();
+        GenerarFactura generarFactura = new GenerarFactura();
         private string NoEnvio;
         private string path;
         private string ruta;
@@ -46,7 +49,12 @@ namespace StellarShip_Express.RegistrarPaquete
             lblTotal.Text = CalcularPrecios.Total.ToString();
 
             dgvPaquetes.Rows[0].Cells["Cantidad"].Value = DatosPaquete.Cantidad;
-            dgvPaquetes.Rows[0].Cells["Paquetes"].Value = DatosPaquete.Caja+ " x Caja rijida\n" + DatosPaquete.Bolsa+ " x Sobre acolchado";
+
+			if (Convert.ToInt32(DatosPaquete.Caja) > 0)
+				dgvPaquetes.Rows[0].Cells["Paquetes"].Value = DatosPaquete.Caja + " x Caja rijida\n";
+            if (Convert.ToInt32(DatosPaquete.Bolsa) > 0)
+                dgvPaquetes.Rows[0].Cells["Paquetes"].Value = dgvPaquetes.Rows[0].Cells["Paquetes"].Value + DatosPaquete.Bolsa + " x Sobre acolchado";
+
             dgvPaquetes.Rows[0].Cells["Servicios extras"].Value = CalcularPrecios.Servicios.ToString();
 
 
@@ -92,8 +100,12 @@ namespace StellarShip_Express.RegistrarPaquete
         {
             Random random = new Random();
             NoEnvio = DateTime.Now.ToString("ddMMyyyyHHmmss") + random.Next(1000, 9999);
+			
 			Fecha = DateTime.Today;
 			long IdEnvio = Convert.ToInt64(NoEnvio);
+
+            GuiaEnvio.NoEnvio = IdEnvio;
+			guiaEnvio.Fecha = Fecha;
 
             var Remitente = consultas.AgregarRemitente(
 				DatosCliente.Cliente[0].Nombre,
@@ -110,7 +122,9 @@ namespace StellarShip_Express.RegistrarPaquete
                 IdEnvio,
 				DatosCliente.Cliente[1].Nombre,
 				DatosCliente.Cliente[1].Telefono,
-				DatosCliente.Cliente[1].Direccion+","+ DatosCliente.Cliente[1].Nointerior,
+                DatosCliente.Cliente[1].Correo,
+                DatosCliente.Cliente[1].Direccion+","+ DatosCliente.Cliente[1].Nointerior,
+				DatosCliente.Cliente[1].Nointerior,
 				DatosCliente.Cliente[1].Cp,
 				DatosCliente.Cliente[1].Ciudad,
 				DatosCliente.Cliente[1].Estado,
@@ -134,181 +148,36 @@ namespace StellarShip_Express.RegistrarPaquete
                     DatosPaquete.Paquete[i].Pirregular
                     );
             }
-
-
+            generarFactura.Fecha = Fecha;
             btnConfirmar.Visible = false;
             btnGuia.Visible = true;
-		}
+
+
+            if (generarFactura.GenerarPDF())
+            {
+                MessageBox.Show("Factura generada");
+            }
+            else
+            {
+                MessageBox.Show("Error al generar la factura");
+            }
+
+            if (guiaEnvio.GenerarGuia())
+			{
+                MessageBox.Show("Guia de envio generada");
+            }
+			else
+			{
+                MessageBox.Show("Error al generar la guia de envio");
+            }
+
+        }
 
 		private void btnGuia_Click(object sender, EventArgs e)
 		{
-            ruta = @"C:\GuiasEnvio\Temporal\";
-            string size;
-
-			if (Directory.Exists(ruta)) { }
-			else Directory.CreateDirectory(ruta);
-
-			System.Drawing.Image imagenCodigo;
-
-
-			BarcodeLib.Barcode codigo = new BarcodeLib.Barcode();
-			codigo.IncludeLabel = true;
-			codigo.LabelPosition = LabelPositions.BOTTOMCENTER;
-
-			//AQUI PASALE EL TEXTO DEL TXT  "CODIGO"
-			imagenCodigo = codigo.Encode(BarcodeLib.TYPE.CODE128, NoEnvio.ToString(), Color.Black, Color.White, 500, 100);
-
-
-
-
-			//EXTRA Y AL ULTIMO
-			Bitmap imagenTitulo = convertirTextoImagen("Guia de Envio", 500, Color.White);
-
-			int alto_imagen_nuevo = imagenCodigo.Height + imagenTitulo.Height;
-
-			Bitmap imagenNueva = new Bitmap(500, alto_imagen_nuevo);
-			Graphics dibujar = Graphics.FromImage(imagenNueva);
-
-			dibujar.DrawImage(imagenTitulo, new Point(0, 0));
-			dibujar.DrawImage(imagenCodigo, new Point(0, imagenTitulo.Height));
-
-			System.Drawing.Image imagenCodigoNuevo = imagenNueva;
-
-
-
-			for (int i = 0; i < DatosPaquete.Cantidad; i++)
-            {
-				path = @"C:\GuiasEnvio\Temporal\" + NoEnvio + $"_{i}.pdf";
-
-				string paginahtml_texto = Properties.Resources.Plantilla_Guia.ToString();
-                paginahtml_texto = paginahtml_texto.Replace("@REMITENTE", DatosCliente.Cliente[0].Nombre);
-                paginahtml_texto = paginahtml_texto.Replace("@TELEFONO", DatosCliente.Cliente[0].Telefono);
-                paginahtml_texto = paginahtml_texto.Replace("@CALLE", DatosCliente.Cliente[0].Direccion);
-                paginahtml_texto = paginahtml_texto.Replace("@DEP", DatosCliente.Cliente[0].Nointerior);
-                paginahtml_texto = paginahtml_texto.Replace("@CP", DatosCliente.Cliente[0].Cp);
-                paginahtml_texto = paginahtml_texto.Replace("@ESTADO", DatosCliente.Cliente[0].Estado);
-                paginahtml_texto = paginahtml_texto.Replace("@PAIS", DatosCliente.Cliente[0].Pais);
-
-                paginahtml_texto = paginahtml_texto.Replace("@DESTINATARIO", DatosCliente.Cliente[1].Nombre);
-                paginahtml_texto = paginahtml_texto.Replace("@Telefono", DatosCliente.Cliente[1].Telefono);
-                paginahtml_texto = paginahtml_texto.Replace("@Calle", DatosCliente.Cliente[1].Direccion);
-                paginahtml_texto = paginahtml_texto.Replace("@Dep", DatosCliente.Cliente[1].Nointerior);
-                paginahtml_texto = paginahtml_texto.Replace("@Cp", DatosCliente.Cliente[1].Cp);
-                paginahtml_texto = paginahtml_texto.Replace("@Estado", DatosCliente.Cliente[1].Estado);
-                paginahtml_texto = paginahtml_texto.Replace("@Pais", DatosCliente.Cliente[1].Pais);
-
-                size = DatosPaquete.Paquete[i].Largo + " x " + DatosPaquete.Paquete[i].Ancho;
-
-				paginahtml_texto = paginahtml_texto.Replace("@PESO", DatosPaquete.Paquete[i].Peso.ToString());
-                paginahtml_texto = paginahtml_texto.Replace("@FECHA", Fecha.ToString("d"));
-                paginahtml_texto = paginahtml_texto.Replace("@Size",size);
-
-                using (FileStream stream = new FileStream(path, FileMode.Create))
-				{
-					Document Pdfdoc = new Document(PageSize.A4, 25, 25, 25, 25);
-
-
-					PdfWriter writer = PdfWriter.GetInstance(Pdfdoc, stream);
-
-					Pdfdoc.Open();
-
-					iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.StellarShip_Logo_Guia, ImageFormat.Png);
-					img.ScaleToFit(250, 40);
-					img.Alignment = iTextSharp.text.Image.UNDERLYING;
-					img.SetAbsolutePosition(135, Pdfdoc.Top - 40);
-					Pdfdoc.Add(img);
-
-					iTextSharp.text.Image img2 = iTextSharp.text.Image.GetInstance(imagenCodigoNuevo, ImageFormat.Png);
-					img2.ScaleToFit(1500, 100);
-					img2.Alignment = iTextSharp.text.Image.UNDERLYING;
-					img2.SetAbsolutePosition(25, Pdfdoc.Top - 370);
-					Pdfdoc.Add(img2);
-
-					using (StringReader sr = new StringReader(paginahtml_texto))
-					{
-						XMLWorkerHelper.GetInstance().ParseXHtml(writer, Pdfdoc, sr);
-					}
-					Pdfdoc.Close();
-					stream.Close();
-
-				}
-			}
-			path = @"C:\GuiasEnvio\" + NoEnvio + ".pdf";
-			CreacionPDF(path,ruta);
-			Thread.Sleep(1000);
-			foreach (var item in Directory.GetFiles(ruta, "*.pdf"))
-			{
-				File.Delete(item);
-			}
-
-			MessageBox.Show("Guia de envio generada en:" + path);
+           
 		}
-
-		public void CreacionPDF(string targetPDF, string sourceDir)
-		{
-			using (FileStream stream = new FileStream(targetPDF, FileMode.Create))
-			{
-
-				using (Document pdfDoc = new Document(PageSize.A4))
-				{
-					using (PdfCopy pdf = new PdfCopy(pdfDoc, stream))
-					{
-
-						pdfDoc.Open();
-						PdfReader r;
-						foreach (var file in Directory.GetFiles(sourceDir, "*.pdf"))
-						{
-							r = new PdfReader(file);
-							pdf.AddDocument(r);
-							r.Close(); //Este cierra el proceso
-						}
-
-
-						if (pdfDoc != null)
-							pdfDoc.Close();
-					}
-				}
-
-
-
-			}
-
-		}
-
-		public static Bitmap convertirTextoImagen(string texto, int ancho, Color color)
-		{
-			//creamos el objeto imagen Bitmap
-			Bitmap objBitmap = new Bitmap(1, 1);
-			int Width = 0;
-			int Height = 0;
-			//formateamos la fuente (tipo de letra, tamaño)
-			System.Drawing.Font objFont = new System.Drawing.Font("Arial", 16, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-
-			//creamos un objeto Graphics a partir del Bitmap
-			Graphics objGraphics = Graphics.FromImage(objBitmap);
-
-			//establecemos el tamaño según la longitud del texto
-			Width = ancho;
-			Height = (int)objGraphics.MeasureString(texto, objFont).Height + 5;
-			objBitmap = new Bitmap(objBitmap, new Size(Width, Height));
-
-			objGraphics = Graphics.FromImage(objBitmap);
-
-			objGraphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-			objGraphics.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-			objGraphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.High;
-			objGraphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-
-			StringFormat drawFormat = new StringFormat();
-			objGraphics.Clear(color);
-
-			drawFormat.Alignment = StringAlignment.Center;
-			objGraphics.DrawString(texto, objFont, new SolidBrush(Color.Black), new RectangleF(0, (objBitmap.Height / 2) - (objBitmap.Height - 10), objBitmap.Width, objBitmap.Height), drawFormat);
-			objGraphics.Flush();
-
-
-			return objBitmap;
-		}
+	
 	}
 	
 }

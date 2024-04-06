@@ -49,6 +49,7 @@ namespace StellarShip_Express.Destino
                 txtEstado.Texts = DatosSucursal.EstadoS;
                 txtMunicipio.Texts = DatosSucursal.MunicipioS;
                 txtCP.Texts = DatosSucursal.CPS;
+                txtCalle.Texts = DatosSucursal.Calle;
                 txtTel.Texts = DatosSucursal.TelefS;
                 lblTitulo.Text = "Modificar Sucursal";
 
@@ -60,7 +61,7 @@ namespace StellarShip_Express.Destino
             if (DatosSucursal.AccionS == "Alta")
             {
 
-                var Alta = dato.AgregarSucursal(txtNombreSuc.Texts, txtPais.Texts, txtEstado.Texts, txtMunicipio.Texts, txtCP.Texts, txtTel.Texts);
+                var Alta = dato.AgregarSucursal(txtNombreSuc.Texts, txtPais.Texts, txtEstado.Texts, txtMunicipio.Texts, txtCP.Texts,txtCalle.Texts, txtTel.Texts);
                 if (Alta == true)
                 {
                     MessageBox.Show(this, "Sucursal agregada exitosamente", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -75,7 +76,7 @@ namespace StellarShip_Express.Destino
 
                 var Modifica = dato.ModificarSucursal(
                     Convert.ToInt32(txtIdSuc.Text),
-                    txtNombreSuc.Texts, txtPais.Texts, txtEstado.Texts, txtMunicipio.Texts, txtCP.Texts, txtTel.Texts);
+                    txtNombreSuc.Texts, txtPais.Texts, txtEstado.Texts, txtMunicipio.Texts, txtCP.Texts, txtCalle.Texts, txtTel.Texts);
                 if (Modifica == true)
                 {
                     MessageBox.Show(this, "Sucursal Modificada exitosamente", "Modificacion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
