@@ -30,75 +30,60 @@ namespace StellarShip_Express.Otros
 		}
 		private void iconButton1_Click(object sender, EventArgs e)
 		{
-			
-			string opcionSeleccionada = cmbFiltros.Texts;
-			Consultas consultas = new Consultas();
-			DataTable Tabla = new DataTable();
-			ConexionSQLServ conexionSQL = new ConexionSQLServ();
-
-			try
-			{
-
-				if (opcionSeleccionada == "NoFactura")
-				{
-					if (rjTextBox1.Texts == "")
-					{
-						MostrarFactura();
-						return;
-					}
-					dgvDatos.DataSource = consultas.BuscarNoFac(rjTextBox1.Texts);
-
-				}
-				if (opcionSeleccionada == "ID Cliente")
-				{
-					if(rjTextBox1.Texts == "")
-					{
-						MostrarFactura();
-						return;
-					}
-					dgvDatos.DataSource = consultas.BuscarIdcliente(rjTextBox1.Texts);
-				}
-				if (opcionSeleccionada == "Sucursal")
-				{
-					if (rjTextBox1.Texts == "")
-					{
-						MostrarFactura();
-						return;
-					}
-					dgvDatos.DataSource = consultas.BuscarSuc(rjTextBox1.Texts);
-				}
-				if (opcionSeleccionada == "Fecha")
-				{
-					using (var connection = conexionSQL.GetConnection())
-					{
-
-						using (var command = new SqlCommand())
-						{
-							connection.Open();
-							string consutafecha = $"Select * from Factura where Fecha BETWEEN '{dateTimePicker1.Value.Date.ToString("yyyy-MM-dd HH:mm:ss")}' AND '{dateTimePicker2.Value.Date.ToString("yyyy-MM-dd HH:mm:ss")}'";
-							SqlDataAdapter adap = new SqlDataAdapter(consutafecha, connection);
-							adap.Fill(Tabla);
-							dgvDatos.DataSource = Tabla;
-							SqlCommand comando = new SqlCommand(consutafecha, connection);
-							SqlDataReader leer;
-							leer = comando.ExecuteReader();
-							connection.Close();
-						}
-
-					}
-				}
+            ConsultasFactura consultas = new ConsultasFactura();
+            string opcionSeleccionada = cmbFiltros.Texts;
 
 
-			}
-			catch (Exception EX)
-			{
 
-				MessageBox.Show("Ha ocurrido un error: " + EX.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
 
-		}
+            if (opcionSeleccionada == "NoFactura")
+            {
+                dgvDatos.DataSource = consultas.NoFactura(rjTextBox1.Texts);
 
-		private void btnActualizar_Click(object sender, EventArgs e)
+            }
+
+            else if (opcionSeleccionada == "ID Cliente")
+            {
+
+                dgvDatos.DataSource = consultas.IdCliente(rjTextBox1.Texts);
+            }
+
+            else if (opcionSeleccionada == "Sucursal")
+            {
+                dgvDatos.DataSource = consultas.Sucursal(rjTextBox1.Texts);
+
+            }
+
+            else if (opcionSeleccionada == "Fecha")
+            {
+                //No funca el de fecha
+                dgvDatos.DataSource = consultas.BuscFecha(dateTimePicker1, dateTimePicker2);
+
+            }
+
+            //if (opcionSeleccionada == "Fecha")
+            //{
+            //    using (var connection = conexionSQL.GetConnection())
+            //    {
+
+            //        using (var command = new SqlCommand())
+            //        {
+            //            connection.Open();
+            //            string consutafecha = $"Select * from Factura where Fecha BETWEEN '{dateTimePicker1.Value.Date.ToString("yyyy-MM-dd HH:mm:ss")}' AND '{dateTimePicker2.Value.Date.ToString("yyyy-MM-dd HH:mm:ss")}'";
+            //            SqlDataAdapter adap = new SqlDataAdapter(consutafecha, connection);
+            //            adap.Fill(Tabla);
+            //            dgvDatos.DataSource = Tabla;
+            //            SqlCommand comando = new SqlCommand(consutafecha, connection);
+            //            SqlDataReader leer;
+            //            leer = comando.ExecuteReader();
+            //            connection.Close();
+            //        }
+
+            //    }
+
+            }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
 		{
 			MostrarFactura();
 		}
@@ -106,6 +91,7 @@ namespace StellarShip_Express.Otros
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
+          
         }
     }
 }

@@ -367,66 +367,6 @@ namespace StellarShip_Express
             }
         }
 
-
-       
-        // Busquedas factura ----------------------------------------------
-        public DataTable BuscarNoFac(string NoFac)
-		{
-            DataTable Tabla = new DataTable();
-            ConexionSQLServ conexionSQL = new ConexionSQLServ();
-            using (var connection = conexionSQL.GetConnection())
-            {
-                connection.Open();
-                using (var command = new SqlCommand())
-                {
-                    command.Connection = connection;
-                    command.CommandText = "Select * from Factura where NoFactura LIKE " + NoFac + "";
-                    command.CommandType = CommandType.Text;
-                    LeerFilas = command.ExecuteReader();
-                    Tabla.Load(LeerFilas);
-                    return Tabla;
-                }
-            }
-        }
-
-        public DataTable BuscarIdcliente(string idClientec)
-        {
-            DataTable Tabla = new DataTable();
-            ConexionSQLServ conexionSQL = new ConexionSQLServ();
-            using (var connection = conexionSQL.GetConnection())
-            {
-                connection.Open();
-                using (var command = new SqlCommand())
-                {
-                    command.Connection = connection;
-                    command.CommandText = "Select * from Factura where Cliente LIKE " + idClientec + "";
-                    command.CommandType = CommandType.Text;
-                    LeerFilas = command.ExecuteReader();
-                    Tabla.Load(LeerFilas);
-                    return Tabla;
-                }
-            }
-        }
-
-        public DataTable BuscarSuc(string suc)
-        {
-            DataTable Tabla = new DataTable();
-            ConexionSQLServ conexionSQL = new ConexionSQLServ();
-            using (var connection = conexionSQL.GetConnection())
-            {
-                connection.Open();
-                using (var command = new SqlCommand())
-                {
-                    command.Connection = connection;
-                    command.CommandText = "Select * from Factura where Sucursal LIKE " + suc + "";
-                    command.CommandType = CommandType.Text;
-                    LeerFilas = command.ExecuteReader();
-                    Tabla.Load(LeerFilas);
-                    return Tabla;
-                }
-            }
-        }
-
        // ---------------------------------------------------------------------
 
         public DataTable BuscarIdSuc(string idDesti) 

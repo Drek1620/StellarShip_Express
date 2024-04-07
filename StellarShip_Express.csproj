@@ -101,7 +101,7 @@
       <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="CustomControls">
-      <HintPath>..\..\..\Downloads\CustomControls.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\5to Semestre\CustomControls.dll</HintPath>
     </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.6.3.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
@@ -241,6 +241,7 @@
       <DependentUpon>ImprimirPDF.cs</DependentUpon>
     </Compile>
     <Compile Include="Otros\consultasbitacora.cs" />
+    <Compile Include="Otros\ConsultasFactura.cs" />
     <Compile Include="Otros\frmBitacora.cs">
       <SubType>Form</SubType>
     </Compile>
