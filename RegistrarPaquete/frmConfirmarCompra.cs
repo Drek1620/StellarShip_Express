@@ -19,6 +19,7 @@ using iTextSharp.tool.xml;
 
 using BarcodeLib;
 using StellarShip_Express.Envios;
+using StellarShip_Express.Imprimir;
 
 namespace StellarShip_Express.RegistrarPaquete
 {
@@ -28,8 +29,8 @@ namespace StellarShip_Express.RegistrarPaquete
         GuiaEnvio guiaEnvio = new GuiaEnvio();
         GenerarFactura generarFactura = new GenerarFactura();
         private string NoEnvio;
-        private string path;
-        private string ruta;
+        private string rutaGuia;
+        private string rutaFactura;
         private DateTime Fecha;
         public frmConfirmarCompra()
         {
@@ -151,11 +152,13 @@ namespace StellarShip_Express.RegistrarPaquete
             generarFactura.Fecha = Fecha;
             btnConfirmar.Visible = false;
             btnGuia.Visible = true;
+            btnFactura.Visible = true;
 
 
             if (generarFactura.GenerarPDF())
             {
                 MessageBox.Show("Factura generada");
+                rutaFactura = GenerarFactura.Ruta;
             }
             else
             {
@@ -165,6 +168,7 @@ namespace StellarShip_Express.RegistrarPaquete
             if (guiaEnvio.GenerarGuia())
 			{
                 MessageBox.Show("Guia de envio generada");
+                rutaGuia = GuiaEnvio.RutaPDF;
             }
 			else
 			{
@@ -175,9 +179,17 @@ namespace StellarShip_Express.RegistrarPaquete
 
 		private void btnGuia_Click(object sender, EventArgs e)
 		{
-           
+            RutasPDF.RutaPDF = rutaGuia;
+            frmImprimirPDF frm = new frmImprimirPDF();
+            frm.ShowDialog();
 		}
-	
-	}
+
+        private void btnFactura_Click(object sender, EventArgs e)
+        {
+            RutasPDF.RutaPDF = rutaFactura;
+            frmImprimirPDF frm = new frmImprimirPDF();
+            frm.ShowDialog();
+        }
+    }
 	
 }

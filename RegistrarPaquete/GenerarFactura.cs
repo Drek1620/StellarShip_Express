@@ -17,9 +17,10 @@ namespace StellarShip_Express.RegistrarPaquete
     {
         public static long NoFactura { get; set; }
         public DateTime Fecha { get; set; }
+        public static string Ruta { get; set; }
         public bool GenerarPDF()
         {
-            string ruta = @"C:\Facturas\"+ NoFactura +".pdf";
+            Ruta = @"C:\Facturas\"+ NoFactura +".pdf";
             //string PaginaHTML_Texto = "<table border=\"1\"><tr><td>HOLA MUNDO</td></tr></table>";
             string PaginaHTML_Texto = Properties.Resources.Factura.ToString();
             PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FACTURA", NoFactura.ToString());
@@ -49,7 +50,7 @@ namespace StellarShip_Express.RegistrarPaquete
             PaginaHTML_Texto = PaginaHTML_Texto.Replace("@IVA", CalcularPrecios.Iva.ToString());
             PaginaHTML_Texto = PaginaHTML_Texto.Replace("@TOTAL", CalcularPrecios.Total.ToString());
 
-            using (FileStream stream = new FileStream(ruta, FileMode.Create))
+            using (FileStream stream = new FileStream(Ruta, FileMode.Create))
             {
                 //Creamos un nuevo documento y lo definimos como PDF
                 Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);

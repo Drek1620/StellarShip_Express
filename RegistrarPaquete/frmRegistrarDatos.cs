@@ -201,7 +201,7 @@ namespace StellarShip_Express.RegistrarPaquete
         {
             try
             {
-                cmbCiudad.DataSource = consultas.MostrarMun(Convert.ToInt32(cmbEstadoD.SelectedValue));
+                cmbCiudadD.DataSource = consultas.MostrarMun(Convert.ToInt32(cmbEstadoD.SelectedValue));
                 cmbCiudadD.DisplayMember = "Descripcion";
                 cmbCiudadD.ValueMember = "MunicipioId";
             }

@@ -11,7 +11,6 @@ namespace StellarShip_Express.Otros
 {
     internal class consultasbitacora
     {
-        private SqlDataReader LeerFilas;
 
         public DataTable buscarid(string id)
         {

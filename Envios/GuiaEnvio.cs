@@ -23,6 +23,7 @@ namespace StellarShip_Express.Envios
     {
         public static long NoEnvio { get; set; }
         public DateTime Fecha { get; set; }
+        public static string RutaPDF { get; set; }
         public bool GenerarGuia()
         {
             string ruta = @"C:\GuiasEnvio\Temporal\";
@@ -116,6 +117,7 @@ namespace StellarShip_Express.Envios
             }
             ruta = @"C:\GuiasEnvio\Temporal\";
             string path = @"C:\GuiasEnvio\" + NoEnvio + ".pdf";
+            RutaPDF = path;
             CreacionPDF(path, ruta);
             Thread.Sleep(1000); 
             foreach (var item in Directory.GetFiles(ruta, "*.pdf"))
@@ -131,7 +133,7 @@ namespace StellarShip_Express.Envios
 
         public void ConsultaGuia()
         {
-            DataRow dr;
+            
             var conexionSQL = new ConexionSQLServ();
             using (var connection = conexionSQL.GetConnection())
             {

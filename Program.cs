@@ -1,4 +1,5 @@
-﻿using StellarShip_Express.Personal;
+﻿using StellarShip_Express.Imprimir;
+using StellarShip_Express.Personal;
 using StellarShip_Express.RegistrarPaquete;
 using System;
 using System.Collections.Generic;

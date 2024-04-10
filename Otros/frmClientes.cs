@@ -162,23 +162,23 @@ namespace StellarShip_Express.Otros
         {
             object opcionSeleccionada = cmbFiltros.SelectedItem;
 
-            if (opcionSeleccionada == "Nombre")
+            if (opcionSeleccionada.ToString() == "Nombre")
             {
                 MostrarBusquedaClienteN();
             }
-            else if (opcionSeleccionada == "ID")
+            else if (opcionSeleccionada.ToString() == "ID")
             {
                 MostrarBusquedaClienteI();
             }
-            else if (opcionSeleccionada == "Ciudad")
+            else if (opcionSeleccionada.ToString() == "Ciudad")
             {
                 MostrarBusquedaClienteC();
             }
-            else if (opcionSeleccionada == "Estado")
+            else if (opcionSeleccionada.ToString() == "Estado")
             {
                 MostrarBusquedaClienteE();
             }
-            else if (opcionSeleccionada == "País")
+            else if (opcionSeleccionada.ToString() == "País")
             {
                 MostrarBusquedaClienteP();
             }
