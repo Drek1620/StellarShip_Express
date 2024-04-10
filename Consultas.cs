@@ -67,7 +67,7 @@ namespace StellarShip_Express
 			throw new NotImplementedException();
 		}
 
-		public DataTable MostrarEstado()
+        public DataTable MostrarMun(int IdEstado)
         {
             DataTable Tabla = new DataTable();
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
@@ -77,7 +77,31 @@ namespace StellarShip_Express
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT DISTINCT Estado FROM Sucursal";
+                    command.CommandText = @"select m.MunicipioId, m.Descripcion 
+                                          from cMunicipios as m
+                                          inner join cEstados as e
+                                          on m.EstadoId = e.EstadoId
+                                          where e.EstadoId = @IdEstado";
+                    command.Parameters.AddWithValue("@IdEstado", SqlDbType.Int).Value = IdEstado;
+                    command.CommandType = CommandType.Text;
+                    LeerFilas = command.ExecuteReader();
+                    Tabla.Load(LeerFilas);
+                    return Tabla;
+                }
+            }
+        }
+
+        public DataTable MostrarEstado()
+        {
+            DataTable Tabla = new DataTable();
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT * FROM cEstados";
                     command.CommandType = CommandType.Text;
                     LeerFilas = command.ExecuteReader();
                     Tabla.Load(LeerFilas);

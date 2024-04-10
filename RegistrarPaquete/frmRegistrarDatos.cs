@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,6 +17,7 @@ namespace StellarShip_Express.RegistrarPaquete
     {
         frm_Menu frm_Menu = new frm_Menu();
         private Form currentChildForm;
+        Consultas consultas = new Consultas();
         public frmRegistrarDatos()
         {
             InitializeComponent();
@@ -77,9 +79,17 @@ namespace StellarShip_Express.RegistrarPaquete
         {
             if (ValidarCampo()==true)
             {
+                if (ComprobarFormatoEmail(txtCorreo.Texts) && ComprobarFormatoEmail(txtCorreoD.Texts))
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show(this, "Correo electronico no valido", "Correo no valido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
                 DatosCliente.Cliente[0] = new ArregloCliente(
                     txtNombre.Texts,
-                    txtCorreo.Texts,
+                    txtCorreo.Texts.ToUpper(),
                     txtTelefono.Texts,
                     txtEmpresa.Texts,
                     txtDireccion.Texts,
@@ -90,7 +100,7 @@ namespace StellarShip_Express.RegistrarPaquete
                     cmbPais.Texts);
                 DatosCliente.Cliente[1] = new ArregloCliente(
                     txtNombreD.Texts,
-                    txtCorreoD.Texts,
+                    txtCorreoD.Texts.ToUpper(),
                     txtTelD.Texts,
                     txtEmpresaD.Texts,
                     txtDireccionD.Texts,
@@ -113,6 +123,27 @@ namespace StellarShip_Express.RegistrarPaquete
             InitializeComponent();
         }
 
+        public static bool ComprobarFormatoEmail(string sEmailAComprobar)
+        {
+            String sFormato;
+            sFormato = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(sEmailAComprobar, sFormato))
+            {
+                if (Regex.Replace(sEmailAComprobar, sFormato, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         private void frmRegistrarDatos_Load(object sender, EventArgs e)
         {
             Ubicaciones();
@@ -120,17 +151,16 @@ namespace StellarShip_Express.RegistrarPaquete
 
         public void Ubicaciones()
         {
-            Consultas consultas = new Consultas();
+            
 
             cmbEstadoD.DataSource = consultas.MostrarEstado();
             cmbEstado.DataSource = consultas.MostrarEstado();
-            cmbEstadoD.DisplayMember = "Estado";
-            cmbEstado.DisplayMember = "Estado";
+            cmbEstadoD.DisplayMember = "Descripcion";
+            cmbEstadoD.ValueMember = "EstadoId";
+            cmbEstado.DisplayMember = "Descripcion";
+            cmbEstado.ValueMember = "EstadoId";
 
-            cmbCiudad.DataSource = consultas.MostrarSuc();
-            cmbCiudadD.DataSource = consultas.MostrarSuc();
-            cmbCiudad.DisplayMember = "Municipio";
-            cmbCiudadD.DisplayMember = "Municipio";
+            
         }
         public void Limpiar()
         {
@@ -151,10 +181,34 @@ namespace StellarShip_Express.RegistrarPaquete
             txtCpD.Texts=""; 
         }
 
-        private void txtNombre__TextChanged(object sender, EventArgs e)
+
+        private void cmbEstado_OnSelectedValueChanged(object sender, EventArgs e)
         {
+            try
+            {
+                cmbCiudad.DataSource = consultas.MostrarMun(Convert.ToInt32(cmbEstado.SelectedValue));
+                cmbCiudad.DisplayMember = "Descripcion";
+                cmbCiudad.ValueMember = "MunicipioId";
+            }
+            catch (Exception)
+            {
+                return;
+            }
             
         }
 
+        private void cmbEstadoD_OnSelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                cmbCiudad.DataSource = consultas.MostrarMun(Convert.ToInt32(cmbEstadoD.SelectedValue));
+                cmbCiudadD.DisplayMember = "Descripcion";
+                cmbCiudadD.ValueMember = "MunicipioId";
+            }
+            catch (Exception)
+            {
+                return;
+            }
+        }
     }
 }

@@ -109,9 +109,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(37, 226);
+            this.label1.Location = new System.Drawing.Point(38, 226);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 23);
+            this.label1.Size = new System.Drawing.Size(66, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "Usuario";
             // 
@@ -139,9 +139,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(37, 307);
+            this.label2.Location = new System.Drawing.Point(38, 307);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 23);
+            this.label2.Size = new System.Drawing.Size(103, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "Contraseña";
             // 
@@ -158,7 +158,7 @@
             this.btnIniciar.ForeColor = System.Drawing.Color.White;
             this.btnIniciar.Location = new System.Drawing.Point(41, 434);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(280, 40);
+            this.btnIniciar.Size = new System.Drawing.Size(282, 40);
             this.btnIniciar.TabIndex = 6;
             this.btnIniciar.Text = "Iniciar Sesión";
             this.btnIniciar.TextColor = System.Drawing.Color.White;
@@ -169,11 +169,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(14, 529);
+            this.label3.Location = new System.Drawing.Point(39, 525);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(331, 19);
+            this.label3.Size = new System.Drawing.Size(289, 16);
             this.label3.TabIndex = 7;
-            this.label3.Text = "______________________________________________";
+            this.label3.Text = "_______________________________________________";
             // 
             // pictureBox1
             // 
@@ -192,7 +192,7 @@
             this.lblError.ForeColor = System.Drawing.Color.Gainsboro;
             this.lblError.Location = new System.Drawing.Point(38, 370);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(123, 21);
+            this.lblError.Size = new System.Drawing.Size(101, 19);
             this.lblError.TabIndex = 9;
             this.lblError.Text = "Mensaje error";
             this.lblError.Visible = false;
@@ -220,6 +220,7 @@
             this.btnMostrar.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnMostrar.FlatAppearance.BorderSize = 0;
             this.btnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrar.ForeColor = System.Drawing.Color.Transparent;
             this.btnMostrar.IconChar = FontAwesome.Sharp.IconChar.Eye;
             this.btnMostrar.IconColor = System.Drawing.Color.White;
             this.btnMostrar.IconFont = FontAwesome.Sharp.IconFont.Auto;

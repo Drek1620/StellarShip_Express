@@ -30,7 +30,7 @@ namespace StellarShip_Express.Envios
 
 			int cantidad = Convert.ToInt32(dsTabla.Tables[0].Rows[0][0].ToString()) / NumFilas;
 
-			if (Convert.ToInt32(dsTabla.Tables[0].Rows[0][0].ToString()) % NumFilas > 0) cantidad++;
+			if (Convert.ToInt32(dsTabla.Tables[0].Rows[0][0].ToString()) % NumFilas == 0) cantidad++;
 
 			textBox1.Text = cantidad.ToString();
 			comboBox1.Items.Clear();
