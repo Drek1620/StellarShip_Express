@@ -100,14 +100,14 @@
             this.pdfViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pdfViewer1.Location = new System.Drawing.Point(0, 42);
             this.pdfViewer1.Name = "pdfViewer1";
-            this.pdfViewer1.Size = new System.Drawing.Size(775, 408);
+            this.pdfViewer1.Size = new System.Drawing.Size(775, 432);
             this.pdfViewer1.TabIndex = 28;
             // 
             // frmImprimirPDF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 450);
+            this.ClientSize = new System.Drawing.Size(775, 474);
             this.Controls.Add(this.pdfViewer1);
             this.Controls.Add(this.TitleBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
