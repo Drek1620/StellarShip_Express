@@ -1,4 +1,5 @@
-﻿using StellarShip_Express.Vehiculos;
+﻿using StellarShip_Express.Sucursal;
+using StellarShip_Express.Vehiculos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ namespace StellarShip_Express.Destino
 {
     public partial class frmRegistrarSucursal : Form
     {
-        Consultas dato = new Consultas();
+        ConsultasSucursal dato = new ConsultasSucursal();
         public frmRegistrarSucursal()
         {
             InitializeComponent();
@@ -90,6 +91,11 @@ namespace StellarShip_Express.Destino
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panTitle_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

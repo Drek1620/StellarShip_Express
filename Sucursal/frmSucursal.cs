@@ -1,4 +1,5 @@
-﻿using StellarShip_Express.Vehiculos;
+﻿using StellarShip_Express.Sucursal;
+using StellarShip_Express.Vehiculos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +20,7 @@ namespace StellarShip_Express.Destino
         }
         public void MostrarSuc()
         {
-            Consultas consultas = new Consultas();
+            ConsultasSucursal consultas = new ConsultasSucursal();
             dgvDatos.DataSource = consultas.MostrarSuc();
         }
 
@@ -63,7 +64,7 @@ namespace StellarShip_Express.Destino
                 , MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
-        Consultas dato = new Consultas();
+        ConsultasSucursal dato = new ConsultasSucursal();
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             DatosSucursal.AccionS = "Baja";
@@ -94,7 +95,7 @@ namespace StellarShip_Express.Destino
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            Consultas consultas = new Consultas();
+            ConsultasSucursal consultas = new ConsultasSucursal();
             try
             {
 

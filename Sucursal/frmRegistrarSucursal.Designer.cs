@@ -59,7 +59,7 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(35, 124);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 18);
+            this.label1.Size = new System.Drawing.Size(99, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
@@ -82,7 +82,7 @@
             this.txtNombreSuc.PasswordChar = false;
             this.txtNombreSuc.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtNombreSuc.PlaceholderText = "";
-            this.txtNombreSuc.Size = new System.Drawing.Size(262, 31);
+            this.txtNombreSuc.Size = new System.Drawing.Size(262, 39);
             this.txtNombreSuc.TabIndex = 1;
             this.txtNombreSuc.Texts = "";
             this.txtNombreSuc.UnderlinedStyle = false;
@@ -106,7 +106,7 @@
             this.txtEstado.PasswordChar = false;
             this.txtEstado.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtEstado.PlaceholderText = "";
-            this.txtEstado.Size = new System.Drawing.Size(262, 31);
+            this.txtEstado.Size = new System.Drawing.Size(262, 39);
             this.txtEstado.TabIndex = 3;
             this.txtEstado.Texts = "";
             this.txtEstado.UnderlinedStyle = false;
@@ -117,7 +117,7 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(35, 228);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 18);
+            this.label2.Size = new System.Drawing.Size(84, 26);
             this.label2.TabIndex = 2;
             this.label2.Text = "Estado";
             // 
@@ -140,7 +140,7 @@
             this.txtMunicipio.PasswordChar = false;
             this.txtMunicipio.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtMunicipio.PlaceholderText = "";
-            this.txtMunicipio.Size = new System.Drawing.Size(262, 31);
+            this.txtMunicipio.Size = new System.Drawing.Size(262, 39);
             this.txtMunicipio.TabIndex = 5;
             this.txtMunicipio.Texts = "";
             this.txtMunicipio.UnderlinedStyle = false;
@@ -151,7 +151,7 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(35, 285);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 18);
+            this.label3.Size = new System.Drawing.Size(116, 26);
             this.label3.TabIndex = 4;
             this.label3.Text = "Municipio";
             // 
@@ -174,7 +174,7 @@
             this.txtCP.PasswordChar = false;
             this.txtCP.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtCP.PlaceholderText = "";
-            this.txtCP.Size = new System.Drawing.Size(262, 31);
+            this.txtCP.Size = new System.Drawing.Size(262, 39);
             this.txtCP.TabIndex = 7;
             this.txtCP.Texts = "";
             this.txtCP.UnderlinedStyle = false;
@@ -185,7 +185,7 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(35, 344);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 18);
+            this.label4.Size = new System.Drawing.Size(51, 26);
             this.label4.TabIndex = 6;
             this.label4.Text = "C/P";
             // 
@@ -209,7 +209,7 @@
             this.txtPais.PasswordChar = false;
             this.txtPais.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPais.PlaceholderText = "";
-            this.txtPais.Size = new System.Drawing.Size(262, 31);
+            this.txtPais.Size = new System.Drawing.Size(262, 39);
             this.txtPais.TabIndex = 9;
             this.txtPais.Texts = "México";
             this.txtPais.UnderlinedStyle = false;
@@ -220,7 +220,7 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(35, 176);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 18);
+            this.label5.Size = new System.Drawing.Size(54, 26);
             this.label5.TabIndex = 8;
             this.label5.Text = "País";
             // 
@@ -243,7 +243,7 @@
             this.txtTel.PasswordChar = false;
             this.txtTel.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtTel.PlaceholderText = "";
-            this.txtTel.Size = new System.Drawing.Size(262, 31);
+            this.txtTel.Size = new System.Drawing.Size(262, 39);
             this.txtTel.TabIndex = 11;
             this.txtTel.Texts = "";
             this.txtTel.UnderlinedStyle = false;
@@ -254,7 +254,7 @@
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(35, 453);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 18);
+            this.label6.Size = new System.Drawing.Size(101, 26);
             this.label6.TabIndex = 10;
             this.label6.Text = "Telefono";
             // 
@@ -312,6 +312,7 @@
             this.panTitle.Name = "panTitle";
             this.panTitle.Size = new System.Drawing.Size(446, 39);
             this.panTitle.TabIndex = 14;
+            this.panTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.panTitle_Paint);
             this.panTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panTitle_MouseDown);
             // 
             // lblTitulo
@@ -320,7 +321,7 @@
             this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.Location = new System.Drawing.Point(12, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(0, 18);
+            this.lblTitulo.Size = new System.Drawing.Size(0, 26);
             this.lblTitulo.TabIndex = 15;
             // 
             // btnMinum
@@ -362,7 +363,7 @@
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(35, 64);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(22, 18);
+            this.label7.Size = new System.Drawing.Size(33, 26);
             this.label7.TabIndex = 15;
             this.label7.Text = "Id";
             // 
@@ -371,7 +372,7 @@
             this.txtIdSuc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIdSuc.Location = new System.Drawing.Point(153, 58);
             this.txtIdSuc.Name = "txtIdSuc";
-            this.txtIdSuc.Size = new System.Drawing.Size(112, 24);
+            this.txtIdSuc.Size = new System.Drawing.Size(112, 32);
             this.txtIdSuc.TabIndex = 16;
             // 
             // txtCalle
@@ -393,7 +394,7 @@
             this.txtCalle.PasswordChar = false;
             this.txtCalle.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtCalle.PlaceholderText = "";
-            this.txtCalle.Size = new System.Drawing.Size(262, 31);
+            this.txtCalle.Size = new System.Drawing.Size(262, 39);
             this.txtCalle.TabIndex = 18;
             this.txtCalle.Texts = "";
             this.txtCalle.UnderlinedStyle = false;
@@ -404,13 +405,13 @@
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.label8.Location = new System.Drawing.Point(35, 398);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 18);
+            this.label8.Size = new System.Drawing.Size(68, 26);
             this.label8.TabIndex = 17;
             this.label8.Text = "Calle";
             // 
             // frmRegistrarSucursal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;

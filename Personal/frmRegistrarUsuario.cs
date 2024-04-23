@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using StellarShip_Express.Personal;
+using StellarShip_Express.Sucursal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,11 +27,12 @@ namespace StellarShip_Express.Formularios
 
         public void ListarPuestos()
         {
-            Consultas objConsulta= new Consultas();
+            Consultas objConsulta = new Consultas();
+            ConsultasSucursal obConsulta = new ConsultasSucursal();
             cmbAcces.DataSource = objConsulta.MostrarPuestos();
             cmbAcces.DisplayMember = "Puesto";
             cmbAcces.ValueMember = "IdPuesto";
-            cmbSucursal.DataSource = objConsulta.MostrarSuc();
+            cmbSucursal.DataSource = obConsulta.MostrarSuc();
             cmbSucursal.DisplayMember = "Nombre";
             cmbSucursal.ValueMember = "IdDestino";
             cmbSucursal.Texts = "---Sucursal---";
