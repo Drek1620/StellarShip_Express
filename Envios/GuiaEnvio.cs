@@ -131,7 +131,7 @@ namespace StellarShip_Express.Envios
             
         }
 
-        public void ConsultaGuia()
+        public bool ConsultaGuia()
         {
             
             var conexionSQL = new ConexionSQLServ();
@@ -191,8 +191,11 @@ namespace StellarShip_Express.Envios
                     
                 }
             }
-
-           GenerarGuia();
+            if (GenerarGuia())
+            {
+                return true;
+            }
+            else return false;
         }
 
         public void CreacionPDF(string targetPDF, string sourceDir)

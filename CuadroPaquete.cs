@@ -84,7 +84,10 @@ namespace StellarShip_Express
         {
 			GuiaEnvio guiaEnvio = new GuiaEnvio();
 			GuiaEnvio.NoEnvio = this.id;
-			guiaEnvio.ConsultaGuia();
+			if (guiaEnvio.ConsultaGuia())
+			{
+				MessageBox.Show("Guia generada correctamente");
+			}
         }
     }
 }

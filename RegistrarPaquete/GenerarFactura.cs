@@ -20,7 +20,7 @@ namespace StellarShip_Express.RegistrarPaquete
         public static string Ruta { get; set; }
         public bool GenerarPDF()
         {
-            Ruta = @"C:\Facturas\"+ NoFactura +".pdf";
+            Ruta = @"C:\Facturas\"+ NoFactura +".pdf"; 
             //string PaginaHTML_Texto = "<table border=\"1\"><tr><td>HOLA MUNDO</td></tr></table>";
             string PaginaHTML_Texto = Properties.Resources.Factura.ToString();
             PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FACTURA", NoFactura.ToString());
