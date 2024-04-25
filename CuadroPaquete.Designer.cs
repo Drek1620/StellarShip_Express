@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGuia = new CustomControls.RButton();
             this.btnCambiar = new CustomControls.RButton();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnGuia = new CustomControls.RButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +75,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(900, 167);
             this.panel1.TabIndex = 15;
+            // 
+            // btnGuia
+            // 
+            this.btnGuia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuia.BackColor = System.Drawing.Color.Orange;
+            this.btnGuia.BackgroundColor = System.Drawing.Color.Orange;
+            this.btnGuia.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnGuia.BorderRadius = 5;
+            this.btnGuia.BorderSize = 0;
+            this.btnGuia.FlatAppearance.BorderSize = 0;
+            this.btnGuia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuia.ForeColor = System.Drawing.Color.White;
+            this.btnGuia.Location = new System.Drawing.Point(785, 122);
+            this.btnGuia.Name = "btnGuia";
+            this.btnGuia.Size = new System.Drawing.Size(106, 34);
+            this.btnGuia.TabIndex = 30;
+            this.btnGuia.Text = "Guia Envio";
+            this.btnGuia.TextColor = System.Drawing.Color.White;
+            this.btnGuia.UseVisualStyleBackColor = false;
+            this.btnGuia.Click += new System.EventHandler(this.btnGuia_Click);
             // 
             // btnCambiar
             // 
@@ -255,27 +276,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnGuia
-            // 
-            this.btnGuia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuia.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnGuia.BackgroundColor = System.Drawing.Color.YellowGreen;
-            this.btnGuia.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnGuia.BorderRadius = 5;
-            this.btnGuia.BorderSize = 0;
-            this.btnGuia.FlatAppearance.BorderSize = 0;
-            this.btnGuia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuia.ForeColor = System.Drawing.Color.White;
-            this.btnGuia.Location = new System.Drawing.Point(785, 122);
-            this.btnGuia.Name = "btnGuia";
-            this.btnGuia.Size = new System.Drawing.Size(106, 34);
-            this.btnGuia.TabIndex = 30;
-            this.btnGuia.Text = "Guia Envio";
-            this.btnGuia.TextColor = System.Drawing.Color.White;
-            this.btnGuia.UseVisualStyleBackColor = false;
-            this.btnGuia.Click += new System.EventHandler(this.btnGuia_Click);
             // 
             // CuadroPaquete
             // 

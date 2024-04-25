@@ -1,4 +1,5 @@
 ﻿using StellarShip_Express.Envios;
+using StellarShip_Express.Imprimir;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -86,8 +87,16 @@ namespace StellarShip_Express
 			GuiaEnvio.NoEnvio = this.id;
 			if (guiaEnvio.ConsultaGuia())
 			{
-				MessageBox.Show("Guia generada correctamente");
-			}
+				
+                if (MessageBox.Show("¿Desea imprimir la guia?", "Guia generada correctamente",
+				MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+				{
+					
+					RutasPDF.RutaPDF = GuiaEnvio.RutaPDF;
+                    frmImprimirPDF frmImprimirPDF = new frmImprimirPDF();
+                    frmImprimirPDF.ShowDialog();
+				}
+            }
         }
     }
 }
