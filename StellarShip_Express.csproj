@@ -339,6 +339,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoConexion.cs" />
     <Compile Include="Sucursal\DatosSucursal.cs" />
+    <Compile Include="Validaciones\ValidarTxt.cs" />
     <Compile Include="Vehiculos\ConsultasVehiculo.cs" />
     <Compile Include="Vehiculos\DatosVehiculo.cs" />
     <Compile Include="Vehiculos\frmRegistrarVehiculo.cs">

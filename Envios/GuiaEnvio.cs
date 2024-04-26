@@ -68,6 +68,7 @@ namespace StellarShip_Express.Envios
                 paginahtml_texto = paginahtml_texto.Replace("@CALLE", DatosCliente.Cliente[0].Direccion);
                 paginahtml_texto = paginahtml_texto.Replace("@DEP", DatosCliente.Cliente[0].Nointerior);
                 paginahtml_texto = paginahtml_texto.Replace("@CP", DatosCliente.Cliente[0].Cp);
+                paginahtml_texto = paginahtml_texto.Replace("@MUNICIPIO", DatosCliente.Cliente[0].Ciudad);
                 paginahtml_texto = paginahtml_texto.Replace("@ESTADO", DatosCliente.Cliente[0].Estado);
                 paginahtml_texto = paginahtml_texto.Replace("@PAIS", DatosCliente.Cliente[0].Pais);
 
@@ -76,6 +77,7 @@ namespace StellarShip_Express.Envios
                 paginahtml_texto = paginahtml_texto.Replace("@Calle", DatosCliente.Cliente[1].Direccion);
                 paginahtml_texto = paginahtml_texto.Replace("@Dep", DatosCliente.Cliente[1].Nointerior);
                 paginahtml_texto = paginahtml_texto.Replace("@Cp", DatosCliente.Cliente[1].Cp);
+                paginahtml_texto = paginahtml_texto.Replace("@Municipio", DatosCliente.Cliente[1].Ciudad);
                 paginahtml_texto = paginahtml_texto.Replace("@Estado", DatosCliente.Cliente[1].Estado);
                 paginahtml_texto = paginahtml_texto.Replace("@Pais", DatosCliente.Cliente[1].Pais);
 
@@ -103,7 +105,7 @@ namespace StellarShip_Express.Envios
                     iTextSharp.text.Image img2 = iTextSharp.text.Image.GetInstance(imagenCodigoNuevo, ImageFormat.Png);
                     img2.ScaleToFit(1500, 100);
                     img2.Alignment = iTextSharp.text.Image.UNDERLYING;
-                    img2.SetAbsolutePosition(25, Pdfdoc.Top - 370);
+                    img2.SetAbsolutePosition(25, Pdfdoc.Top - 395);
                     Pdfdoc.Add(img2);
 
                     using (StringReader sr = new StringReader(paginahtml_texto))
@@ -131,7 +133,7 @@ namespace StellarShip_Express.Envios
             
         }
 
-        public void ConsultaGuia()
+        public bool ConsultaGuia()
         {
             
             var conexionSQL = new ConexionSQLServ();
@@ -191,8 +193,11 @@ namespace StellarShip_Express.Envios
                     
                 }
             }
-
-           GenerarGuia();
+            if (GenerarGuia())
+            {
+                return true;
+            }
+            else return false;
         }
 
         public void CreacionPDF(string targetPDF, string sourceDir)

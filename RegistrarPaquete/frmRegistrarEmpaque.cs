@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StellarShip_Express.Validaciones;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -62,34 +63,50 @@ namespace StellarShip_Express.RegistrarPaquete
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            frmConfirmarCompra frmConfirm= new frmConfirmarCompra();
-            DatosPaquete paq= new DatosPaquete();
-            int contpaq = 0;
-            int contbolsa = 0;
+            if (indice_fila != 0)
+            {
+                frmConfirmarCompra frmConfirm = new frmConfirmarCompra();
+                DatosPaquete paq = new DatosPaquete();
+                int contpaq = 0;
+                int contbolsa = 0;
+                try
+                {
+                    for (int i = 0; i <= indice_fila; i++)
+                    {
+                        DatosPaquete.Paquete[i] = new Paquete(
+                            dgvPaquetes.Rows[i].Cells[0].Value.ToString(),
+                            double.Parse(dgvPaquetes.Rows[i].Cells[1].Value.ToString()),
+                            double.Parse(dgvPaquetes.Rows[i].Cells[2].Value.ToString()),
+                            double.Parse(dgvPaquetes.Rows[i].Cells[3].Value.ToString()),
+                            dgvPaquetes.Rows[i].Cells[4].Value.ToString(),
+                            dgvPaquetes.Rows[i].Cells[5].Value.ToString(),
+                            dgvPaquetes.Rows[i].Cells[6].Value.ToString()
+                            );
+                        if (dgvPaquetes.Rows[i].Cells[0].Value.ToString() == "Caja")
+                            contpaq++;
+                        else if (dgvPaquetes.Rows[i].Cells[0].Value.ToString() == "Sobre alcolchado")
+                            contbolsa++;
+                    }
+                }
+                catch (Exception)
+                {
 
-            for (int i = 0; i <= indice_fila; i++)
-            {
-                DatosPaquete.Paquete[i] = new Paquete(
-                    dgvPaquetes.Rows[i].Cells[0].Value.ToString(),
-                    double.Parse(dgvPaquetes.Rows[i].Cells[1].Value.ToString()),
-                    double.Parse(dgvPaquetes.Rows[i].Cells[2].Value.ToString()),
-					double.Parse(dgvPaquetes.Rows[i].Cells[3].Value.ToString()),
-                    dgvPaquetes.Rows[i].Cells[4].Value.ToString(),
-                    dgvPaquetes.Rows[i].Cells[5].Value.ToString(),
-                    dgvPaquetes.Rows[i].Cells[6].Value.ToString()
-                    );
-                if (dgvPaquetes.Rows[i].Cells[0].Value.ToString() == "Caja")
-                    contpaq++;
-                else if (dgvPaquetes.Rows[i].Cells[0].Value.ToString() == "Sobre alcolchado")
-                    contbolsa++;
+                    MessageBox.Show("Ingrese los datos nuevamente", "Error al añadir los datos",
+                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                DatosPaquete.Caja = contpaq.ToString();
+                DatosPaquete.Bolsa = contbolsa.ToString();
+                DatosPaquete.Cantidad = indice_fila + 1;
+                if (frmConfirm.ShowDialog() == DialogResult.OK)
+                {
+                    this.Close();
+                }
             }
-            DatosPaquete.Caja = contpaq.ToString();
-            DatosPaquete.Bolsa = contbolsa.ToString();
-            DatosPaquete.Cantidad = indice_fila + 1;
-            if (frmConfirm.ShowDialog() == DialogResult.OK)
-            {
-                this.Close();
-            }
+            else
+                MessageBox.Show("Agrege un paquete a la tabla", "Error al añadir los datos",
+                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void chkPeligroso_CheckedChanged(object sender, EventArgs e)
@@ -101,6 +118,42 @@ namespace StellarShip_Express.RegistrarPaquete
         }
 
         int indice_fila;
+
+        ErrorProvider errorp = new ErrorProvider();
+
+        private void txtLargo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            bool validar =ValidarTxt.SoloNumeros(e);
+            if (!validar)
+            {
+                errorp.SetError(txtLargo, "Solo numeros");
+            }
+            else
+                errorp.Clear();
+        }
+
+        private void txtAncho_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            bool validar = ValidarTxt.SoloNumeros(e);
+            if (!validar)
+            {
+                errorp.SetError(txtAncho, "Solo numeros");
+            }
+            else
+                errorp.Clear();
+        }
+
+        private void txtKg_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            bool validar = ValidarTxt.SoloNumeros(e);
+            if (!validar)
+            {
+                errorp.SetError(txtKg, "Solo numeros");
+            }
+            else
+                errorp.Clear();
+        }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             
@@ -121,6 +174,14 @@ namespace StellarShip_Express.RegistrarPaquete
             fila.Cells["Seguro"].Value = seguro;
             fila.Cells["MPeligroso"].Value = Mpeligroso;
             fila.Cells["PaqIrregular"].Value = PaqIrreg;
+            Limpiar();
+        }
+
+        public void Limpiar()
+        {
+            txtAncho.Texts = "";
+            txtKg.Texts = "";
+            txtLargo.Texts = "";
         }
 
         private void chkSeguro_CheckedChanged(object sender, EventArgs e)
