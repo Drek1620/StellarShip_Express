@@ -20,18 +20,51 @@ namespace StellarShip_Express.Otros
 {
 	public partial class frmClientes : Form
 	{
-		public frmClientes()
-		{
-			InitializeComponent();
-		}
 
-
-        public void MostrarClientes()
+        PaginadoClientes objp = new PaginadoClientes();
+        DataSet dsTabla; 
+        public int pagInicio = 1, Indice = 0, Numfilas = 2, Pagfinal;
+        
+        public frmClientes()
         {
+            InitializeComponent();
 
-            Consultas consultas = new Consultas();
-            dgvDatos.DataSource = consultas.MostrarClientes();
         }
+
+        void CargarDG()
+        {
+            objp.Inicio1 = pagInicio;
+            objp.Final1 = Pagfinal;
+            dsTabla = objp.PaginadoClientes_();
+            dgvDatos.DataSource = dsTabla.Tables[1];
+
+            int cantidad = Convert.ToInt32(dsTabla.Tables[0].Rows[0][0].ToString()) / Numfilas;
+            cmbNumPag.Items.Clear();
+
+            if (Convert.ToInt32(dsTabla.Tables[0].Rows[0][0].ToString()) % Numfilas >= 0)
+            {
+                cantidad++;
+            }
+
+            txtNumPag.Text = cantidad.ToString();
+            cmbNumPag.Items.Clear();
+
+            for (int x = 1; x <= cantidad; x++)
+            {
+                cmbNumPag.Items.Add(x.ToString());
+
+            }
+
+            cmbNumPag.SelectedIndex = Indice;
+
+        }
+
+        //public void MostrarClientes()
+        //{
+
+        //    Consultas consultas = new Consultas();
+        //    dgvDatos.DataSource = consultas.MostrarClientes();
+        //}
 
         private void dgvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -72,12 +105,22 @@ namespace StellarShip_Express.Otros
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            MostrarClientes();
+            CargarDG();
         }
 
 		private void frmClientes_Load_1(object sender, EventArgs e)
 		{
-			MostrarClientes();
-		}
-	}
+            Pagfinal = Numfilas;
+            CargarDG();
+        }
+
+        private void cmbNumPag_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int pagina = Convert.ToInt32(cmbNumPag.Text);
+            Indice = pagina - 1;
+            pagInicio = (pagina - 1) * Numfilas + 1;
+            Pagfinal = pagina * Numfilas;
+            CargarDG();
+        }
+    }
 }
