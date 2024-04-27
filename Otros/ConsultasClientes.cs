@@ -22,6 +22,7 @@ namespace StellarShip_Express.Otros
 {
     internal class ConsultasClientes
     {
+        private SqlDataReader LeerFilas;
         public DataTable MostrarBusquedaClienteN(string nombre)
         {
             DataTable Tabla = new DataTable();

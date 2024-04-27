@@ -20,18 +20,45 @@ namespace StellarShip_Express.Otros
 {
 	public partial class frmClientes : Form
 	{
-		public frmClientes()
-		{
-			InitializeComponent();
-		}
 
+        PaginadoClientes objp = new PaginadoClientes();
+        DataSet dsTabla; 
+        public int pagInicio = 1, Indice = 0, Numfilas = 2, Pagfinal;
 
-        public void MostrarClientes()
+        public frmClientes()
         {
+            InitializeComponent();
+            Pagfinal = Numfilas;
+            CargarDG(); //se lo dejo pero creo que no es necesario
 
-            Consultas consultas = new Consultas();
-            dgvDatos.DataSource = consultas.MostrarClientes();
         }
+
+        void CargarDG()
+        {
+            objp.inicio1 = pagInicio;
+            objp.final1 = Pagfinal;
+            dsTabla = objp.PaginadoClientes_();
+            dgvDatos.DataSource = dsTabla.Tables[1];
+
+            int cantidad = Convert.ToInt32(dsTabla.Tables[0].Rows[0][0].ToString()) / Numfilas;
+
+            if (Convert.ToInt32(dsTabla.Tables[0].Rows[0][0].ToString()) % Numfilas > 0) cantidad++;
+            txtNumPag.Text = cantidad.ToString();
+            cmbNumPag.Items.Clear();
+
+            for (int x = 1; x <= cantidad; x++) cmbNumPag.Items.Add(x.ToString());
+
+            cmbNumPag.SelectedIndex = Indice;
+
+            
+        }
+
+        //public void MostrarClientes()
+        //{
+
+        //    Consultas consultas = new Consultas();
+        //    dgvDatos.DataSource = consultas.MostrarClientes();
+        //}
 
         private void dgvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -70,14 +97,30 @@ namespace StellarShip_Express.Otros
             //puro coco
         }
 
+        private void cmbNumPag_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int pagina = Convert.ToInt32(cmbNumPag.Text);
+            Indice = pagina - 1;
+            pagInicio = (pagina - 1) * Numfilas + 1;
+            Pagfinal = pagina * Numfilas;
+            CargarDG();
+        }
+
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            MostrarClientes();
+            Pagfinal = Numfilas;
+            CargarDG();
         }
 
 		private void frmClientes_Load_1(object sender, EventArgs e)
 		{
-			MostrarClientes();
-		}
-	}
+            Pagfinal = Numfilas;
+            CargarDG();
+        }
+
+        private void cmbNumPag_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //este no era jeje
+        }
+    }
 }

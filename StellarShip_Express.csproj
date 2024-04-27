@@ -264,6 +264,7 @@
     <Compile Include="Otros\frmFactura.Designer.cs">
       <DependentUpon>frmFactura.cs</DependentUpon>
     </Compile>
+    <Compile Include="Otros\PaginadoClientes.cs" />
     <Compile Include="Otros\PaginadoFactura.cs" />
     <Compile Include="Personal\DatosModifPersonal.cs" />
     <Compile Include="Personal\frmTomarFoto.cs">
