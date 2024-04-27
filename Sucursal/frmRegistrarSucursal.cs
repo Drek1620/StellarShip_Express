@@ -47,14 +47,15 @@ namespace StellarShip_Express.Destino
                 //DatosSucursal.IDModifiS = DatosSucursal.IdDestino;
                 txtNombreSuc.Texts = DatosSucursal.NombreSuc;
                 txtPais.Texts = DatosSucursal.PaisS;
-                txtEstado.Texts = DatosSucursal.EstadoS;
-                txtMunicipio.Texts = DatosSucursal.MunicipioS;
+                cmbEstado.Text = DatosSucursal.EstadoS.ToString();
+                cmbMunicipio.Text = DatosSucursal.MunicipioS.ToString();
                 txtCP.Texts = DatosSucursal.CPS;
                 txtCalle.Texts = DatosSucursal.Calle;
                 txtTel.Texts = DatosSucursal.TelefS;
                 lblTitulo.Text = "Modificar Sucursal";
 
             }
+            ListarEstado();
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -62,7 +63,7 @@ namespace StellarShip_Express.Destino
             if (DatosSucursal.AccionS == "Alta")
             {
 
-                var Alta = dato.AgregarSucursal(txtNombreSuc.Texts, txtPais.Texts, txtEstado.Texts, txtMunicipio.Texts, txtCP.Texts,txtCalle.Texts, txtTel.Texts);
+                var Alta = dato.AgregarSucursal(txtNombreSuc.Texts, txtPais.Texts, cmbEstado.SelectedValue.ToString(), cmbMunicipio.SelectedValue.ToString(), txtCP.Texts,txtCalle.Texts, txtTel.Texts);
                 if (Alta == true)
                 {
                     MessageBox.Show(this, "Sucursal agregada exitosamente", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -77,7 +78,7 @@ namespace StellarShip_Express.Destino
 
                 var Modifica = dato.ModificarSucursal(
                     Convert.ToInt32(txtIdSuc.Text),
-                    txtNombreSuc.Texts, txtPais.Texts, txtEstado.Texts, txtMunicipio.Texts, txtCP.Texts, txtCalle.Texts, txtTel.Texts);
+                    txtNombreSuc.Texts, txtPais.Texts, cmbEstado.SelectedValue.ToString(), cmbMunicipio.SelectedValue.ToString(), txtCP.Texts, txtCalle.Texts, txtTel.Texts);
                 if (Modifica == true)
                 {
                     MessageBox.Show(this, "Sucursal Modificada exitosamente", "Modificacion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -87,6 +88,16 @@ namespace StellarShip_Express.Destino
                     MessageBox.Show(this, "La sucursal no existe en la base de datos", "Sucursal Inexistente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        public void ListarEstado()
+        {
+
+
+            cmbEstado.DataSource = dato.ListarEstados();
+            cmbEstado.ValueMember = "EstadoId";
+            cmbEstado.DisplayMember = "Descripcion";
+
+        }
+        Consultas ob = new Consultas();
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -96,6 +107,20 @@ namespace StellarShip_Express.Destino
         private void panTitle_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void cmbEstado_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                cmbMunicipio.DataSource = ob.MostrarMun(Convert.ToInt32(cmbEstado.SelectedValue));
+                cmbMunicipio.ValueMember = "MunicipioId";
+                cmbMunicipio.DisplayMember = "Descripcion";
+            }
+            catch (Exception)
+            {
+                return;
+            }
         }
     }
 }

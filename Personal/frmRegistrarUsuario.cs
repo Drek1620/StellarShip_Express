@@ -32,7 +32,7 @@ namespace StellarShip_Express.Formularios
             cmbAcces.DataSource = objConsulta.MostrarPuestos();
             cmbAcces.DisplayMember = "Puesto";
             cmbAcces.ValueMember = "IdPuesto";
-            cmbSucursal.DataSource = obConsulta.MostrarSuc();
+            cmbSucursal.DataSource = obConsulta.ListarSucursal();
             cmbSucursal.DisplayMember = "Nombre";
             cmbSucursal.ValueMember = "IdDestino";
             cmbSucursal.Texts = "---Sucursal---";
