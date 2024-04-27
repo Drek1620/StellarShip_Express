@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace StellarShip_Express.Otros
 {
@@ -86,30 +87,27 @@ namespace StellarShip_Express.Otros
             }
             return Tabla;
         }
+        
         public DataTable BuscFecha(DateTimePicker fecha1, DateTimePicker fecha2)
         {
             DataTable Tabla = new DataTable();
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
-
             using (var connection = conexionSQL.GetConnection())
             {
-
+                connection.Open();
                 using (var command = new SqlCommand())
                 {
-                    //No funca 
-                    connection.Open();
-                    string consutafecha =  $"Select * from Factura where Fecha BETWEEN '{fecha1.Value.Date.ToString("yyyy-MM-dd HH:mm:ss")}' AND '{fecha2.Value.Date.ToString("yyyy-MM-dd HH:mm:ss")}'";
-                    SqlDataAdapter adap = new SqlDataAdapter(consutafecha, connection);
-                    adap.Fill(Tabla);
-                    SqlCommand comando = new SqlCommand(consutafecha, connection);
-                    SqlDataReader leer;
-                    leer = comando.ExecuteReader();
-                    connection.Close();
+                    command.Connection = connection;
+                    command.CommandText = @"select * from Factura Where Fecha = @Fecha BETWEEN " + "'" + fecha1 + "'" + " and " + "'" + fecha2 + "'";
+                    command.Parameters.AddWithValue("@Fecha", SqlDbType.DateTime).Value = fecha1;
+                    command.Parameters.AddWithValue("@Fecha", SqlDbType.DateTime).Value = fecha2;
+                    command.CommandType = CommandType.Text;
+                    LeerFilas = command.ExecuteReader();
+                    Tabla.Load(LeerFilas);
+                    return Tabla;
+                    
                 }
-
-
             }
-            return Tabla;
         }
 
     }
