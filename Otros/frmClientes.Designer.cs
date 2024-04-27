@@ -231,6 +231,7 @@
             this.cmbNumPag.Size = new System.Drawing.Size(72, 25);
             this.cmbNumPag.TabIndex = 42;
             this.cmbNumPag.SelectedIndexChanged += new System.EventHandler(this.cmbNumPag_SelectedIndexChanged);
+            this.cmbNumPag.SelectionChangeCommitted += new System.EventHandler(this.cmbNumPag_SelectionChangeCommitted);
             // 
             // lblPag
             // 

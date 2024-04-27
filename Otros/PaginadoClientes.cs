@@ -26,8 +26,8 @@ namespace StellarShip_Express.Otros
         private string Estado;
         private string Pais;
         private int Numero;
-        private int Inicio;
-        private int Final;
+        private int inicio;
+        private int final;
 
 
         public int IdRemitente1 { get => IdRemitente; set => IdRemitente = value; }
@@ -41,8 +41,8 @@ namespace StellarShip_Express.Otros
         public string Estado1 { get => Estado; set => Estado = value; }
         public string Pais1 { get => Pais; set => Pais = value; }
         public int Numero1 { get => Numero; set => Numero = value; }
-        public int Inicio1 { get => Inicio; set => Inicio = value; }
-        public int Final1 { get => Final; set => Final = value; }
+        public int inicio1 { get => inicio; set => inicio = value; }
+        public int final1 { get => final; set => final = value; }
         
         private SqlDataReader LeerFilas;
         public DataSet PaginadoClientes_()
@@ -53,10 +53,10 @@ namespace StellarShip_Express.Otros
                 connection.Open();
                 using (var command = new SqlCommand())
                 {
-                    SqlCommand comando = new SqlCommand("PaginadoClientes", connection);
+                    SqlCommand comando = new SqlCommand("dbo.PaginadoClientes", connection);
                     comando.CommandType = CommandType.StoredProcedure;
-                    comando.Parameters.AddWithValue("@inicio", Inicio1);
-                    comando.Parameters.AddWithValue("@final", Final1);
+                    comando.Parameters.AddWithValue("@inicio", inicio1);
+                    comando.Parameters.AddWithValue("@final", final1);
                     SqlDataAdapter da = new SqlDataAdapter(comando);
                     DataSet dt = new DataSet();
                     da.Fill(dt);
@@ -65,7 +65,7 @@ namespace StellarShip_Express.Otros
             }
         }
 
-        public DataTable Remitente_(string hoka)
+        public DataTable Remitente(string hoka)
         {
             DataTable Tabla = new DataTable();
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
