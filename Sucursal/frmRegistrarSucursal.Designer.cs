@@ -30,9 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombreSuc = new CustomControls.RJControls.RJTextBox();
-            this.txtEstado = new CustomControls.RJControls.RJTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtMunicipio = new CustomControls.RJControls.RJTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCP = new CustomControls.RJControls.RJTextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,6 +48,8 @@
             this.txtIdSuc = new System.Windows.Forms.TextBox();
             this.txtCalle = new CustomControls.RJControls.RJTextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.cmbMunicipio = new System.Windows.Forms.ComboBox();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.panTitle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,30 +87,6 @@
             this.txtNombreSuc.Texts = "";
             this.txtNombreSuc.UnderlinedStyle = false;
             // 
-            // txtEstado
-            // 
-            this.txtEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEstado.BackColor = System.Drawing.SystemColors.Window;
-            this.txtEstado.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtEstado.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
-            this.txtEstado.BorderRadius = 0;
-            this.txtEstado.BorderSize = 2;
-            this.txtEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEstado.Location = new System.Drawing.Point(153, 215);
-            this.txtEstado.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEstado.MaxLength = 32767;
-            this.txtEstado.Multiline = false;
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtEstado.PasswordChar = false;
-            this.txtEstado.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtEstado.PlaceholderText = "";
-            this.txtEstado.Size = new System.Drawing.Size(262, 39);
-            this.txtEstado.TabIndex = 3;
-            this.txtEstado.Texts = "";
-            this.txtEstado.UnderlinedStyle = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -120,30 +96,6 @@
             this.label2.Size = new System.Drawing.Size(84, 26);
             this.label2.TabIndex = 2;
             this.label2.Text = "Estado";
-            // 
-            // txtMunicipio
-            // 
-            this.txtMunicipio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMunicipio.BackColor = System.Drawing.SystemColors.Window;
-            this.txtMunicipio.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtMunicipio.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
-            this.txtMunicipio.BorderRadius = 0;
-            this.txtMunicipio.BorderSize = 2;
-            this.txtMunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMunicipio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMunicipio.Location = new System.Drawing.Point(153, 272);
-            this.txtMunicipio.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMunicipio.MaxLength = 32767;
-            this.txtMunicipio.Multiline = false;
-            this.txtMunicipio.Name = "txtMunicipio";
-            this.txtMunicipio.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtMunicipio.PasswordChar = false;
-            this.txtMunicipio.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtMunicipio.PlaceholderText = "";
-            this.txtMunicipio.Size = new System.Drawing.Size(262, 39);
-            this.txtMunicipio.TabIndex = 5;
-            this.txtMunicipio.Texts = "";
-            this.txtMunicipio.UnderlinedStyle = false;
             // 
             // label3
             // 
@@ -409,6 +361,23 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "Calle";
             // 
+            // cmbMunicipio
+            // 
+            this.cmbMunicipio.FormattingEnabled = true;
+            this.cmbMunicipio.Location = new System.Drawing.Point(153, 280);
+            this.cmbMunicipio.Name = "cmbMunicipio";
+            this.cmbMunicipio.Size = new System.Drawing.Size(262, 31);
+            this.cmbMunicipio.TabIndex = 20;
+            // 
+            // cmbEstado
+            // 
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Location = new System.Drawing.Point(153, 227);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(262, 31);
+            this.cmbEstado.TabIndex = 21;
+            this.cmbEstado.SelectedValueChanged += new System.EventHandler(this.cmbEstado_SelectedValueChanged);
+            // 
             // frmRegistrarSucursal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
@@ -416,6 +385,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(446, 577);
+            this.Controls.Add(this.cmbEstado);
+            this.Controls.Add(this.cmbMunicipio);
             this.Controls.Add(this.txtCalle);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtIdSuc);
@@ -429,9 +400,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCP);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtMunicipio);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNombreSuc);
             this.Controls.Add(this.label1);
@@ -453,9 +422,7 @@
 
         private System.Windows.Forms.Label label1;
         private CustomControls.RJControls.RJTextBox txtNombreSuc;
-        private CustomControls.RJControls.RJTextBox txtEstado;
         private System.Windows.Forms.Label label2;
-        private CustomControls.RJControls.RJTextBox txtMunicipio;
         private System.Windows.Forms.Label label3;
         private CustomControls.RJControls.RJTextBox txtCP;
         private System.Windows.Forms.Label label4;
@@ -473,5 +440,7 @@
         private System.Windows.Forms.TextBox txtIdSuc;
         private CustomControls.RJControls.RJTextBox txtCalle;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cmbMunicipio;
+        private System.Windows.Forms.ComboBox cmbEstado;
     }
 }

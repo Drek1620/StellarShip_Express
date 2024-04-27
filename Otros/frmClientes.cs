@@ -20,183 +20,107 @@ namespace StellarShip_Express.Otros
 {
 	public partial class frmClientes : Form
 	{
-		public frmClientes()
-		{
-			InitializeComponent();
-		}
 
+        PaginadoClientes objp = new PaginadoClientes();
+        DataSet dsTabla; 
+        public int pagInicio = 1, Indice = 0, Numfilas = 2, Pagfinal;
 
-        public void MostrarClientes()
+        public frmClientes()
         {
+            InitializeComponent();
+            Pagfinal = Numfilas;
+            CargarDG(); //se lo dejo pero creo que no es necesario
 
-            Consultas consultas = new Consultas();
-            dgvDatos.DataSource = consultas.MostrarClientes();
         }
 
-        public void MostrarBusquedaClienteN()
+        void CargarDG()
         {
-            string terminoBusqueda = txtBusqueda.Text;
-            DataTable Tabla = new DataTable();
-            ConexionSQLServ conexionSQL = new ConexionSQLServ();
-            using (var connection = conexionSQL.GetConnection())
-            {
-                connection.Open();
-                using (var command = new SqlCommand())
-                {
-                    command.Connection = connection;
-                    command.CommandText = "SELECT * FROM Remitente WHERE Nombre LIKE '" + txtBusqueda.Text + "%'";
-                    command.CommandType = CommandType.Text;
-                    command.Parameters.AddWithValue("@terminoBusqueda", terminoBusqueda);
+            objp.inicio1 = pagInicio;
+            objp.final1 = Pagfinal;
+            dsTabla = objp.PaginadoClientes_();
+            dgvDatos.DataSource = dsTabla.Tables[1];
 
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        Tabla.Load(reader);
-                    }
-                }
-            }
-            dgvDatos.DataSource = Tabla;
+            int cantidad = Convert.ToInt32(dsTabla.Tables[0].Rows[0][0].ToString()) / Numfilas;
+
+            if (Convert.ToInt32(dsTabla.Tables[0].Rows[0][0].ToString()) % Numfilas > 0) cantidad++;
+            txtNumPag.Text = cantidad.ToString();
+            cmbNumPag.Items.Clear();
+
+            for (int x = 1; x <= cantidad; x++) cmbNumPag.Items.Add(x.ToString());
+
+            cmbNumPag.SelectedIndex = Indice;
+
+            
         }
 
-        public void MostrarBusquedaClienteI()
-        {
-            string terminoBusqueda = txtBusqueda.Text;
-            DataTable Tabla = new DataTable();
-            ConexionSQLServ conexionSQL = new ConexionSQLServ();
-            using (var connection = conexionSQL.GetConnection())
-            {
-                connection.Open();
-                using (var command = new SqlCommand())
-                {
-                    command.Connection = connection;
-                    command.CommandText = "SELECT * FROM Remitente WHERE IdRemitente LIKE '" + txtBusqueda.Text + "%'";
-                    command.CommandType = CommandType.Text;
-                    command.Parameters.AddWithValue("@terminoBusqueda", terminoBusqueda);
+        //public void MostrarClientes()
+        //{
 
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        Tabla.Load(reader);
-                    }
-                }
-            }
-            dgvDatos.DataSource = Tabla;
-        }
-
-        public void MostrarBusquedaClienteC()
-        {
-            string terminoBusqueda = txtBusqueda.Text;
-            DataTable Tabla = new DataTable();
-            ConexionSQLServ conexionSQL = new ConexionSQLServ();
-            using (var connection = conexionSQL.GetConnection())
-            {
-                connection.Open();
-                using (var command = new SqlCommand())
-                {
-                    command.Connection = connection;
-                    command.CommandText = "SELECT * FROM Remitente WHERE Ciudad LIKE '" + txtBusqueda.Text + "%'";
-                    command.CommandType = CommandType.Text;
-                    command.Parameters.AddWithValue("@terminoBusqueda", terminoBusqueda);
-
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        Tabla.Load(reader);
-                    }
-                }
-            }
-            dgvDatos.DataSource = Tabla;
-        }
-
-        public void MostrarBusquedaClienteE()
-        {
-            string terminoBusqueda = txtBusqueda.Text;
-            DataTable Tabla = new DataTable();
-            ConexionSQLServ conexionSQL = new ConexionSQLServ();
-            using (var connection = conexionSQL.GetConnection())
-            {
-                connection.Open();
-                using (var command = new SqlCommand())
-                {
-                    command.Connection = connection;
-                    command.CommandText = "SELECT * FROM Remitente WHERE Estado LIKE '" + txtBusqueda.Text + "%'";
-                    command.CommandType = CommandType.Text;
-                    command.Parameters.AddWithValue("@terminoBusqueda", terminoBusqueda);
-
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        Tabla.Load(reader);
-                    }
-                }
-            }
-            dgvDatos.DataSource = Tabla;
-        }
-
-        public void MostrarBusquedaClienteP()
-        {
-            string terminoBusqueda = txtBusqueda.Text;
-            DataTable Tabla = new DataTable();
-            ConexionSQLServ conexionSQL = new ConexionSQLServ();
-            using (var connection = conexionSQL.GetConnection())
-            {
-                connection.Open();
-                using (var command = new SqlCommand())
-                {
-                    command.Connection = connection;
-                    command.CommandText = "SELECT * FROM Remitente WHERE Pais LIKE '" + txtBusqueda.Text + "%'";
-                    command.CommandType = CommandType.Text;
-                    command.Parameters.AddWithValue("@terminoBusqueda", terminoBusqueda);
-
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        Tabla.Load(reader);
-                    }
-                }
-            }
-            dgvDatos.DataSource = Tabla;
-        }
+        //    Consultas consultas = new Consultas();
+        //    dgvDatos.DataSource = consultas.MostrarClientes();
+        //}
 
         private void dgvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            //puto el que lo lea
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            object opcionSeleccionada = cmbFiltros.SelectedItem;
+            ConsultasClientes consultas = new ConsultasClientes();
+            string opcionSeleccionada = cmbFiltros.Texts;
 
-            if (opcionSeleccionada.ToString() == "Nombre")
+            if (opcionSeleccionada == "ID")
             {
-                MostrarBusquedaClienteN();
+                dgvDatos.DataSource = consultas.MostrarBusquedaClienteI(txtBusqueda.Text);
             }
-            else if (opcionSeleccionada.ToString() == "ID")
+            else if (opcionSeleccionada == "Nombre")
             {
-                MostrarBusquedaClienteI();
+                dgvDatos.DataSource = consultas.MostrarBusquedaClienteN(txtBusqueda.Text);
             }
-            else if (opcionSeleccionada.ToString() == "Ciudad")
+            else if (opcionSeleccionada == "Ciudad")
             {
-                MostrarBusquedaClienteC();
+                dgvDatos.DataSource = consultas.MostrarBusquedaClienteC(txtBusqueda.Text);
             }
-            else if (opcionSeleccionada.ToString() == "Estado")
+            else if (opcionSeleccionada == "Estado")
             {
-                MostrarBusquedaClienteE();
+                dgvDatos.DataSource = consultas.MostrarBusquedaClienteE(txtBusqueda.Text);
             }
-            else if (opcionSeleccionada.ToString() == "País")
+            else if (opcionSeleccionada == "País")
             {
-                MostrarBusquedaClienteP();
+                dgvDatos.DataSource = consultas.MostrarBusquedaClienteP(txtBusqueda.Text);
             }
         }
 
         private void cmbFiltros_OnSelectedIndexChanged(object sender, EventArgs e)
         {
+            //puro coco
+        }
 
+        private void cmbNumPag_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int pagina = Convert.ToInt32(cmbNumPag.Text);
+            Indice = pagina - 1;
+            pagInicio = (pagina - 1) * Numfilas + 1;
+            Pagfinal = pagina * Numfilas;
+            CargarDG();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            MostrarClientes();
+            Pagfinal = Numfilas;
+            CargarDG();
         }
 
 		private void frmClientes_Load_1(object sender, EventArgs e)
 		{
-			MostrarClientes();
-		}
-	}
+            Pagfinal = Numfilas;
+            CargarDG();
+        }
+
+        private void cmbNumPag_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //este no era jeje
+        }
+    }
 }

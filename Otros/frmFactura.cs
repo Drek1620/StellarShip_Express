@@ -58,6 +58,16 @@ namespace StellarShip_Express.Otros
             CargaDG();
         }
 
+        private void dgvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //culoEnorme
+        }
+
+        private void cmbFiltros_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void iconButton1_Click(object sender, EventArgs e)
 		{
             ConsultasFactura consultas = new ConsultasFactura();

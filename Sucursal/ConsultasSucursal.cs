@@ -44,7 +44,7 @@ namespace StellarShip_Express.Sucursal
             }
 
         }
-        public DataTable MostrarSuc()
+       /* public DataTable MostrarSuc()
         {
             DataTable Tabla = new DataTable();
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
@@ -61,7 +61,7 @@ namespace StellarShip_Express.Sucursal
                     return Tabla;
                 }
             }
-        }
+        }*/
 
         public bool ModificarSucursal(int IDModi, string NombreSuc, string PaisS, string EstadoS, string MunicipioS, string CPS, string Calle, string TelefS)
         {
@@ -180,6 +180,45 @@ namespace StellarShip_Express.Sucursal
             }
         }
 
+        public DataTable ListarEstados()
+        {
+            DataTable Tabla = new DataTable();
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "ListarEstados";
+                    command.CommandType = CommandType.StoredProcedure;
+                    LeerFilas = command.ExecuteReader();
+                    Tabla.Load(LeerFilas);
+                    return Tabla;
+                }
+            }
+        }
+
+
+
+        public DataTable ListarSucursal()
+        {
+            DataTable Tabla = new DataTable();
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "ListarSucursal";
+                    command.CommandType = CommandType.StoredProcedure;
+                    LeerFilas = command.ExecuteReader();
+                    Tabla.Load(LeerFilas);
+                    return Tabla;
+                }
+            }
+        }
 
     }
 }

@@ -21,7 +21,7 @@ namespace StellarShip_Express.Destino
         public void MostrarSuc()
         {
             ConsultasSucursal consultas = new ConsultasSucursal();
-            dgvDatos.DataSource = consultas.MostrarSuc();
+            dgvDatos.DataSource = consultas.ListarSucursal();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -50,8 +50,8 @@ namespace StellarShip_Express.Destino
                 DatosSucursal.IdDestino = Convert.ToInt32(dgvDatos.CurrentRow.Cells["IdDestino"].Value);
                 DatosSucursal.NombreSuc = dgvDatos.CurrentRow.Cells["Nombre"].Value.ToString();
                 DatosSucursal.PaisS = dgvDatos.CurrentRow.Cells["Pais"].Value.ToString();
-                DatosSucursal.EstadoS = dgvDatos.CurrentRow.Cells["Estado"].Value.ToString();
-                DatosSucursal.MunicipioS = dgvDatos.CurrentRow.Cells["Municipio"].Value.ToString();
+                DatosSucursal.EstadoS = Convert.ToInt32(dgvDatos.CurrentRow.Cells["Estado"].Value);
+                DatosSucursal.MunicipioS = Convert.ToInt32(dgvDatos.CurrentRow.Cells["Municipio"].Value);
                 DatosSucursal.CPS= dgvDatos.CurrentRow.Cells["CP"].Value.ToString();
                 DatosSucursal.Calle = dgvDatos.CurrentRow.Cells["Calle"].Value.ToString();
                 DatosSucursal.TelefS = dgvDatos.CurrentRow.Cells["Telefono"].Value.ToString();
