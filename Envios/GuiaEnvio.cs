@@ -105,7 +105,7 @@ namespace StellarShip_Express.Envios
                     iTextSharp.text.Image img2 = iTextSharp.text.Image.GetInstance(imagenCodigoNuevo, ImageFormat.Png);
                     img2.ScaleToFit(1500, 100);
                     img2.Alignment = iTextSharp.text.Image.UNDERLYING;
-                    img2.SetAbsolutePosition(25, Pdfdoc.Top - 395);
+                    img2.SetAbsolutePosition(25, Pdfdoc.Top - 420 );
                     Pdfdoc.Add(img2);
 
                     using (StringReader sr = new StringReader(paginahtml_texto))
