@@ -115,7 +115,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDatos.RowHeadersWidth = 51;
-            this.dgvDatos.Size = new System.Drawing.Size(889, 484);
+            this.dgvDatos.Size = new System.Drawing.Size(892, 431);
             this.dgvDatos.TabIndex = 32;
             this.dgvDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellContentClick);
             // 
@@ -173,7 +173,7 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(160, 38);
             this.dateTimePicker2.TabIndex = 25;
-            this.dateTimePicker2.Value = new System.DateTime(2023, 11, 29, 0, 0, 0, 0);
+            this.dateTimePicker2.Value = new System.DateTime(2024, 4, 27, 0, 0, 0, 0);
             // 
             // dateTimePicker1
             // 
@@ -184,7 +184,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(158, 38);
             this.dateTimePicker1.TabIndex = 24;
-            this.dateTimePicker1.Value = new System.DateTime(2023, 11, 24, 0, 0, 0, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2024, 4, 27, 0, 0, 0, 0);
             // 
             // btnActualizar
             // 
@@ -222,8 +222,9 @@
             // 
             // lblPag
             // 
+            this.lblPag.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblPag.AutoSize = true;
-            this.lblPag.Location = new System.Drawing.Point(358, 3);
+            this.lblPag.Location = new System.Drawing.Point(328, 549);
             this.lblPag.Name = "lblPag";
             this.lblPag.Size = new System.Drawing.Size(68, 21);
             this.lblPag.TabIndex = 37;
@@ -231,9 +232,10 @@
             // 
             // cmbNumPag
             // 
+            this.cmbNumPag.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.cmbNumPag.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNumPag.FormattingEnabled = true;
-            this.cmbNumPag.Location = new System.Drawing.Point(432, 3);
+            this.cmbNumPag.Location = new System.Drawing.Point(392, 543);
             this.cmbNumPag.Name = "cmbNumPag";
             this.cmbNumPag.Size = new System.Drawing.Size(72, 29);
             this.cmbNumPag.TabIndex = 38;
@@ -241,8 +243,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(510, 3);
+            this.label1.Location = new System.Drawing.Point(470, 549);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 21);
             this.label1.TabIndex = 39;
@@ -250,10 +253,15 @@
             // 
             // txtNumPag
             // 
+            this.txtNumPag.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtNumPag.Enabled = false;
-            this.txtNumPag.Location = new System.Drawing.Point(550, 4);
+            this.txtNumPag.Location = new System.Drawing.Point(504, 543);
             this.txtNumPag.Name = "txtNumPag";
+<<<<<<< HEAD
             this.txtNumPag.Size = new System.Drawing.Size(111, 28);
+=======
+            this.txtNumPag.Size = new System.Drawing.Size(72, 24);
+>>>>>>> 70eb3f257d78bba4f9322cc85b32b8cf7185692c
             this.txtNumPag.TabIndex = 40;
             // 
             // frmFactura
@@ -261,7 +269,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(970, 682);
+            this.ClientSize = new System.Drawing.Size(970, 580);
             this.Controls.Add(this.txtNumPag);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbNumPag);
