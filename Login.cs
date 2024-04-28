@@ -43,12 +43,12 @@ namespace StellarShip_Express
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            if (txtUser.Text != "")
+            if (txtUser.Texts != "")
             {
-                if (txtPass.Text != "")
+                if (txtPass.Texts != "")
                 {
                     InicioSesion inicio = new InicioSesion();
-                    var validLogin = inicio.Login(txtUser.Text, txtPass.Text);
+                    var validLogin = inicio.Login(txtUser.Texts, txtPass.Texts);
                     if (validLogin == true)
                     {
                         frm_Menu f1 = new frm_Menu();
@@ -65,7 +65,7 @@ namespace StellarShip_Express
                 }
                 else lblError.Text = " Contraseña Incorrecta"; lblError.Visible = true;
             }
-            else lblError.Text = " Usuario Incorrecta"; lblError.Visible = true;
+            else lblError.Text = " Usuario Incorrecto"; lblError.Visible = true;
         }
 
         private void btnConfig_Click(object sender, EventArgs e)
@@ -79,8 +79,8 @@ namespace StellarShip_Express
 
         private void Logout(object sender, FormClosedEventArgs e)
         {
-            txtPass.Clear();
-            txtUser.Clear();
+            txtPass.Texts = "";
+            txtUser.Texts = "";
             txtUser.Focus();
             lblError.Visible=false;
             this.Show();
@@ -88,17 +88,17 @@ namespace StellarShip_Express
 
 		private void btnMostrar_Click(object sender, EventArgs e)
 		{
-            if (txtPass.UseSystemPasswordChar == false)
+            if (txtPass.PasswordChar == false)
             {
-				txtPass.UseSystemPasswordChar = true;
+				txtPass.PasswordChar = true;
 				btnMostrar.IconChar = IconChar.Eye;
 				
 			}
             else
             {
-				if (txtPass.UseSystemPasswordChar == true)
+				if (txtPass.PasswordChar == true)
 				{
-					txtPass.UseSystemPasswordChar = false;
+					txtPass.PasswordChar = false;
 					btnMostrar.IconChar = IconChar.EyeSlash;
 				}
 			}
