@@ -257,11 +257,11 @@
             this.txtNumPag.Enabled = false;
             this.txtNumPag.Location = new System.Drawing.Point(504, 543);
             this.txtNumPag.Name = "txtNumPag";
-<<<<<<< HEAD
+
             this.txtNumPag.Size = new System.Drawing.Size(111, 28);
-=======
+
             this.txtNumPag.Size = new System.Drawing.Size(72, 24);
->>>>>>> 70eb3f257d78bba4f9322cc85b32b8cf7185692c
+
             this.txtNumPag.TabIndex = 40;
             // 
             // frmFactura
