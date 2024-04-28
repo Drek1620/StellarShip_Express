@@ -32,8 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.cmbFiltros = new CustomControls.RJComboBox();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.btnActualizar = new FontAwesome.Sharp.IconButton();
@@ -55,36 +53,13 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.cmbFiltros, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(381, 46);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(387, 35);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(549, 38);
             this.tableLayoutPanel1.TabIndex = 31;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimePicker2.Font = new System.Drawing.Font("Century Gothic", 15F);
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(386, 3);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(160, 32);
-            this.dateTimePicker2.TabIndex = 36;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Century Gothic", 10F);
-            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 15F);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(222, 3);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(158, 32);
-            this.dateTimePicker1.TabIndex = 35;
             // 
             // cmbFiltros
             // 
@@ -159,7 +134,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvDatos.Size = new System.Drawing.Size(889, 445);
+            this.dgvDatos.Size = new System.Drawing.Size(889, 434);
             this.dgvDatos.TabIndex = 27;
             this.dgvDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellContentClick);
             // 
@@ -173,7 +148,7 @@
             this.btnActualizar.IconColor = System.Drawing.Color.White;
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 25;
-            this.btnActualizar.Location = new System.Drawing.Point(331, 50);
+            this.btnActualizar.Location = new System.Drawing.Point(337, 39);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(44, 31);
             this.btnActualizar.TabIndex = 30;
@@ -190,7 +165,7 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(287, 50);
+            this.iconButton1.Location = new System.Drawing.Point(293, 39);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(44, 31);
             this.iconButton1.TabIndex = 29;
@@ -199,7 +174,7 @@
             // 
             // txtBusqueda
             // 
-            this.txtBusqueda.Location = new System.Drawing.Point(40, 50);
+            this.txtBusqueda.Location = new System.Drawing.Point(44, 39);
             this.txtBusqueda.Multiline = true;
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(249, 31);
@@ -207,16 +182,18 @@
             // 
             // txtNumPag
             // 
+            this.txtNumPag.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtNumPag.Enabled = false;
-            this.txtNumPag.Location = new System.Drawing.Point(228, 10);
+            this.txtNumPag.Location = new System.Drawing.Point(518, 543);
             this.txtNumPag.Name = "txtNumPag";
-            this.txtNumPag.Size = new System.Drawing.Size(111, 24);
+            this.txtNumPag.Size = new System.Drawing.Size(75, 24);
             this.txtNumPag.TabIndex = 44;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(188, 9);
+            this.label1.Location = new System.Drawing.Point(484, 549);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 19);
             this.label1.TabIndex = 43;
@@ -224,9 +201,10 @@
             // 
             // cmbNumPag
             // 
+            this.cmbNumPag.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.cmbNumPag.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNumPag.FormattingEnabled = true;
-            this.cmbNumPag.Location = new System.Drawing.Point(110, 9);
+            this.cmbNumPag.Location = new System.Drawing.Point(406, 543);
             this.cmbNumPag.Name = "cmbNumPag";
             this.cmbNumPag.Size = new System.Drawing.Size(72, 25);
             this.cmbNumPag.TabIndex = 42;
@@ -235,8 +213,9 @@
             // 
             // lblPag
             // 
+            this.lblPag.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblPag.AutoSize = true;
-            this.lblPag.Location = new System.Drawing.Point(36, 9);
+            this.lblPag.Location = new System.Drawing.Point(339, 549);
             this.lblPag.Name = "lblPag";
             this.lblPag.Size = new System.Drawing.Size(58, 19);
             this.lblPag.TabIndex = 41;
@@ -278,8 +257,6 @@
 		private System.Windows.Forms.DataGridView dgvDatos;
 		private CustomControls.RJComboBox cmbFiltros;
         private System.Windows.Forms.TextBox txtBusqueda;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox txtNumPag;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbNumPag;
