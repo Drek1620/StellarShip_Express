@@ -200,7 +200,6 @@
             // btnMostrar
             // 
             this.btnMostrar.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnMostrar.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnMostrar.FlatAppearance.BorderSize = 0;
             this.btnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -235,7 +234,7 @@
             this.txtPass.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPass.PlaceholderText = "";
             this.txtPass.Size = new System.Drawing.Size(246, 29);
-            this.txtPass.TabIndex = 31;
+            this.txtPass.TabIndex = 2;
             this.txtPass.Texts = "";
             this.txtPass.UnderlinedStyle = false;
             // 
@@ -258,7 +257,7 @@
             this.txtUser.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtUser.PlaceholderText = "";
             this.txtUser.Size = new System.Drawing.Size(282, 29);
-            this.txtUser.TabIndex = 32;
+            this.txtUser.TabIndex = 1;
             this.txtUser.Texts = "";
             this.txtUser.UnderlinedStyle = false;
             // 

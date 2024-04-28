@@ -52,7 +52,6 @@
             // btnActualizar
             // 
             this.btnActualizar.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnActualizar.FlatAppearance.BorderSize = 0;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.IconChar = FontAwesome.Sharp.IconChar.ArrowsRotate;
@@ -69,7 +68,6 @@
             // iconButton1
             // 
             this.iconButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Default;
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
@@ -151,8 +149,8 @@
             // 
             // frmEnviosEnCurso
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(977, 580);
             this.Controls.Add(this.textBox1);

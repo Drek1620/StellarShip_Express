@@ -121,10 +121,10 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Lohit Telugu", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(616, 12);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(114, 22);
+            this.label11.Size = new System.Drawing.Size(112, 17);
             this.label11.TabIndex = 28;
             this.label11.Text = "Cambiar Estado:";
             // 
@@ -142,10 +142,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Lohit Telugu", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(131, 122);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 22);
+            this.label10.Size = new System.Drawing.Size(59, 17);
             this.label10.TabIndex = 26;
             this.label10.Text = "Detalles";
             // 
@@ -200,10 +200,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Lohit Telugu", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(131, 93);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 22);
+            this.label8.Size = new System.Drawing.Size(52, 17);
             this.label8.TabIndex = 22;
             this.label8.Text = "Estado";
             // 
@@ -220,10 +220,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lohit Telugu", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(131, 65);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 22);
+            this.label6.Size = new System.Drawing.Size(56, 17);
             this.label6.TabIndex = 20;
             this.label6.Text = "Destino";
             // 
@@ -240,31 +240,31 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lohit Telugu", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(131, 39);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 22);
+            this.label4.Size = new System.Drawing.Size(52, 17);
             this.label4.TabIndex = 18;
             this.label4.Text = "Recibe";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lohit Telugu", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(286, 12);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 4);
-            this.label2.Size = new System.Drawing.Size(172, 26);
+            this.label2.Size = new System.Drawing.Size(170, 21);
             this.label2.TabIndex = 17;
             this.label2.Text = "000000000000000000";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lohit Telugu", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(131, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 22);
+            this.label1.Size = new System.Drawing.Size(158, 17);
             this.label1.TabIndex = 16;
             this.label1.Text = "Codigo de Seguimiento.";
             // 
@@ -279,8 +279,8 @@
             // 
             // CuadroPaquete
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.panel1);

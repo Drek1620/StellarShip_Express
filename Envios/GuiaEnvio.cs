@@ -14,6 +14,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using Microsoft.Win32;
+using System.Windows.Controls;
 
 
 
@@ -46,17 +48,26 @@ namespace StellarShip_Express.Envios
             //EXTRA Y AL ULTIMO
             Bitmap imagenTitulo = convertirTextoImagen("Guia de Envio", 500, Color.White);
 
-            int alto_imagen_nuevo = imagenCodigo.Height + imagenTitulo.Height;
+            int alto_imagen_nuevo = imagenCodigo.Height + imagenTitulo.Height;  
+
+            //Bitmap bitmap = new Bitmap(imagenCodigo);
+
+            //using (Graphics graphics = Graphics.FromImage(bitmap))
+            //{
+            //    // Dibuja la imagen en el objeto de gráficos
+            //    graphics.DrawImage(imagenCodigo, 0, 0, 500,100);
+            //}
 
             Bitmap imagenNueva = new Bitmap(500, alto_imagen_nuevo);
             Graphics dibujar = Graphics.FromImage(imagenNueva);
-
+            
             dibujar.DrawImage(imagenTitulo, new Point(0, 0));
-            dibujar.DrawImage(imagenCodigo, new Point(0, imagenTitulo.Height));
+            dibujar.DrawImage(imagenCodigo,0 ,imagenTitulo.Height, 500,100);
+            
 
             System.Drawing.Image imagenCodigoNuevo = imagenNueva;
 
-
+            imagenCodigoNuevo.Save(@"C:\GuiasEnvio\img.png");
 
             for (int i = 0; i < DatosPaquete.Cantidad; i++)
             {
@@ -103,9 +114,10 @@ namespace StellarShip_Express.Envios
                     Pdfdoc.Add(img);
 
                     iTextSharp.text.Image img2 = iTextSharp.text.Image.GetInstance(imagenCodigoNuevo, ImageFormat.Png);
-                    img2.ScaleToFit(1500, 100);
+                    
                     img2.Alignment = iTextSharp.text.Image.UNDERLYING;
                     img2.SetAbsolutePosition(25, Pdfdoc.Top - 420 );
+                    img2.ScaleToFit(500, 100);
                     Pdfdoc.Add(img2);
 
                     using (StringReader sr = new StringReader(paginahtml_texto))
