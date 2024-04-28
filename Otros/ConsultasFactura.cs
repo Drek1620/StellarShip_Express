@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -87,25 +88,23 @@ namespace StellarShip_Express.Otros
             }
             return Tabla;
         }
-        
-        public DataTable BuscFecha(DateTimePicker fecha1, DateTimePicker fecha2)
+
+        public DataTable BuscFecha(DateTime fechaini, DateTime fechafin)
         {
-            DataTable Tabla = new DataTable();
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
             using (var connection = conexionSQL.GetConnection())
             {
                 connection.Open();
                 using (var command = new SqlCommand())
                 {
-                    command.Connection = connection;
-                    command.CommandText = @"select * from Factura Where Fecha = @Fecha BETWEEN " + "'" + fecha1 + "'" + " and " + "'" + fecha2 + "'";
-                    command.Parameters.AddWithValue("@Fecha", SqlDbType.DateTime).Value = fecha1;
-                    command.Parameters.AddWithValue("@Fecha", SqlDbType.DateTime).Value = fecha2;
-                    command.CommandType = CommandType.Text;
-                    LeerFilas = command.ExecuteReader();
-                    Tabla.Load(LeerFilas);
-                    return Tabla;
-                    
+                    SqlCommand comando = new SqlCommand("BuscarFecha", connection);
+                    comando.CommandType = CommandType.StoredProcedure;
+                    comando.Parameters.AddWithValue("@fechaini", fechaini);
+                    comando.Parameters.AddWithValue("@fechafin", fechafin);
+                    SqlDataAdapter da = new SqlDataAdapter(comando);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
                 }
             }
         }
