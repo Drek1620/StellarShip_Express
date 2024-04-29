@@ -34,8 +34,6 @@
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.txtPass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnIniciar = new CustomControls.RButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,6 +41,8 @@
             this.lblError = new System.Windows.Forms.Label();
             this.btnConfig = new FontAwesome.Sharp.IconButton();
             this.btnMostrar = new FontAwesome.Sharp.IconButton();
+            this.txtPass = new CustomControls.RJControls.RJTextBox();
+            this.txtUser = new CustomControls.RJControls.RJTextBox();
             this.TitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -115,25 +115,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Usuario";
             // 
-            // txtUser
-            // 
-            this.txtUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(41, 250);
-            this.txtUser.MinimumSize = new System.Drawing.Size(0, 32);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(280, 32);
-            this.txtUser.TabIndex = 3;
-            // 
-            // txtPass
-            // 
-            this.txtPass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(41, 331);
-            this.txtPass.MinimumSize = new System.Drawing.Size(0, 32);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(246, 32);
-            this.txtPass.TabIndex = 5;
-            this.txtPass.UseSystemPasswordChar = true;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -167,13 +148,15 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(39, 525);
+            this.label3.Location = new System.Drawing.Point(9, 532);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(289, 16);
+            this.label3.Size = new System.Drawing.Size(346, 21);
             this.label3.TabIndex = 7;
-            this.label3.Text = "_______________________________________________";
+            this.label3.Text = "__________________________________________";
             // 
             // pictureBox1
             // 
@@ -217,40 +200,86 @@
             // btnMostrar
             // 
             this.btnMostrar.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnMostrar.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnMostrar.FlatAppearance.BorderSize = 0;
             this.btnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnMostrar.ForeColor = System.Drawing.Color.Transparent;
             this.btnMostrar.IconChar = FontAwesome.Sharp.IconChar.Eye;
             this.btnMostrar.IconColor = System.Drawing.Color.White;
             this.btnMostrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMostrar.IconSize = 30;
             this.btnMostrar.Location = new System.Drawing.Point(287, 331);
-            this.btnMostrar.MaximumSize = new System.Drawing.Size(36, 32);
             this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(36, 32);
+            this.btnMostrar.Size = new System.Drawing.Size(36, 29);
             this.btnMostrar.TabIndex = 30;
             this.btnMostrar.UseVisualStyleBackColor = false;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
+            // txtPass
+            // 
+            this.txtPass.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPass.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtPass.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtPass.BorderRadius = 0;
+            this.txtPass.BorderSize = 2;
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPass.Location = new System.Drawing.Point(41, 331);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPass.MaxLength = 32767;
+            this.txtPass.Multiline = false;
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Padding = new System.Windows.Forms.Padding(4, 6, 4, 2);
+            this.txtPass.PasswordChar = true;
+            this.txtPass.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtPass.PlaceholderText = "";
+            this.txtPass.Size = new System.Drawing.Size(246, 29);
+            this.txtPass.TabIndex = 2;
+            this.txtPass.Texts = "";
+            this.txtPass.UnderlinedStyle = false;
+            // 
+            // txtUser
+            // 
+            this.txtUser.BackColor = System.Drawing.SystemColors.Window;
+            this.txtUser.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtUser.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtUser.BorderRadius = 0;
+            this.txtUser.BorderSize = 2;
+            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtUser.Location = new System.Drawing.Point(41, 251);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUser.MaxLength = 32767;
+            this.txtUser.Multiline = false;
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Padding = new System.Windows.Forms.Padding(4, 6, 4, 2);
+            this.txtUser.PasswordChar = false;
+            this.txtUser.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtUser.PlaceholderText = "";
+            this.txtUser.Size = new System.Drawing.Size(282, 29);
+            this.txtUser.TabIndex = 1;
+            this.txtUser.Texts = "";
+            this.txtUser.UnderlinedStyle = false;
+            // 
             // Login
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
             this.ClientSize = new System.Drawing.Size(361, 618);
+            this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.txtPass);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.btnConfig);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnIniciar);
-            this.Controls.Add(this.txtPass);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.TitleBar);
-            this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -272,8 +301,6 @@
         private FontAwesome.Sharp.IconButton btnMinum;
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtUser;
-        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label2;
         private CustomControls.RButton btnIniciar;
         private System.Windows.Forms.Label label3;
@@ -281,5 +308,7 @@
         private System.Windows.Forms.Label lblError;
         private FontAwesome.Sharp.IconButton btnConfig;
 		private FontAwesome.Sharp.IconButton btnMostrar;
-	}
+        private CustomControls.RJControls.RJTextBox txtPass;
+        private CustomControls.RJControls.RJTextBox txtUser;
+    }
 }

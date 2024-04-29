@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace StellarShip_Express.Otros
 {
@@ -86,30 +88,25 @@ namespace StellarShip_Express.Otros
             }
             return Tabla;
         }
-        public DataTable BuscFecha(DateTimePicker fecha1, DateTimePicker fecha2)
-        {
-            DataTable Tabla = new DataTable();
-            ConexionSQLServ conexionSQL = new ConexionSQLServ();
 
+        public DataTable BuscFecha(DateTime fechaini, DateTime fechafin)
+        {
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
             using (var connection = conexionSQL.GetConnection())
             {
-
+                connection.Open();
                 using (var command = new SqlCommand())
                 {
-                    //No funca 
-                    connection.Open();
-                    string consutafecha =  $"Select * from Factura where Fecha BETWEEN '{fecha1.Value.Date.ToString("yyyy-MM-dd HH:mm:ss")}' AND '{fecha2.Value.Date.ToString("yyyy-MM-dd HH:mm:ss")}'";
-                    SqlDataAdapter adap = new SqlDataAdapter(consutafecha, connection);
-                    adap.Fill(Tabla);
-                    SqlCommand comando = new SqlCommand(consutafecha, connection);
-                    SqlDataReader leer;
-                    leer = comando.ExecuteReader();
-                    connection.Close();
+                    SqlCommand comando = new SqlCommand("BuscarFecha", connection);
+                    comando.CommandType = CommandType.StoredProcedure;
+                    comando.Parameters.AddWithValue("@fechaini", fechaini);
+                    comando.Parameters.AddWithValue("@fechafin", fechafin);
+                    SqlDataAdapter da = new SqlDataAdapter(comando);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
                 }
-
-
             }
-            return Tabla;
         }
 
     }

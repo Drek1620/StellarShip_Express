@@ -34,12 +34,13 @@ namespace StellarShip_Express.Imprimir
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            pdf.Dispose();
         }
-
+        PdfDocument pdf;
         public void MostrarPDF()
         {
      
-            PdfDocument pdf = PdfDocument.Load(RutasPDF.RutaPDF);
+            pdf = PdfDocument.Load(RutasPDF.RutaPDF);
             pdfViewer1.Document = pdf;
             pdfViewer1.ZoomMode = PdfViewerZoomMode.FitWidth;
         }

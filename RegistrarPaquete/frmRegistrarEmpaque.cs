@@ -63,8 +63,9 @@ namespace StellarShip_Express.RegistrarPaquete
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if (indice_fila != 0)
+            if (dgvPaquetes.RowCount > 1)
             {
+                MessageBox.Show(dgvPaquetes.RowCount.ToString());
                 frmConfirmarCompra frmConfirm = new frmConfirmarCompra();
                 DatosPaquete paq = new DatosPaquete();
                 int contpaq = 0;
