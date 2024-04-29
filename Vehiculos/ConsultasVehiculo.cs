@@ -8,15 +8,14 @@ using System.Threading.Tasks;
 
 namespace StellarShip_Express.Vehiculos
 {
-    internal class ConsultasVehiculo
+    public class ConsultasVehiculo
     {
         private SqlDataReader LeerFilas;
 
-        //metodos para busqueda de vehiculos
-        public DataTable BuscarMarca(string marca)
+        //METODO PARA LA PAGINACION LO MANDO A MI CLASE FRMVEHICULO
+        public DataSet ListarVehiculos(int inicio, int final)
         {
-
-            DataTable Tabla = new DataTable();
+            
             ConexionSQLServ conexionSQL = new ConexionSQLServ();
             using (var connection = conexionSQL.GetConnection())
             {
@@ -24,53 +23,15 @@ namespace StellarShip_Express.Vehiculos
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT * FROM Vehiculo WHERE Marca LIKE '" + marca + "%'";
-                    command.CommandType = CommandType.Text;
-                    LeerFilas = command.ExecuteReader();
-                    Tabla.Load(LeerFilas);
-                    return Tabla;
-                }
-            }
-
-        }
-
-        public DataTable BuscarID(string id)
-        {
-
-            DataTable Tabla = new DataTable();
-            ConexionSQLServ conexionSQL = new ConexionSQLServ();
-            using (var connection = conexionSQL.GetConnection())
-            {
-                connection.Open();
-                using (var command = new SqlCommand())
-                {
-                    command.Connection = connection;
-                    command.CommandText = "SELECT * FROM Vehiculo WHERE IdVehiculo LIKE '" + id + "%'";
-                    command.CommandType = CommandType.Text;
-                    LeerFilas = command.ExecuteReader();
-                    Tabla.Load(LeerFilas);
-                    return Tabla;
-                }
-            }
-
-        }
-
-        public DataTable BuscarTipoV(string tipo)
-        {
-
-            DataTable Tabla = new DataTable();
-            ConexionSQLServ conexionSQL = new ConexionSQLServ();
-            using (var connection = conexionSQL.GetConnection())
-            {
-                connection.Open();
-                using (var command = new SqlCommand())
-                {
-                    command.Connection = connection;
-                    command.CommandText = "SELECT * FROM Vehiculo WHERE TipoVehiculo LIKE '" + tipo + "%'";
-                    command.CommandType = CommandType.Text;
-                    LeerFilas = command.ExecuteReader();
-                    Tabla.Load(LeerFilas);
-                    return Tabla;
+                    command.CommandText = "splistarVehiculos";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@inicio", inicio);
+                    command.Parameters.AddWithValue("@final",final);
+                    SqlDataAdapter da = new SqlDataAdapter(command);
+                    DataSet dt = new DataSet(); 
+                    da.Fill(dt);    
+                    return dt;  
+                   
                 }
             }
 
@@ -96,6 +57,72 @@ namespace StellarShip_Express.Vehiculos
             }
 
         }
+
+        //metodos para busqueda de vehiculos
+        public DataTable BuscarMarca(string marca)
+        {
+
+            DataTable Tabla = new DataTable();
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT Idvehiculo,Marca,Modelo,NoPlaca,TipoVehiculo,Año,IdTransportista FROM Vehiculo WHERE Marca LIKE '" + marca + "%'";
+                    command.CommandType = CommandType.Text;
+                    LeerFilas = command.ExecuteReader();
+                    Tabla.Load(LeerFilas);
+                    return Tabla;
+                }
+            }
+
+        }
+
+        public DataTable BuscarID(string id)
+        {
+
+            DataTable Tabla = new DataTable();
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT Idvehiculo,Marca,Modelo,NoPlaca,TipoVehiculo,Año,IdTransportista  FROM Vehiculo WHERE IdVehiculo LIKE '" + id + "%'";
+                    command.CommandType = CommandType.Text;
+                    LeerFilas = command.ExecuteReader();
+                    Tabla.Load(LeerFilas);
+                    return Tabla;
+                }
+            }
+
+        }
+
+        public DataTable BuscarTipoV(string tipo)
+        {
+
+            DataTable Tabla = new DataTable();
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT Idvehiculo,Marca,Modelo,NoPlaca,TipoVehiculo,Año,IdTransportista  FROM Vehiculo WHERE TipoVehiculo LIKE '" + tipo + "%'";
+                    command.CommandType = CommandType.Text;
+                    LeerFilas = command.ExecuteReader();
+                    Tabla.Load(LeerFilas);
+                    return Tabla;
+                }
+            }
+
+        }
+
+
 
         public DataTable Conductores()
         {

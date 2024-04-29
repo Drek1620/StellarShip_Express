@@ -12,8 +12,11 @@ namespace StellarShip_Express.Vehiculos
 {
     public partial class frmVehiculos : Form
     {
+        DataSet dsTabla = new DataSet();
+        int PagInico = 1, Indice = 0, NumFilas = 10, PaginaFinal;
         public frmVehiculos()
         {
+            PaginaFinal = NumFilas;
             InitializeComponent();
         }
         public void MostrarVehiculos()
@@ -62,8 +65,37 @@ namespace StellarShip_Express.Vehiculos
 
         }
 
-        ConsultasVehiculo dato = new ConsultasVehiculo();    
-      
+        ConsultasVehiculo dato = new ConsultasVehiculo(); 
+        
+        
+        //PAGINACION
+        private void cargarDT() 
+        {
+            DatosVehiculo.inicio = PagInico;
+            DatosVehiculo.final = PaginaFinal;
+
+            dsTabla = dato.ListarVehiculos(DatosVehiculo.inicio, DatosVehiculo.final);
+            dgvDatos.DataSource= dsTabla.Tables[1];
+
+            int cantidad = Convert.ToInt32(dsTabla.Tables[0].Rows[0][0].ToString()) / NumFilas;
+            if (Convert.ToInt32(dsTabla.Tables[0].Rows[0][0].ToString()) % NumFilas >= 0)
+            {
+                cantidad++;
+            }
+
+            textBox1.Text = cantidad.ToString();
+            comboBox1.Items.Clear();
+
+            for (int i = 1; i <= cantidad; i++)
+            {
+                comboBox1.Items.Add(i.ToString());
+            }
+
+            comboBox1.SelectedIndex = Indice;
+        
+        }
+
+   
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             try
@@ -101,12 +133,21 @@ namespace StellarShip_Express.Vehiculos
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            MostrarVehiculos();
+            cargarDT();
+        }
+
+        private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)//PARA LA PAGINACION
+        {
+            int Pagina = Convert.ToInt32(comboBox1.Text);
+            Indice = Pagina - 1;
+            PagInico = (Pagina - 1) * NumFilas + 1;
+            PaginaFinal=Pagina*NumFilas;
+            cargarDT();
         }
 
         private void frmVehiculos_Load(object sender, EventArgs e)
         {
-            MostrarVehiculos();
+            cargarDT(); //metodo para mostrar dg de paginacion 
         }
 
         private void dgvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)

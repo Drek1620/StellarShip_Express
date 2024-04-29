@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,10 @@ namespace StellarShip_Express.Vehiculos
         public static string Año { get; set; }
         public static int IdTransportista { get; set; }
         public static string AccionV { get => accionV; set => accionV = value; }
+        public int Numero { get; set; }
+
+        public static int inicio { get; set; }    
+        public static int final { get; set; }
 
         private static string accionV;
 
