@@ -56,7 +56,8 @@ namespace StellarShip_Express.Envios
 		private void frmEnviosEnCurso_Load(object sender, EventArgs e)
 		{
 			LlenarPaquetes();
-		}
+            
+        }
 
 		private void BtnCambiar_Click(object sender, EventArgs e)
 		{
