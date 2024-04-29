@@ -35,7 +35,7 @@ namespace StellarShip_Express.Otros
 
             int cantidad = Convert.ToInt32(dstabla.Tables[0].Rows[0][0].ToString()) / numfilas;
 
-			if (Convert.ToInt32(dstabla.Tables[0].Rows[0][0].ToString()) % numfilas >= 0)
+			if (Convert.ToInt32(dstabla.Tables[0].Rows[0][0].ToString()) % numfilas > 0)
 			{
 				cantidad++;
 			}
@@ -43,7 +43,7 @@ namespace StellarShip_Express.Otros
 			txtNumPag.Text= cantidad.ToString();
 			cmbNumPag.Items.Clear();
 
-			for (int i = 0; i <= cantidad; i++)
+			for (int i = 1; i <= cantidad; i++)
 			{
 				cmbNumPag.Items.Add(i.ToString());
 			}
