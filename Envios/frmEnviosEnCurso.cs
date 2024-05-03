@@ -53,7 +53,7 @@ namespace StellarShip_Express.Envios
 			LlenarPaquetes();
 		}
 
-		private void frmEnviosEnCurso_Load(object sender, EventArgs e)
+        private void frmEnviosEnCurso_Load(object sender, EventArgs e)
 		{
 			LlenarPaquetes();
             

@@ -44,10 +44,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(15, 108);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 86);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1191, 558);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(953, 446);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // btnActualizar
@@ -59,10 +58,9 @@
             this.btnActualizar.IconColor = System.Drawing.Color.White;
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 25;
-            this.btnActualizar.Location = new System.Drawing.Point(476, 44);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnActualizar.Location = new System.Drawing.Point(381, 35);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(55, 39);
+            this.btnActualizar.Size = new System.Drawing.Size(44, 31);
             this.btnActualizar.TabIndex = 19;
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
@@ -76,10 +74,9 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(421, 44);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton1.Location = new System.Drawing.Point(337, 35);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(55, 39);
+            this.iconButton1.Size = new System.Drawing.Size(44, 31);
             this.iconButton1.TabIndex = 18;
             this.iconButton1.UseVisualStyleBackColor = false;
             // 
@@ -92,16 +89,16 @@
             this.rjTextBox1.BorderSize = 2;
             this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(50, 44);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.rjTextBox1.Location = new System.Drawing.Point(40, 35);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rjTextBox1.MaxLength = 32767;
             this.rjTextBox1.Multiline = false;
             this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(12, 9, 12, 9);
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.rjTextBox1.PasswordChar = false;
             this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(371, 39);
+            this.rjTextBox1.Size = new System.Drawing.Size(297, 31);
             this.rjTextBox1.TabIndex = 17;
             this.rjTextBox1.Texts = "";
             this.rjTextBox1.UnderlinedStyle = false;
@@ -111,10 +108,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(436, 680);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(349, 544);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 19);
+            this.label1.Size = new System.Drawing.Size(61, 17);
             this.label1.TabIndex = 20;
             this.label1.Text = "Paginas";
             // 
@@ -124,10 +120,9 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(516, 676);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Location = new System.Drawing.Point(413, 541);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(64, 26);
+            this.comboBox1.Size = new System.Drawing.Size(52, 23);
             this.comboBox1.TabIndex = 21;
             this.comboBox1.SelectionChangeCommitted += new System.EventHandler(this.comboBox1_SelectionChangeCommitted);
             // 
@@ -136,10 +131,9 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(589, 680);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(471, 544);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 19);
+            this.label2.Size = new System.Drawing.Size(26, 17);
             this.label2.TabIndex = 22;
             this.label2.Text = "de";
             // 
@@ -148,18 +142,17 @@
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(629, 676);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(503, 541);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(65, 26);
+            this.textBox1.Size = new System.Drawing.Size(53, 23);
             this.textBox1.TabIndex = 23;
             // 
             // frmEnviosEnCurso
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1221, 725);
+            this.ClientSize = new System.Drawing.Size(977, 580);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
@@ -169,7 +162,6 @@
             this.Controls.Add(this.rjTextBox1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmEnviosEnCurso";
             this.Text = "Envios en Curso";
             this.Load += new System.EventHandler(this.frmEnviosEnCurso_Load);
