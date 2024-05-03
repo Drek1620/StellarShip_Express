@@ -15,7 +15,7 @@ namespace StellarShip_Express.Otros
 	{
 		PaginadoBitacora objb = new PaginadoBitacora();
 		DataSet dstabla;
-		int paginicio = 1, indice = 0, numfilas = 18, pagfinal;
+		int paginicio = 1, indice = 0, numfilas = 32, pagfinal;
 
        
 
