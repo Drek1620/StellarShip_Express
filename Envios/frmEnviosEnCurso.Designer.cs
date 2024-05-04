@@ -48,9 +48,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(41, 89);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(15, 108);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(892, 431);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1191, 558);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // btnActualizar
@@ -62,7 +63,8 @@
             this.btnActualizar.IconColor = System.Drawing.Color.White;
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 25;
-            this.btnActualizar.Location = new System.Drawing.Point(331, 35);
+            this.btnActualizar.Location = new System.Drawing.Point(476, 44);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(44, 31);
             this.btnActualizar.TabIndex = 19;
@@ -78,7 +80,8 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(287, 35);
+            this.iconButton1.Location = new System.Drawing.Point(421, 44);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(44, 31);
             this.iconButton1.TabIndex = 18;
@@ -93,8 +96,8 @@
             this.rjTextBox1.BorderSize = 2;
             this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(41, 35);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rjTextBox1.Location = new System.Drawing.Point(50, 44);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.rjTextBox1.MaxLength = 32767;
             this.rjTextBox1.Multiline = false;
             this.rjTextBox1.Name = "rjTextBox1";
@@ -102,7 +105,7 @@
             this.rjTextBox1.PasswordChar = false;
             this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(246, 31);
+            this.rjTextBox1.Size = new System.Drawing.Size(371, 39);
             this.rjTextBox1.TabIndex = 17;
             this.rjTextBox1.Texts = "";
             this.rjTextBox1.UnderlinedStyle = false;
@@ -225,8 +228,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(977, 580);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(1221, 725);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
