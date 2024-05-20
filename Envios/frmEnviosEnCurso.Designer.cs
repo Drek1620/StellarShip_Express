@@ -36,6 +36,10 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.cmbFiltros = new CustomControls.RJComboBox();
+            this.rjComboBox1 = new CustomControls.RJComboBox();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -44,9 +48,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 86);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(15, 108);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(953, 446);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1191, 558);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // btnActualizar
@@ -58,7 +63,8 @@
             this.btnActualizar.IconColor = System.Drawing.Color.White;
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 25;
-            this.btnActualizar.Location = new System.Drawing.Point(381, 35);
+            this.btnActualizar.Location = new System.Drawing.Point(476, 44);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(44, 31);
             this.btnActualizar.TabIndex = 19;
@@ -74,7 +80,8 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(337, 35);
+            this.iconButton1.Location = new System.Drawing.Point(421, 44);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(44, 31);
             this.iconButton1.TabIndex = 18;
@@ -89,8 +96,8 @@
             this.rjTextBox1.BorderSize = 2;
             this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(40, 35);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rjTextBox1.Location = new System.Drawing.Point(50, 44);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.rjTextBox1.MaxLength = 32767;
             this.rjTextBox1.Multiline = false;
             this.rjTextBox1.Name = "rjTextBox1";
@@ -98,7 +105,7 @@
             this.rjTextBox1.PasswordChar = false;
             this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(297, 31);
+            this.rjTextBox1.Size = new System.Drawing.Size(371, 39);
             this.rjTextBox1.TabIndex = 17;
             this.rjTextBox1.Texts = "";
             this.rjTextBox1.UnderlinedStyle = false;
@@ -147,12 +154,81 @@
             this.textBox1.Size = new System.Drawing.Size(53, 23);
             this.textBox1.TabIndex = 23;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.06922F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.97997F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.13297F));
+            this.tableLayoutPanel1.Controls.Add(this.rjComboBox1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.cmbFiltros, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(384, 28);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(549, 38);
+            this.tableLayoutPanel1.TabIndex = 37;
+            // 
+            // cmbFiltros
+            // 
+            this.cmbFiltros.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbFiltros.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbFiltros.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.cmbFiltros.BorderSize = 2;
+            this.cmbFiltros.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltros.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.cmbFiltros.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbFiltros.IconColor = System.Drawing.Color.DimGray;
+            this.cmbFiltros.Items.AddRange(new object[] {
+            "NoFactura",
+            "ID Cliente",
+            "Sucursal",
+            "Fecha"});
+            this.cmbFiltros.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmbFiltros.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbFiltros.Location = new System.Drawing.Point(3, 3);
+            this.cmbFiltros.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbFiltros.Name = "cmbFiltros";
+            this.cmbFiltros.Padding = new System.Windows.Forms.Padding(2);
+            this.cmbFiltros.SelectedValue = null;
+            this.cmbFiltros.Size = new System.Drawing.Size(200, 32);
+            this.cmbFiltros.TabIndex = 37;
+            this.cmbFiltros.Texts = "";
+            // 
+            // rjComboBox1
+            // 
+            this.rjComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.rjComboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rjComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.rjComboBox1.BorderSize = 2;
+            this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.rjComboBox1.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.rjComboBox1.ForeColor = System.Drawing.Color.DimGray;
+            this.rjComboBox1.IconColor = System.Drawing.Color.DimGray;
+            this.rjComboBox1.Items.AddRange(new object[] {
+            "NoFactura",
+            "ID Cliente",
+            "Sucursal",
+            "Fecha"});
+            this.rjComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.rjComboBox1.ListTextColor = System.Drawing.Color.DimGray;
+            this.rjComboBox1.Location = new System.Drawing.Point(211, 3);
+            this.rjComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
+            this.rjComboBox1.Name = "rjComboBox1";
+            this.rjComboBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.rjComboBox1.SelectedValue = null;
+            this.rjComboBox1.Size = new System.Drawing.Size(200, 32);
+            this.rjComboBox1.TabIndex = 38;
+            this.rjComboBox1.Texts = "";
+            // 
             // frmEnviosEnCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(977, 580);
+            this.ClientSize = new System.Drawing.Size(1221, 725);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
@@ -165,6 +241,7 @@
             this.Name = "frmEnviosEnCurso";
             this.Text = "Envios en Curso";
             this.Load += new System.EventHandler(this.frmEnviosEnCurso_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,5 +257,8 @@
 		private System.Windows.Forms.ComboBox comboBox1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private CustomControls.RJComboBox cmbFiltros;
+        private CustomControls.RJComboBox rjComboBox1;
     }
 }

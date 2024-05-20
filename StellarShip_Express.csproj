@@ -301,6 +301,7 @@
     </Compile>
     <Compile Include="RegistrarPaquete\GenerarFactura.cs" />
     <Compile Include="RegistrarPaquete\ImageAndText.cs" />
+    <Compile Include="SucursalTrabajo.cs" />
     <Compile Include="Sucursal\ConsultasSucursal.cs" />
     <Compile Include="Sucursal\frmSucursal.cs">
       <SubType>Form</SubType>
