@@ -216,6 +216,7 @@
       <DependentUpon>CuadroPaquete.cs</DependentUpon>
     </Compile>
     <Compile Include="DatosUsuario.cs" />
+    <Compile Include="Encriptacion\Encrypt.cs" />
     <Compile Include="Envios\ConsultaPaquetes.cs" />
     <Compile Include="Envios\frmEnviosEnCurso.cs">
       <SubType>Form</SubType>

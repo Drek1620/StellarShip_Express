@@ -1,5 +1,6 @@
 ﻿using AForge.Imaging.Filters;
 using FontAwesome.Sharp;
+using StellarShip_Express.Encriptacion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,7 +49,7 @@ namespace StellarShip_Express
                 if (txtPass.Texts != "")
                 {
                     InicioSesion inicio = new InicioSesion();
-                    var validLogin = inicio.Login(txtUser.Texts, txtPass.Texts);
+                    var validLogin = inicio.Login(txtUser.Texts, Encrypt.GetSHA256( txtPass.Texts));
                     if (validLogin == true)
                     {
                         frm_Menu f1 = new frm_Menu();

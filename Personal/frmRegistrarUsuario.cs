@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using StellarShip_Express.Encriptacion;
 using StellarShip_Express.Personal;
 using StellarShip_Express.Sucursal;
 using System;
@@ -73,7 +74,7 @@ namespace StellarShip_Express.Formularios
             }
         }
 
-
+        
         private void btnSave_Click(object sender, EventArgs e)
         {
             string acces;
@@ -95,7 +96,7 @@ namespace StellarShip_Express.Formularios
                                     txtName.Texts,
                                     txtPApellido.Texts,
                                     txtSApellido.Texts,
-                                    txtPass.Texts,
+                                    Encrypt.GetSHA256(txtPass.Texts) ,  
                                     acces,
                                     Convert.ToInt64(txtTel.Texts),
                                     Convert.ToInt32(cmbSucursal.SelectedValue),
@@ -127,7 +128,7 @@ namespace StellarShip_Express.Formularios
                                         txtName.Texts,
                                         txtPApellido.Texts,
                                         txtSApellido.Texts,
-                                        txtPass.Texts,
+                                        Encrypt.GetSHA256( txtPass.Texts),
                                         acces,
                                         Convert.ToInt64(txtTel.Texts),
                                         Convert.ToInt32(cmbSucursal.SelectedValue),
