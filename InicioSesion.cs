@@ -65,7 +65,26 @@ namespace StellarShip_Express
 
         public bool Trabajo(int IdSucursal)
         {
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "spSucursalTrabajo";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@IdSucursal", SqlDbType.Int).Value=IdSucursal;
+                    command.Parameters.Add("@Nombre", SqlDbType.VarChar, 50).Direction = ParameterDirection.Output;
+                    command.Parameters.Add("@Pais", SqlDbType.VarChar, 50).Direction = ParameterDirection.Output;
+                    command.Parameters.Add("@Estado", SqlDbType.VarChar, 100).Direction = ParameterDirection.Output;
+                    command.Parameters.Add("@Municipio", SqlDbType.VarChar, 100).Direction = ParameterDirection.Output;
+                    command.Parameters.Add("@Cp", SqlDbType.VarChar, 50).Direction = ParameterDirection.Output;
+                    command.Parameters.Add("@Calle", SqlDbType.VarChar, 50).Direction = ParameterDirection.Output;
+                    command.Parameters.Add("@Telefono", SqlDbType.VarChar, 50).Direction = ParameterDirection.Output;
+                }
 
+            }
             return true;
         }
     }
