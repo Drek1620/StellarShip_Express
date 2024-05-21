@@ -82,6 +82,15 @@ namespace StellarShip_Express
                     command.Parameters.Add("@Cp", SqlDbType.VarChar, 50).Direction = ParameterDirection.Output;
                     command.Parameters.Add("@Calle", SqlDbType.VarChar, 50).Direction = ParameterDirection.Output;
                     command.Parameters.Add("@Telefono", SqlDbType.VarChar, 50).Direction = ParameterDirection.Output;
+                    command.ExecuteNonQuery();
+
+                    SucursalTrabajo.Nombre = command.Parameters["@Nombre"].Value.ToString();
+                    SucursalTrabajo.Pais = command.Parameters["@Pais"].Value.ToString();
+                    SucursalTrabajo.Estado = command.Parameters["@Estado"].Value.ToString();
+                    SucursalTrabajo.Municipio = command.Parameters["@Municipio"].Value.ToString();
+                    SucursalTrabajo.CP = command.Parameters["@Cp"].Value.ToString();
+                    SucursalTrabajo.Calle = command.Parameters["@Calle"].Value.ToString();
+                    SucursalTrabajo.Telefono = command.Parameters["@Telefono"].Value.ToString();
                 }
 
             }
