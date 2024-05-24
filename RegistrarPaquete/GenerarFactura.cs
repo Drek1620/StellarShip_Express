@@ -23,6 +23,9 @@ namespace StellarShip_Express.RegistrarPaquete
             Ruta = @"C:\Facturas\"+ NoFactura +".pdf"; 
             //string PaginaHTML_Texto = "<table border=\"1\"><tr><td>HOLA MUNDO</td></tr></table>";
             string PaginaHTML_Texto = Properties.Resources.Factura.ToString();
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@DIRECCION", SucursalTrabajo.Nombre + " " + 
+                SucursalTrabajo.Calle + " " + SucursalTrabajo.CP);
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@TELEFONO", SucursalTrabajo.Telefono);
             PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FACTURA", NoFactura.ToString());
             PaginaHTML_Texto = PaginaHTML_Texto.Replace("@CLIENTE", DatosCliente.Cliente[0].Nombre.ToUpper());
             PaginaHTML_Texto = PaginaHTML_Texto.Replace("@DOCUMENTO", GuiaEnvio.NoEnvio.ToString());
