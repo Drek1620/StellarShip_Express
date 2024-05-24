@@ -115,7 +115,7 @@ namespace StellarShip_Express.Envios
 
 		}
 
-		public bool CambiarEstatus(long id, string estatus)
+		public bool CambiarEstatus(long id, string estatus, string detalles, int? unidad)
 		{
 			ConexionSQLServ conexionSQL = new ConexionSQLServ();
 			using (var connection = conexionSQL.GetConnection())
@@ -127,10 +127,15 @@ namespace StellarShip_Express.Envios
 					command.CommandText = "spEditarEstatus";
 					command.CommandType = CommandType.StoredProcedure;
 					command.Parameters.AddWithValue("@Responsable", DatosUsuario.IdUser);
-					command.Parameters.AddWithValue("@IdEnvioActu", id);
-					command.Parameters.AddWithValue("@Estatus", estatus);
+                    command.Parameters.AddWithValue("@Estatus", estatus);
+                    command.Parameters.AddWithValue("@Detalles", detalles);
+					if (unidad == null)
+                        command.Parameters.AddWithValue("@Unidad", SqlDbType.Int).Value = DBNull.Value;
+					else
+                        command.Parameters.AddWithValue("@Unidad", SqlDbType.Int).Value = unidad;  
+                    command.Parameters.AddWithValue("@IdEnvioActu", id);
 
-					int a = command.ExecuteNonQuery();
+                    int a = command.ExecuteNonQuery();
 					if (a > 0)
 					{
 						return true;

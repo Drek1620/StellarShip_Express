@@ -17,7 +17,7 @@ namespace StellarShip_Express.Otros
 
         PaginadoFactura objp = new PaginadoFactura();
         DataSet dsTabla;
-        public int pagInicio = 1, Indice = 0, Numfilas = 10, Pagfinal;
+        public int pagInicio = 1, Indice = 0, Numfilas = 32, Pagfinal;
         public frmFactura()
         {
             InitializeComponent();

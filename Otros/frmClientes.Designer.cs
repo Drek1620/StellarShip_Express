@@ -58,7 +58,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(549, 38);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(543, 38);
             this.tableLayoutPanel1.TabIndex = 31;
             // 
             // cmbFiltros
@@ -99,6 +99,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDatos.BackgroundColor = System.Drawing.Color.White;
             this.dgvDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -120,7 +121,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDatos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDatos.EnableHeadersVisualStyles = false;
-            this.dgvDatos.Location = new System.Drawing.Point(41, 89);
+            this.dgvDatos.Location = new System.Drawing.Point(44, 89);
             this.dgvDatos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDatos.MultiSelect = false;
             this.dgvDatos.Name = "dgvDatos";
@@ -134,7 +135,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvDatos.Size = new System.Drawing.Size(889, 434);
+            this.dgvDatos.Size = new System.Drawing.Size(886, 434);
             this.dgvDatos.TabIndex = 27;
             this.dgvDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellContentClick);
             // 
@@ -193,9 +194,10 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(484, 549);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 19);
+            this.label1.Size = new System.Drawing.Size(27, 17);
             this.label1.TabIndex = 43;
             this.label1.Text = "De";
             // 
@@ -215,9 +217,10 @@
             // 
             this.lblPag.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblPag.AutoSize = true;
+            this.lblPag.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.lblPag.Location = new System.Drawing.Point(339, 549);
             this.lblPag.Name = "lblPag";
-            this.lblPag.Size = new System.Drawing.Size(58, 19);
+            this.lblPag.Size = new System.Drawing.Size(55, 17);
             this.lblPag.TabIndex = 41;
             this.lblPag.Text = "Pagina";
             // 

@@ -79,6 +79,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDatos.BackgroundColor = System.Drawing.Color.White;
             this.dgvDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -171,7 +172,7 @@
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(386, 3);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(160, 38);
+            this.dateTimePicker2.Size = new System.Drawing.Size(160, 32);
             this.dateTimePicker2.TabIndex = 25;
             this.dateTimePicker2.Value = new System.DateTime(2024, 4, 27, 0, 0, 0, 0);
             // 
@@ -182,7 +183,7 @@
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(222, 3);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(158, 38);
+            this.dateTimePicker1.Size = new System.Drawing.Size(158, 32);
             this.dateTimePicker1.TabIndex = 24;
             this.dateTimePicker1.Value = new System.DateTime(2024, 4, 27, 0, 0, 0, 0);
             // 
@@ -224,9 +225,10 @@
             // 
             this.lblPag.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblPag.AutoSize = true;
+            this.lblPag.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.lblPag.Location = new System.Drawing.Point(328, 549);
             this.lblPag.Name = "lblPag";
-            this.lblPag.Size = new System.Drawing.Size(68, 21);
+            this.lblPag.Size = new System.Drawing.Size(55, 17);
             this.lblPag.TabIndex = 37;
             this.lblPag.Text = "Pagina";
             // 
@@ -237,7 +239,7 @@
             this.cmbNumPag.FormattingEnabled = true;
             this.cmbNumPag.Location = new System.Drawing.Point(392, 543);
             this.cmbNumPag.Name = "cmbNumPag";
-            this.cmbNumPag.Size = new System.Drawing.Size(72, 29);
+            this.cmbNumPag.Size = new System.Drawing.Size(72, 25);
             this.cmbNumPag.TabIndex = 38;
             this.cmbNumPag.SelectionChangeCommitted += new System.EventHandler(this.cmbNumPag_SelectionChangeCommitted);
             // 
@@ -245,9 +247,10 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(470, 549);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 21);
+            this.label1.Size = new System.Drawing.Size(27, 17);
             this.label1.TabIndex = 39;
             this.label1.Text = "De";
             // 
@@ -257,16 +260,12 @@
             this.txtNumPag.Enabled = false;
             this.txtNumPag.Location = new System.Drawing.Point(504, 543);
             this.txtNumPag.Name = "txtNumPag";
-
-            this.txtNumPag.Size = new System.Drawing.Size(111, 28);
-
             this.txtNumPag.Size = new System.Drawing.Size(72, 24);
-
             this.txtNumPag.TabIndex = 40;
             // 
             // frmFactura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(970, 580);

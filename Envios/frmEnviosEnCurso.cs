@@ -52,6 +52,37 @@ namespace StellarShip_Express.Envios
 			PagFinal = pagina * NumFilas;
 			LlenarPaquetes();
 		}
+		int? unidad;
+        private void txtBusqueda_KeyPress(object sender, KeyPressEventArgs e)
+        {
+			
+			if (e.KeyChar == (char)Keys.Enter)
+			{
+				if (cmbCambios.SelectedIndex == 0)
+					unidad = Convert.ToInt32(cmbUnidades.SelectedValue);
+				else
+					unidad = null;
+				
+                var editar = obj.CambiarEstatus(Convert.ToInt64(txtBusqueda.Texts),
+                cmbEstado.Texts, 
+				cmbCambios.Texts + " en " + SucursalTrabajo.Municipio + ", " + SucursalTrabajo.Estado + " - "+ DateTime.Now.ToString(),
+				unidad);
+                txtBusqueda.Texts = "";
+
+				if (editar)
+				{
+					MessageBox.Show("Correcto");
+				}else
+                    MessageBox.Show("Error");
+            }
+			
+        }
+
+        private void cmbCambios_OnSelectedValueChanged(object sender, EventArgs e)
+        {
+			MessageBox.Show(cmbCambios.SelectedIndex.ToString());
+			
+        }
 
         private void frmEnviosEnCurso_Load(object sender, EventArgs e)
 		{

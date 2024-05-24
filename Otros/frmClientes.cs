@@ -23,7 +23,7 @@ namespace StellarShip_Express.Otros
 
         PaginadoClientes objp = new PaginadoClientes();
         DataSet dsTabla; 
-        public int pagInicio = 1, Indice = 0, Numfilas = 2, Pagfinal;
+        public int pagInicio = 1, Indice = 0, Numfilas = 32, Pagfinal;
 
         public frmClientes()
         {

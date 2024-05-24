@@ -71,14 +71,14 @@ namespace StellarShip_Express
 		{
 			
 
-			var editar = obj.CambiarEstatus(this.Id,
-				cmbEstatus.Text);
+			//var editar = obj.CambiarEstatus(this.Id,
+			//	cmbEstatus.Text);
 		}
 
 		private void btnEntregado_Click(object sender, EventArgs e)
 		{
-			var editar = obj.CambiarEstatus(this.Id,
-				"Entregado");
+			//var editar = obj.CambiarEstatus(this.Id,
+			//	"Entregado");
 		}
 
         private void btnGuia_Click(object sender, EventArgs e)
