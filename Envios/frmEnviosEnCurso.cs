@@ -78,22 +78,40 @@ namespace StellarShip_Express.Envios
 			
         }
 
+		public void CargarVehiculos()
+		{
+			
+			cmbUnidades.DataSource = obj.VehiculosSucursal();
+			cmbUnidades.ValueMember = "IdVehiculo";
+			cmbUnidades.DisplayMember = "IdVehiculo";
+        }
+
+        private void flowLayoutPanel1_SizeChanged(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.SuspendLayout();
+            foreach (Control ctrl in flowLayoutPanel1.Controls)
+            {
+                if (ctrl is CuadroPaquete) ctrl.Width = flowLayoutPanel1.ClientSize.Width - 10;
+            }
+            flowLayoutPanel1.ResumeLayout();
+        }
+
         private void cmbCambios_OnSelectedValueChanged(object sender, EventArgs e)
         {
-			MessageBox.Show(cmbCambios.SelectedIndex.ToString());
-			
+			if (cmbCambios.SelectedIndex == 0)
+				cmbUnidades.Visible = true;
+			else
+				cmbUnidades.Visible =false;
         }
 
         private void frmEnviosEnCurso_Load(object sender, EventArgs e)
 		{
 			LlenarPaquetes();
-            
+			CargarVehiculos();
         }
 
-		private void BtnCambiar_Click(object sender, EventArgs e)
-		{
-			MessageBox.Show("Hola");
-		}
+
+
 
 		private void btnActualizar_Click(object sender, EventArgs e)
 		{

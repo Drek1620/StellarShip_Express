@@ -58,6 +58,7 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(940, 407);
             this.flowLayoutPanel1.TabIndex = 0;
+            this.flowLayoutPanel1.SizeChanged += new System.EventHandler(this.flowLayoutPanel1_SizeChanged);
             // 
             // btnActualizar
             // 
@@ -273,6 +274,7 @@
             this.cmbUnidades.Size = new System.Drawing.Size(200, 32);
             this.cmbUnidades.TabIndex = 34;
             this.cmbUnidades.Texts = "";
+            this.cmbUnidades.Visible = false;
             // 
             // cmbCambios
             // 

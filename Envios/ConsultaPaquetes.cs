@@ -149,6 +149,32 @@ namespace StellarShip_Express.Envios
 				}
 			}
 
+
+		}
+
+		public DataTable VehiculosSucursal()
+		{
+			DataTable tabla = new DataTable();
+			ConexionSQLServ conexionSQLServ = new ConexionSQLServ();
+			using (var connection = conexionSQLServ.GetConnection())
+			{
+				connection.Open();
+				using (var command = new SqlCommand())
+				{
+					command.Connection = connection;
+					command.CommandText = @"select v.IdVehiculo 
+											from Vehiculo as v
+											inner join Usuario as u
+											on v.IdTransportista = u.IdUsuario
+											where u.NivelAcceso = 3 and u.Sucursal= @Sucursal";
+					command.CommandType = CommandType.Text;
+					command.Parameters.AddWithValue("@Sucursal", SqlDbType.Int).Value = DatosUsuario.Sucursal;
+					LeerFilas = command.ExecuteReader();
+					tabla.Load(LeerFilas);
+					return tabla;
+
+                }
+			}
 		}
 	}
 }
