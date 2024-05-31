@@ -78,6 +78,54 @@ namespace StellarShip_Express.Envios
 
 		}
 
+		public DataSet BusquedaPaquete(FlowLayoutPanel Contenedor, long idEnvio)
+		{
+			ConexionSQLServ conexionSQL = new ConexionSQLServ();
+			using (var connection = conexionSQL.GetConnection())
+			{
+				connection.Open();
+				using (var command = new SqlCommand())
+				{
+					command.Connection = connection;
+					command.CommandText = "BuscarPaquetes";
+					command.CommandType = CommandType.StoredProcedure;
+					command.Parameters.AddWithValue("@inicio", Inicio1);
+					command.Parameters.AddWithValue("@final", Final1);
+                    command.Parameters.AddWithValue("@IdEnvio", idEnvio);
+
+                    SqlDataAdapter da = new SqlDataAdapter(command);
+					DataSet dt = new DataSet();
+					da.Fill(dt);
+
+					foreach (DataRow dr in dt.Tables[1].Rows)
+					{
+						//Muestras los valores obteniendolos con el Índice o el Nombre de la columna, 
+						//   de la siguiente manera:
+						string valor2 = dr[0].ToString();
+						Id_Guia = Convert.ToInt64(dr[0]);
+						Recibe = dr[1].ToString();
+						Destino = dr[3].ToString();
+						Estatus = dr[4].ToString();
+						Detalles = dr[5].ToString();
+
+						CuadroPaquete btn = new CuadroPaquete();
+
+						btn.Id = Id_Guia;
+						btn.Guia = id_Guia.ToString();
+						btn.Recibe = Recibe;
+						btn.Destino = Destino;
+						btn.Estatus = Estatus;
+						btn.Detalles = Detalles;
+
+						Contenedor.Controls.Add(btn);
+
+					}
+
+					return dt;
+				}
+			}
+		}
+
 
 		public void LlenarDatos(FlowLayoutPanel Contenedor)
 		{

@@ -30,11 +30,8 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnGuia = new CustomControls.RButton();
-            this.btnCambiar = new CustomControls.RButton();
-            this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.cmbEstatus = new System.Windows.Forms.ComboBox();
             this.btnEntregado = new CustomControls.RButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -54,11 +51,8 @@
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.Controls.Add(this.btnGuia);
-            this.panel1.Controls.Add(this.btnCambiar);
-            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.cmbEstatus);
             this.panel1.Controls.Add(this.btnEntregado);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label8);
@@ -88,45 +82,14 @@
             this.btnGuia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuia.ForeColor = System.Drawing.Color.White;
-            this.btnGuia.Location = new System.Drawing.Point(785, 122);
+            this.btnGuia.Location = new System.Drawing.Point(785, 90);
             this.btnGuia.Name = "btnGuia";
-            this.btnGuia.Size = new System.Drawing.Size(106, 34);
+            this.btnGuia.Size = new System.Drawing.Size(106, 64);
             this.btnGuia.TabIndex = 30;
             this.btnGuia.Text = "Guia Envio";
             this.btnGuia.TextColor = System.Drawing.Color.White;
             this.btnGuia.UseVisualStyleBackColor = false;
             this.btnGuia.Click += new System.EventHandler(this.btnGuia_Click);
-            // 
-            // btnCambiar
-            // 
-            this.btnCambiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCambiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(150)))), ((int)(((byte)(229)))));
-            this.btnCambiar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(150)))), ((int)(((byte)(229)))));
-            this.btnCambiar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnCambiar.BorderRadius = 5;
-            this.btnCambiar.BorderSize = 0;
-            this.btnCambiar.FlatAppearance.BorderSize = 0;
-            this.btnCambiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCambiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCambiar.ForeColor = System.Drawing.Color.White;
-            this.btnCambiar.Location = new System.Drawing.Point(785, 35);
-            this.btnCambiar.Name = "btnCambiar";
-            this.btnCambiar.Size = new System.Drawing.Size(106, 34);
-            this.btnCambiar.TabIndex = 29;
-            this.btnCambiar.Text = "Cambiar";
-            this.btnCambiar.TextColor = System.Drawing.Color.White;
-            this.btnCambiar.UseVisualStyleBackColor = false;
-            this.btnCambiar.Click += new System.EventHandler(this.btnCambiar_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(616, 12);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(112, 17);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "Cambiar Estado:";
             // 
             // label9
             // 
@@ -149,23 +112,6 @@
             this.label10.TabIndex = 26;
             this.label10.Text = "Detalles";
             // 
-            // cmbEstatus
-            // 
-            this.cmbEstatus.BackColor = System.Drawing.Color.White;
-            this.cmbEstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEstatus.FormattingEnabled = true;
-            this.cmbEstatus.Items.AddRange(new object[] {
-            "Recogido",
-            "En Tránsito",
-            "En Centro de Clasificación",
-            "Listo para Entrega",
-            "Intento de Entrega Fallido",
-            "En Almacén/Depósito"});
-            this.cmbEstatus.Location = new System.Drawing.Point(620, 37);
-            this.cmbEstatus.Name = "cmbEstatus";
-            this.cmbEstatus.Size = new System.Drawing.Size(101, 21);
-            this.cmbEstatus.TabIndex = 25;
-            // 
             // btnEntregado
             // 
             this.btnEntregado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -178,9 +124,9 @@
             this.btnEntregado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntregado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntregado.ForeColor = System.Drawing.Color.White;
-            this.btnEntregado.Location = new System.Drawing.Point(785, 78);
+            this.btnEntregado.Location = new System.Drawing.Point(785, 15);
             this.btnEntregado.Name = "btnEntregado";
-            this.btnEntregado.Size = new System.Drawing.Size(106, 34);
+            this.btnEntregado.Size = new System.Drawing.Size(106, 64);
             this.btnEntregado.TabIndex = 24;
             this.btnEntregado.Text = "Entregado";
             this.btnEntregado.TextColor = System.Drawing.Color.White;
@@ -297,10 +243,8 @@
 		#endregion
 
 		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.Label label11;
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label10;
-		private System.Windows.Forms.ComboBox cmbEstatus;
 		private CustomControls.RButton btnEntregado;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.Label label8;
@@ -311,7 +255,6 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.PictureBox pictureBox1;
-		public CustomControls.RButton btnCambiar;
         private CustomControls.RButton btnGuia;
     }
 }

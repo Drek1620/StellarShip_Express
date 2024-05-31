@@ -2,6 +2,7 @@
 using StellarShip_Express.Encriptacion;
 using StellarShip_Express.Personal;
 using StellarShip_Express.Sucursal;
+using StellarShip_Express.Validaciones;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -241,6 +242,17 @@ namespace StellarShip_Express.Formularios
                     pcbImgUser.Image = Image.FromStream(ms);
                 }
             }
+        }
+        ErrorProvider errorp = new ErrorProvider();
+        private void txtTel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            bool validar = ValidarTxt.SoloNumeros(e);
+            if (!validar)
+            {
+                errorp.SetError(txtTel, "Solo numeros");
+            }
+            else
+                errorp.Clear();
         }
     }
 }

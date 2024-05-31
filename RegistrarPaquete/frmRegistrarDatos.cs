@@ -81,36 +81,36 @@ namespace StellarShip_Express.RegistrarPaquete
             {
                 if (ComprobarFormatoEmail(txtCorreo.Texts) && ComprobarFormatoEmail(txtCorreoD.Texts))
                 {
-
+                    DatosCliente.Cliente[0] = new ArregloCliente(
+                   txtNombre.Texts,
+                   txtCorreo.Texts.ToUpper(),
+                   txtTelefono.Texts,
+                   txtEmpresa.Texts,
+                   txtDireccion.Texts,
+                   txtNoInterior.Texts,
+                   txtCP.Texts,
+                   cmbCiudad.Texts,
+                   cmbEstado.Texts,
+                   cmbPais.Texts);
+                    DatosCliente.Cliente[1] = new ArregloCliente(
+                        txtNombreD.Texts,
+                        txtCorreoD.Texts.ToUpper(),
+                        txtTelD.Texts,
+                        txtEmpresaD.Texts,
+                        txtDireccionD.Texts,
+                        txtNointernoD.Texts,
+                        txtCpD.Texts,
+                        cmbCiudadD.Texts,
+                        cmbEstadoD.Texts,
+                        cmbPaisD.Texts);
+                    OpenChildForm(new frmRegistrarEmpaque());
+                    Limpiar();
                 }
                 else
                 {
                     MessageBox.Show(this, "Correo electronico no valido", "Correo no valido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-                DatosCliente.Cliente[0] = new ArregloCliente(
-                    txtNombre.Texts,
-                    txtCorreo.Texts.ToUpper(),
-                    txtTelefono.Texts,
-                    txtEmpresa.Texts,
-                    txtDireccion.Texts,
-                    txtNoInterior.Texts,
-                    txtCP.Texts,
-                    cmbCiudad.Texts,
-                    cmbEstado.Texts,
-                    cmbPais.Texts);
-                DatosCliente.Cliente[1] = new ArregloCliente(
-                    txtNombreD.Texts,
-                    txtCorreoD.Texts.ToUpper(),
-                    txtTelD.Texts,
-                    txtEmpresaD.Texts,
-                    txtDireccionD.Texts,
-                    txtNointernoD.Texts,
-                    txtCpD.Texts,
-                    cmbCiudadD.Texts,
-                    cmbEstadoD.Texts,
-                    cmbPaisD.Texts);
-                OpenChildForm(new frmRegistrarEmpaque());
-                Limpiar();
+               
             }
             else
                 MessageBox.Show(this, "Ingrese todos los campos obligatorios.\nPor favor", "Ingrese todos los datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

@@ -316,6 +316,7 @@
             this.cmbEstado.ForeColor = System.Drawing.Color.DimGray;
             this.cmbEstado.IconColor = System.Drawing.Color.DimGray;
             this.cmbEstado.Items.AddRange(new object[] {
+            "",
             "En tránsito a sucursal",
             "Recibido en Sucursal",
             "En proceso de entrega",

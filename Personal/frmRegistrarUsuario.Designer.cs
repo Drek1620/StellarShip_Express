@@ -404,6 +404,7 @@
             this.txtTel.TabIndex = 20;
             this.txtTel.Texts = "";
             this.txtTel.UnderlinedStyle = false;
+            this.txtTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTel_KeyPress);
             // 
             // txtId
             // 
