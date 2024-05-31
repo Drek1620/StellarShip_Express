@@ -452,7 +452,7 @@ namespace StellarShip_Express
 				using (var command = new SqlCommand())
 				{
 					command.Connection = connection;
-					command.CommandText = "select * from DetalleEnvio where Status = 'Paquete entregado'";
+					command.CommandText = "select * from DetalleEnvio where Estatus = 'Paquete entregado'";
 					command.CommandType = CommandType.Text;
 					LeerFilas = command.ExecuteReader();
 					Tabla.Load(LeerFilas);

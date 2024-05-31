@@ -13,7 +13,7 @@ namespace StellarShip_Express.Vehiculos
     public partial class frmVehiculos : Form
     {
         DataSet dsTabla = new DataSet();
-        int PagInico = 1, Indice = 0, NumFilas = 10, PaginaFinal;
+        int PagInico = 1, Indice = 0, NumFilas = 32, PaginaFinal;
         public frmVehiculos()
         {
             PaginaFinal = NumFilas;
