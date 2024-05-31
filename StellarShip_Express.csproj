@@ -281,6 +281,7 @@
     <Compile Include="RegistrarPaquete\DatosCliente.cs" />
     <Compile Include="RegistrarPaquete\DatosFactura.cs" />
     <Compile Include="RegistrarPaquete\DatosPaquete.cs" />
+    <Compile Include="RegistrarPaquete\EnviarEmail.cs" />
     <Compile Include="RegistrarPaquete\frmConfirmarCompra.cs">
       <SubType>Form</SubType>
     </Compile>

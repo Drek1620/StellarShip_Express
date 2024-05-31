@@ -175,6 +175,9 @@ namespace StellarShip_Express.RegistrarPaquete
                 MessageBox.Show("Error al generar la guia de envio");
             }
 
+            EnviarEmail enviarEmail = new EnviarEmail();
+            enviarEmail.CrearCorreoRemitente();
+            enviarEmail.CrearCorreoDestinatario();
         }
 
 		private void btnGuia_Click(object sender, EventArgs e)
