@@ -77,8 +77,9 @@ namespace StellarShip_Express
 
 		private void btnEntregado_Click(object sender, EventArgs e)
 		{
-			//var editar = obj.CambiarEstatus(this.Id,
-			//	"Entregado");
+			var editar = obj.CambiarEstatus(this.Id,
+                "Paquete entregado", "El paquete ha sido entregado.",null);
+			btnEntregado.Enabled = false;
 		}
 
         private void btnGuia_Click(object sender, EventArgs e)

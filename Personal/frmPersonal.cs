@@ -1,4 +1,5 @@
 ﻿using CustomControls;
+using StellarShip_Express.Otros;
 using StellarShip_Express.Personal;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Windows.Forms;
 
 namespace StellarShip_Express.Formularios
@@ -16,7 +18,10 @@ namespace StellarShip_Express.Formularios
     {
         private Form currentChildForm;
 
-        Consultas datos=new Consultas();
+
+        ConsultasPersonal objp = new ConsultasPersonal();
+        DataSet dsTabla;
+        public int pagInicio = 1, Indice = 0, Numfilas = 32, PagFinal;
         public frmPersonal()
         {
             InitializeComponent();
@@ -24,8 +29,28 @@ namespace StellarShip_Express.Formularios
 
         public void MostrarUsuarios()
         {
-            Consultas consultas = new Consultas();
-            dgvDatos.DataSource = consultas.MostrarUsuarios();
+            objp.Inicio = pagInicio;
+            objp.Final = PagFinal;
+            dsTabla = objp.Personal();
+            dgvDatos.DataSource = dsTabla.Tables[1];
+
+            int cantidad = Convert.ToInt32(dsTabla.Tables[0].Rows[0][0].ToString()) / Numfilas;
+            cmbNumPag.Items.Clear();
+
+            if (Convert.ToInt32(dsTabla.Tables[0].Rows[0][0].ToString()) % Numfilas > 0)
+            {
+                cantidad++;
+            }
+
+            txtNumPag.Text = cantidad.ToString();
+            cmbNumPag.Items.Clear();
+
+            for (int x = 1; x <= cantidad; x++)
+            {
+                cmbNumPag.Items.Add(x.ToString());
+            }
+
+            cmbNumPag.SelectedIndex = Indice;
         }
         private void OpenChildForm(Form childForm) //Este es para cerrar la ventana actual y mostrar la que se pase como parametro
         {
@@ -55,6 +80,7 @@ namespace StellarShip_Express.Formularios
 
         private void frmPersonal_Load(object sender, EventArgs e)
         {
+            PagFinal = Numfilas;
             MostrarUsuarios();
         }
 

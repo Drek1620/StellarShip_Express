@@ -170,6 +170,16 @@ namespace StellarShip_Express.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap StellarShip {
+            get {
+                object obj = ResourceManager.GetObject("StellarShip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap StellarShip_Express_logo {
             get {
                 object obj = ResourceManager.GetObject("StellarShip_Express_logo", resourceCulture);

@@ -1,5 +1,6 @@
 ﻿using FontAwesome.Sharp;
 using StellarShip_Express.Acerca;
+using StellarShip_Express.Configuracion;
 using StellarShip_Express.Destino;
 using StellarShip_Express.Envios;
 using StellarShip_Express.Formularios;
@@ -32,6 +33,8 @@ namespace StellarShip_Express
         private string guias;
         private string facturas;
         private int height;
+
+        
         
         public frm_Menu()
         {
@@ -157,8 +160,9 @@ namespace StellarShip_Express
 
         private void frm_Menu_Load(object sender, EventArgs e)
         {
-			
-			if (DatosUsuario.Acceso == 2)
+			rjDropdownMenu1.IsMainMenu = true;
+            rjDropdownMenu1.PrimaryColor = Color.FromArgb(44, 62, 86);
+            if (DatosUsuario.Acceso == 2)
 			{
 				btnStaff.Visible = false;
 				btnVehicles.Visible = false;
@@ -328,7 +332,24 @@ namespace StellarShip_Express
 		private void iconButton2_Click(object sender, EventArgs e)
 		{
             frmAcerca frmAcerca = new frmAcerca();
+            if (DatosUsuario.Acceso == 1)
+            {
+                rjDropdownMenu1.Show(iconButton2, -125, iconButton2.Height);
+            }else
+                frmAcerca.ShowDialog();
+
+
+        }
+
+        private void configuraciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Configuracion.Configuracion());
+        }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAcerca frmAcerca = new frmAcerca();
             frmAcerca.ShowDialog();
-		}
-	}
+        }
+    }
 }

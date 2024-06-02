@@ -72,6 +72,7 @@ namespace StellarShip_Express.Envios
 			PagInicio = (pagina - 1) * NumFilas + 1;
 			PagFinal = pagina * NumFilas;
 			LlenarPaquetes();
+			Tamaño();
 		}
 		int? unidad;
         private void txtBusqueda_KeyPress(object sender, KeyPressEventArgs e)
@@ -153,6 +154,7 @@ namespace StellarShip_Express.Envios
 		{
 			flowLayoutPanel1.Controls.Clear();
 			LlenarPaquetes();
+			Tamaño();
 		}
 	}
 }

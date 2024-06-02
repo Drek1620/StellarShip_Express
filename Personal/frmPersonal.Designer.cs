@@ -38,6 +38,10 @@
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
+            this.txtNumPag = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbNumPag = new System.Windows.Forms.ComboBox();
+            this.lblPag = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -201,12 +205,57 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // txtNumPag
+            // 
+            this.txtNumPag.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtNumPag.Enabled = false;
+            this.txtNumPag.Location = new System.Drawing.Point(544, 540);
+            this.txtNumPag.Name = "txtNumPag";
+            this.txtNumPag.Size = new System.Drawing.Size(72, 24);
+            this.txtNumPag.TabIndex = 44;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(510, 546);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(27, 17);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "De";
+            // 
+            // cmbNumPag
+            // 
+            this.cmbNumPag.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.cmbNumPag.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbNumPag.FormattingEnabled = true;
+            this.cmbNumPag.Location = new System.Drawing.Point(432, 540);
+            this.cmbNumPag.Name = "cmbNumPag";
+            this.cmbNumPag.Size = new System.Drawing.Size(72, 25);
+            this.cmbNumPag.TabIndex = 42;
+            // 
+            // lblPag
+            // 
+            this.lblPag.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblPag.AutoSize = true;
+            this.lblPag.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.lblPag.Location = new System.Drawing.Point(368, 546);
+            this.lblPag.Name = "lblPag";
+            this.lblPag.Size = new System.Drawing.Size(55, 17);
+            this.lblPag.TabIndex = 41;
+            this.lblPag.Text = "Pagina";
+            // 
             // frmPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(970, 580);
+            this.Controls.Add(this.txtNumPag);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cmbNumPag);
+            this.Controls.Add(this.lblPag);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnEliminar);
@@ -222,6 +271,7 @@
             this.Load += new System.EventHandler(this.frmPersonal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -234,5 +284,9 @@
         private FontAwesome.Sharp.IconButton btnEliminar;
         private FontAwesome.Sharp.IconButton btnAgregar;
         private FontAwesome.Sharp.IconButton btnActualizar;
+        private System.Windows.Forms.TextBox txtNumPag;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbNumPag;
+        private System.Windows.Forms.Label lblPag;
     }
 }

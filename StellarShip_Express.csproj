@@ -208,6 +208,12 @@
     </Compile>
     <Compile Include="ConexionMySql.cs" />
     <Compile Include="ConexionSQLServ.cs" />
+    <Compile Include="Configuracion\frmConfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion\frmConfiguracion.Designer.cs">
+      <DependentUpon>frmConfiguracion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas.cs" />
     <Compile Include="CuadroPaquete.cs">
       <SubType>UserControl</SubType>
@@ -216,6 +222,11 @@
       <DependentUpon>CuadroPaquete.cs</DependentUpon>
     </Compile>
     <Compile Include="DatosUsuario.cs" />
+    <Compile Include="DropDown\MenuColorTable.cs" />
+    <Compile Include="DropDown\MenuRenderer.cs" />
+    <Compile Include="DropDown\RJDropdownMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Encriptacion\Encrypt.cs" />
     <Compile Include="Envios\ConsultaPaquetes.cs" />
     <Compile Include="Envios\frmEnviosEnCurso.cs">
@@ -268,6 +279,7 @@
     <Compile Include="Otros\PaginadoBitacora.cs" />
     <Compile Include="Otros\PaginadoClientes.cs" />
     <Compile Include="Otros\PaginadoFactura.cs" />
+    <Compile Include="Personal\ConsultasPersonal.cs" />
     <Compile Include="Personal\DatosModifPersonal.cs" />
     <Compile Include="Personal\frmTomarFoto.cs">
       <SubType>Form</SubType>
@@ -362,6 +374,9 @@
     </Compile>
     <EmbeddedResource Include="Acerca\frmAcerca.resx">
       <DependentUpon>frmAcerca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion\frmConfiguracion.resx">
+      <DependentUpon>frmConfiguracion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CuadroPaquete.resx">
       <DependentUpon>CuadroPaquete.cs</DependentUpon>
@@ -472,6 +487,7 @@
   <ItemGroup>
     <Content Include="Icono_principal.ico" />
     <Content Include="Resources\Factura.html" />
+    <None Include="Resources\StellarShip.png" />
     <Content Include="Resources\StellarShip_Logo_Guia.png" />
   </ItemGroup>
   <ItemGroup>

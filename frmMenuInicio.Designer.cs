@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Menu));
             this.panTitle = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.pcbImgUsuario = new CustomControls.CircularPictureBox();
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.pcbIconTitle = new FontAwesome.Sharp.IconPictureBox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.pcbImgUsuario = new CustomControls.CircularPictureBox();
             this.btnMaximizar = new FontAwesome.Sharp.IconButton();
             this.btnMinum = new FontAwesome.Sharp.IconButton();
             this.btnHome = new System.Windows.Forms.PictureBox();
@@ -55,18 +58,20 @@
             this.btnRegister = new FontAwesome.Sharp.IconButton();
             this.panInicio = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblNombre = new System.Windows.Forms.Label();
+            this.rjDropdownMenu1 = new StellarShip_Express.DropDown.RJDropdownMenu(this.components);
+            this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbIconTitle)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImgUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbIconTitle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.panAlmacen.SuspendLayout();
             this.panMenu.SuspendLayout();
             this.panRegis.SuspendLayout();
             this.panInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.rjDropdownMenu1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panTitle
@@ -88,6 +93,54 @@
             this.panTitle.Size = new System.Drawing.Size(1245, 76);
             this.panTitle.TabIndex = 0;
             this.panTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panTitle_MouseDown);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.Controls.Add(this.lblNombre, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pcbImgUsuario, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1094, 26);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(110, 52);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(52, 0);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblNombre.Size = new System.Drawing.Size(58, 52);
+            this.lblNombre.TabIndex = 9;
+            this.lblNombre.Text = "Default";
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pcbImgUsuario
+            // 
+            this.pcbImgUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pcbImgUsuario.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pcbImgUsuario.BorderColor = System.Drawing.Color.White;
+            this.pcbImgUsuario.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.pcbImgUsuario.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.pcbImgUsuario.BorderSize = 2;
+            this.pcbImgUsuario.GradientAngle = 50F;
+            this.pcbImgUsuario.Image = global::StellarShip_Express.Properties.Resources.Null;
+            this.pcbImgUsuario.Location = new System.Drawing.Point(3, 3);
+            this.pcbImgUsuario.MinimumSize = new System.Drawing.Size(46, 46);
+            this.pcbImgUsuario.Name = "pcbImgUsuario";
+            this.pcbImgUsuario.Size = new System.Drawing.Size(46, 46);
+            this.pcbImgUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbImgUsuario.TabIndex = 8;
+            this.pcbImgUsuario.TabStop = false;
             // 
             // lblTitleChildForm
             // 
@@ -133,24 +186,6 @@
             this.iconButton2.TabIndex = 10;
             this.iconButton2.UseVisualStyleBackColor = true;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
-            // 
-            // pcbImgUsuario
-            // 
-            this.pcbImgUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pcbImgUsuario.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.pcbImgUsuario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
-            this.pcbImgUsuario.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
-            this.pcbImgUsuario.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.pcbImgUsuario.BorderSize = 2;
-            this.pcbImgUsuario.GradientAngle = 50F;
-            this.pcbImgUsuario.Image = global::StellarShip_Express.Properties.Resources.Null;
-            this.pcbImgUsuario.Location = new System.Drawing.Point(3, 3);
-            this.pcbImgUsuario.MinimumSize = new System.Drawing.Size(46, 46);
-            this.pcbImgUsuario.Name = "pcbImgUsuario";
-            this.pcbImgUsuario.Size = new System.Drawing.Size(46, 46);
-            this.pcbImgUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbImgUsuario.TabIndex = 8;
-            this.pcbImgUsuario.TabStop = false;
             // 
             // btnMaximizar
             // 
@@ -529,43 +564,39 @@
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.Image = global::StellarShip_Express.Properties.Resources.StellarShip_Logo_Tono2;
-            this.pictureBox2.Location = new System.Drawing.Point(273, 170);
+            this.pictureBox2.Image = global::StellarShip_Express.Properties.Resources.StellarShip;
+            this.pictureBox2.Location = new System.Drawing.Point(251, 144);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(466, 100);
+            this.pictureBox2.Size = new System.Drawing.Size(544, 133);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // tableLayoutPanel1
+            // rjDropdownMenu1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.AutoSize = true;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.lblNombre, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pcbImgUsuario, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(1094, 26);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(110, 52);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.rjDropdownMenu1.IsMainMenu = false;
+            this.rjDropdownMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.configuraciónToolStripMenuItem,
+            this.acercaDeToolStripMenuItem});
+            this.rjDropdownMenu1.MenuItemHeight = 25;
+            this.rjDropdownMenu1.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.rjDropdownMenu1.Name = "rjDropdownMenu1";
+            this.rjDropdownMenu1.PrimaryColor = System.Drawing.Color.Empty;
+            this.rjDropdownMenu1.Size = new System.Drawing.Size(151, 48);
             // 
-            // lblNombre
+            // configuraciónToolStripMenuItem
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(52, 0);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(0);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblNombre.Size = new System.Drawing.Size(58, 52);
-            this.lblNombre.TabIndex = 9;
-            this.lblNombre.Text = "Default";
-            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
+            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.configuraciónToolStripMenuItem.Text = "Configuración";
+            this.configuraciónToolStripMenuItem.Click += new System.EventHandler(this.configuraciónToolStripMenuItem_Click);
+            // 
+            // acercaDeToolStripMenuItem
+            // 
+            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.acercaDeToolStripMenuItem.Text = "Acerca de";
+            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
             // frm_Menu
             // 
@@ -585,16 +616,17 @@
             this.Load += new System.EventHandler(this.frm_Menu_Load);
             this.panTitle.ResumeLayout(false);
             this.panTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbIconTitle)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImgUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbIconTitle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.panAlmacen.ResumeLayout(false);
             this.panMenu.ResumeLayout(false);
             this.panRegis.ResumeLayout(false);
             this.panInicio.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.rjDropdownMenu1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -629,6 +661,9 @@
 		private FontAwesome.Sharp.IconButton btnClientes;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label lblNombre;
+        private DropDown.RJDropdownMenu rjDropdownMenu1;
+        private System.Windows.Forms.ToolStripMenuItem configuraciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
     }
 }
 

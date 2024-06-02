@@ -390,7 +390,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(446, 577);
             this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.cmbMunicipio);
