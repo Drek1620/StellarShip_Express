@@ -219,6 +219,29 @@ namespace StellarShip_Express.Sucursal
                 }
             }
         }
+        //Paginacion
+        public DataSet PagSuc(int inicioS, int finalS)
+        {
 
+            ConexionSQLServ conexionSQL = new ConexionSQLServ();
+            using (var connection = conexionSQL.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "spPaginacionS";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@inicio", inicioS);
+                    command.Parameters.AddWithValue("@final", finalS);
+                    SqlDataAdapter da = new SqlDataAdapter(command);
+                    DataSet dt = new DataSet();
+                    da.Fill(dt);
+                    return dt;
+
+                }
+            }
+
+        }
     }
 }

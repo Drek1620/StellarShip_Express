@@ -14,8 +14,11 @@ namespace StellarShip_Express.Destino
 {
     public partial class frmSucursal : Form
     {
+        DataSet dsTabla = new DataSet();
+        int PagInico = 1, Indice = 0, NumFilas = 6, PaginaFinal;
         public frmSucursal()
         {
+            PaginaFinal = NumFilas;
             InitializeComponent();
         }
         public void MostrarSuc()
@@ -33,12 +36,12 @@ namespace StellarShip_Express.Destino
 
         private void frmSucursal_Load(object sender, EventArgs e)
         {
-            MostrarSuc();
+            cargarDT();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            MostrarSuc();
+            cargarDT();
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
@@ -93,6 +96,15 @@ namespace StellarShip_Express.Destino
             }
         }
 
+        private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int Pagina = Convert.ToInt32(comboBox1.Text);
+            Indice = Pagina - 1;
+            PagInico = (Pagina - 1) * NumFilas + 1;
+            PaginaFinal = Pagina * NumFilas;
+            cargarDT();
+        }
+
         private void iconButton1_Click(object sender, EventArgs e)
         {
             ConsultasSucursal consultas = new ConsultasSucursal();
@@ -119,6 +131,33 @@ namespace StellarShip_Express.Destino
 
                 MessageBox.Show("Ha ocurrido un error: " + EX.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        
+        //Pag
+        private void cargarDT()
+        {
+            DatosSucursal.inicioS = PagInico;
+            DatosSucursal.finalS = PaginaFinal;
+
+            dsTabla = dato.PagSuc(DatosSucursal.inicioS, DatosSucursal.finalS);
+            dgvDatos.DataSource = dsTabla.Tables[1];
+
+            int cantidad = Convert.ToInt32(dsTabla.Tables[0].Rows[0][0].ToString()) / NumFilas;
+            if (Convert.ToInt32(dsTabla.Tables[0].Rows[0][0].ToString()) % NumFilas >= 0)
+            {
+                cantidad++;
+            }
+
+            textBox1.Text = cantidad.ToString();
+            comboBox1.Items.Clear();
+
+            for (int i = 1; i <= cantidad; i++)
+            {
+                comboBox1.Items.Add(i.ToString());
+            }
+
+            comboBox1.SelectedIndex = Indice;
+
         }
 
         private void cmbFiltro_SelectedIndexChanged(object sender, EventArgs e)

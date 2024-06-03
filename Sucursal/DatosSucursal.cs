@@ -20,5 +20,9 @@ namespace StellarShip_Express.Vehiculos
         public static string AccionS { get => accionS; set => accionS = value; }
 
         private static string accionS;
+
+        //Variables para la paginacion
+        public static int inicioS { get; set; }
+        public static int finalS { get; set; }
     }
 }
