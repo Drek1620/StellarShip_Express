@@ -31,9 +31,9 @@ namespace StellarShip_Express.RegistrarPaquete
             mCorreo.From = new MailAddress(myEmail, myAlias, System.Text.Encoding.UTF8);
             mCorreo.To.Add(DatosCliente.Cliente[0].Correo.Trim());
             mCorreo.Subject = "Confirmación de Envío de Su Paquete";
-            mCorreo.Body = $"<h1>Ha comenzado el envío de tu paquete.</h1>" +
-                $"<p>Numero de envió: {GuiaEnvio.NoEnvio}</p> " +
-                $"<p>Puede rastrear su envio en: http://stellarship.somee.com/</p>";
+            mCorreo.Body = "<h1>Ha comenzado el envío de tu paquete.</h1>" +
+                "<p>Numero de envió: "+GuiaEnvio.NoEnvio+"</p> " +
+                "<p>Puede rastrear su envio en: http://stellarship.somee.com/</p>";
             mCorreo.IsBodyHtml = true;
             mCorreo.Priority = MailPriority.Normal;
 
@@ -49,9 +49,9 @@ namespace StellarShip_Express.RegistrarPaquete
             mCorreo.From = new MailAddress(myEmail, myAlias, System.Text.Encoding.UTF8);
             mCorreo.To.Add(DatosCliente.Cliente[1].Correo.Trim());
             mCorreo.Subject = "Confirmación de Envío de Su Paquete";
-            mCorreo.Body = $"<h1>Ha comenzado el envío de tu paquete.</h1>" +
-                $"<p>Numero de envió: {GuiaEnvio.NoEnvio}</p> " +
-                $"<p>Puede rastrear su envio en: http://stellarship.somee.com/</p>";
+            mCorreo.Body = "<h1>Ha comenzado el envío de tu paquete.</h1>" +
+                "<p>Numero de envió: "+ GuiaEnvio.NoEnvio+"</p> " +
+                "<p>Puede rastrear su envio en: http://stellarship.somee.com/</p>";
             mCorreo.IsBodyHtml = true;
             mCorreo.Priority = MailPriority.Normal;
 
