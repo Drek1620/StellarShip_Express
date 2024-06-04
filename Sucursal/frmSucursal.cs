@@ -15,7 +15,7 @@ namespace StellarShip_Express.Destino
     public partial class frmSucursal : Form
     {
         DataSet dsTabla = new DataSet();
-        int PagInico = 1, Indice = 0, NumFilas = 6, PaginaFinal;
+        int PagInico = 1, Indice = 0, NumFilas = 16, PaginaFinal;
         public frmSucursal()
         {
             PaginaFinal = NumFilas;
@@ -36,12 +36,15 @@ namespace StellarShip_Express.Destino
 
         private void frmSucursal_Load(object sender, EventArgs e)
         {
+           
             cargarDT();
+           
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             cargarDT();
+           
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
@@ -53,8 +56,8 @@ namespace StellarShip_Express.Destino
                 DatosSucursal.IdDestino = Convert.ToInt32(dgvDatos.CurrentRow.Cells["IdDestino"].Value);
                 DatosSucursal.NombreSuc = dgvDatos.CurrentRow.Cells["Nombre"].Value.ToString();
                 DatosSucursal.PaisS = dgvDatos.CurrentRow.Cells["Pais"].Value.ToString();
-                DatosSucursal.EstadoS = Convert.ToInt32(dgvDatos.CurrentRow.Cells["Estado"].Value);
-                DatosSucursal.MunicipioS = Convert.ToInt32(dgvDatos.CurrentRow.Cells["Municipio"].Value);
+               // DatosSucursal.EstadoS = Convert.ToInt32(dgvDatos.CurrentRow.Cells["Estado"].Value);
+               // DatosSucursal.MunicipioS = Convert.ToInt32(dgvDatos.CurrentRow.Cells["Municipio"].Value);
                 DatosSucursal.CPS= dgvDatos.CurrentRow.Cells["CP"].Value.ToString();
                 DatosSucursal.Calle = dgvDatos.CurrentRow.Cells["Calle"].Value.ToString();
                 DatosSucursal.TelefS = dgvDatos.CurrentRow.Cells["Telefono"].Value.ToString();
