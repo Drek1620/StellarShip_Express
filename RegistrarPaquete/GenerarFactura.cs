@@ -68,7 +68,7 @@ namespace StellarShip_Express.RegistrarPaquete
                 img.Alignment = iTextSharp.text.Image.UNDERLYING;
 
                 //img.SetAbsolutePosition(10,100);
-                img.SetAbsolutePosition(pdfDoc.LeftMargin - 10, pdfDoc.Top - 40);
+                img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 40);
                 pdfDoc.Add(img);
 
 
